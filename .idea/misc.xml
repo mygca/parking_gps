@@ -3,10 +3,4 @@
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
-  <component name="ProjectDictionaryState">
-    <dictionary name="starwox" />
-  </component>
-  <component name="PublishConfigData" autoUpload="Always" autoUploadExternalChanges="true">
-    <option name="myAutoUpload" value="ALWAYS" />
-  </component>
 </project>
