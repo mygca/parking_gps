@@ -43,7 +43,7 @@ class CsvImportCommand extends Command
 
         $io->title('Attempting to import the file');
 
-        $reader = Reader::createFromPath('%kernel.root_dir%/../public/csv/parcs-relais-idf.csv', 'r');
+        $reader = Reader::createFromPath('%kernel.root_dir%/../public/uploads/csv/parking_relais.csv', 'r');
         $reader->setDelimiter(';');
 
         $results = $reader->fetchAssoc();

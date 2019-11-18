@@ -71,6 +71,10 @@ class Contact
 
     /**
      * @ORM\Column(type="string", length=255, nullable=false)
+     * @Assert\File(
+     *     mimeTypes = {"application/pdf" , "application/x-pdf"},
+     *     mimeTypesMessage = "Please, send a PDF file"
+     *     )
      */
     private $file;
 

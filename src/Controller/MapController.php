@@ -70,7 +70,6 @@ class MapController extends AbstractController
             return $this->redirectToRoute('homepage');
         }
 
-        dump($contact);
         return $this->render('forms/contact_form.html.twig', [
             'controller_name' => 'contact_us',
             'form' => $form->createView()

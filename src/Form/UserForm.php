@@ -2,35 +2,34 @@
 /**
  * Created by PhpStorm.
  * User: starwox
- * Date: 10/10/2019
- * Time: 16:03
+ * Date: 18/11/2019
+ * Time: 10:25
  */
 
 namespace App\Form;
 
 
-use Symfony\Component\Form\AbstractType;
+use Doctrine\DBAL\Types\IntegerType;
+use Doctrine\DBAL\Types\TextType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
-use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\IntegerType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 
-class ContactForm extends AbstractType
+class UserForm
 {
+
 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
 
         $builder
-            ->add('last_name', TextType::class, [
-                'label' => 'Last name',
-                'attr' => ['placeholder' => 'Last Name'],
+            ->add('login', TextType::class, [
+                'label' => 'Login',
+                'attr' => ['placeholder' => 'Login'],
             ])
-            ->add('first_name', TextType::class, [
-                'label' => 'First name',
-                'attr' => ['placeholder' => 'First Name'],
+            ->add('password', TextType::class, [
+                'label' => 'Password',
+                'attr' => ['placeholder' => 'Password'],
             ])
             ->add('email', TextType::class, [
                 'label' => 'Email',
@@ -40,14 +39,6 @@ class ContactForm extends AbstractType
                 'label' => 'Phone',
                 'attr' => ['placeholder' => 'Phone Number'],
             ])
-            ->add('message', TextType::class, [
-                'label' => 'Message',
-                'attr' => ['placeholder' => 'Message'],
-            ])
-            ->add('file', FileType::class, [
-                'label' => 'File (PDF)',
-                'required' => false
-            ])
             ->add('agreeTerms', CheckboxType::class, [
                 'label' => 'Agree ?',
                 'mapped' => false
@@ -55,5 +46,6 @@ class ContactForm extends AbstractType
             ->add('submit', SubmitType::class, ['label' => 'Submit'])
         ;
     }
+
 
 }
