@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {% form_theme form 'bootstrap_4_layout.html.twig' %}
+    <div class="formulaire">
+        {{ form_start(form) }}
+
+
+        <!-- Nom de famille -->
+        {{ form_label(form.login) }}
+        {{ form_widget(form.login) }}
+
+
+        <!-- Prénom -->
+        {{ form_label(form.password) }}
+        {{ form_widget(form.password) }}
+
+
+        <!-- E-mail avec vérification -->
+        {{ form_label(form.email) }}
+        {{ form_widget(form.email) }}
+
+
+        <!-- Numéro de téléphone -->
+        {{ form_label(form.phone) }}
+        {{ form_widget(form.phone) }}
+
+        <!-- Accepter les termes -->
+        {{ form_label(form.agreeTerms) }}
+        {{ form_widget(form.agreeTerms) }}
+
+        <!-- Bouton de validation -->
+        {{ form_label(form.submit) }}
+        {{ form_widget(form.submit) }}
+
+        {{ form_end(form) }}
+    </div>
+
+{% endblock %}
