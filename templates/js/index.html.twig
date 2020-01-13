@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div id="root"></div>
+    {{ locale }}
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('build/js/react.js') }}"></script>
+{% endblock %}
