@@ -12,14 +12,16 @@ Etape à suivre:
 
 Concernant l'import des CSV dans la base de données, 3 commandes sont à votre disposition:
 
+### file: parking_relais.csv
 ```bash
-(file: parking_relais.csv)
 php bin/console csv:import
-============================
-(file: parking_saemes)
+```
+### file: parking_saemes
+```bash
 php bin/console park:saemes
-============================
-(file: gares_idf)
+```
+### file: gares_idf
+```bash
 php bin/console csv:gareidf
 
 ```
