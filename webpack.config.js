@@ -48,9 +48,9 @@ Encore
     .enableVersioning(Encore.isProduction())
 
     // enables @babel/preset-env polyfills
-    .configureBabel(() => {}, {
-        useBuiltIns: 'usage',
-        corejs: 3
+    .configureBabelPresetEnv((config) => {
+        config.useBuiltIns = 'usage';
+        config.corejs = 3;
     })
 
     // enables Sass/SCSS support
@@ -65,9 +65,9 @@ Encore
 
     // uncomment if you're having problems with a jQuery plugin
     //.autoProvidejQuery()
-    .addEntry('js/app', ['babel-polyfill', './assets/js/react.js'])
+
     // uncomment if you use API Platform Admin (composer req api-admin)
-    .enableReactPreset()
+    //.enableReactPreset()
     //.addEntry('admin', './assets/js/admin.js')
 ;
 
