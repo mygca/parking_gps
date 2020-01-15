@@ -4,6 +4,26 @@
     <list default="true" id="df735bf9-c755-43f7-a5b8-86f5d21fa55e" name="Default" comment="">
       <change afterPath="$PROJECT_DIR$/sql_file/sql_15012020.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Command/CsvGareCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/GaresIDF.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/js/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/parking_gps.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/parking_gps.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MapController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MapController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/UserFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UserFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/connect/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/forms/register.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/forms/contact_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/forms/contact_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/translations/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/react.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,6 +43,14 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
               <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/UserController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+              <folding>
+                <element signature="e#118#139#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -32,6 +60,14 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
               <caret line="18" selection-start-line="18" selection-end-line="18" />
+      <file leaf-file-name="CsvFileController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/CsvFileController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="805">
+              <caret line="59" column="79" selection-start-line="59" selection-start-column="79" selection-end-line="59" selection-end-column="79" />
+              <folding>
+                <element signature="e#119#142#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -42,7 +78,12 @@
             <state relative-caret-position="29184">
               <caret line="1536" selection-start-line="1536" selection-end-line="1536" />
             </state>
+      <file leaf-file-name="gares_idf.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/uploads/csv/gares_idf.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
           </provider>
+          <provider selected="true" editor-type-id="csv-text-editor" />
         </entry>
       </file>
       <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
@@ -50,6 +91,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="266">
               <caret line="72" selection-start-line="72" selection-end-line="72" />
+      <file leaf-file-name="CsvImportCommand.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Command/CsvImportCommand.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="438">
+              <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -59,7 +105,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="501">
               <caret line="59" column="49" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
-            </state>
+      <file leaf-file-name="CsvFile.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/CsvFile.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />            </state>
           </provider>
         </entry>
       </file>
@@ -76,10 +126,18 @@
               <folding>
                 <element signature="e#115#139#0#PHP" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="Parking.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Parking.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="717">
+              <caret line="118" column="7" selection-start-line="118" selection-start-column="7" selection-end-line="118" selection-end-column="7" />
+>>>>>>> 644a24780c6fb616a14c0d15df253d428e29fb6d
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -106,8 +164,26 @@
           <provider selected="true" editor-type-id="csv-text-editor">
             <state>
               <caret column="36" selection-start-column="25" selection-end-column="36" />
+=======
+      <file leaf-file-name="CsvGareCommand.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Command/CsvGareCommand.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="664">
+              <caret line="62" column="30" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+              <folding>
+                <element signature="e#115#139#0#PHP" expanded="true" />
+              </folding>
+>>>>>>> 644a24780c6fb616a14c0d15df253d428e29fb6d
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parking_relais.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/uploads/csv/parking_relais.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor" />
         </entry>
       </file>
     </leaf>
@@ -129,9 +205,12 @@
       <find>af 2</find>
       <find>af 2.</find>
       <find>code_lig</find>
+<<<<<<< HEAD
       <find>lodash</find>
       <find>@babel/helper-compilation-targets&quot;</find>
       <find>npm-shr</find>
+=======
+>>>>>>> 644a24780c6fb616a14c0d15df253d428e29fb6d
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -146,6 +225,10 @@
         <option value="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error404.html.twig" />
         <option value="$PROJECT_DIR$/src/Migrations/Version20191015102411.php" />
         <option value="$PROJECT_DIR$/config/packages/twig.yaml" />
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/assets/css/app.css" />
+>>>>>>> 644a24780c6fb616a14c0d15df253d428e29fb6d
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/parcs-relais-idf.csv" />
         <option value="$PROJECT_DIR$/templates/index.html.twig" />
@@ -173,7 +256,13 @@
         <option value="$PROJECT_DIR$/src/Entity/Users.php" />
         <option value="$PROJECT_DIR$/src/Controller/MapController.php" />
         <option value="$PROJECT_DIR$/assets/js/app.js" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/assets/js/react.js" />
+=======
+        <option value="$PROJECT_DIR$/webpack.config.js" />
+        <option value="$PROJECT_DIR$/assets/js/react.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+>>>>>>> 644a24780c6fb616a14c0d15df253d428e29fb6d
         <option value="$PROJECT_DIR$/templates/connect/register.html.twig" />
         <option value="$PROJECT_DIR$/templates/forms/contact_form.html.twig" />
         <option value="$PROJECT_DIR$/templates/js/index.html.twig" />
@@ -186,6 +275,7 @@
         <option value="$PROJECT_DIR$/src/Migrations/Version20200113114017.php" />
         <option value="$PROJECT_DIR$/src/Migrations/Version20200113122012.php" />
         <option value="$PROJECT_DIR$/src/Command/CsvGareCommand.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/var/cache/dev/ContainerNKKsu1W/srcApp_KernelDevDebugContainer.php" />
         <option value="$PROJECT_DIR$/var/cache/dev/ContainerNKKsu1W/getConsole_CommandLoaderService.php" />
         <option value="$PROJECT_DIR$/src/Entity/GaresIDF.php" />
@@ -194,6 +284,11 @@
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/sql_file/sql_15012020.sql" />
+=======
+        <option value="$PROJECT_DIR$/src/Entity/GaresIDF.php" />
+        <option value="$PROJECT_DIR$/var/cache/dev/ContainerNKKsu1W/srcApp_KernelDevDebugContainer.php" />
+        <option value="$PROJECT_DIR$/var/cache/dev/ContainerNKKsu1W/getConsole_CommandLoaderService.php" />
+>>>>>>> 644a24780c6fb616a14c0d15df253d428e29fb6d
       </list>
     </option>
   </component>
@@ -337,6 +432,68 @@
               <item name="parking_gps" type="b2602c69:ProjectViewProjectNode" />
               <item name="parking_gps" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
+=======
+            <path>
+              <item name="parking_gps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parking_gps" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parking_gps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parking_gps" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parking_gps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parking_gps" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+              <item name="csv" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parking_gps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parking_gps" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parking_gps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parking_gps" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Command" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parking_gps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parking_gps" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parking_gps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parking_gps" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parking_gps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parking_gps" type="462c0819:PsiDirectoryNode" />
+              <item name="var" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parking_gps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parking_gps" type="462c0819:PsiDirectoryNode" />
+              <item name="var" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parking_gps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parking_gps" type="462c0819:PsiDirectoryNode" />
+              <item name="var" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
+              <item name="dev" type="462c0819:PsiDirectoryNode" />
+            </path>
+>>>>>>> 644a24780c6fb616a14c0d15df253d428e29fb6d
           </expand>
           <select />
         </subPane>
@@ -395,12 +552,20 @@
       <workItem from="1574067684231" duration="20737000" />
       <workItem from="1576487636202" duration="430000" />
       <workItem from="1576550292778" duration="9000" />
+<<<<<<< HEAD
       <workItem from="1578906888019" duration="11275000" />
+=======
+      <workItem from="1578906888019" duration="5052000" />
+>>>>>>> 644a24780c6fb616a14c0d15df253d428e29fb6d
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="71054000" />
+=======
+    <option name="totallyTimeSpent" value="64210000" />
+>>>>>>> 644a24780c6fb616a14c0d15df253d428e29fb6d
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -419,7 +584,11 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.5425641" />
+=======
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.47282052" />
+>>>>>>> 644a24780c6fb616a14c0d15df253d428e29fb6d
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23870574" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
@@ -442,10 +611,13 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
       <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.5425641" />
       <window_info id="Favorites" order="2" side_tool="true" />
+=======
+>>>>>>> 644a24780c6fb616a14c0d15df253d428e29fb6d
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -455,6 +627,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/Entity/Contact.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -546,12 +719,140 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/packages/translation.yaml">
+=======
+    <entry file="file://$PROJECT_DIR$/symfony.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5429" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/doctrine.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Command/TesterCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="34" column="34" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/UserForm.php" />
+    <entry file="file://$PROJECT_DIR$/public/uploads/csv/parking_saemes.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/shell/csv_entity_database.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="54" selection-start-line="5" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/react.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="67" column="61" selection-start-line="67" selection-start-column="61" selection-end-line="67" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/forms/csv_upload.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/MapController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-358">
+          <caret line="27" column="74" selection-start-line="27" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/twig.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+          <folding>
+            <element signature="e#30#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="1292" column="122" selection-start-line="1292" selection-start-column="118" selection-end-line="1292" selection-end-column="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/forms/contact_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travvendor/symfony/twig-bridge/Resources/views/Form/bootstrap_4_layout.html.twig" />
+    <entry file="file://$PROJECT_DIR$/templates/index.html.twig">
+>>>>>>> 644a24780c6fb616a14c0d15df253d428e29fb6d
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="91" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="91" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/travvendor/symfony/validator/Resources/translations/validators.af 2.xlf" />
     <entry file="file://$PROJECT_DIR$/travvendor/symfony/validator/Resources/translations/validators.af.xlf" />
     <entry file="file://$PROJECT_DIR$/config/services.yaml">
@@ -605,11 +906,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+=======
+    <entry file="file://$PROJECT_DIR$/templates/js/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Parking.php">
+    <entry file="file://$PROJECT_DIR$/var/cache/de_/srcApp_KernelDevDebugContainer.xml" />
+    <entry file="file://$PROJECT_DIR$/travvendor/symfony/translation/Translator.php" />
+    <entry file="file://$PROJECT_DIR$/translations/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/translations/validators.af.xlf" />
+    <entry file="file://$PROJECT_DIR$/translations/validators.af 2.xlf" />
+    <entry file="file://$PROJECT_DIR$/var/log/dev.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="213">
+          <caret line="1277" column="164" selection-start-line="1277" selection-start-column="164" selection-end-line="1277" selection-end-column="164" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/translation.yaml">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="91" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travvendor/symfony/validator/Resources/translations/validators.af 2.xlf" />
+    <entry file="file://$PROJECT_DIR$/travvendor/symfony/validator/Resources/translations/validators.af.xlf" />
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/services.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+>>>>>>> 644a24780c6fb616a14c0d15df253d428e29fb6d
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/forms/register.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="717">
           <caret line="118" column="7" selection-start-line="118" selection-start-column="7" selection-end-line="118" selection-end-column="7" />
         </state>
@@ -625,9 +967,35 @@
     <entry file="file://$PROJECT_DIR$/public/uploads/csv/parking_relais.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+=======
+        <state relative-caret-position="114">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/ContactForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="26" column="49" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+          <folding>
+            <element signature="e#113#153#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/UserFormType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+          <folding>
+            <element signature="e#28#49#0#PHP" expanded="true" />
+          </folding>
+        </state>
+>>>>>>> 644a24780c6fb616a14c0d15df253d428e29fb6d
       </provider>
       <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/Command/CsvImportCommand.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -644,6 +1012,27 @@
           <caret column="36" selection-start-column="25" selection-end-column="36" />
         </state>
       </provider>
+=======
+    <entry file="file://$PROJECT_DIR$/src/Controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+          <folding>
+            <element signature="e#118#139#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/CsvFileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="805">
+          <caret line="59" column="79" selection-start-line="59" selection-start-column="79" selection-end-line="59" selection-end-column="79" />
+          <folding>
+            <element signature="e#119#142#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+>>>>>>> 644a24780c6fb616a14c0d15df253d428e29fb6d
     </entry>
     <entry file="file://$PROJECT_DIR$/public/uploads/csv/gares_idf.csv">
       <provider editor-type-id="csv-table-editor">
@@ -651,6 +1040,7 @@
       </provider>
       <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/Entity/Saemes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -731,6 +1121,82 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29184">
           <caret line="1536" selection-start-line="1536" selection-end-line="1536" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/Entity/CsvFile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Parking.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="717">
+          <caret line="118" column="7" selection-start-line="118" selection-start-column="7" selection-end-line="118" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/uploads/csv/parking_relais.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Command/CsvImportCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20200113114017.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20200113122012.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/GaresIDF.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="231" lean-forward="true" selection-start-line="231" selection-end-line="231" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20200113124421.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/cache/dev/ContainerNKKsu1W/srcApp_KernelDevDebugContainer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="366" selection-start-line="366" selection-end-line="366" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/cache/dev/ContainerNKKsu1W/getConsole_CommandLoaderService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="96" column="2693" selection-start-line="96" selection-start-column="2693" selection-end-line="96" selection-end-column="2693" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Command/CsvGareCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="62" column="30" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+          <folding>
+            <element signature="e#115#139#0#PHP" expanded="true" />
+          </folding>
+>>>>>>> 644a24780c6fb616a14c0d15df253d428e29fb6d
         </state>
       </provider>
     </entry>
