@@ -76,4 +76,15 @@ class MapController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/react", name="test_react")
+     */
+    public function reactJS (): Response
+    {
+
+        return $this->render('js/index.html.twig', [
+            'controller_name' => 'reactjs',
+        ]);
+    }
+
 }
