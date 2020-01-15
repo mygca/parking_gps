@@ -28,7 +28,6 @@ class MapController extends AbstractController
         $repository = $this->getDoctrine()->getRepository(Parking::class);
 
 
-
         return $this->render('index.html.twig', [
             'controller_name' => 'homepage',
             'parking' => $repository->findAll(),
