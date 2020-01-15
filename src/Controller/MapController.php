@@ -8,6 +8,7 @@
 namespace App\Controller;
 
 use App\Entity\Contact;
+use App\Entity\Parking;
 use App\Form\ContactForm;
 use Doctrine\ORM\EntityManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -24,8 +25,13 @@ class MapController extends AbstractController
     public function home ()
     {
 
+        $repository = $this->getDoctrine()->getRepository(Parking::class);
+
+
+
         return $this->render('index.html.twig', [
-            'controller_name' => 'homepage'
+            'controller_name' => 'homepage',
+            'parking' => $repository->findAll(),
             ]);
     }
 
@@ -49,15 +55,35 @@ class MapController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid())
         {
+            $file = $form->get('file')->getData();
+
+            $filename = sha1(random_bytes(14)). '.' . $file->guessExtension();
+
+            $file->move(
+              $this->getParameter('pdf_directory'),
+              $filename
+            );
+
+            $contact->setFile($filename);
             $em->persist($contact);
             $em->flush();
             return $this->redirectToRoute('homepage');
         }
 
-        dump($contact);
         return $this->render('forms/contact_form.html.twig', [
             'controller_name' => 'contact_us',
             'form' => $form->createView()
+        ]);
+    }
+
+    /**
+     * @Route("/react", name="test_react")
+     */
+    public function reactJS (): Response
+    {
+
+        return $this->render('js/index.html.twig', [
+            'controller_name' => 'reactjs',
         ]);
     }
 

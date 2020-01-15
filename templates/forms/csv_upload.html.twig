@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ erreur }}
+    {% form_theme form 'bootstrap_4_layout.html.twig' %}
+    <div class="formulaire">
+        {{ form_start(form) }}
+
+
+        <!-- Nom de famille -->
+        {{ form_label(form.NameFile) }}
+        {{ form_widget(form.NameFile) }}
+
+        <!-- Upload a file -->
+        {{ form_label(form.file) }}
+        {{ form_widget(form.file) }}
+
+        <!-- Bouton de validation -->
+        {{ form_label(form.save) }}
+        {{ form_widget(form.save) }}
+
+        {{ form_end(form) }}
+    </div>
+
+{% endblock %}

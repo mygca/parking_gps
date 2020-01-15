@@ -9,9 +9,9 @@
 namespace App\Form;
 
 
-use phpDocumentor\Reflection\Types\Integer;
-use function Sodium\add;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -43,6 +43,14 @@ class ContactForm extends AbstractType
             ->add('message', TextType::class, [
                 'label' => 'Message',
                 'attr' => ['placeholder' => 'Message'],
+            ])
+            ->add('file', FileType::class, [
+                'label' => 'File (PDF)',
+                'required' => false
+            ])
+            ->add('agreeTerms', CheckboxType::class, [
+                'label' => 'Agree ?',
+                'mapped' => false
             ])
             ->add('submit', SubmitType::class, ['label' => 'Submit'])
         ;

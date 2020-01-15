@@ -20,12 +20,20 @@ class Contact
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank
+     * @Assert\Type(
+     *     type="string",
+     *     message="The value {{ value }} is not a valid {{ type }}."
+     * )
      */
     private $last_name;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank
+     * @Assert\Type(
+     *     type="string",
+     *     message="The value {{ value }} is not a valid {{ type }}."
+     * )
      */
     private $first_name;
 
@@ -43,7 +51,7 @@ class Contact
      * @ORM\Column(type="integer")
      * @Assert\NotBlank
      * @Assert\Length(
-     *      min = 2,
+     *      min = 5,
      *      max = 16,
      *      minMessage = "Your number phone must be at least {{ limit }} characters long",
      *      maxMessage = "Your number phone cannot be longer than {{ limit }} characters"
@@ -60,6 +68,15 @@ class Contact
      * @Assert\NotBlank
      */
     private $message;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=false)
+     * @Assert\File(
+     *     mimeTypes = {"application/pdf" , "application/x-pdf"},
+     *     mimeTypesMessage = "Please, send a PDF file"
+     *     )
+     */
+    private $file;
 
     public function getId(): ?int
     {
@@ -122,6 +139,18 @@ class Contact
     public function setMessage(string $message): self
     {
         $this->message = $message;
+
+        return $this;
+    }
+
+    public function getFile(): ?string
+    {
+        return $this->file;
+    }
+
+    public function setFile(string $file): self
+    {
+        $this->file = $file;
 
         return $this;
     }
