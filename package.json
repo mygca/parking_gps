@@ -14,5 +14,11 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
-  }
+  },
+  "name": "parking_gps",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:mygca/parking_gps.git",
+  "author": "Tan <tanamanda13@gmail.com>",
+  "license": "MIT"
 }

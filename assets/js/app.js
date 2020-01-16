@@ -6,7 +6,23 @@
  */
 
 // any CSS you require will output into a single css file (app.css in this case)
-require('../css/app.css');
+//require('../css/app.css');
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to require it.
 // const $ = require('jquery');
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import '../css/app.css';
+
+class App extends React.Component {
+    render() {
+        return (
+            <div>
+                <p>Hello</p>
+            </div>
+        )
+    }
+}
+
+ReactDOM.render(<App/>, document.getElementById('root'));

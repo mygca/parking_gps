@@ -65,7 +65,7 @@ Encore
 
     // uncomment if you're having problems with a jQuery plugin
     //.autoProvidejQuery()
-    .addEntry('js/app', ['babel-polyfill', './assets/js/react.js'])
+    //.addEntry('js/app', ['babel-polyfill', './assets/js/react.js'])
     // uncomment if you use API Platform Admin (composer req api-admin)
     .enableReactPreset()
     //.addEntry('admin', './assets/js/admin.js')
