@@ -6,6 +6,7 @@ Etape à suivre:
  - Cloner le git
  - Edit le fichier ".env" selon vos choix
  - Utiliser la commande "composer install"
+ /!\ Ayez une version de PHP décente.
  
  Si un problème survient, ouvrez une issues et décrivez votre problème.
 
