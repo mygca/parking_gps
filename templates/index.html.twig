@@ -1,5 +1,15 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+{{ parent() }}
+{% endblock %}
+
 {% block body %}
-{{ dump(parking) }}
+    <h1> Test de Bootstrap </h1>
+    <div id="root"></div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ encore_entry_link_tags('app') }}"></script>
 {% endblock %}
