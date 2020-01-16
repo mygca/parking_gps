@@ -98,8 +98,6 @@ class CsvFileController extends AbstractController
 
         $data = $em->findAll();
 
-        dump($data);die();
-
 
         return $this->render('forms/csv_upload.html.twig', [
             'controller_name' => 'homepage',
