@@ -5,7 +5,7 @@
 Etape à suivre:
 
  - Cloner le git
- - Edit le fichier ".env" selon vos choix
+ - Configurer le fichier ".env"
  - Utiliser la commande "composer install"
  
  Si un problème survient, ouvrez une issues et décrivez votre problème.
