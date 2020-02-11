@@ -54,3 +54,23 @@ Supprimer une migration:
 ```bash
 php bin/console doctrine:migrations:version YYYYMMDDHHMMSS --delete
 ```
+
+
+
+## Côté DEV
+
+### Si vous souhaitez faire du JS / SASS
+
+Pour faire du JS (React), il vous suffit de vous rendre dans: assets/js/app.js
+
+Pour faire du SASS, il vous suffit de vous rendre dans: assets/css/app.scss
+
+Pour utiliser WEBPACK:
+
+```bash
+yarn encore dev --watch
+
+## CTRL + C pour arreter le process
+```
+
+
