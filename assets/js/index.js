@@ -6,17 +6,13 @@
  */
 
 // any CSS you import will output into a single css file (app.css in this case)
-import '../css/app.scss';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
+import '../css/app.scss';
+import App from './App';
 
-const myfirstelement = <h1>Hello React!</h1>
-console.log("TEST TEST")
 
 
-ReactDOM.render(myfirstelement, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
 // import $ from 'jquery';
-
-console.log('Hello Webpack Encore! Edit me in assets/js/app.js');

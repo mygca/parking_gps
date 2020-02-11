@@ -53,8 +53,8 @@ class CsvGareCommand extends Command
 
         foreach ($results as $row)
         {
-            $parking = (new GaresIDF())
-                ->setGeoPoint($row['Geo Point'])
+            $gare = (new GaresIDF())
+                ->setGeoPoint($row['date'])
                 ->setGeoShape($row['Geo Shape'])
                 ->setNomGare($row['nom_gare'])
                 ->setNomLong($row['nomlong'])
@@ -68,8 +68,7 @@ class CsvGareCommand extends Command
                 ->setX($row['x'])
                 ->setY($row['y'])
             ;
-
-            $this->em->persist($parking);
+            $this->em->persist($gare);
 
             $io->progressAdvance();
         }

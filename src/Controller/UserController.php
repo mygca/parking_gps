@@ -70,7 +70,6 @@ class UserController extends AbstractController
     public function toto(Request $req)
     {
         $repository = $this->getDoctrine()->getRepository(Users::class);
-
         return $this->render('js/index.html.twig', [
             'controller_name' => 'homepage',
             'locale' => $req->getLocale(),
