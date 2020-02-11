@@ -25,6 +25,7 @@ Encore
      */
     .addEntry('app', './assets/js/index.js')
     //.addEntry('page2', './assets/js/page2.js')
+    //.addStyleEntry('css/app', './react/app.scss')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
@@ -53,9 +54,16 @@ Encore
     })
 
     // enables Sass/SCSS support
-    .enableSassLoader()
-    .enableLessLoader()
-    .enableStylusLoader()
+    .enableSassLoader((options) => {
+        options.sourceMap = true;
+        options.sassOptions = {
+            outputStyle: options.outputStyle,
+            sourceComments: !Encore.isProduction(),
+        };
+        delete options.outputStyle;
+    }, {})
+    //.enableLessLoader()
+    //.enableStylusLoader()
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()

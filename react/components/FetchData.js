@@ -1,14 +1,13 @@
 import React from 'react';
 
-
 //import './App.scss';
 
-function App() {
+const FectchData = () => {
     return (
         <div className="App">
-            Hello World!
+            Hello Data!
         </div>
     );
 }
 
-export default App;
+export default FectchData;
