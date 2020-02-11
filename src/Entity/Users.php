@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -50,6 +52,16 @@ class Users implements UserInterface
      * @Assert\NotBlank()
      */
     private $phone;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\RatingInfo", mappedBy="userID")
+     */
+    private $ratingInfos;
+
+    public function __construct()
+    {
+        $this->ratingInfos = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -124,6 +136,34 @@ class Users implements UserInterface
 
     public function eraseCredentials()
     {
+    }
+
+    /**
+     * @return Collection|RatingInfo[]
+     */
+    public function getRatingInfos(): Collection
+    {
+        return $this->ratingInfos;
+    }
+
+    public function addRatingInfo(RatingInfo $ratingInfo): self
+    {
+        if (!$this->ratingInfos->contains($ratingInfo)) {
+            $this->ratingInfos[] = $ratingInfo;
+            $ratingInfo->addUserID($this);
+        }
+
+        return $this;
+    }
+
+    public function removeRatingInfo(RatingInfo $ratingInfo): self
+    {
+        if ($this->ratingInfos->contains($ratingInfo)) {
+            $this->ratingInfos->removeElement($ratingInfo);
+            $ratingInfo->removeUserID($this);
+        }
+
+        return $this;
     }
 
 }

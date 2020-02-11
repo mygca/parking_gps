@@ -17,3 +17,4 @@ import App from '../../react/App';
 ReactDOM.render(<App />, document.getElementById('root'));
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
 // import $ from 'jquery';
+
