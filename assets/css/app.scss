@@ -4,6 +4,8 @@ body {
   background-color: red;
 }
 
-h1 {
-  color: red;
+.App {
+  > h1 {
+    color: red;
+  }
 }

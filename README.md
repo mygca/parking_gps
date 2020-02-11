@@ -27,24 +27,14 @@ php bin/console d:m:m
 
 Concernant l'import des CSV dans la base de données, plusieurs commandes sont à votre disposition:
 
-### file: parking_relais.csv
+### Import de tout les CSV de Parking
 ```bash
-php bin/console csv:import
+php bin/console csv:parking
 ```
 
-### file: parking_saemes
-```bash
-php bin/console park:saemes
-```
-
-### file: gares_idf
+### file: Import des Train / Metro / RER / Tramway (A trier)
 ```bash
 php bin/console csv:gareidf
-```
-
-### file: ParkingsList
-```bash
-php bin/console csv:parklist
 ```
 
 
@@ -53,4 +43,11 @@ php bin/console csv:parklist
 Supprimer une migration:
 ```bash
 php bin/console doctrine:migrations:version YYYYMMDDHHMMSS --delete
+```
+
+Reset sa base de données:
+```bash
+php bin/console doctrine:database:drop --force
+php bin/console d:d:c
+php bin/console d:m:m
 ```
