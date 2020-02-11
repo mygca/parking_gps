@@ -12,6 +12,7 @@
     "webpack-notifier": "^1.8.0"
   },
   "dependencies": {
+    "core-js": "3",
     "encore": "^0.0.30-beta",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
