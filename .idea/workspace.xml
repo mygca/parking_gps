@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fdb72845-42e6-470a-b108-893675e1ab6e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MapController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MapController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/UserFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UserFormType.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/public/build/" />
     <ignored path="$PROJECT_DIR$/node_modules/" />
@@ -32,7 +34,7 @@
       <file leaf-file-name="Version20200211142235.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Migrations/Version20200211142235.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
+            <state relative-caret-position="589">
               <caret line="32" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
@@ -40,27 +42,64 @@
       </file>
       <file leaf-file-name="Version20200113124421.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Migrations/Version20200113124421.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-60" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="Version20191118091345.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Migrations/Version20191118091345.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
+            <state relative-caret-position="589">
               <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Users.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Users.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/Users.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="19">
               <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
               <folding>
                 <element signature="e#30#78#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserFormType.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Form/UserFormType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-276">
+              <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/forms/register.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/UserController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="46" column="82" lean-forward="true" selection-start-line="46" selection-start-column="82" selection-end-line="46" selection-end-column="82" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Controller/MapController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="454">
+              <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+              <folding>
+                <element signature="e#117#140#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -119,7 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Form/UserFormType.php" />
         <option value="$PROJECT_DIR$/src/Migrations/Version20200113114017.php" />
         <option value="$PROJECT_DIR$/src/Migrations/Version20200113122012.php" />
         <option value="$PROJECT_DIR$/var/cache/dev/ContainerNKKsu1W/srcApp_KernelDevDebugContainer.php" />
@@ -127,7 +165,6 @@
         <option value="$PROJECT_DIR$/sql_file/sql_15012020.sql" />
         <option value="$PROJECT_DIR$/yarn 2.lock" />
         <option value="$PROJECT_DIR$/yarn.lock" />
-        <option value="$PROJECT_DIR$/src/Controller/MapController.php" />
         <option value="$PROJECT_DIR$/assets/css/global.scss" />
         <option value="$PROJECT_DIR$/assets/css/app.css" />
         <option value="$PROJECT_DIR$/assets/js/react.js" />
@@ -162,7 +199,6 @@
         <option value="$PROJECT_DIR$/src/Command/ParkingSaemesCommand.php" />
         <option value="$PROJECT_DIR$/src/Command/ParkingCommand.php" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/Controller/UserController.php" />
         <option value="$PROJECT_DIR$/templates/forms/login.html.twig" />
         <option value="$PROJECT_DIR$/config/packages/security.yaml" />
         <option value="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" />
@@ -170,6 +206,9 @@
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/src/Migrations/Version20200211142235.php" />
         <option value="$PROJECT_DIR$/src/Entity/Users.php" />
+        <option value="$PROJECT_DIR$/src/Form/UserFormType.php" />
+        <option value="$PROJECT_DIR$/src/Controller/UserController.php" />
+        <option value="$PROJECT_DIR$/src/Controller/MapController.php" />
       </list>
     </option>
   </component>
@@ -302,16 +341,15 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="805" />
-    <option name="y" value="23" />
-    <option name="width" value="875" />
-    <option name="height" value="941" />
+    <option name="width" value="1680" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -322,42 +360,23 @@
             <path>
               <item name="parking_gps" type="b2602c69:ProjectViewProjectNode" />
               <item name="parking_gps" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parking_gps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parking_gps" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parking_gps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parking_gps" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="parking_gps" type="b2602c69:ProjectViewProjectNode" />
               <item name="parking_gps" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="parking_gps" type="b2602c69:ProjectViewProjectNode" />
               <item name="parking_gps" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parking_gps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parking_gps" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Repository" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -418,46 +437,36 @@
       <workItem from="1579217469117" duration="285000" />
       <workItem from="1580576640899" duration="4027000" />
       <workItem from="1581337922534" duration="8982000" />
+      <workItem from="1581518427257" duration="914000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127818000" />
+    <option name="totallyTimeSpent" value="128873000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26007327" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32923076" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2923077" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.25948718" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22527473" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.26051283" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25702077" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32923076" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.26051283" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -546,11 +555,7 @@
     <entry file="file://$PROJECT_DIR$/src/Migrations/Version20200116222459.php" />
     <entry file="file://$PROJECT_DIR$/src/Migrations/Version20200116224153.php" />
     <entry file="file://$PROJECT_DIR$/src/Migrations/Version20200210151701.php" />
-    <entry file="file://$PROJECT_DIR$/src/Entity/RatingInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1452" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/RatingInfo.php" />
     <entry file="file://$PROJECT_DIR$/public/uploads/csv/parking_saemes.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
@@ -622,13 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/forms/register.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.en.xlf" />
     <entry file="file://$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.es.xlf" />
     <entry file="file://$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.en.xlf" />
@@ -649,28 +647,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/UserFormType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-541" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/SecurityController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-142" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/MapController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1159">
-          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php">
@@ -711,19 +690,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Migrations/Version20200211142235.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
+        <state relative-caret-position="589">
           <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Migrations/Version20200113124421.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-60" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Migrations/Version20191118091345.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
+        <state relative-caret-position="589">
           <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
         </state>
       </provider>
@@ -734,6 +711,37 @@
           <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
           <folding>
             <element signature="e#30#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/UserFormType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-276">
+          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/forms/register.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="46" column="82" lean-forward="true" selection-start-line="46" selection-start-column="82" selection-end-line="46" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/MapController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+          <folding>
+            <element signature="e#117#140#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -14,10 +14,18 @@ use Doctrine\ORM\EntityManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
 class MapController extends AbstractController
 {
+
+    private $session;
+
+    public function __construct(SessionInterface $session)
+    {
+        $this->session = $session;
+    }
 
     /**
      * @Route("/", name="homepage")
@@ -25,6 +33,7 @@ class MapController extends AbstractController
     public function home ()
     {
 
+        dump($this->session->get('login'));
         $repository = $this->getDoctrine()->getRepository(Parking::class);
 
 

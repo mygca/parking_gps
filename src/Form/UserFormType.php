@@ -23,6 +23,14 @@ class UserFormType extends AbstractType
                 'label' => 'Login',
                 'attr' => ['placeholder' => 'Login'],
             ])
+            ->add('first_name', TextType::class, [
+                'label' => 'First Name',
+                'attr' => ['placeholder' => 'First Name'],
+            ])
+            ->add('last_name', TextType::class, [
+                'label' => 'Last Name',
+                'attr' => ['placeholder' => 'Last Name'],
+            ])
             ->add('password', RepeatedType::class, [
                 'type' => PasswordType::class,
                 'first_options' => [
