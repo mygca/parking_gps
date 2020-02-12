@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fdb72845-42e6-470a-b108-893675e1ab6e" name="Default" comment="" />
+    <list default="true" id="fdb72845-42e6-470a-b108-893675e1ab6e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Users.php" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/public/build/" />
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle/" />
@@ -42,11 +45,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Version20191118091345.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Version20191118091345.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Migrations/Version20191118091345.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
               <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Users.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Users.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
+              <folding>
+                <element signature="e#30#78#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,9 +105,12 @@
       <find>moto</find>
       <find>&lt;source&gt;Invalid credentials.&lt;/source&gt;</find>
       <find>Invalid cr</find>
+      <find>t</find>
+      <find>ratingInfos</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
+      <dir>$PROJECT_DIR$/src</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -124,7 +142,6 @@
         <option value="$PROJECT_DIR$/public/uploads/csv/gares_idf.csv" />
         <option value="$PROJECT_DIR$/src/Entity/GaresIDF.php" />
         <option value="$PROJECT_DIR$/src/Entity/Saemes.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Users.php" />
         <option value="$PROJECT_DIR$/src/Entity/Parking.php" />
         <option value="$PROJECT_DIR$/src/Migrations/Version20191118091345.php" />
         <option value="$PROJECT_DIR$/src/Migrations/Version20200116224153.php" />
@@ -152,6 +169,7 @@
         <option value="$PROJECT_DIR$/src/Command/CsvGareCommand.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/src/Migrations/Version20200211142235.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Users.php" />
       </list>
     </option>
   </component>
@@ -404,21 +422,22 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127122000" />
+    <option name="totallyTimeSpent" value="127818000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22527473" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32923076" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.2923077" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.25948718" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22527473" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -437,7 +456,6 @@
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
       <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.26051283" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout>
@@ -449,13 +467,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -714,6 +725,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
+          <folding>
+            <element signature="e#30#78#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
