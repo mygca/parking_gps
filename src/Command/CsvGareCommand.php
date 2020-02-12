@@ -53,6 +53,16 @@ class CsvGareCommand extends Command
 
         foreach ($results as $row)
         {
+
+            if( $row['res_com'] == 'LIGNE J' OR
+                $row['res_com'] == 'LIGNE N' OR
+                $row['res_com'] == 'LIGNE P' OR
+                $row['res_com'] == 'RER A' OR
+                $row['res_com'] == 'RER B' OR
+                $row['res_com'] == 'RER C' OR
+                $row['res_com'] == 'RER D'
+            ) {
+
             $gare = (new GaresIDF())
                 ->setGeoPoint($row['Geo Point'])
                 ->setGeoShape($row['Geo Shape'])
@@ -69,7 +79,7 @@ class CsvGareCommand extends Command
                 ->setY($row['y'])
             ;
             $this->em->persist($gare);
-
+            }
             $io->progressAdvance();
         }
 
