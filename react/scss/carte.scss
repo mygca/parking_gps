@@ -1,0 +1,43 @@
+svg{
+  width:100%;
+  height:auto;
+  user-select:none;
+  .linie{fill:none;stroke-width:6px;stroke-miterlimit:10;stroke:#1d1d1b}
+  circle{fill:#fff;stroke:#1d1d1b;stroke-width:2px;transition:all 0.1s}
+  
+  .siteOlympique{
+    position: relative;
+    animation:siteAnimation 0.5s infinite alternate;
+    @keyframes siteAnimation{
+      0%{fill:#fff;;}
+      100%{fill:black;}
+    }
+  }
+  .hoverLine{
+    stroke:#fff;
+  }
+  .selectedSite{
+    fill:#fff;
+  }
+}
+
+.map{
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  overflow: scroll;
+  .box--carte{
+    position: relative;
+    width:100%;
+    div{
+      position: absolute;
+      top:0;
+      width:100%;
+      height:100%;
+    }
+    .carte__bg{
+      width:100%;
+    }
+  }
+}
+

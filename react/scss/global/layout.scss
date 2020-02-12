@@ -1,0 +1,27 @@
+.wrapper{
+  display: flex;
+  height:100vh;
+  overflow: hidden;
+  &__sidebar{
+    width:45%;
+    background-color: #fff;
+    height: 100vh;
+    overflow: scroll;
+  }
+  &__map{
+    width:55%;
+    background-color:#efefef;
+    height: 100vh;
+    position: absolute;
+    right:0;
+  }
+}
+
+.box--carte{
+  position: relative;
+  svg{
+    width:100%;
+    position: absolute;
+    max-height: 100vh;
+  }
+}

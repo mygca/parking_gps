@@ -1,0 +1,8 @@
+import React from 'react';
+
+export const bg= <svg width="2824" height="2256" viewBox="0 0 3000 2403" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect opacity="0.27" x="0.5" y="0.5" width="2823" height="2255" stroke="white"/>
+<path d="M1181.59 414L1210.51 443.421H1520.38L1588.81 511.908H1818.68L2050 743.415V1255.62L1685.67 1620.25H1607.12L1491.46 1736H1088.58L1039.43 1686.8H966.661L597.516 1317.36V1062.7H518V958.523L1062.08 414H1181.59Z" fill="#C4C4C4" fill-opacity="0.2" stroke="white"/>
+<path d="M1820.5 833.765V1313.07H1756.24H1756.02L1755.87 1313.24L1629.35 1450.5H1019.12L804.5 1235.76V922.145L1090.31 642.5H1629.36L1820.5 833.765Z" fill="#C4C4C4" fill-opacity="0.2" stroke="white"/>
+<path d="M1064.5 1182.33V982.91L1225.62 830.5H1495.7L1578.5 913.403V1145.56L1476.8 1247.5H1129.7L1064.5 1182.33Z" fill="#BDBCBC" fill-opacity="0.2" stroke="white"/>
+</svg>

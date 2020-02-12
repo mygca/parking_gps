@@ -8,7 +8,7 @@
 // any CSS you import will output into a single css file (app.css in this case)
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../css/app.css';
+import '../css/index.scss';
 import App from '../../react/App';
 
 

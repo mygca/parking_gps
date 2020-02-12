@@ -1,14 +1,18 @@
 import React from 'react';
+import './App.scss';
 
 
-//import './App.scss';
+import Sidebar from './components/Sidebar';
+import Map from './components/Map';
+
 
 function App() {
-    return (
-        <div className="App">
-            <h1>Hello Christinba ba!</h1>
-        </div>
-    );
+  return (
+    <div className="wrapper">
+      <Sidebar />
+      <Map />
+    </div>
+  );
 }
 
 export default App;
