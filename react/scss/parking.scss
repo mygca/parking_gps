@@ -1,0 +1,173 @@
+.wrapper--parkingOutput{
+  margin-top: 3vw;
+  border: solid #efefef 1px;
+  padding:1vw;
+  .wrapper--filterAffichage{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+}
+.box--parking{
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  padding-top: 5px;
+  h3{
+    text-transform: uppercase;
+  }
+}
+
+
+.rerStationBox{
+  width:30%;
+  display: flex;
+  align-items: center;
+  .rerStationBox__icon{
+    width:20px;
+    height:20px;
+    margin-right: 5px;
+  }
+}
+
+.button--like{
+  width:2vw;
+  outline: none;
+  height:2vw;
+  border:none;
+  background-image: url(../img/heart.png);
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: center;
+  &--active{
+    background-image: url(../img/heart--active.png);
+  }
+}
+
+.parking__options{
+  display: flex;
+}
+
+.parkingOption{
+  margin-top:10px;
+  width:20px;
+  height:20px;
+  margin-right: 5px;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  &--24{
+    background-image: url(../img/icon--24.png);
+  }
+  &--handicape{
+    background-image: url(../img/icon--handicape.png);
+  }
+  &--securite{
+    background-image: url(../img/icon--securite.png);
+  }
+
+}
+
+.parking__price{
+  .price__price{
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .price__legende{
+    font-size: 14px;
+  }
+}
+
+.parking__distance{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+
+  .distance{
+    margin-right: 20px;
+    .distance__legende{
+      font-size: 12px;
+    }
+    .distance__distance{
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+  
+  // p{
+  //   padding-right:5px;
+  //   padding-left: 5px;
+  //   position: relative;
+  //   &::after{
+  //     content: "...";
+  //     position: absolute;
+  //     bottom:-7px;
+  //     left:50%;
+  //     transform: translateX(-50%);
+  //   }
+  // }
+}
+
+.button--seeMore{
+  outline: none;
+  padding: 0;
+  display: block;
+  border: none;
+  width:20px;
+  margin-left: 10px;
+  height:20px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  background-image: url(../img/icon--menu.png);
+  &--active{
+    background-image: url(../img/icon--menu--active.png);
+  }
+}
+
+.parking--opened{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.parking__infoLine{
+  display: flex;
+  margin-bottom: 20px;
+  .infoLine__image{
+    margin-right: 10px;
+  }
+  .infoLine__legende{
+    font-size: 12px;
+    color:$primary;
+  }
+  .infoLine__value{
+    font-size: 18px;
+  }
+}
+
+.wrapper--prix{
+  justify-content: flex-start;
+  .parking__infoLine{
+    width:50%;
+  }
+
+  // .parking__infoLine:first-child{
+  //   margin-right: 20px;
+  // }
+}
+
+.parking__map{
+  width:100%;
+  margin-bottom: 20px;
+}
+
+.button--contact{
+  align-self: flex-end;
+  border: solid 1px $primary;
+  color:$primary;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+
