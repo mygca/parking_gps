@@ -72,6 +72,8 @@ Encore
     // requires WebpackEncoreBundle 1.4 or higher
     //.enableIntegrityHashes(Encore.isProduction())
 
+   
+
     // uncomment if you're having problems with a jQuery plugin
     //.autoProvidejQuery()
     //.addEntry('js/app', ['babel-polyfill', './assets/js/react.js'])
@@ -79,5 +81,17 @@ Encore
     .enableReactPreset()
     //.addEntry('admin', './assets/js/admin.js')
 ;
+
+// if (Encore.isProduction()) {
+//     Encore.configureFilenames({
+//         images: '[path][name].[hash:8].[ext]',
+//         fonts: '[path][name].[hash:8].[ext]'
+//     });
+// } else {
+//     Encore.configureFilenames({
+//         images: '[path][name].[ext]',
+//         fonts: '[path][name].[ext]'
+//     });
+// }
 
 module.exports = Encore.getWebpackConfig();

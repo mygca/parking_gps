@@ -19,9 +19,9 @@ const FectchData = () => {
 
     const fetchData = async () => {
       const result = await axios.get(
-        '/api/parking_lists',
+        '/api/parkings',
       );
-      // console.log(result);
+       console.log(result);
       // console.log(result.data);
       //console.log(result.data["hydra:member"][0].ParkName);
       //setData(result.data);
@@ -37,7 +37,7 @@ const FectchData = () => {
   // useEffect(() => {
   //   async function result() {
   //     // You can await here
-  //     const response = await axios('https://localhost:8000/api/parking_lists');
+  //     const response = await axios('https://localhost:8000/api/parkings');
   //     // ...
   //     setData(result.data);
   //   }
@@ -48,7 +48,7 @@ const FectchData = () => {
     return (
         <div className="App">
             <p>Hello Data!</p> 
-            { console.log(data) 
+            { //console.log(data) 
             /*{ console.log(data["hydra:member"][0].ParkName) } */}
             <ul>
               {
@@ -60,7 +60,7 @@ const FectchData = () => {
                 // )
                 data.map(parking => (
                   <li key={parking.id}>
-                    <p>{parking.ParkName}</p>
+                    {parking.ParkName}
                   </li>
                   )
                 )
