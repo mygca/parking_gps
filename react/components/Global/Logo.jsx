@@ -1,11 +1,13 @@
 import React from 'react';
 //import Select from 'react-select';
 
+const logo = require('../../img/logo.png')
+
 
 
 function Logo() {
   return (
-    <img alt="logo" className="logo" src="../../img/logo.png" alt=""/>
+    <img alt="logo" className="logo" src={logo} alt=""/>
   );
 }
 
