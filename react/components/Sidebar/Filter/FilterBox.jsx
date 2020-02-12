@@ -9,11 +9,20 @@ function FilterBox({ name, text}) {
     <h2 className="filterBox__headline">{text}</h2>
     <div className="selectPlaceholder">PlaceHolder</div>
 
-      {/* <Select
-        value={selectedOption}
-        onChange={this.handleChange}
-        options={options}
-      /> */}
+    {name==="site"?
+    <Select
+      value={selectedOption}
+      onChange={this.handleChange}
+      options={options}
+    />:
+    <Select
+      value={selectedOption}
+      onChange={this.handleChange}
+      options={options}
+    />
+    }
+
+  
 
     </div>
   );
