@@ -10,7 +10,6 @@ import Map from './components/Map';
 function App() {
   return (
     <div className="wrapper">
-    <img src="./img/carte.png" />
       <Sidebar />
       <Map />
     </div>
