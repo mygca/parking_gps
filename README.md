@@ -8,6 +8,9 @@ Etape à suivre:
  - Configurer le fichier ".env"
  - Utiliser la commande "composer install"
  
+ 
+ /!\ Ayez une version de PHP décente.
+ 
  Si un problème survient, ouvrez une issues et décrivez votre problème.
 
 ## Initialisation de la BDD
@@ -51,3 +54,22 @@ php bin/console doctrine:database:drop --force
 php bin/console d:d:c
 php bin/console d:m:m
 ```
+
+
+
+## Côté DEV
+
+### Si vous souhaitez faire du JS / SASS
+
+Pour faire du JS (React), il vous suffit de vous rendre dans: assets/js/app.js
+
+Pour faire du SASS, il vous suffit de vous rendre dans: assets/css/app.scss
+
+Pour utiliser WEBPACK:
+
+```bash
+yarn encore dev --watch
+
+## CTRL + C pour arreter le process
+```
+
