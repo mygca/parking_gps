@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
 
-function ButtonSeeMore() {
+const ButtonSeeMoreContext = React.createContext();
 
-  const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
+const ButtonSeeMore = ({ onClick, isOpen }) => {
 
-  ButtonSeeMore.handleClickOutside = () => setIsOpen(false);
+  // const [btnOpen, setIsOpen] = useState(false);
+  // const toggle = () => setIsOpen(!btnOpen);
+
+  // ButtonSeeMore.handleClickOutside = () => setIsOpen(false);
 
   return (
-    <button className={isOpen ? 'button--seeMore button--seeMore--active' : 'button--seeMore'} onClick={toggle}></button>
+    // <button className={btnOpen ? 'button--seeMore button--seeMore--active' : 'button--seeMore'} onClick={toggle}></button>
+    
+      <button onClick={onClick} className={isOpen ? 'button--seeMore button--seeMore--active' : 'button--seeMore'}></button>
+    
   );
 }
 
