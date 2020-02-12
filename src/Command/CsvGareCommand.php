@@ -54,7 +54,7 @@ class CsvGareCommand extends Command
         foreach ($results as $row)
         {
             $gare = (new GaresIDF())
-                ->setGeoPoint($row['date'])
+                ->setGeoPoint($row['Geo Point'])
                 ->setGeoShape($row['Geo Shape'])
                 ->setNomGare($row['nom_gare'])
                 ->setNomLong($row['nomlong'])
