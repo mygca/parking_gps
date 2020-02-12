@@ -8,7 +8,7 @@ function MainFilterSection() {
   return (
     <div className="wrapper--filter">
       <Logo />
-      <FilterBox name="site" text="Quoi ton site" />
+      <FilterBox name="site" text="Quoi ton site"/>
       <FilterBox name="direction" text="Direction d'arrive"/>
       <Button name="Valide" />
     </div>

@@ -9,10 +9,10 @@ import{getGareId} from '../../functions/map/getGareId.js';
 
 function Carte() {
 
-  useEffect(() => {
-    centerMap();
-    getGareId();
-  },[])
+  // useEffect(() => {
+  //   centerMap();
+  //   getGareId();
+  // },[])
 
   return (
     <div className="box--carte">

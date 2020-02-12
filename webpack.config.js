@@ -26,6 +26,7 @@ Encore
     .addEntry('app', './react/index.js')
     //.addEntry('app', './assets/js/index.js')
     //.addEntry('page2', './assets/js/page2.js')
+    //.addStyleEntry('css/app', './react/app.scss')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
@@ -72,12 +73,26 @@ Encore
     // requires WebpackEncoreBundle 1.4 or higher
     //.enableIntegrityHashes(Encore.isProduction())
 
+   
+
     // uncomment if you're having problems with a jQuery plugin
     //.autoProvidejQuery()
-
+    //.addEntry('js/app', ['babel-polyfill', './assets/js/react.js'])
     // uncomment if you use API Platform Admin (composer req api-admin)
     .enableReactPreset()
     //.addEntry('admin', './assets/js/admin.js')
 ;
+
+// if (Encore.isProduction()) {
+//     Encore.configureFilenames({
+//         images: '[path][name].[hash:8].[ext]',
+//         fonts: '[path][name].[hash:8].[ext]'
+//     });
+// } else {
+//     Encore.configureFilenames({
+//         images: '[path][name].[ext]',
+//         fonts: '[path][name].[ext]'
+//     });
+// }
 
 module.exports = Encore.getWebpackConfig();

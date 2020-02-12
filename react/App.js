@@ -1,4 +1,5 @@
 import React from 'react';
+import FetchData from './components/FetchData';
 import './App.scss';
 
 

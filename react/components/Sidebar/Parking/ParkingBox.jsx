@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import RerArrete from './RerArrete'
 import Favorit from './Favorit'
 import ParkingOptions from './ParkingOptions'
@@ -9,7 +9,14 @@ import ParkingOpend from './ParkingOpend'
 
 
 
-function Parking({opened}) {
+function Parking() {
+  const [isOpen, setIsOpen] = useState(false);
+  console.log(isOpen);
+
+  const toFalse = ()=> {
+    setIsOpen(!isOpen);
+  }
+
   return (
     <div className="box--parking parking">
 
@@ -20,7 +27,7 @@ function Parking({opened}) {
         </div>
         <div className="wrapper--flex">
           <Favorit />
-          <ButtonSeeMore />
+          <ButtonSeeMore onClick={toFalse} isOpen={isOpen} />
         </div>
       </div>
 
@@ -30,7 +37,7 @@ function Parking({opened}) {
           <ParkingOptions name="handicape"/>
           <ParkingOptions name="securite"/>
         </div>
-        {opened==="false"?
+        {isOpen===false?
           <Price />
         :""}
       </div>
@@ -40,7 +47,7 @@ function Parking({opened}) {
         <Distance name="En Train" value="20km - 20min"/>
       </div>
 
-      {opened==="true"?
+      {isOpen===true?
         <ParkingOpend />
       :""}
 
