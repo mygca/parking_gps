@@ -2,9 +2,11 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ * @ApiResource()
  * @ORM\Entity(repositoryClass="App\Repository\ParkingRepository")
  */
 class Parking
@@ -17,431 +19,346 @@ class Parking
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $geo_point;
+    private $Code;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $geo_shape;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $id_pr;
+    private $GeoPoint;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $nom_pr;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $nb_pl_pr;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $nb_pl_cov;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $nb_pl_pmr;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $nb_pl_elec;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $nb_pl_2rm;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $nb_pl_v;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $label_pr;
+    private $ParkName;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $moa_pr;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $gestio_pr;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $struct_pr;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $www;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $mes_dates;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $mes_annees;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $insee_t;
+    private $NbrPlace;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $nom_comm;
+    private $Address;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Zipcode;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $City;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $Handicape;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $Camera;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $adres_pr;
+    private $Company;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $id_ref_lda;
+    private $MaxHeight;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="boolean", nullable=true)
      */
-    private $nom_lda;
+    private $FullTime;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="boolean", nullable=true)
      */
-    private $nom_gare;
+    private $MotoAccess;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $id_ref_zdl;
+    private $PriceDay;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $nom_zdl;
+    private $PriceWeek;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $OpenTime;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $CloseTime;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $PlacePMR;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $PlaceElec;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $PlaceMoto;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    public function getCode(): ?string
+    {
+        return $this->Code;
+    }
+
+    public function setCode(?string $Code): self
+    {
+        $this->Code = $Code;
+
+        return $this;
+    }
+
     public function getGeoPoint(): ?string
     {
-        return $this->geo_point;
+        return $this->GeoPoint;
     }
 
-    public function setGeoPoint(string $geo_point): self
+    public function setGeoPoint(string $GeoPoint): self
     {
-        $this->geo_point = $geo_point;
+        $this->GeoPoint = $GeoPoint;
 
         return $this;
     }
 
-    public function getGeoShape(): ?string
+    public function getParkName(): ?string
     {
-        return $this->geo_shape;
+        return $this->ParkName;
     }
 
-    public function setGeoShape(string $geo_shape): self
+    public function setParkName(string $ParkName): self
     {
-        $this->geo_shape = $geo_shape;
+        $this->ParkName = $ParkName;
 
         return $this;
     }
 
-    public function getIdPr(): ?int
+    public function getNbrPlace(): ?string
     {
-        return $this->id_pr;
+        return $this->NbrPlace;
     }
 
-    public function setIdPr(int $id_pr): self
+    public function setNbrPlace(?string $NbrPlace): self
     {
-        $this->id_pr = $id_pr;
+        $this->NbrPlace = $NbrPlace;
 
         return $this;
     }
 
-    public function getNomPr(): ?string
+    public function getAddress(): ?string
     {
-        return $this->nom_pr;
+        return $this->Address;
     }
 
-    public function setNomPr(string $nom_pr): self
+    public function setAddress(string $Address): self
     {
-        $this->nom_pr = $nom_pr;
+        $this->Address = $Address;
 
         return $this;
     }
 
-    public function getNbPlPr(): ?int
+    public function getZipcode(): ?string
     {
-        return $this->nb_pl_pr;
+        return $this->Zipcode;
     }
 
-    public function setNbPlPr(int $nb_pl_pr): self
+    public function setZipcode(string $Zipcode): self
     {
-        $this->nb_pl_pr = $nb_pl_pr;
+        $this->Zipcode = $Zipcode;
 
         return $this;
     }
 
-    public function getNbPlCov(): ?int
+    public function getCity(): ?string
     {
-        return $this->nb_pl_cov;
+        return $this->City;
     }
 
-    public function setNbPlCov(int $nb_pl_cov): self
+    public function setCity(string $City): self
     {
-        $this->nb_pl_cov = $nb_pl_cov;
+        $this->City = $City;
 
         return $this;
     }
 
-    public function getNbPlPmr(): ?int
+    public function getHandicape(): ?bool
     {
-        return $this->nb_pl_pmr;
+        return $this->Handicape;
     }
 
-    public function setNbPlPmr(int $nb_pl_pmr): self
+    public function setHandicape(bool $Handicape): self
     {
-        $this->nb_pl_pmr = $nb_pl_pmr;
+        $this->Handicape = $Handicape;
 
         return $this;
     }
 
-    public function getNbPlElec(): ?int
+    public function getCamera(): ?bool
     {
-        return $this->nb_pl_elec;
+        return $this->Camera;
     }
 
-    public function setNbPlElec(int $nb_pl_elec): self
+    public function setCamera(?bool $Camera): self
     {
-        $this->nb_pl_elec = $nb_pl_elec;
+        $this->Camera = $Camera;
 
         return $this;
     }
 
-    public function getNbPl2rm(): ?int
+    public function getCompany(): ?string
     {
-        return $this->nb_pl_2rm;
+        return $this->Company;
     }
 
-    public function setNbPl2rm(int $nb_pl_2rm): self
+    public function setCompany(?string $Company): self
     {
-        $this->nb_pl_2rm = $nb_pl_2rm;
+        $this->Company = $Company;
 
         return $this;
     }
 
-    public function getNbPlV(): ?int
+    public function getMaxHeight(): ?string
     {
-        return $this->nb_pl_v;
+        return $this->MaxHeight;
     }
 
-    public function setNbPlV(int $nb_pl_v): self
+    public function setMaxHeight(?string $MaxHeight): self
     {
-        $this->nb_pl_v = $nb_pl_v;
+        $this->MaxHeight = $MaxHeight;
 
         return $this;
     }
 
-    public function getLabelPr(): ?int
+    public function getFullTime(): ?bool
     {
-        return $this->label_pr;
+        return $this->FullTime;
     }
 
-    public function setLabelPr(int $label_pr): self
+    public function setFullTime(?bool $FullTime): self
     {
-        $this->label_pr = $label_pr;
+        $this->FullTime = $FullTime;
 
         return $this;
     }
 
-    public function getMoaPr(): ?string
+    public function getMotoAccess(): ?bool
     {
-        return $this->moa_pr;
+        return $this->MotoAccess;
     }
 
-    public function setMoaPr(?string $moa_pr): self
+    public function setMotoAccess(?bool $MotoAccess): self
     {
-        $this->moa_pr = $moa_pr;
+        $this->MotoAccess = $MotoAccess;
 
         return $this;
     }
 
-    public function getGestioPr(): ?string
+    public function getPriceDay(): ?string
     {
-        return $this->gestio_pr;
+        return $this->PriceDay;
     }
 
-    public function setGestioPr(?string $gestio_pr): self
+    public function setPriceDay(?string $PriceDay): self
     {
-        $this->gestio_pr = $gestio_pr;
+        $this->PriceDay = $PriceDay;
 
         return $this;
     }
 
-    public function getStructPr(): ?string
+    public function getPriceWeek(): ?string
     {
-        return $this->struct_pr;
+        return $this->PriceWeek;
     }
 
-    public function setStructPr(?string $struct_pr): self
+    public function setPriceWeek(?string $PriceWeek): self
     {
-        $this->struct_pr = $struct_pr;
+        $this->PriceWeek = $PriceWeek;
 
         return $this;
     }
 
-    public function getWww(): ?string
+    public function getOpenTime(): ?string
     {
-        return $this->www;
+        return $this->OpenTime;
     }
 
-    public function setWww(?string $www): self
+    public function setOpenTime(?string $OpenTime): self
     {
-        $this->www = $www;
+        $this->OpenTime = $OpenTime;
 
         return $this;
     }
 
-    public function getMesDates(): ?string
+    public function getCloseTime(): ?string
     {
-        return $this->mes_dates;
+        return $this->CloseTime;
     }
 
-    public function setMesDates(?string $mes_dates): self
+    public function setCloseTime(?string $CloseTime): self
     {
-        $this->mes_dates = $mes_dates;
+        $this->CloseTime = $CloseTime;
 
         return $this;
     }
 
-    public function getMesAnnees(): ?int
+    public function getPlacePMR(): ?string
     {
-        return $this->mes_annees;
+        return $this->PlacePMR;
     }
 
-    public function setMesAnnees(int $mes_annees): self
+    public function setPlacePMR(?string $PlacePMR): self
     {
-        $this->mes_annees = $mes_annees;
+        $this->PlacePMR = $PlacePMR;
 
         return $this;
     }
 
-    public function getInseeT(): ?int
+    public function getPlaceElec(): ?string
     {
-        return $this->insee_t;
+        return $this->PlaceElec;
     }
 
-    public function setInseeT(int $insee_t): self
+    public function setPlaceElec(?string $PlaceElec): self
     {
-        $this->insee_t = $insee_t;
+        $this->PlaceElec = $PlaceElec;
 
         return $this;
     }
 
-    public function getNomComm(): ?string
+    public function getPlaceMoto(): ?string
     {
-        return $this->nom_comm;
+        return $this->PlaceMoto;
     }
 
-    public function setNomComm(string $nom_comm): self
+    public function setPlaceMoto(?string $PlaceMoto): self
     {
-        $this->nom_comm = $nom_comm;
-
-        return $this;
-    }
-
-    public function getAdresPr(): ?string
-    {
-        return $this->adres_pr;
-    }
-
-    public function setAdresPr(?string $adres_pr): self
-    {
-        $this->adres_pr = $adres_pr;
-
-        return $this;
-    }
-
-    public function getIdRefLda(): ?int
-    {
-        return $this->id_ref_lda;
-    }
-
-    public function setIdRefLda(int $id_ref_lda): self
-    {
-        $this->id_ref_lda = $id_ref_lda;
-
-        return $this;
-    }
-
-    public function getNomLda(): ?string
-    {
-        return $this->nom_lda;
-    }
-
-    public function setNomLda(string $nom_lda): self
-    {
-        $this->nom_lda = $nom_lda;
-
-        return $this;
-    }
-
-    public function getNomGare(): ?string
-    {
-        return $this->nom_gare;
-    }
-
-    public function setNomGare(string $nom_gare): self
-    {
-        $this->nom_gare = $nom_gare;
-
-        return $this;
-    }
-
-    public function getIdRefZdl(): ?int
-    {
-        return $this->id_ref_zdl;
-    }
-
-    public function setIdRefZdl(int $id_ref_zdl): self
-    {
-        $this->id_ref_zdl = $id_ref_zdl;
-
-        return $this;
-    }
-
-    public function getNomZdl(): ?string
-    {
-        return $this->nom_zdl;
-    }
-
-    public function setNomZdl(string $nom_zdl): self
-    {
-        $this->nom_zdl = $nom_zdl;
+        $this->PlaceMoto = $PlaceMoto;
 
         return $this;
     }

@@ -1,15 +1,48 @@
 {% extends 'base.html.twig' %}
-
+{% block meta %}
+{{ parent() }}
+{% endblock %}
 {% block stylesheets %}
 {{ parent() }}
+    <style>
+        /* Set the size of the div element that contains the map */
+        #map {
+            height: 500px;  /* The height is 400 pixels */
+            width: 100%;  /* The width is the width of the web page */
+        }
+    </style>
 {% endblock %}
 
 {% block body %}
-    <h1> Test de Bootstrap </h1>
     <div id="root"></div>
+
+<!--
+    <div id="map"></div>
+    -->
 {% endblock %}
 
 {% block javascripts %}
     {{ parent() }}
     <script src="{{ encore_entry_link_tags('app') }}"></script>
+    <!--
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of Uluru
+            let uluru = {lat: 48.864716
+                , lng: 	2.349014};
+            // The map, centered at Uluru
+            let map = new google.maps.Map(
+                document.getElementById('map'), {zoom: 12, center: uluru});
+            // The marker, positioned at Uluru
+            let marker = new google.maps.Marker({position: uluru, map: map});
+        }
+    </script>
+
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5T8EjxkkAr1tdS36zc-SqBWIToThueuc&callback=initMap">
+    </script>
+
+-->
+
 {% endblock %}

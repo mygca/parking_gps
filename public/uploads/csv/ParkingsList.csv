@@ -1,0 +1,218 @@
+datasetid,recordid,nom_parking,company,adresse,ville,code_postal,geo,gares_id,24/24,time_opening,time_closing,prix_jour,prix_semaine,camera,handicape,hauteur_maximum,nombre_de_places
+parking,76,Parking Achres Ville,"Autocit
+",2 Alle Edouard Branly,"Achres
+",78260,"48.9691923927, 2.0778745706",6,TRUE,0.00,0.00,0,0,FALSE,TRUE,100,100
+parking,130,Parking de la Gare,Ville,2 Impasse de la Gare,Ballancourt-sur-Essonne,91610,"48.531550, 2.373430",106,TRUE,0.00,0.00,0,0,FALSE,TRUE,100,50
+parking,115,"Parking Boissy-Saint-Lger
+",Indigo,"	
+8 Boulevard de la Gare",Boissy-Saint-Leger,94470,"48.7523020203, 2.50537327295",87,TRUE,0.00,0.00,10.20,,TRUE,TRUE,1.9,541
+parking,87,Parking Bondy,Vincy Park,95 avenue Jules ferry,Bondy,93140,"48.8950627251, 2.47708587336","e,p",,,,,,,,,
+parking,92,"Parking Boussy-Saint-Antoine (Gare)
+",Effia,195 rue Marcel Pagnol,Boussy-Saint-Antoine,91800,"48.6803131849, 2.53184668156",105,TRUE,0.00,0.00,8.50,,FALSE,TRUE,1.9,200
+parking,98,"Parking La Hacquinire
+",Indigo,"41, rue Charles de Gaulle",Bures-sur-Yvette,91440,"48.6948655517, 2.15246123112",401,TRUE,0.00,0.00,13.20,,TRUE,TRUE,1.9,54
+parking,114,"Parking Bussy-Saint-Georges
+",,5 Boulevard Pierre Mends France,Bussy-Saint-Georges,77600,"48.8361576, 2.7077261",119,TRUE,0.00,0.00,14.90,,TRUE,TRUE,1.9,420
+parking,135,Parking Les Arts,Indigo,Parking Relais ,Cergy,95000,"49.013330, 2.063700",129,TRUE,0.00,0.00,8.50,,TRUE,TRUE,1.9,324
+parking,111,Esplanade de la Gare,Indigo,1 Rue de la Gare,Cergy,95000,"49.036070, 2.079340",129,TRUE,0.00,0.00,11.50,,TRUE,TRUE,1.9,50
+parking,99,"Parking Cergy Le Haut
+",Indigo,6 place des 3 gares,Cergy le Haut,95800,"49.048461, 2.0106553",128,TRUE,0.00,0.00,8.50,,TRUE,TRUE,1.9,701
+parking,77,Parking Changis Saint-Jean,Effia,"10, Rue Marcel Neyrat",Changis Saint-Jean,77660,"48.959364781, 3.02542640107",146,TRUE,0.00,0.00,-,,FALSE,TRUE,2.1,200
+parking,68,Parking de la Gare de Chatou,Saemes,Place Maurice Berteaux,Chatou,78400,"48.88595, 2.15486
+",574.361,FALSE,5.00,21.00,16.25,33.4,TRUE,FALSE,1.9,405
+parking,69,Parking Place Berteaux,Saemes,Place Maurice Berteaux,Chatou,78400,"48.88629, 2.1549
+",574.361,TRUE,0.00,0.00,24.05,33.4,FALSE,TRUE,1.95,95
+parking,105,"Parking Chelles Gournay
+",Effia,"4 avenue du marchal de lattre de tassigny
+",Chelles,77500,"48.8739519905, 2.58162154602","p,e",TRUE,0.00,0.00,,,,,,
+parking,75,Parking Combs-la-Ville-Quincy,Indigo,"9, rue des Bergeries ",Combs-la-ville,77380,"48.6671000298, 2.54733466163",196,FALSE,0,0.00,4,,FALSE,TRUE,1.9,400
+parking,79,Parking Conflans Fin d'Oise,Indigo,Impasse de Fin d'Oise,Conflans-Sainte-Honorine,78700,"48.9889960227, 2.07409470092",203,TRUE,0.00,-,-,-,FALSE,TRUE,1.9,455
+parking,81,Parking Conflans-Sainte-Honorine,"Indigo
+",6 rue Rue de la Fonderie,Conflans-Sainte-Honorine,78700,"48.9982037664, 2.09975614712",205,FALSE,0.00,0.00,-,-,FAUX,TRUE,1.9,290
+parking,70,Parking Hôpital Henri Mondor,Saemes,1 rue Gustave Eiffel,Créteil,9400,"48.798667, 2.451794
+",826.437,TRUE,0.00,0.00,11.2,,TRUE,TRUE,1.9,596
+parking,123,Parking de la Gare,Ville,2 Avenue du Dr Jules Bals,Dourdan,91410,"48.533210,2.010410",240,TRUE,0.00,0.00,0,-,FALSE,TRUE,100,150
+parking,124,Parking Dourdan,Ville,1 Rue Gautreau,"Dourdan
+ 
+",91410,"48.530860,2.014940",240,TRUE,0.00,0.00,0,,FALSE,TRUE,100,50
+parking,109,"Parking Ermont Eaubonne
+",Effia,"	
+1 Rue Raoul Dautry",Ermont,95120,"48.9805758339, 2.26838051123",997,TRUE,0.00,0.00,15.00,,TRUE,TRUE,1.9,250
+,133,Val de Seine Gare ,Ville,1 Avenue de Mousseau,Évry,9100,,276,TRUE,0.00,0.00,0,0,FALSE,TRUE,1.9,350
+parking,71,Parking Gentilly Centre Ville,Saemes,Face au 13 rue Albert Guilpin,Gentilly,94250,"48.816686, 2.348964
+",327,FALSE,8.00,20.00,16.8,51,TRUE,TRUE,1.9,45
+parking,72,Parking Gentilly Eglise,Saemes,Face au 21 avenue Raspail,Gentilly,94250,"48.814996, 2.352085
+",327,TRUE,0.00,0.00,23,,TRUE,TRUE,1.9,52
+parking,95,Parking Herblay,"
+Effia","4 Rue Etienne Fourmont
+",Herblay,95220,"48.9916256775, 2.16049131713",346,TRUE,0.00,0.00,14.50,,FALSE,TRUE,1.9,250
+parking,118,"Parking Vauboyen
+",Ville,Chemin des Charbonniers,"Jouy-en-Josas
+
+",78350,"48.7587078355, 2.19206702286",874,TRUE,0.00,0.00,0,,FALSE,TRUE,1.8,135
+parking,86,Parking Pierre Marx,"Gestipark
+",,La Fert-sous-Jouarre,,"48.9502109172, 3.12342508488",397,,,,,,,,,
+parking,131,Parking de la Gare,Ville,15 Avenue du Gén Leclerc,La Ferté-Alais,91590,"48.484980, 2.350840",396,TRUE,0.00,0.00,0,0,FALSE,TRUE,1.9,150
+parking,132,Le Malesherbois Parking,Ville,2 Rue 19 Mars 1962,Le Malesherbois,45330,"48.292990, 2.398570",955,TRUE,0.00,0.00,0,0,FALSE,TRUE,100,300
+parking,110,"Parking Le Raincy Villemomble Montfermeil
+",Effia,Cour de la Gare,Le Raincy,93340,"48.8889869809, 2.51386487083",e,TRUE,0.00,0.00,,,,,,
+parking,116,"Parking Longueville
+",Effia,Rue de Verdun,Longueville,77650,"48.5136014668, 3.2496545091",p,TRUE,0.00,0.00,,,,,,
+parking,97,Parking Louvres,,Place de la Gare,Louvres,95380,"49.0493543, 2.5008422",482,TRUE,0.00,0.00,16.00,,FALSE,TRUE,2,350
+parking,91,"Parking Massy Palaiseau
+",Effia,16 Place Pierre Semart,Massy,91300,"48.7251792387, 2.25612121732","520, 522",TRUE,0.00,0.00,16.70,73.00,TRUE,TRUE,1.9,227
+parking,73,Parking Meaux Nord,Effia,Avenue de la Gare,Meaux,77100,"48.957780768, 2.87417996855",529,TRUE,0.00,0.00,10.10,,TRUE,TRUE,1.9,120
+parking,108,Parking Meaux Nord,Effia,1B Rue de Venise,Meaux,77100,"48.9547605047, 2.87308767362
+",529,TRUE,0.00,0.00,10.00,,TRUE,TRUE,1.9,200
+parking,65,Parc Relais Val d'Europe - Serris Montévrain,Saemes,77 rue de la Charbonnière,Montévrain,77144,"48.85378, 2.7689",70,TRUE,0.00,0.00,5.4,27.2,TRUE,TRUE,1.9,722
+parking,84,Parking Montigny-le-Bretonneux Bièvre - SQY Ouest,"Q-Park
+",7 Avenue des Prés,Montigny-le-Bretonneux,78180,"48.777540, 2.018590","938, 835",TRUE,0.00,0.00,7.8,,TRUE,TRUE,1.9,617
+parking,90,"Parking Montigny-le-Bretonneux Jean Bertin
+
+",Q-Park,Avenue de Lunca,Montigny-le-Bretonneux,78180,"48.789028216, 2.04529883263","938, 835",FALSE,6.30,21.00,8.80,,TRUE,TRUE,1.9,510
+parking,122,Parking Espace Saint Quentin,Indigo, Espace St Quentin,Montigny-le-Bretonneux,78885,"48.783920,2.043130",938.835,TRUE,0.00,0.00,,,TRUE,TRUE,1.9,1918
+parking,94,Parking Prague,SAEMES,77 Rue de la Charbonnire ,Montvrain,77144,"48.8537095024, 2.76908545179",70,FALSE,5.30,1.30,12.00,,TRUE,TRUE,1.9,650
+parking,117,"Parking Mormant
+","Effia
+","Rue Maurice Martin
+
+",Mormant,77720,"48.61411342, 2.88739326608",p,TRUE,0.00,0.00,,,,,,
+parking,127,Parking Parking des Arcades,Indigo,4 Avenue de Lattre de Tassigny,Nogent-sur-Marne,94130,"42.875370,2.176350",594,TRUE,0.00,0.00,-,,FALSE,FALSE,1.8,109
+parking,126,Parking Indigo Baltard,Indigo,5B Avenue Watteau,"Nogent-sur-Marne
+",94130,"48.832770,2.472030",594,TRUE,0.00,0.00,21.20,,TRUE,TRUE,1.9,291
+parking,88,"Parking Noisy Champs
+",Indigo, Centre commercial du CHAMPY ,Noisy-le-Grand,93160,"48.8431075808, 2.57867087148",597,TRUE,0.00,0.00,9.20,,TRUE,TRUE,1.9,318
+parking,104,"Parking Noisy-le-Grand Mont d'Est
+",Indigo,8 Boulevard du Mont d'Est,"Noisy-le-Grand
+",93160,"48.8401457, 2.5454603",597,TRUE,0.00,0.00,9.40,,TRUE,TRUE,1.85,634
+parking,78,Parking Noisy-le-Sec,Effia,,Noisy-le-Sec,,"48.8962060652, 2.45886357961",e,TRUE,0.00,0.00,,,,,,
+parking,102,"Parking Orgerus Bhoust
+",Ville,Rue du clos aux biches,Orgerus,78910,"48.8264179268, 1.70198839406
+",610,TRUE,0.00,0.00,8.50,,FALSE,TRUE,1.8,370
+parking,1,Parking Pyramides,Saemes,15 rue des pyramides,Paris,75001,"48.864994,2.33298",574,true,0.00,0.00,37.8,160,true,true,1.9,659
+parking,2,Parking Lagrange-Maubert,Saemes,19 rue Lagrange,Paris,75005,"48.850541,2.348671",235,true,0.00,0.00,37.8,147,true,false,1.85,477
+parking,3,Parking Maubert Collège des Bernardins,Saemes,37 boulevard St Germain,Paris,75005,"48.849577,2.350867",361.684,true,0.00,0.00,37.8,135,false,true,1.85,655
+parking,4,Parking Quai branly-Tour Eiffel,Saemes,25 Quai Branly,Paris,75007,"48.861935,2.298733",141,true,0.00,0.00,29.4,129,false,true,1.9,543
+parking,5,Parking Les Halles-St Eustache,Saemes,22 rue des Halles,Paris,75001,"48.860212,2.346654","163,170,164",true,0.00,0.00,36.90,128.00,true,false,1.85,375
+parking,6,Parking Notre Dame,Saemes,Place du parvis Notre Dame,Paris,75004,"48.854055,2.347417",828.827,true,0.00,0.00,37.80,107.00,true,false,1.9,279
+parking,7,Parking Rivoli-Sébastopol,Saemes,6 Quai de Gesvres,Paris,75004,"48.858396,2.350484","163,170,164",true,0.00,0.00,37.80,107.00,true,true,1.9,297
+parking,8,Parking Hôtel de Ville,Saemes,5 rue Pernelle,Paris,75004,"48.858396,2.350484",361.684,true,0.00,0.00,38.70,117.00,true,true,1.85,505
+parking,9,Parking Gay Lussac,Saemes,Face au 45 rue Gay Lussac,Paris,75005,"48.84216,2.343078",310.309,true,0.00,0.00,38.20,,false,false,1.95,105
+parking,10,Parking Polytechnique,Saemes,rue Jacques Henri Lartigue,Paris,75005,"48.847013, 2.351095","828,827,488,38",true,0.00,0.00,34.50,,FALSE,FALSE,1.90,259
+parking,11,Parking Monge,Saemes,17 rue Gracieuse,Paris,75005,"48.84255, 2.35149",484.38,true,0.00,0.00,35.20,,FALSE,TRUE,1.9,371
+parking,12,Parking Maubert Collège des Bernardins,Saemes,37 boulevard St Germain,Paris,75005,"48.849577, 2.350867",361.684,true,0.00,0.00,37.80,137.00,vrai,TRUE,1.85,655
+parking,13,Parking Poliveau,Saemes,39 bis rue Poliveau,Paris,75005,"48.8399, 2.35762",38,true,0.00,0.00,37.80,,FALSE,FALSE,1.9,57
+parking,14,Parking Marché Saint Germain,Saemes,Face au 1 Rue Lobineau,Paris,75006,"48.85166, 2.33611","828,827,484",true,0.00,0.00,37.90,,FALSE,faux,1.9,104
+parking,15,Parking André Honnorat,Saemes,9 rue Auguste Comte,Paris,75006,"48.84429, 2.33585",484,true,0.00,0.00,38.20,,FALSE,faux,1.9,329
+parking,16,Parking Ecole de Médecine,Saemes,21 rue Ecole de Médecine,Paris,75006,"48.850912, 2.341171",828.827,true,0.00,0.00,37.80,168.00,vrai,vrai,1.9,303
+parking,17,Parking Champagny,Saemes,Face au 13 rue Casimir Perrier,Paris,75007,"48.85788, 2.31849",574.361,true,0.00,0.00,39.90,,FALSE,faux,1.9,112
+parking,18,Parking Haussmann Berri,Saemes,Face au 155 boulevard Haussmann,Paris,75008,"48.875263, 2.309631",151,true,0.00,0.00,36.90,170.00,TRUE,FALSE,1.9,2182
+parking,19,Parking Rond Point des Champs Elysées,Saemes,"face au 3, Avenue Matignon",Paris,75008,"48.86939, 2.31101",361.684,true,0.00,0.00,34.40,,TRUE,FALSE,1.9,331
+parking,20,Parking Anvers,Saemes,41 boulevard Marguerite-de-Rochechouart,Paris,75009,"48.882697, 2.344013",484,true,0.00,0.00,35.10,164.00,TRUE,TRUE,1.9,528
+parking,21,Parking Mayran,Saemes,5 rue Mayran,Paris,75009,"48.877146, 2.345712","484, 1016",true,0.00,0.00,38.30,,TRUE,TRUE,1.9,80
+parking,22,Parking Milton,Saemes,35 rue Milton,Paris,75009,"48.87926, 2.34258
+",484.1016,true,0.00,0.00,36.80,,FALSE,FALSE,1.9,99
+parking,23,Parking Meyerbeer Opéra,Saemes,3 rue de la Chaussée d'Antin,Paris,75009,"48.871505, 2.333759",1016.32,true,0.00,0.00,35.10,149.00,TRUE,TRUE,1.9,589
+parking,24,Parking Hôpital Saint Louis,Saemes,1 avenue Claude Vellefaux,Paris,75010,"48.873379, 2.369972",305,true,0.00,0.00,19.80,89.00,TRUE,TRUE,1.75,478
+parking,25,Parking Récollets,Saemes,3 passage des Récollets,Paris,75010,"48.87427, 2.35877
+",305,true,0.00,0.00,32.40,,TRUE,TRUE,2,97
+parking,26,Parking René Boulanger,Saemes,1 ter rue René Boulanger,Paris,75010,"48.86836, 2.36174",305,true,0.00,0.00,36.40,,TRUE,FALSE,1.8,191
+parking,27,Parking Colonel Fabien,Saemes,3 rue Louis Blanc,Paris,75010,"48.878795, 2.369113",305,true,0.00,0.00,37.90,,TRUE,TRUE,1.9,96
+parking,28,Parking Roquette,Saemes,Face au 19 rue Servan,Paris,75011,"48.86015, 2.38351",501.376,true,0.00,0.00,35.40,,TRUE,FALSE,1.9,292
+parking,29,Parking Reuilly-Diderot,Saemes,34 rue de Reuilly,Paris,75012,"48.84622, 2.387776",582.307,true,0.00,0.00,36.90,93,TRUE,VRAI,3.5,147
+parking,30,"Parking Van Gogh
+",Saemes,205 rue de Bercy,Paris,75012,"48.84478, 2.37186",38,true,0.00,0.00,28.20,,FALSE,FALSE,1.9,183
+parking,31,Parking Bercy Seine,Saemes,Intersection de la rue joseph Kessel et 210 quai de Bercy - prendre élargissement de chaussée,Paris,75012,"48.833875, 2.382319",71.307,true,0.00,0.00,34.20,97,TRUE,TRUE,1.9,310
+parking,32,Parking Gare Bercy Seine,Saemes,Intersection de la rue joseph Kessel et 210 quai de Bercy - prendre élargissement de chaussée,Paris,75012,"48.83578, 2.3801",71.307,TRUE,0.00,0.00,36.30,,vrai,FAUX,4,81
+parking,33,Parking Méditerranée - Gare de Lyon,Saemes,26 rue de Chalon,Paris,75012,"48.845002, 2.375691",307,TRUE,0.00,0.00,37.10,,ture,FALSE,1.9,1622
+parking,34,Parking Hector Malot,Saemes,Angle avenue daumesnil et rue Hector Malot,Paris,75012,"48.846882, 2.377121",307,TRUE,0.00,0.00,38.80,148.9,ture,TRUE,2,484
+parking,35,Parking Charléty Coubertin,Saemes,17 avenue Pierre de Coubertin,Paris,75013,"48.817356, 2.344178",327,TRUE,0.00,0.00,,,ture,TRUE,1.85,445
+parking,36,Parking Charléty Thomire,Saemes,Rue Thomire,Paris,75013,"48.81951, 2.34841",189,TRUE,0.00,0.00,35.1,79,ture,TRUE,1.9,907
+parking,37,Parking Mairie du 14ème,Saemes,Rue Saillard,Paris,75014,"48.8331172, 2.3273865",828.827,TRUE,0.00,0.00,25.30,,ture,FAUX,1.9,164
+parking,38,Parking Hôpital Sainte Anne,Saemes,100 rue de la Santé,Paris,75014,"48.827057, 2.341523","828,827,488,38",TRUE,0.00,0.00,32.30,,ture,TRUE,1.9,278
+parking,39,Parking Porte d'Orléans,Saemes,1 rue de la légion étrangère,Paris,75014,"48.82097, 2.324525",189.327,TRUE,0.00,0.00,19.4,88.10,ture,TRUE,2.6,688
+parking,40,Parking Didot,Saemes,Place Moro Giafferi / 2 rue Didot,Paris,75014,"48.833912, 2.321583",501.235,TRUE,0.00,0.00,32.4,103,ture,TRUE,1.9,287
+parking,41,Parking Mairie du 15ème - Lecourbe,Saemes,143 rue Lecourbe,Paris,75015,"48.841671, 2.299584",501.376,TRUE,0.00,0.00,32.40,,ture,TRUE,1.9,314
+parking,42,Parking Général Beuret,Saemes,31 rue du Général Beuret,Paris,75015,"48.83999, 2.30212",501.376,TRUE,0.00,0.00,35.1,110,ture,FALSE,1.85,170
+parking,43,Parking Emile Augier,Saemes,face au 50 boulevard Emile Augier,Paris,75016,"48.86269, 2.2726",42,TRUE,0.00,0.00,36.30,,FALSE,TRUE,,70
+parking,44,Parking Mozart,Saemes,56-67 avenue Mozart,Paris,75016,"48.854801, 2.269472",151,TRUE,0.00,0.00,35.40,,FALSE,FALSE,1.9,264
+parking,45,Parking Flandrin,Saemes,face au 2 boulevard Flandrin,Paris,75016,"48.86438, 2.27219",41,TRUE,0.00,0.00,35.60,,FALSE,TRUE,,228
+parking,46,Parking Jean Bouin,Saemes,17 rue Nungesser et Coli,Paris,75016,"48.845261, 2.253626",57,TRUE,0.00,0.00,32.4,,TRUE,FALSE,1.85,487
+parking,47,Parking Gros Boulainvilliers,Saemes,15 rue de boulainvilliers,Paris,75016,"48.85217, 2.27691",376.42,TRUE,0.00,0.00,34.20,,TRUE,FALSE,1.95,415
+parking,48,Parking Porte d'Auteuil,Saemes,"1-3 avenue du Général Sarail
+",Paris,75016,"48.847473, 2.256245",57,TRUE,0.00,0.00,36,139.8,TRUE,TRUE,1.85,1128
+parking,49,Parking Sainte Périne,Saemes,Angle rue Chardon-Lagache et rue Mirabeau,Paris,75016,"48.845256, 2.266998",327,TRUE,0.00,0.00,37.50,,FALSE,FALSE,1.85,170
+parking,50,Parking Delessert,Saemes,13 rue Beethoven,Paris,75016,"48.858752, 2.286969",141,TRUE,0.00,0.00,32.40,,TRUE,FALSE,1.95,254
+parking,51,Parking Mairie du 17ème,Saemes,16/20 rue des Batignolles,Paris,75017,"48.884606, 2.321516",1016,TRUE,0.00,0.00,36.9,127,TRUE,TRUE,1.85,387
+parking,52,Parking Cardinet,Saemes,face 168 rue Cardinet,Paris,75017,"48.88958, 2.3164",688,TRUE,0.00,0.00,36.00,,TRUE,FALSE,1.95,640
+parking,53,Parking Péreire,Saemes,209 Boulevard Pereire,Paris,75017,"48.883775, 2.295416",632,TRUE,0.00,0.00,28.90,,TRUE,FALSE,2.1,298
+parking,54,Parking Marcadet,Saemes,142 rue Marcadet,Paris,75018,"48.891256, 2.339104",310.309,TRUE,0.00,0.00,38.00,,TRUE,FALSE,2,145
+parking,55,Parking 20/22 Goutte d'Or,Saemes,20-22 rue de la Goutte d'Or,Paris,75018,"48.88503, 2.352989",310.309,TRUE,0.00,0.00,34.90,,TRUE,FALSE,1.9,85
+parking,56,Parking Chartres,Saemes,4 rue de Chartres,Paris,75018,"48.884401, 2.355409",310.309,TRUE,0.00,0.00,33.30,,TRUE,FALSE,1.9,161
+parking,57,Parking Carpeaux,Saemes,5 / 7 / 7 bis rue Carpeaux,Paris,75018,"48.890469, 2.330233",688,TRUE,0.00,0.00,25.50,,FALSE,FALSE,1.9,102
+parking,58,Parking Damrémont,Saemes,73 rue Damremont,Paris,75018,"48.892529, 2.335539",688,TRUE,0.00,0.00,19.50,,FALSE,FALSE,2.2,148
+parking,59,Parking Firmin Gémier,Saemes,5/ 7 rue Firmin Gémier,Paris,75018,"48.89476, 2.330174
+",688,TRUE,0.00,0.00,37.30,,TRUE,FALSE,1.95,135
+parking,60,Parking Islettes,Saemes,12 rue de Islettes,Paris,75018,"48.884416, 2.35083",319.309,TRUE,0.00,0.00,32.40,,TRUE,FALSE,1.9,50
+parking,61,Parking 44 Goutte d'Or,Saemes,44 rue de la Goutte d'Or,Paris,75018,"48.885102, 2.351066",310.309,TRUE,0.00,0.00,38.40,,TRUE,TRUE,1.9,59
+parking,62,Parking Mairie du 19ème,Saemes,Rue André Dubois,Paris,75019,"48.88341, 2.38173",305,TRUE,0.00,0.00,35.40,,TRUE,TRUE,1.9,250
+parking,63,Parking Hôpital Robert-Debré,Saemes,48 boulevard Sérurier,Paris,75019,"48.87929, 2.40177
+",305,FALSE,9.30,20.30,18,77,TRUE,TRUE,1.9,180
+parking,64,Parking Printemps Nation,Saemes,22 rue de Lagny,Paris,75020,"48.848886, 2.401191
+",582,FALSE,5.00,1.00,23.50,,FALSE,FALSE,1.9,79
+parking,106,"Parking Pontoise Gare 
+",Effia,26 Avenue du Marchal Canrobert,Pontoise,95300,"49.0461602177, 2.09313418803",677,TRUE,0.00,0.00,10.30,20,TRUE,TRUE,1.9,320
+parking,85,Parking Fontaine Cornaille,Effia,Rue de la Gare,Quincy-sous-Snart,91480,"48.6791271, 2.5349827",105,TRUE,0.00,0.00,920,,FALSE,TRUE,1.85,240
+parking,113,"Parking Boussy-Saint-Antoine 
+",Effia,"        
+6 Rue des 2 Communes",Quincy-sous-Snart,91480,"48.680680, 2.535160",105,TRUE,0.00,0.00,8.50,,FALSE,TRUE,1.9,300
+,134,Parking Gare de Ris-Orangis,Ville,11 Place de la Gare,Ris-Orangis,91130,,740,TRUE,0.00,0.00,0,0,FALSE,TRUE,1.9,400
+parking,128,Parking La Louvière,Indigo, 2 Place de la Louvière,Saint-Maur-des-Fossés,94100,"48.805050,2.485840",826,TRUE,0.00,0.00,,,TRUE,TRUE,1.9,255
+parking,129,Parking Marché,Ville,12 Place des Marronniers,Saint-Maur-des-Fossés,94100,"48.805400,2.497810",142,TRUE,0.00,0.00,25.00,45.00,FALSE,TRUE,100,20
+parking,80,Parking Saint-Ouen l'Aumne - Liesse,Indigo,4 Rue du Champ Gaillard,Saint-Ouen-l'aumone,95310,"49.0335205369, 2.12781740826",834.832,TRUE,0.00,0.00,8.50,,TRUE,FALSE,1.9,124
+parking,82,Parking Souppes Chateau-Landon,Effia,26 avenue du marechal leclerc,Souppes-sur-Loing,77460,"48.1812355826, 2.73673930967",r,TRUE,0.00,0.00,,,,,,
+parking,93,"Parking Gare De Lagny Thorigny
+",SAEMES,Rue D'Orgemont,Thorigny-sur-Marne,77400,"48.8820061352, 2.70842926028",417,TRUE,0.00,0.00,12.30,,FALSE,TRUE,100,50
+parking,66,Parking Vaires Centre Ville,Saemes,rue de la Gare,Vaires-sur-Marne,77360,"48.874147, 2.640764",866,TRUE,0.00,0.00,18.4,,TRUE,TRUE,1.9,93
+parking,67,Parc Relais Vaires Torcy,Saemes,17 avenue des Mésanges,Vaires-sur-Marne,77360,"48.8759, 2.64306
+",866,TRUE,0.00,0.00,8.5,17,TRUE,TRUE,1.9,241
+parking,103,"Parking Moret Veneux-les-Sablons
+",Effia,"	
+50 Avenue de la Gare,","Veneux les sablons
+",77250,"48.3779378, 2.8013249",r,TRUE,0.00,0.00,,,,,,
+parking,119,"Parking Saint-Cloud
+",Indigo,33 Avenue de Saint-Cloud,Versaille,78000,"48.805390,2.132530",885.887,TRUE,0.00,0.00,24.00,,TRUE,TRUE,1.9,408
+parking,120,"Parking Marché Notre-Dame
+",Indigo,70 Rue De La Paroisse,Versaille,78000,"48.806770,2.131050",885.887,TRUE,0.00,0.00,24.00,,TRUE,TRUE,2.0,726
+parking,121,Parking Grand Siècle,Indigo,"7/9, Boulevard des Jeux olympiques",Versaille,78000,"48.804170,2.158000",916,TRUE,0.00,0.00,18.00,,TRUE,TRUE,1.8,86
+parking,125,Parking Indigo Vincennes Marigny Château,Indigo,Cours Marigny,Vincennes,94300,"48.845770,2.439750",913,TRUE,0.00,0.00,14.85,,TRUE,TRUE,1.9,631
+parking,74,Parking Neuville Universit,Indigo,Avenue de l'ambassadeur,Neuville-sur-Oise,95000,"49.0157660085, 2.07981466612",591,TRUE,0.00,0.00,12.30,,FALSE,TRUE,1.9,250
+parking,100,"Parking 11 Novembre - Courcelle-sur-Yvette
+",Ville,26 rue des gents,Gif-sur-Yvette,91190,"48.6998692, 2.0989423",577,TRUE,0.00,0.00,10.00,14.00,TRUE,TRUE,1.9,210
+parking,101,Parking Gagny,Effia,Impasse Ancienne Cour Marchandise,,93220,"48.8834895111, 2.5243615515",e,TRUE,0.00,0.00,,,,,,
+parking,136,Parking Gare d'Etampes,Ville,Place Gaston Beau,Étampes,91150,,271,TRUE,0.00,0.00,0,,FALSE,FALSE,1.9,50
+parking,137,Parking Gare de Saint-Chéron,Ville,Gare de Saint-Chéron,Saint-Chéron,91530,"48.551370, 2.125380",811,TRUE,0.00,0.00,0,,FALSE,TRUE,2,120
+parking,138,Parking gare de Brétigny-Sur-Orge RER,Effia,Place Pierre Vennin,Brétigny-Sur-Orge,91220,"48.606080, 2.302100",108,TRUE,0.00,0.00,9.50,21.00,TRUE,TRUE,1.9,230
+parking,139,Parking PSR - Parc de la Gare,Indigo,"5, Rue de l'Industrie",Melun,77000,"48.526150, 2.655790",530,TRUE,0.00,0.00,10.90,,TRUE,TRUE,1.9,640
+parking,140,Parking de la Gare de Verrière,Ville,Rue des Spahis Marocains,La Verrière,78320,"48.755820, 1.941710",193,TRUE,0.00,0.00,0,,FALSE,TRUE,1.9,730
+parking,141,Parking Gare Routière,Ville,Rue de la Prairie,Rambouillet,78120,"48.644500, 1.833990",720,TRUE,0.00,0.00,12.20,,FALSE,TRUE,1.9,420
+parking,142,Parking Gare  Sequoia,Ville,Place Ferdinand Prud'homme,Rambouillet,78120,"48.643468, 1.830839",720,TRUE,0.00,0.00,18.00,,TRUE,TRUE,1.9,385
+parking,143,Parking gare de Villiers Neauphle,Effia,Place de la Gare,Villiers-Saint-Frédéric,78640,"48.815350, 1.876710",911,TRUE,0.00,0.00,12.30,,FALSE,TRUE,100,54
+parking,144,Parking Indigo Saint-Germain-En-Laye Château,Indigo,22 Place Charles de Gaulle,Saint-Germain-en-Laye,78100,"48.897260, 2.095220",820,TRUE,0.00,0.00,17.80,,TRUE,TRUE,1.9,1124
+parking,145,Parking Q-Park Marché Neuf,Q-Park,1 Place du Marché Neuf,Saint-Germain-en-Laye,78100,"48.898090, 2.089100",820,TRUE,0.00,0.00,11.30,,TRUE,TRUE,1.9,390
+parking,146,Parking Place Berteaux,Saemes ,Place Maurice Berteaux,Chatou,78400,"48.886270, 2.155460",172,TRUE,0.00,0.00,24.50,,FALSE,TRUE,1.95,240
+parking,147,Parking des Provinces Françaises,Semna,55 Allée d'Aquitaine,Nanterre,92000,"48.901380, 2.217020",578,TRUE,0.00,0.00,18.00,,TRUE,TRUE,1.9,455
+parking,148,Parking PSR Gare,Indigo,Place du 8 mai 1945,Mantes-la-Jolie,78200,"48.990160, 1.703870",507,TRUE,0.00,0.00,8.50,,TRUE,TRUE,1.9,706
+parking,149,Parking a la Gare,Ville,9 Rue du Pied de Chêne,Issou,78440,"48.978930, 1.784000",365,TRUE,0.00,0.00,0,,FALSE,TRUE,1.9,80
+parking,150,Parking gare d'Aubergenville,Effia,Boulevard de la Gare,Aubergenville,78410,"48.972440, 1.846080",388,TRUE,0.00,0.00,4.7,,FALSE,TRUE,1.9,230
+parking,151,Parking R. Pion,Ville,"1 Rue René Pion,",Triel-sur-Seine,78510,"48.979950, 2.004330",859,TRUE,0.00,0.00,0,,FALSE,FALSE,100,55
+parking,152,Zenpark - Parking Andrésy - Gare de Maurecourt,Ville,58 Avenue des Robaresses,Andrésy,78570,"48.990630, 2.058160",527,TRUE,0.00,0.00,10.50,,FALSE,FALSE,1.9,60
+parking,153,Parking Jean Jaures,Ville,"Rue Jean Jaurès,",Ermont,95120,"48.982550, 2.259860",265,TRUE,0.00,0.00,10.70,,FALSE,TRUE,100,86
+parking,154,Parking Hippodrome D'Enghien Soisy,Ville,1 Place André Foulon,Soisy-sous-Montmorency,95230,"48.980100, 2.292200",782,TRUE,0.00,0.00,12.20,,FALSE,TRUE,1.9,36
+parking,155,Parking Centre commercial l'Ilo,Indigo,5 avenue de Lattre de Tassigny ,Épinay-sur-Seine,93800,"48.958340, 2.308520",258,TRUE,0.00,0.00,20.00,,TRUE,TRUE,1.9,830
+parking,156,Parking de la Gare Orry-la-Ville,Ville,Place de la Gare,Orry-la-ville,60560,"49.138800, 2.490400",957,TRUE,0.00,0.00,8.50,,FALSE,TRUE,1.9,120
+parking,157,Parking gare d'Arnouville,Ville,24 Avenue Jean Laugere,Arnouville,95400,"48.995250, 2.417650",909,TRUE,0.00,0.00,12.00,,TRUE,TRUE,1.9,90
+parking,158,Parking,Ville,"Boulevard Salvador Allende,",Sarcelles,95200,"48.978960, 2.393280",322,TRUE,0.00,0.00,0,,FALSE,TRUE,1.9,240
+parking,159,Yespark,Ville,2 Place de la Fraternité,Mitry-Mory,77290,"48.977770, 2.624200",551,TRUE,0.00,0.00,9.50,,FALSE,FALSE,1.9,95
+parking,160,Parking Gare,Ville,Place de la Gare,Sevran,93270,"48.935750, 2.534620",796,TRUE,0.00,0.00,0,,FALSE,TRUE,1.9,240
+parking,161,Onepark,,54 Avenue des Nations,Roissy-en-France,93420,"48.989700, 2.517770",621,TRUE,0.00,0.00,0,,FALSE,TRUE,100,80
