@@ -1,11 +1,18 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import Linie from './Linie';
 
 import {bg} from '../../data/svg/bg.js';
+import{centerMap} from '../../functions/map/centerMap.js';
+import{getGareId} from '../../functions/map/getGareId.js';
 
 
 
 function Carte() {
+
+  useEffect(() => {
+    centerMap();
+    getGareId();
+  },[])
 
   return (
     <div className="box--carte">
@@ -18,8 +25,6 @@ function Carte() {
       <Linie nameLine="n" />
       <Linie nameLine="p" />
       <Linie nameLine="j" />
-
-      {/* {centerCarte()} */}
     </div>
   );
 }
