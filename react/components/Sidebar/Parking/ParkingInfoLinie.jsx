@@ -4,7 +4,7 @@ import React from 'react';
 function ParkingInfoLinie({name,legende,value}) {
   return (
     <div className="parking__infoLine">
-      <img src={"./img/infoLinie--"+name+".png"} className="infoLine__image" alt=""/>
+      <img src={"./build/images/infoLinie--"+name+".png"} className="infoLine__image" alt=""/>
       <div>
         <p className="infoLine__legende">{legende}</p>
         <p className="infoLine__value">{value}</p>

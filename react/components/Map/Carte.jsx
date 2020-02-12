@@ -5,8 +5,8 @@ import {bg} from '../../data/svg/bg.js';
 
 
 
-
 function Carte() {
+
   return (
     <div className="box--carte">
       <div className="carte__bg">{bg}</div>
@@ -18,6 +18,8 @@ function Carte() {
       <Linie nameLine="n" />
       <Linie nameLine="p" />
       <Linie nameLine="j" />
+
+      {/* {centerCarte()} */}
     </div>
   );
 }

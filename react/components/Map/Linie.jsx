@@ -12,19 +12,19 @@ function Linie(nameLine) {
 
   switch (nameLine.nameLine) {
     case 'a':
-      return <div>{liniea}</div>;
+      return <div className="wrapper--line">{liniea}</div>;
     case 'b':
-      return <div>{linieb}</div>;
+      return <div className="wrapper--line">{linieb}</div>;
     case 'c':
-      return <div>{liniec}</div>;
+      return <div className="wrapper--line">{liniec}</div>;
     case 'd':
-      return <div>{linied}</div>;
+      return <div className="wrapper--line">{linied}</div>;
     case 'n':
-      return <div>{linien}</div>;
+      return <div className="wrapper--line">{linien}</div>;
     case 'j':
-      return <div>{liniej}</div>;
+      return <div className="wrapper--line">{liniej}</div>;
     case 'p':
-      return <div>{liniep}</div>;
+      return <div className="wrapper--line">{liniep}</div>;
     default:
       return "what";
   }

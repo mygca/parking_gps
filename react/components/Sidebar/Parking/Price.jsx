@@ -3,8 +3,8 @@ import React from 'react';
 function Price() {
   return (
     <div className="parking__price price">
-      <p class="price__price">24€</p>
-      <p class="price__legende">Jour</p>
+      <p className="price__price">24€</p>
+      <p className="price__legende">Jour</p>
     </div>
   );
 }

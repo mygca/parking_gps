@@ -28,15 +28,20 @@ svg{
   overflow: scroll;
   .box--carte{
     position: relative;
-    width:100%;
-    div{
+    width:200%;
+    .wrapper--line{
       position: absolute;
       top:0;
       width:100%;
       height:100%;
     }
     .carte__bg{
-      width:100%;
+      position: relative;
+      top:auto;
+      height:auto;
+      svg{
+        position: relative;
+      }
     }
   }
 }

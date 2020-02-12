@@ -15,9 +15,9 @@ function Distance({name,value}) {
     // </div>
 
     <div className="parking__distance">
-      <div class="distanceBox distance">
-        <p class="distance__legende">{name}</p>
-        <p class="distance__distance">{value}</p>
+      <div className="distanceBox distance">
+        <p className="distance__legende">{name}</p>
+        <p className="distance__distance">{value}</p>
       </div>
     </div>
   );

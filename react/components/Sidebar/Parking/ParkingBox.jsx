@@ -7,6 +7,8 @@ import Price from './Price'
 import ButtonSeeMore from './ButtonSeeMoor'
 import ParkingOpend from './ParkingOpend'
 
+
+
 function Parking({opened}) {
   return (
     <div className="box--parking parking">
