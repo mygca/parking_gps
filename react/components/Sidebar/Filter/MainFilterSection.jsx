@@ -17,8 +17,8 @@ function MainFilterSection() {
       <Logo />
       <FilterBox name="site" text="Quoi ton site"/>
       <FilterBox name="direction" text="Direction d'arrive"/>
-      <Button name="Valide" />
-      {/* <h2>{selectedSite}</h2> */}
+      <Button name="Valide" /> 
+      <h2>{selectedSite}</h2>
     </div>
   );
 }

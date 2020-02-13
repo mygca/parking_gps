@@ -26,21 +26,21 @@ const FilterBox = ({text,name}) => {
 
   return (
     <div className="box--filter filterBox">
-    <h2 className="filterBox__headline">{text}</h2>
+      <h2 className="filterBox__headline">{text}</h2>
 
-    {name==="site"?
-      <Select
-        value={selectedSite}
-        onChange={handleChangeSite}
-        options={dataSites}
-      />
-    :
-    <Select
-      value={selectedDirection}
-      onChange={handleChangeDirection}
-      options={dataDirection}
-    />  
-  }
+      {name==="site"?
+        <Select
+          value={selectedSite}
+          onChange={handleChangeSite}
+          options={dataSites}
+        />
+        :
+        <Select
+          value={selectedDirection}
+          onChange={handleChangeDirection}
+          options={dataDirection}
+        />  
+      } 
 
       
     </div>
