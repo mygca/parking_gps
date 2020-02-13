@@ -27,9 +27,9 @@ function ParkingPreviewWrapper() {
   
   return (
     <div className="wrapper--parking">
-      <ParkingBox />
-      {/* <p>Hello Data!</p> 
-            { console.log(data) 
+      {/* <ParkingBox /> */}
+      {/*
+             console.log(data) 
             /*{ console.log(data["hydra:member"][0].ParkName) } */}
             {/* <ul>
               {
@@ -40,8 +40,15 @@ function ParkingPreviewWrapper() {
                   )
                 )
               }
-            </ul>
- */} 
+            </ul> */}
+
+        {data.map(data => (
+
+          <ParkingBox data={data}/>  
+            
+          )) 
+        }
+ 
 
       
     </div>

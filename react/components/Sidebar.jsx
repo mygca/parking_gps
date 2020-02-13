@@ -5,8 +5,8 @@ import MapOutput from './Sidebar/Resultat/MapOutput';
 const Sidebar = ({sport,setSport}) => {
   return (
     <div className="wrapper__sidebar sidebar">
-      <MainFilterSection sport={sport} setSport={setSport} />
-      {/* <MapOutput /> */}
+      {/* <MainFilterSection sport={sport} setSport={setSport} /> */}
+      <MapOutput />
     </div>
   );
 }

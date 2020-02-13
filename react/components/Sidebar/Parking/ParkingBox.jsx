@@ -11,7 +11,7 @@ import ParkingOpend from './ParkingOpend'
 
 
 
-function Parking() {
+function Parking({data}) {
   const [isOpen, setIsOpen] = useState(false);
   console.log(isOpen);
 
@@ -24,8 +24,9 @@ function Parking() {
 
       <div className="wrapper--flex">
         <div>
-          <h3>Parking-Vincennes Chateau</h3>
-          <RerArrete name="Vincennes"/>
+          {/* <h3>Parking-Vincennes Chateau</h3> */}
+          <h3>{data.ParkName}</h3>
+          <RerArrete name="Vincennes"/> 
         </div>
         <div className="wrapper--flex">
           <Favorit />
@@ -40,7 +41,7 @@ function Parking() {
           <ParkingOptions name="securite"/>
         </div>
         {isOpen===false?
-          <Price />
+          <Price data={data}/>
         :""}
       </div>
 
@@ -50,7 +51,7 @@ function Parking() {
       </div>
 
       {isOpen===true?
-        <ParkingOpend />
+        <ParkingOpend data={data} />
       :""}
 
     </div>
