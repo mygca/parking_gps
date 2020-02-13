@@ -15,19 +15,13 @@ function Carte({sport}) {
   
 
   useEffect(() => {
-    //centerMap({direction});
+    centerMap();
     //getGareId();
   },[])
 
   return (
     <div className="box--carte">
       <div className="carte__bg">{bg}</div>
-
-    
-
-     
-
-      
 
       {(sport === "athletik")? <div><Linie nameLine="b"/><Linie nameLine="d"/></div>
         :(sport === "aviron")?<Linie nameLine="p" />

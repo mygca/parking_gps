@@ -1,5 +1,4 @@
-export function centerMap(arrivalDirection){
-  console.log("hallo direction");
+export function centerMap(){
   let scrollContainer=document.querySelector(".wrapper__map");
   let scrollElement=document.querySelector(".box--carte");
 
@@ -12,20 +11,23 @@ export function centerMap(arrivalDirection){
   let yScroll = (imgHeight-imgWrapperHeight)/2;
   let xScroll = (imgWidth-imgWrapperWidth)/2;
 
-  let direction =arrivalDirection;
+  console.log("x "+xScroll +" y "+yScroll)
+  scrollContainer.scrollTo(xScroll, yScroll);
 
-  switch (direction) {
-    case 'nord':
+  // let direction =arrivalDirection;
 
-      return scrollContainer.scrollTo(xScroll, 0);
-    case 'east':
-      return scrollContainer.scrollTo(imgWidth, yScroll);
-    case 'south':
-      return scrollContainer.scrollTo(xScroll, imgHeight);
-    case 'west':
-      return scrollContainer.scrollTo(0, yScroll);
-    default:
-      return scrollContainer.scrollTo(xScroll, yScroll);
+  // switch (direction) {
+  //   case 'nord':
+
+  //     return scrollContainer.scrollTo(xScroll, 0);
+  //   case 'east':
+  //     return scrollContainer.scrollTo(imgWidth, yScroll);
+  //   case 'south':
+  //     return scrollContainer.scrollTo(xScroll, imgHeight);
+  //   case 'west':
+  //     return scrollContainer.scrollTo(0, yScroll);
+  //   default:
+  //     return scrollContainer.scrollTo(xScroll, yScroll);
       
-  }
+  // }
 }
