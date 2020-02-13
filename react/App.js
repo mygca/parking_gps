@@ -9,19 +9,18 @@ import Map from './components/Map';
 
 const App = () => {
 
-  const [sport, setSport] = useState()
-  const [direction, setDirection] = useState()
+  const [sport, setSport] = useState({label: "hallu", value: "amanda"})
+  //const [direction, setDirection] = useState({label: "hallu", value: "amanda"})
 
  
   return (
     <div className="wrapper">
       <div className="stateGlobal">
-        {/* <p>{sport.value}</p>
-        <p>{direction.value}</p> */}
+      <p>{sport.label}</p>
       </div>
-      <p></p>
-      <Sidebar setSport={setSport} setDirection={setDirection} direction={direction} sport={sport}/>
-      <Map sport={sport} direction={direction}/>
+      
+      <Sidebar setSport={setSport} sport={sport}/>
+      <Map sport={sport.label}/>
     </div>
     
 

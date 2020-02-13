@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 //import LanguageSwitcher from '../../Global/LanguageSwitcher'
 
 
-const MainFilterSection = ({sport,direction,setSport,setDirection}) => {
+const MainFilterSection = ({sport,setSport}) => {
 
 
   return (
@@ -16,10 +16,10 @@ const MainFilterSection = ({sport,direction,setSport,setDirection}) => {
 
 
       <Logo />
-      <FilterBox setSport={setSport} sport={sport} setDirection={setDirection} direction={direction}  name="site" text="Quoi ton site"/>
-      <FilterBox setSport={setSport} setDirection={setDirection} direction={direction}  name="direction" text="Direction d'arrive"/>
+      <FilterBox setSport={setSport} sport={sport} name="site" text="Quoi ton site"/>
+      {/* <FilterBox setSport={setSport} name="direction" text="Direction d'arrive"/> */}
 
-      {/* <Link  name="Valide" to="/application">Valide </Link> */}
+      <Button  name="Valide"> Valide </Button>
       {/* <h2>{selectedSite}</h2> */}
     </div>
   );
