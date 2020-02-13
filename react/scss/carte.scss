@@ -3,8 +3,12 @@ svg{
   height:auto;
   user-select:none;
   pointer-events: none;
-  .linie{fill:none;stroke-width:6px;stroke-miterlimit:10;stroke:#1d1d1b}
-  circle{fill:#fff;stroke:#1d1d1b;stroke-width:2px;transition:all 0.1s;pointer-events: auto !important;}
+
+  .linie{
+    fill:none;
+    stroke-width:6px;
+    stroke-miterlimit:10;
+    stroke:#1d1d1b}
   
   .siteOlympique{
     position: relative;
@@ -20,25 +24,35 @@ svg{
   .selectedSite{
     fill:#fff;
   }
-  circle:hover{
-    background-color: blue;
+
+}
+
+circle{
+  fill:#fff;
+  stroke:#1d1d1b;
+  stroke-width:2px;
+  transition:all 0.1s;
+  pointer-events: auto !important;
+  &:hover{
+  fill: blue;
   }
 }
 
 .map{
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
+  pointer-events: none;
   overflow: scroll;
+  
   .box--carte{
     position: relative;
     width:200%;
     .wrapper--line{
       position: absolute;
       pointer-events: none;
+      user-select: none;
       top:0;
       width:100%;
       height:100%;
+      
     }
     .carte__bg{
       position: relative;

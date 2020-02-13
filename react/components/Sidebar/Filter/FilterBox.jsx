@@ -7,6 +7,9 @@ import SiteContext from '../../../contexts/SiteContext'
 import DirectionContext from '../../../contexts/DirectionContext'
 
 import{centerMap} from '../../../functions/map/centerMap.js';
+import{getGareId} from '../../../functions/map/getGareId.js';
+
+//import {STATIONS} from '../../data/stations.js'
 
 const FilterBox = ({text,name}) => {
   const { selectedSite, setSelectedSite } = useContext(SiteContext);
@@ -16,13 +19,22 @@ const FilterBox = ({text,name}) => {
   const handleChangeSite = selectedSite => {
     setSelectedSite(selectedSite);
     console.log(selectedSite);
+    setTimeout(() => {
+      getGareId();
+    }, 100);
+    
   }
+
+ 
 
   const handleChangeDirection = selectedDirection => {
     setSelectedDirection(selectedDirection);
     console.log(selectedDirection);
     centerMap(selectedDirection.value);
   }
+
+  
+
 
   return (
     <div className="box--filter filterBox">

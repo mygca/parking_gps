@@ -1,36 +1,36 @@
 export const dataSites = [
   {value:'athletik', label:'Athlétisme'}, //404 806 (b,D)
-  {value:'aviron', label:'Aviron'}, //Vaires-sur-Marne
-  {value:'badminton', label:'Badminton'}, //Le Bourget
-  {value:'basketball-pierre', label:'Basket-ball | Stade Pierre-de-Coubertin'}, //Stade Pierre-de-Coubertin
-  {value:'basketball-accor', label:'Basket-ball | AccorHotels Arena'}, //Stade Pierre-de-Coubertin
-  {value:'beachvolley', label:'Beach-volley'}, // 141
-  {value:'bmx', label:'BMX'}, // 835 938
-  {value:'box', label:'box'}, // 376
-  {value:'canoe', label:'Canoë-kayak'}, // Vaires-sur-Marne
-  {value:'cyclism-pist', label:'Cyclisme sur piste'},  // 835 938
-  {value:'cyclism-route', label:'Cyclisme sur route'}, //  151
-  {value:'equitation', label:'Équitation'}, // 887 ,885 ,886
-  {value:'escrime', label:'Escrime'}, // 361
-  {value:'foot', label:'Foot - Paris'}, // 376
-  {value:'golf', label:'Golf'}, // 835 938
+  {value:'aviron', label:'Aviron'}, //866 (P)
+  {value:'badminton', label:'Badminton'}, // 427 (B)
+  {value:'basketball-pierre', label:'Basket-ball | Stade Pierre-de-Coubertin'}, // 367 (C)
+  {value:'basketball-accor', label:'Basket-ball | AccorHotels Arena'}, // 637 (C, Arena 1) 305 (P, Arena 2)
+  {value:'beachvolley', label:'Beach-volley'}, // 141 (C)
+  {value:'bmx', label:'BMX'}, // 835 938 (C, N)
+  {value:'box', label:'box'}, // 376 (C)
+  {value:'canoe', label:'Canoë-kayak'}, // 866 (P)
+  {value:'cyclism-pist', label:'Cyclisme sur piste'},  // 835 938 (C, N)
+  {value:'cyclism-route', label:'Cyclisme sur route'}, //  151 (A)
+  {value:'equitation', label:'Équitation'}, // 887 ,885 ,886 (C)
+  {value:'escrime', label:'Escrime'}, // 361 (C)
+  {value:'foot', label:'Foot - Paris'}, // 376 (C)
+  {value:'golf', label:'Golf'}, // 835 938 (C, N)
   // {value:'halterophilie', label:'Haltérophilie'}, // La Villette.
-  {value:'handball', label:'Handball'}, // Parc des expositions de la porte de Versailles
-  {value:'hockey', label:'Hockey sur gazon'}, // 435
-  {value:'judo', label:'Judo'}, // AccorHotels Arena
-  {value:'lutte', label:'Lutte'}, // AccorHotels Arena
-  {value:'natation-denise', label:'Natation | Saint-Denis'}, //  //404 806
-  {value:'natation-paris', label:'Natation | Paris'}, // Tour eifel
-  {value:'natation-synchronisee', label:'Natation synchronisée'}, // AccorHotels Arena
-  {value:'pentathlon', label:'Pentathlon moderne'},  // 887 ,885 ,886
-  {value:'plonge', label:'Plongeon'}, // //404 806
-  {value:'rugby', label:'Rugby'}, //Stade Jean-Bouin
-  {value:'taekwondo', label:'Taekwondo'}, // 361
-  {value:'tennis', label:'Tennis'}, // 376
-  {value:'tennis-table', label:'Tennis de table'}, // Parc des expositions de la porte de Versailles
+  {value:'handball', label:'Handball'}, // 872 (N)
+  {value:'hockey', label:'Hockey sur gazon'}, // 435 (J)
+  {value:'judo', label:'Judo'}, // 637 (C, Arena 1)
+  {value:'lutte', label:'Lutte'}, // 305 (P, Arena 2)
+  {value:'natation-denise', label:'Natation | Saint-Denis'}, // 404 806 (B, D)
+  {value:'natation-paris', label:'Natation | Paris'}, // 141 (C)
+  {value:'natation-synchronisee', label:'Natation synchronisée'}, // 404 806 (B, D)
+  {value:'pentathlon', label:'Pentathlon moderne'},  // 887 ,885 ,886 (C)
+  {value:'plonge', label:'Plongeon'}, // 404 806 (B, D)
+  {value:'rugby', label:'Rugby'}, // 57 (C)
+  {value:'taekwondo', label:'Taekwondo'}, // 361 (C)
+  {value:'tennis', label:'Tennis'}, // 57 (C)
+  {value:'tennis-table', label:'Tennis de table'}, // 872 (N)
 
-  {value:'tennis-table', label:'VTT'}, // Parc des expositions de la porte de Versailles
-  {value:'volleyball', label:'Volley-ball indoor'}, // Le Bourget
-  {value:'water-polo', label:'Water-polo'}, // Centre de water-polo
+  {value:'tennis-table', label:'VTT'}, // 858 (N)
+  {value:'volleyball', label:'Volley-ball indoor'}, // 427 (B)
+  {value:'water-polo', label:'Water-polo'}, // 34 (B)
 
 ]

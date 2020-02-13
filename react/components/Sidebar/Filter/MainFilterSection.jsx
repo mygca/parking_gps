@@ -3,6 +3,7 @@ import React from 'react';
 import FilterBox from './FilterBox';
 import Button from '../../Global/Button';
 import Logo from '../../Global/Logo';
+import { Link } from 'react-router-dom'
 
 //import LanguageSwitcher from '../../Global/LanguageSwitcher'
 
@@ -17,7 +18,8 @@ function MainFilterSection() {
       <Logo />
       <FilterBox name="site" text="Quoi ton site"/>
       <FilterBox name="direction" text="Direction d'arrive"/>
-      <Button name="Valide" />
+
+      <Link  name="Valide" to="/application">Valide </Link>
       {/* <h2>{selectedSite}</h2> */}
     </div>
   );
