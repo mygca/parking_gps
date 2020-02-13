@@ -16,9 +16,9 @@ function ParkingOpend({data}) {
       <ParkingInfoLinie name="time" legende="Ouvertures" data={ data.OpenTime==null ? "nc" : data.OpenTime } />
       <div className="wrapper--flex wrapper--prix">
         {/* <ParkingInfoLinie name="price" legende="Jour" value="10€" /> */}
-        <ParkingInfoLinie name="price" legende="Jour" data={data.PriceDay + "€"} />
+        <ParkingInfoLinie name="price" legende="Jour" data={data.PriceDay=='' || data.PriceDay=="Pas d'information" ? `${data.PriceDay}€` : "Pas d'information"} />
         {/* <ParkingInfoLinie name="price" legende="Semaine" value="30€" /> */}
-        <ParkingInfoLinie name="price" legende="Semaine" data={data.PriceWeek + "€"} />
+        <ParkingInfoLinie name="price" legende="Semaine" data={data.PriceWeek=='' || data.PriceWeek=="Pas d'information" ? `${data.PriceWeek}€` : "Pas d'information"}  />
       </div>
     </div>
   );
