@@ -21,9 +21,9 @@ function Carte({site,direction}) {
     <div className="box--carte">
       <div className="carte__bg">{bg}</div>
 
-      {(site === "athletik")?<Linie nameLine="a" />
-        :(site === "rugby")?<Linie nameLine="b" />
-        :(site === "velo")?<Linie nameLine="c" />
+      {(site === "athletik")? <div><Linie nameLine="b"/><Linie nameLine="d"/></div>
+        // :(site === "aviron")?<Linie nameLine="b" />
+        :(site === "badminton")?<Linie nameLine="b" />
         :(site === "handball")?<Linie nameLine="d" />
         :(site === "cheval")?<Linie nameLine="j" />
         :(site === "bateau")?<Linie nameLine="n" />
