@@ -2,10 +2,12 @@ import React from 'react';
 import Carte from './Map/Carte';
 import Popup from './Map/Popup';
 
-function Map({site,direction}) {
+const Map = ({sport, site}) => {
   return (
     <div className="wrapper__map map">
-      <Carte site={site} direction={direction} />
+      <p>{site}</p>
+      <Carte site={site} />
+      {console.log("mapsport", sport)}
       <Popup />
     </div>
   );
