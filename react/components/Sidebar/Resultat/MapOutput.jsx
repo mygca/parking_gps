@@ -13,7 +13,7 @@ function MapOutput() {
   const [isSecurity, setIsSecurity] = useState(false)
   const [minHeight, setMinHeight] = useState("1.9")
 
-  const [gareID, setGareID] = useState(10)
+  const [gareID, setGareID] = useState()
 
   useEffect(() => {
     getGareId(setGareID)
