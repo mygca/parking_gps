@@ -64,6 +64,7 @@ class CsvGareCommand extends Command
             ) {
 
             $gare = (new GaresIDF())
+                ->setId(intval($row['gares_id']))
                 ->setGeoPoint($row['Geo Point'])
                 ->setGeoShape($row['Geo Shape'])
                 ->setNomGare($row['nom_gare'])

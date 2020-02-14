@@ -8,24 +8,17 @@
 namespace App\Controller;
 
 use App\Entity\Contact;
+use App\Entity\GaresIDF;
 use App\Entity\Parking;
 use App\Form\ContactForm;
 use Doctrine\ORM\EntityManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
 class MapController extends AbstractController
 {
-
-    private $session;
-
-    public function __construct(SessionInterface $session)
-    {
-        $this->session = $session;
-    }
 
     /**
      * @Route("/", name="homepage")
@@ -33,7 +26,7 @@ class MapController extends AbstractController
     public function home ()
     {
 
-        dump($this->session->get('login'));
+        // dump($this->getUser());
         $repository = $this->getDoctrine()->getRepository(Parking::class);
 
 
@@ -84,14 +77,20 @@ class MapController extends AbstractController
         ]);
     }
 
+
     /**
-     * @Route("/react", name="test_react")
+     * @Route("/test", name="test")
      */
-    public function reactJS (): Response
+    public function gare ()
     {
 
-        return $this->render('js/index.html.twig', [
-            'controller_name' => 'reactjs',
+        // dump($this->getUser());
+        $repository = $this->getDoctrine()->getRepository(GaresIDF::class)->findAll();
+        dump($repository);
+
+        return $this->render('index.html.twig', [
+            'controller_name' => 'homepage',
+            'parking' => $repository[0],
         ]);
     }
 
