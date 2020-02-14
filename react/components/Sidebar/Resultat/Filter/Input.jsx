@@ -10,7 +10,6 @@ function Input({name,minHeight,setMinHeight}) {
     <div className="wrapper--input">
       <input placeholder="1.9" onChange={handlerOnChange} />
       <label>{name}</label>
-      <p>{minHeight}</p>
     </div>
   );
 }

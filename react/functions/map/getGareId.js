@@ -1,20 +1,7 @@
-//import React, { useContext } from 'react';
-// import GareIDContext from '../../contexts/GareIDContext'
-
-export function getGareId(){
+export default function getGareId(setGareID){
 
   console.log("gare id")
 
-  //const { selectedGareID, setSelectedGareID } = useContext(GareIDContext);
-
-  // const handleChangeGareID = selectedGareID => {
-  //   setSelectedGareID(selectedGareID);
-  //   console.log(selectedGareID);
-  //   centerMap(selectedGareID.value);
-  // }
-
-
-  //get all circels of svg which is selected
   let circles = document.querySelectorAll("circle");
 
   console.log(circles)
@@ -36,10 +23,8 @@ export function getGareId(){
       let selectedGareIDoutput = circle.getAttribute('data-station-id');
       console.log(selectedGareIDoutput);
 
-      return selectedGareIDoutput;
-
       // set state gare id
-      // handleChangeGareID(selectedGareID)
+      setGareID(selectedGareIDoutput)
 
 
 
@@ -54,3 +39,4 @@ export function getGareId(){
     });
   }
 }
+

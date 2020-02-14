@@ -3,7 +3,7 @@ import Searchbar from './Filter/Searchbar';
 import ToggelButton from './Filter/ToggelButton';
 import Input from './Filter/Input';
 
-function FilterBox({setIs24,setIsHandicap,setIsSecurity,is24,isHandicap,isSecurity,minHeight,setMinHeight}) {
+function FilterBox({setIs24,setIsHandicap,setIsSecurity,is24,isHandicap,isSecurity,minHeight,setMinHeight,}) {
   return (
     <div className="output__filter">
       {/* <Searchbar /> */}
@@ -15,11 +15,6 @@ function FilterBox({setIs24,setIsHandicap,setIsSecurity,is24,isHandicap,isSecuri
         </div>
         <Input name="Hauter Minimum" setMinHeight={setMinHeight} minHeight={minHeight} />
 
-        <br></br>
-        <p>{is24?"24":""}</p>
-        <p>{isHandicap?"handicap":""}</p>
-        <p>{isSecurity?"security":""}</p>
-        <p>{minHeight}</p>
     </div>
   );
 }

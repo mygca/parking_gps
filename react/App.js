@@ -16,10 +16,10 @@ const App = () => {
  
   return (
     <div className="wrapper">
-      <div className="stateGlobal">
+      {/* <div className="stateGlobal">
       <p>{sport.label}</p>
       <p>{isSelected}</p>
-      </div>
+      </div> */}
       
       <Sidebar setSport={setSport} sport={sport} setIsSelected={setIsSelected} isSelected={isSelected}/>
       <Map sport={sport.label}/>
