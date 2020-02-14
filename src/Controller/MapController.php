@@ -8,6 +8,7 @@
 namespace App\Controller;
 
 use App\Entity\Contact;
+use App\Entity\GaresIDF;
 use App\Entity\Parking;
 use App\Form\ContactForm;
 use Doctrine\ORM\EntityManager;
@@ -25,6 +26,7 @@ class MapController extends AbstractController
     public function home ()
     {
 
+        // dump($this->getUser());
         $repository = $this->getDoctrine()->getRepository(Parking::class);
 
 
@@ -75,14 +77,20 @@ class MapController extends AbstractController
         ]);
     }
 
+
     /**
-     * @Route("/react", name="test_react")
+     * @Route("/test", name="test")
      */
-    public function reactJS (): Response
+    public function gare ()
     {
 
-        return $this->render('js/index.html.twig', [
-            'controller_name' => 'reactjs',
+        // dump($this->getUser());
+        $repository = $this->getDoctrine()->getRepository(GaresIDF::class)->findAll();
+        dump($repository);
+
+        return $this->render('index.html.twig', [
+            'controller_name' => 'homepage',
+            'parking' => $repository[0],
         ]);
     }
 

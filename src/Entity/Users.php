@@ -54,13 +54,23 @@ class Users implements UserInterface
     private $phone;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\RatingInfo", mappedBy="userID")
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $ratingInfos;
+    private $FirstName;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $LastName;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Favorite", mappedBy="UserID")
+     */
+    private $favorites;
 
     public function __construct()
     {
-        $this->ratingInfos = new ArrayCollection();
+        $this->favorites = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -138,29 +148,53 @@ class Users implements UserInterface
     {
     }
 
-    /**
-     * @return Collection|RatingInfo[]
-     */
-    public function getRatingInfos(): Collection
+    public function getFirstName(): ?string
     {
-        return $this->ratingInfos;
+        return $this->FirstName;
     }
 
-    public function addRatingInfo(RatingInfo $ratingInfo): self
+    public function setFirstName(?string $FirstName): self
     {
-        if (!$this->ratingInfos->contains($ratingInfo)) {
-            $this->ratingInfos[] = $ratingInfo;
-            $ratingInfo->addUserID($this);
+        $this->FirstName = $FirstName;
+
+        return $this;
+    }
+
+    public function getLastName(): ?string
+    {
+        return $this->LastName;
+    }
+
+    public function setLastName(?string $LastName): self
+    {
+        $this->LastName = $LastName;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Favorite[]
+     */
+    public function getFavorites(): Collection
+    {
+        return $this->favorites;
+    }
+
+    public function addFavorite(Favorite $favorite): self
+    {
+        if (!$this->favorites->contains($favorite)) {
+            $this->favorites[] = $favorite;
+            $favorite->addUserID($this);
         }
 
         return $this;
     }
 
-    public function removeRatingInfo(RatingInfo $ratingInfo): self
+    public function removeFavorite(Favorite $favorite): self
     {
-        if ($this->ratingInfos->contains($ratingInfo)) {
-            $this->ratingInfos->removeElement($ratingInfo);
-            $ratingInfo->removeUserID($this);
+        if ($this->favorites->contains($favorite)) {
+            $this->favorites->removeElement($favorite);
+            $favorite->removeUserID($this);
         }
 
         return $this;

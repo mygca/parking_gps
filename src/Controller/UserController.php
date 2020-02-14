@@ -57,26 +57,12 @@ class UserController extends AbstractController
             $em->flush();
 
 
-            return $this->redirectToRoute('toto');
+            return $this->redirectToRoute('login');
         }
 
         return $this->render('forms/register.html.twig', [
             'controller_name' => 'register',
             'form' => $form->createView()
-        ]);
-    }
-
-
-
-    /**
-     * @Route("/toto", name="toto")
-     */
-    public function toto(Request $req)
-    {
-        $repository = $this->getDoctrine()->getRepository(Users::class);
-        return $this->render('js/index.html.twig', [
-            'controller_name' => 'homepage',
-            'locale' => $req->getLocale(),
         ]);
     }
 

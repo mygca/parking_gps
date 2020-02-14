@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -117,6 +119,16 @@ class Parking
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $PlaceMoto;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\GaresIDF", inversedBy="gares_id")
+     */
+    private $GaresID;
+
+    public function __construct()
+    {
+        $this->GaresID = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -359,6 +371,32 @@ class Parking
     public function setPlaceMoto(?string $PlaceMoto): self
     {
         $this->PlaceMoto = $PlaceMoto;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|GaresIDF[]
+     */
+    public function getGaresID(): Collection
+    {
+        return $this->GaresID;
+    }
+
+    public function addGaresID(GaresIDF $garesID): self
+    {
+        if (!$this->GaresID->contains($garesID)) {
+            $this->GaresID[] = $garesID;
+        }
+
+        return $this;
+    }
+
+    public function removeGaresID(GaresIDF $garesID): self
+    {
+        if ($this->GaresID->contains($garesID)) {
+            $this->GaresID->removeElement($garesID);
+        }
 
         return $this;
     }

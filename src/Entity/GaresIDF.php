@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
 
@@ -16,7 +18,7 @@ class GaresIDF
 {
     /**
      * @ORM\Id()
-     * @ORM\GeneratedValue()
+     * @ORM\GeneratedValue(strategy="NONE")
      * @ORM\Column(type="integer")
      */
     private $id;
@@ -86,9 +88,26 @@ class GaresIDF
      */
     private $y;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Parking")
+     */
+    private $parkings;
+
+    public function __construct()
+    {
+        $this->parkings = new ArrayCollection();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function setId(string $id): self
+    {
+        $this->id = $id;
+
+        return $this;
     }
 
     public function getGeopoint(): ?string
@@ -243,6 +262,34 @@ class GaresIDF
     public function setY(string $y): self
     {
         $this->y = $y;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Parking[]
+     */
+    public function getParkings(): Collection
+    {
+        return $this->parkings;
+    }
+
+    public function addParking(Parking $parking): self
+    {
+        if (!$this->parkings->contains($parking)) {
+            $this->parkings[] = $parking;
+            $parking->addGaresID($this);
+        }
+
+        return $this;
+    }
+
+    public function removeParking(Parking $parking): self
+    {
+        if ($this->parkings->contains($parking)) {
+            $this->parkings->removeElement($parking);
+            $parking->removeGaresID($this);
+        }
 
         return $this;
     }

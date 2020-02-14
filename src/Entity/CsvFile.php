@@ -44,7 +44,6 @@ class CsvFile
         $this->setIntoDB(false);
     }
 
-
     public function getId(): ?int
     {
         return $this->id;

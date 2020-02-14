@@ -9,9 +9,9 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ApiResource()
- * @ORM\Entity(repositoryClass="App\Repository\RatingInfoRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\FavoriteRepository")
  */
-class RatingInfo
+class Favorite
 {
     /**
      * @ORM\Id()
@@ -21,19 +21,19 @@ class RatingInfo
     private $id;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Users", inversedBy="ratingInfos")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Users", inversedBy="favorites")
      */
-    private $userID;
+    private $UserID;
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Parking")
      */
-    private $parkID;
+    private $ParkingID;
 
     public function __construct()
     {
-        $this->userID = new ArrayCollection();
-        $this->parkID = new ArrayCollection();
+        $this->UserID = new ArrayCollection();
+        $this->ParkingID = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -46,13 +46,13 @@ class RatingInfo
      */
     public function getUserID(): Collection
     {
-        return $this->userID;
+        return $this->UserID;
     }
 
     public function addUserID(Users $userID): self
     {
-        if (!$this->userID->contains($userID)) {
-            $this->userID[] = $userID;
+        if (!$this->UserID->contains($userID)) {
+            $this->UserID[] = $userID;
         }
 
         return $this;
@@ -60,8 +60,8 @@ class RatingInfo
 
     public function removeUserID(Users $userID): self
     {
-        if ($this->userID->contains($userID)) {
-            $this->userID->removeElement($userID);
+        if ($this->UserID->contains($userID)) {
+            $this->UserID->removeElement($userID);
         }
 
         return $this;
@@ -70,24 +70,24 @@ class RatingInfo
     /**
      * @return Collection|Parking[]
      */
-    public function getParkID(): Collection
+    public function getParkingID(): Collection
     {
-        return $this->parkID;
+        return $this->ParkingID;
     }
 
-    public function addParkID(Parking $parkID): self
+    public function addParkingID(Parking $parkingID): self
     {
-        if (!$this->parkID->contains($parkID)) {
-            $this->parkID[] = $parkID;
+        if (!$this->ParkingID->contains($parkingID)) {
+            $this->ParkingID[] = $parkingID;
         }
 
         return $this;
     }
 
-    public function removeParkID(Parking $parkID): self
+    public function removeParkingID(Parking $parkingID): self
     {
-        if ($this->parkID->contains($parkID)) {
-            $this->parkID->removeElement($parkID);
+        if ($this->ParkingID->contains($parkingID)) {
+            $this->ParkingID->removeElement($parkingID);
         }
 
         return $this;
