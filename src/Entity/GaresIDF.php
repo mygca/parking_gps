@@ -6,13 +6,15 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
+use ApiPlatform\Core\Annotation\ApiSubresource;
+
 
 
 /**
  *
+ * @ApiResource
  * @ORM\Entity(repositoryClass="App\Repository\GaresIDFRepository")
  *
- * @ApiResource
  */
 class GaresIDF
 {
@@ -90,6 +92,7 @@ class GaresIDF
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Parking")
+     * @ApiSubresource
      */
     private $parkings;
 
