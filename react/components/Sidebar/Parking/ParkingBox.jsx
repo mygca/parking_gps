@@ -25,7 +25,7 @@ function Parking({data}) {
       <div className="wrapper--flex">
         <div>
           {/* <h3>Parking-Vincennes Chateau</h3> */}
-          <h3>{data.ParkName}</h3>
+          <h3>{data.gares_id}</h3>
           <RerArrete name="Vincennes"/> 
         </div>
         <div className="wrapper--flex">
