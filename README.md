@@ -30,14 +30,14 @@ php bin/console d:m:m
 
 Concernant l'import des CSV dans la base de données, plusieurs commandes sont à votre disposition:
 
-### Import de tout les CSV de Parking
-```bash
-php bin/console csv:parking
-```
-
-### file: Import des Train / Metro / RER / Tramway (A trier)
+### file: Import des Trains et RER
 ```bash
 php bin/console csv:gareidf
+```
+
+### Import de tout les CSV de Parking associés aux Gares
+```bash
+php bin/console csv:parking
 ```
 
 
@@ -50,12 +50,7 @@ php bin/console doctrine:migrations:version YYYYMMDDHHMMSS --delete
 
 Reset sa base de données:
 ```bash
-php bin/console doctrine:database:drop --force
-php bin/console d:d:c
-php bin/console d:m:m
-y
-php bin/console c:c
- 
+php bin/console reset:db
 ```
 
 
