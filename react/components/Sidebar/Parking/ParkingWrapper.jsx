@@ -4,7 +4,7 @@ import ParkingBox from './ParkingBox';
 //import { data } from '../../../../data/parkings';
 import parkings from '../../../data/parkings';
 
-function ParkingPreviewWrapper() {
+function ParkingWrapper() {
   const [data, setData] = useState([]);
 
   // useEffect(()=> {
@@ -78,4 +78,4 @@ function ParkingPreviewWrapper() {
   );
 }
 
-export default ParkingPreviewWrapper;
+export default ParkingWrapper;
