@@ -13,7 +13,7 @@ import ParkingOpend from './ParkingOpend'
 
 function Parking({data}) {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
+  //console.log(isOpen);
 
   const toFalse = ()=> {
     setIsOpen(!isOpen);

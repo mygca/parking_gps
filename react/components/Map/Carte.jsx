@@ -12,8 +12,6 @@ import{getGareId} from '../../functions/map/getGareId.js';
 
 function Carte({sport}) {
 
-  
-
   useEffect(() => {
     centerMap();
     //getGareId();

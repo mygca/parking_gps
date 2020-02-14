@@ -1,26 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import FilterBox from './FilterBox';
 import Button from '../../Global/Button';
 import Logo from '../../Global/Logo';
-import { Link } from 'react-router-dom'
-
-//import LanguageSwitcher from '../../Global/LanguageSwitcher'
 
 
-const MainFilterSection = ({sport,setSport}) => {
 
+
+const MainFilterSection = ({sport,setSport,setIsSelected,isSelected}) => {
+
+  
+
+  function handlerClick(){
+    {setIsSelected("true")}
+  }
 
   return (
     <div className="wrapper--filter">
 
-
       <Logo />
-      <FilterBox setSport={setSport} sport={sport} name="site" text="Quoi ton site"/>
+      <FilterBox setSport={setSport} sport={sport}  name="site" text="Quoi ton site"/>
       {/* <FilterBox setSport={setSport} name="direction" text="Direction d'arrive"/> */}
 
-      <Button  name="Valide"> Valide </Button>
-      {/* <h2>{selectedSite}</h2> */}
+      <button className="button--primary" onClick={handlerClick}>Valide</button>
+
     </div>
   );
 }
