@@ -13,7 +13,7 @@ function MapOutput() {
   const [isSecurity, setIsSecurity] = useState(false)
   const [minHeight, setMinHeight] = useState("1.9")
 
-  const [gareID, setGareID] = useState(10)
+  const [gareID, setGareID] = useState()
 
   useEffect(() => {
     getGareId(setGareID)
@@ -29,7 +29,10 @@ function MapOutput() {
         setMinHeight={setMinHeight} minHeight={minHeight}
       />
       <p>{gareID}</p>
-      <ParkingOutput />
+      <ParkingOutput gareID={gareID} setIs24={setIs24} is24={is24}
+        setIsHandicap={setIsHandicap} isHandicap={isHandicap}
+        setIsSecurity={setIsSecurity} isSecurity={isSecurity}
+        setMinHeight={setMinHeight} minHeight={minHeight}/>
 
  
     </div>

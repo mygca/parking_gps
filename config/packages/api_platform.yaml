@@ -8,3 +8,7 @@ api_platform:
     collection:
         pagination:
             enabled: false
+# App\Entity\GaresIDF:
+#     collectionOperations:
+#         get:
+#             filters: ['garesidf.reseau_filter']
