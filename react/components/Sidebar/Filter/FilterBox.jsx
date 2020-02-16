@@ -17,7 +17,7 @@ const FilterBox = ({ setSport, text,name, sport}) => {
     {name==="site"?
       <Select
         value={sport}
-        onChange={(e) => {setSport({label: e.value, value: e.value})}}
+        onChange={(e) => {setSport({label: e.value, value: e.value, lines: e.lines})}}
         options={dataSites}
       />
     :""

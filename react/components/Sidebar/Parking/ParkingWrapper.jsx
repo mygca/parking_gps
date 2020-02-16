@@ -106,13 +106,15 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
       }
     //handleToggleFilter();
     //handleToggleFilter();
-    if (is24) {
-      console.log('ezi')
-    }
+
+    // if (is24) {
+    //   console.log('ezi')
+    // }
+
     setData(parkings);
     //Loop()
     fetchGare();
-  }, [is24])
+  }, [])
   
   //handleToggleFilter();
 

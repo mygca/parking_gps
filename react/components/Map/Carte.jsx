@@ -41,7 +41,7 @@ function Carte({sport}) {
         :(sport === "judo")?<Linie nameLine="c" />
         :(sport === "lutte")?<Linie nameLine="p" />
         :(sport === "natation-denise")?<div><Linie nameLine="b"/><Linie nameLine="d"/></div>
-        :(sport === "natation-paris")?<Linie nameLine="a" />
+        :(sport === "natation-paris")?<Linie nameLine="c" />
         :(sport === "natation-synchronisee")?<div><Linie nameLine="b" /><Linie nameLine="d" /></div>
         :(sport === "pentathlon")?<Linie nameLine="c" />
         :(sport === "plonge")?<div><Linie nameLine="b"/><Linie nameLine="d"/></div>
