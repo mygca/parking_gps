@@ -2,7 +2,7 @@ import React from 'react';
 import FilterBoxAffichage from './FilterBoxAffichage';
 import ParkingWrapper from '../Parking/ParkingWrapper';
 
-function ParkingOutput({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHandicap,isSecurity,minHeight,setMinHeight}) {
+function ParkingOutput({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHandicap,isSecurity,minHeight,setMinHeight, sport}) {
   return (
     <div className="wrapper--parkingOutput">
       <h2>Tout des Parkings</h2>
@@ -11,7 +11,7 @@ function ParkingOutput({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHandi
       <ParkingWrapper gareID={gareID} setIs24={setIs24} is24={is24}
         setIsHandicap={setIsHandicap} isHandicap={isHandicap}
         setIsSecurity={setIsSecurity} isSecurity={isSecurity}
-        setMinHeight={setMinHeight} minHeight={minHeight}/>
+        setMinHeight={setMinHeight} minHeight={minHeight} sport={sport}/>
     </div>
   );
 }
