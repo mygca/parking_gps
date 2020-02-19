@@ -3,12 +3,19 @@ import axios from 'axios';
 import ParkingBox from './ParkingBox';
 //import { data } from '../../../../data/parkings';
 import parkings from '../../../data/parkings';
+import getParkingByLine from '../../../functions/map/getParkingByLine';
+//import handleToggleFilter from '../../../functions/map/handleToggleFilter';
 
 import showParkings from '../../../functions/map/showParking';
 
 
-function ParkingWrapper() {
+function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHandicap,isSecurity,minHeight,setMinHeight, sport, lines}) {
   const [data, setData] = useState([]);
+  const [gares, setGares] = useState(null);
+
+  /*
+  * Data fetch parkings from API
+  */
 
   // useEffect(()=> {
 
@@ -29,27 +36,116 @@ function ParkingWrapper() {
     
   // }, []);
 
-  // useEffect(()=>{
+  //console.log(parkings);
+  // var z = typeof parkings;
+  // console.log(z);
 
-  //   // const fetchData = async () => {
-  //   //   const result = await axios.get(
-  //   //     '../../../../data/parkings.js',
-  //   //     );
-  //   //   setData(result.data);
-  //   //   }
+  //getParkingByLine(gares);
+
+  //console.log(gares)
+
+  // for (const p of gares) {
+  //   //console.log(p.company)
+  //   console.log(p.garesId)
+  // }
 
 
-  //   fetch('../../../../data/parkings.js')
-  //     .then( response => response.json )
-  //     .then( setData(response.json) );
 
-  // }, [])
+  
+
+  
+  const fetchGare = () => {
+  // const rer = ['a', 'b', 'c', 'd'];
+  const linesJO = ['a', 'b', 'c', 'd', 'j', 'n', 'p'];
+  //const train = ['j', 'n', 'p'];
+  const Line = [];
+    if ((lines).length > 1) 
+    { 
+      //const lines = (lines).length;
+      
+      for (let i = 0; i < lines.length; i++) {
+        const l = lines[i];
+        //console.log(l)
+        if (linesJO.includes(l)) {
+          //l1 = `rer%20`;
+          Line.push(l)
+        } 
+        else {
+          //pathLine.push(l)
+          console.log(`La ligne ${l} ne dessert pas les JO`)
+        }
+        
+      }
+
+     const garesUrlLine1 = `/api/gares_i_d_fs?indice_ligne=${Line[0]}`;
+     const garesUrlLine2 = `/api/gares_i_d_fs?indice_ligne=${Line[1]}`; 
+   
+ 
+      axios
+        .all(
+          // [requestTrain, requestRer]
+          [axios.get(garesUrlLine1), axios.get(garesUrlLine2)]
+        )
+        .then(
+          axios.spread((...responses) => {
+            const responseOne = responses[0].data["hydra:member"];
+            const responseTwo = responses[1].data["hydra:member"];
+            let allGares = [...responseOne, ...responseTwo];
+
+            //console.log(allGares[0])
+            setGares(allGares)
+
+          })
+        );
+
+    } 
+    else 
+    {
+      console.log('na')
+      axios
+        .get(
+          `/api/gares_i_d_fs?indice_ligne=${lines}`,
+        )
+        .then((res) => {
+            //console.log(res.data["hydra:member"])
+            setGares(res.data["hydra:member"])
+          }
+        )
+    }
+  }
 
   useEffect(() => {
     setData(parkings);
     showParkings({data})
+
+    fetchGare();
+    //setData(parkings);
+    getParkingByLine(gares);
+ 
   }, [])
-  
+  console.log(gares);
+  getParkingByLine(gares, parkings);
+  //console.log(getParkingByLine(gares, parkings))
+  //console.log(gares[0].garesId);
+  // var t = Object.values(gares)
+  // console.log(t)
+
+  // for (const p of gares) {
+  //   //console.log(p.company)
+  //   console.log(p.garesId)
+  // }
+  // const parkingsByLine = [];
+  // for (const p of parkings) {
+  //   for (let i = 0; i < (p.gares_id).length; i++) {
+  //     const parkingGareid = p.gares_id[i];
+  //     if (gares.includes(parkingGareid))
+  //     {
+  //       parkingsByLine.push(p)
+  //     }
+      
+  //   }
+  // }
+  // console.log(parkingsByLine)
 
   
   return (
@@ -68,13 +164,28 @@ function ParkingWrapper() {
                 )
               }
             </ul> */}
+        <p>C'est le gareid :{gareID}</p>
+          <p>{is24}</p>
+          {/* <p>{(lines).length}</p> */}
+          {/* <p>{gares[0].reseau}</p> */}
+        
+          {/* {gares.map(data => (
 
-        {data.map(data => (
+              <ParkingBox data={data}/>  
+            
+            )) 
+          } */}
 
-          <ParkingBox data={data}/>  
+          {/* {gares.map(gare =>(
+            <p>{gare.reseau}</p>
+          ))} */}
+
+         {data.map((data, i )=> (
+
+          <ParkingBox key={i} data={data}/>  
             
           )) 
-        }
+        } 
  
 
       

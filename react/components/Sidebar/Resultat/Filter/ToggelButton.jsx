@@ -8,6 +8,7 @@ function ToggelButton({name,is24,isHandicap,isSecurity,setIs24,setIsHandicap,set
 
     if(name==="24"){
       setIs24(!is24)
+      console.log(is24)
     }
     else if(name==="handicap"){
       setIsHandicap(!isHandicap);
