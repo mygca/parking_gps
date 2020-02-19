@@ -8,7 +8,7 @@ export const linien =<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://
   <line data-ligne-line="n" className="linie linie--n" x1="399.86" y1="1739.18" x2="709.39" y2="1429.65"/>
 
   <circle data-ligne="n" data-station-id="501" data-station="gare-montparnasse" cx="1317.04" cy="1200.45" r="7"/>
-  <circle data-ligne="n" data-station-id="872" data-station="vanves-malakoff" cx="1248.01" cy="1268.25" r="7"/>
+  <circle data-ligne="n" data-station-id="872" handball="true" data-station="vanves-malakoff" cx="1248.01" cy="1268.25" r="7" tennistable="true"/>
   <circle data-ligne="n" data-station-id="190" data-station="clamart" cx="1170.67" cy="1304.93" r="7"/>
   <circle data-ligne="n" site="bateau" data-station-id="538" data-station="meudon" cx="1095.17" cy="1304.93" r="7"/>
   <circle data-ligne="n" data-station-id="62" data-station="bellevue" cx="1058.72" cy="1304.93" r="7"/>
@@ -17,8 +17,8 @@ export const linien =<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://
   <circle data-ligne="n" data-station-id="915" data-station="viroflay-river-gauche" cx="1033.04" cy="1402.37" r="7"/>
   <circle data-ligne="n" data-station-id="886" data-station="versialle-chantiers" cx="869.5" cy="1431.38" r="7"/>
   <circle data-ligne="n" data-station-id="813" data-station="saint-cyr" cx="731.04" cy="1431.38" r="7"/>
-  <circle className="parking" data-ligne="n" data-station-id="938" data-station="saint-quentin-en-yvelines-montigny-le-bretonneuax" cx="673.37" cy="1466.31" r="7"/>
-  <circle data-ligne="n" data-station-id="858" data-station="trappes" cx="634.71" cy="1503.64" r="7"/>
+  <circle className="parking" data-ligne="n" data-station-id="938" bmx="true" cyclismpist="true" data-station="saint-quentin-en-yvelines-montigny-le-bretonneuax" golf="true" cx="673.37" cy="1466.31" r="7"/>
+  <circle data-ligne="n" data-station-id="858" data-station="trappes" vtt="true" cx="634.71" cy="1503.64" r="7"/>
   <circle data-ligne="n" data-station-id="406" data-station="la-verriere" cx="596.03" cy="1543.46" r="7"/>
   <circle className="parking" data-ligne="n" data-station-id="193" data-station="coignieres" cx="559.2" cy="1579.84" r="7"/>
   <circle data-ligne="n" data-station-id="458" data-station="les-essarts-le-roi" cx="518.18" cy="1619.25" r="7"/>

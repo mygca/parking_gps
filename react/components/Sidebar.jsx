@@ -11,7 +11,7 @@ const Sidebar = ({sport,setSport,setIsSelected,isSelected}) => {
 
       {isSelected === "false"?
         <MainFilterSection sport={sport} setSport={setSport} setIsSelected={setIsSelected}  isSelected={isSelected}/>
-      :<MapOutput /> 
+      :<MapOutput sport={sport.value} /> 
       }
       
     </div>

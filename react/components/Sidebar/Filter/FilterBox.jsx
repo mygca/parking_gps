@@ -10,14 +10,18 @@ import{getGareId} from '../../../functions/map/getGareId.js';
 
 const FilterBox = ({ setSport, text,name, sport}) => {
 
+
   return (
+
     <div className="box--filter filterBox">
     <h2 className="filterBox__headline">{text}</h2>
+
+    {console.log(sport.label)}
 
     {name==="site"?
       <Select
         value={sport}
-        onChange={(e) => {setSport({label: e.value, value: e.value})}}
+        onChange={(e) => {setSport({label: e.label, value: e.value});centerMap(e.value)}}
         options={dataSites}
       />
     :""

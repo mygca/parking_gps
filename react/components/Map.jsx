@@ -5,9 +5,7 @@ import Popup from './Map/Popup';
 const Map = ({sport}) => {
   return (
     <div className="wrapper__map map">
-      <p>{sport}</p>
-      <Carte sport={sport} />
-      {console.log("mapsport", sport)}
+      <Carte sport={sport.value} />
       <Popup />
     </div>
   );

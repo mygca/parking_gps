@@ -1,6 +1,11 @@
 import React from 'react';
 import ParkingInfoLinie from './ParkingInfoLinie';
-const cartePlaceholder = require('../../../img/carte.png')
+const cartePlaceholder = require('../../../img/carte.png');
+// const prix= require('../../../img/infoLinie--price.png');
+// const time= require('../../../img/infoLinie--time.png');
+// const station= require('../../../img/infoLinie--station.png');
+// const adresse= require('../../../img/infoLinie--adresse.png');
+// const opperator= require('../../../img/infoLinie--opperator.png');
 
 
 function ParkingOpend({data}) {

@@ -16,7 +16,7 @@ export const linieb = <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http:/
   <circle data-ligne="b" data-station-id="242" data-station="drancy" cx="1669.06" cy="662.42" r="7"/>
   <circle className="siteCircle" badminton="true" data-ligne="b" data-station-id="427" data-station="le-bourget" cx="1591.66" cy="662.42" r="7"/>
   <circle data-ligne="b" data-station-id="34" data-station="la-courneuve-aubervillers" cx="1526.92" cy="709.3" r="7"/>
-  <circle data-ligne="b" className="siteCircle" athletik="true" natation-denise="true" natation-synchronisee="true" plonge="true" volleyball="volleyball" water-polo="true" data-station-id="404" data-station="la-plaine-stade-de-france" cx="1481.8" cy="754.57" r="7"/>
+  <circle data-ligne="b" className="siteCircle" athletik="true" natationdenise="true" natationsynchronisee="true" plonge="true" volleyball="volleyball" waterpolo="true" data-station-id="404" data-station="la-plaine-stade-de-france" cx="1481.8" cy="754.57" r="7"/>
   <circle data-ligne="b" data-station-id="309" data-station="gare-du-nord" cx="1445.69" cy="839" r="7"/>
   <circle data-ligne="b" data-station-id="164" data-station="chatelet" cx="1445.69" cy="976.39" r="7"/>
   <circle data-ligne="b" data-station-id="827" data-station="saint-michel-notre-dame" cx="1445.69" cy="1062.35" r="7"/>

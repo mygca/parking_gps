@@ -1,10 +1,19 @@
-export default function getGareId(setGareID){
+export default function getGareId(setGareID,sport){
 
   console.log("gare id")
 
   let circles = document.querySelectorAll("circle");
 
-  console.log(circles)
+  // display site
+   
+  setTimeout(() => {
+    let selectedSite= document.querySelectorAll('['+sport+']');
+      
+    for (let i = 0; i < selectedSite.length; i++) {
+      selectedSite[i].setAttribute('r', "18" );
+      selectedSite[i].style.fill="#fff";
+    }
+  }, 100);
 
   for (let j = 0; j < circles.length; j++) {
 
@@ -16,6 +25,11 @@ export default function getGareId(setGareID){
     //if hovered
     circle.addEventListener("click", function(){
 
+      //reset circel size
+      for (let i = 0; i < circles.length; i++) {
+        circles[i].setAttribute('r', "8" );
+      }
+
       //change styke of selected circle
       circle.setAttribute('r', "15" );
 
@@ -26,17 +40,10 @@ export default function getGareId(setGareID){
       // set state gare id
       setGareID(selectedGareIDoutput)
 
-
-
-      // get gare name of gare id
-      // for (let i = 0; i < STATIONS[0].length; i++) {
-      //   let station = STATIONS[0][i];
-      //   if(station.fields.gares_id == selectedStationId){   
-      //     _this.handlerGareChange(station.fields.nom_gare);  
-      //   }
-      // }
-
     });
   }
+
+
+  
 }
 

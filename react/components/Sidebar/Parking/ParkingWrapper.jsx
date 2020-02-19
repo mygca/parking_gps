@@ -4,6 +4,9 @@ import ParkingBox from './ParkingBox';
 //import { data } from '../../../../data/parkings';
 import parkings from '../../../data/parkings';
 
+import showParkings from '../../../functions/map/showParking';
+
+
 function ParkingWrapper() {
   const [data, setData] = useState([]);
 
@@ -43,7 +46,8 @@ function ParkingWrapper() {
   // }, [])
 
   useEffect(() => {
-    setData(parkings)
+    setData(parkings);
+    showParkings({data})
   }, [])
   
 

@@ -19,6 +19,8 @@ const MainFilterSection = ({sport,setSport,setIsSelected,isSelected}) => {
     <div className="wrapper--filter">
 
       <Logo />
+
+      
       <FilterBox setSport={setSport} sport={sport}  name="site" text="Quoi ton site"/>
       {/* <FilterBox setSport={setSport} name="direction" text="Direction d'arrive"/> */}
 

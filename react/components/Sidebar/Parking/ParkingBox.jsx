@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import RerArrete from './RerArrete'
 import Favorit from './Favorit'
 import ParkingOptions from './ParkingOptions'
@@ -11,6 +11,8 @@ import ParkingOpend from './ParkingOpend'
 
 
 
+
+
 function Parking({data}) {
   const [isOpen, setIsOpen] = useState(false);
   //console.log(isOpen);
@@ -18,6 +20,10 @@ function Parking({data}) {
   const toFalse = ()=> {
     setIsOpen(!isOpen);
   }
+
+  useEffect(() => {
+    //showParkings({data})
+  }, [])
 
   return (
     <div className="box--parking parking">

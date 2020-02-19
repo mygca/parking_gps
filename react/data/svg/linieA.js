@@ -18,7 +18,7 @@ export const liniea = <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http:/
     <circle data-ligne="a" data-station-id="785" data-station="sartrouville" cx="960" cy="723.47" r="7"/>
     <circle data-ligne="a" data-station-id="357" data-station="houilles-carrieres-sur-seine" cx="993.07" cy="756.2" r="7"/>
     <circle data-ligne="a" data-station-id="393" data-station="la-defense" cx="1092.99" cy="858.48" r="7"/>
-    <circle className="siteCircle" cyclism-route="true" data-ligne="a" data-station-id="151" data-station="charles-de-gaulle-etoile" cx="1202.72" cy="969.41" r="7"/>
+    <circle className="siteCircle" cyclismroute="true" data-ligne="a" data-station-id="151" data-station="charles-de-gaulle-etoile" cx="1202.72" cy="969.41" r="7"/>
     <circle data-ligne="a" data-station-id="32" data-station="auber" cx="1330.38" cy="990.27" r="7"/>
     <circle data-ligne="a" data-station-id="163" data-station="chatelet-les-halles" cx="1461.04" cy="991.27" r="7"/>
     <circle data-ligne="a" data-station-id="307" data-station="gare-de-lyon" cx="1554.04" cy="1082.17" r="7"/>

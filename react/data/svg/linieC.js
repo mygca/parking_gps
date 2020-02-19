@@ -10,7 +10,7 @@ export const liniec =<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://
   <polyline data-ligne-line="c" className="linie linie--c" points="869.5 1466.31 1063.29 1466.31 1334.38 1737.4 1445.69 1737.4 1556.87 1626.22 1582.66 1626.22"/>
   <polyline data-ligne-line="c" className="linie linie--c" points="895.07 355.61 912.43 372.98 987.5 372.98 1322.53 708 1322.53 773.55 1122.65 973.43 1122.65 1077.72 1158.72 1112.33 1183.64 1112.33"/>
 
-  <circle data-ligne="c" data-station-id="835" className="siteCircle" bmx="true" golf="true" cyclism-pist="true" data-station="saint-quentin-en-yvelines-montigny-le-bretonneux" cx="683.96" cy="1480.05" r="7"/>
+  <circle data-ligne="c" data-station-id="835" className="siteCircle" bmx="true" golf="true" cyclismpist="true" data-station="saint-quentin-en-yvelines-montigny-le-bretonneux" cx="683.96" cy="1480.05" r="7"/>
   <circle data-ligne="c" data-station-id="814" data-station="saint-cyr" data-name="saint-cyr" cx="731.04" cy="1445.32" r="7"/>
   <circle data-ligne="c" className="siteCircle" equitation="true" pentathlon="true" data-station-id="885" data-station="versailles-chateau" cx="869.5" cy="1445.32" r="7"/>
   <circle data-ligne="c" className="siteCircle" equitation="true" pentathlon="true" data-station-id="887" data-station="versialles-chantiers" cx="869.5" cy="1466.31" r="7"/>
@@ -19,12 +19,12 @@ export const liniec =<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://
   <circle data-ligne="c" data-station-id="638" data-station="petit-jouy-les-loges" cx="1063.29" cy="1466.31" r="7"/>
   <circle data-ligne="c" data-station-id="540" data-station="meudon-val-fleury" cx="1117.62" cy="1335.48" r="7"/>
   <circle data-ligne="c" data-station-id="366" data-station="issy" cx="1172.25" cy="1283.54" r="7"/>
-  <circle data-ligne="c" className="siteCircle" basketball-pierre="true" data-station-id="367" data-station="issy-val-de-seine" cx="1172.25" cy="1246.03" r="7"/>
+  <circle data-ligne="c" className="siteCircle" basketballpierre="true" data-station-id="367" data-station="issy-val-de-seine" cx="1172.25" cy="1246.03" r="7"/>
 
   <circle data-ligne="c" className="siteCircle" rugby="true" tennis="true" data-station-id="57" data-station="pont-du-garigliano" cx="1172.25" cy="1201.5" r="7"/>
   <circle data-ligne="c" data-station-id="376" className="siteCircle" foot="true" data-station="javel" cx="1172.25" cy="1154.63" r="7"/>
   
-  <circle className="siteCircle" beachvolley="true" box="true" data-ligne="c" data-station-id="141" data-station="champs-de-mars-tour-eiffel" natation-paris="true" cx="1183.27" cy="1112.33" r="7"/>
+  <circle className="siteCircle" beachvolley="true" box="true" data-ligne="c" data-station-id="141" data-station="champs-de-mars-tour-eiffel" natationparis="true" cx="1183.27" cy="1112.33" r="7"/>
 
   <circle data-ligne="c" data-station-id="664" data-station="pont-de-lalma" cx="1223.07" cy="1073.08" r="7"/>
   <circle data-ligne="c" className="siteCircle" taekwondo="true" escrime="true" data-station-id="361" data-station="invalides" cx="1281.51" cy="1063.93" r="7"/>
