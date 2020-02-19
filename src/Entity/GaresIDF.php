@@ -10,7 +10,7 @@ use ApiPlatform\Core\Annotation\ApiResource;
  *
  * @ORM\Entity(repositoryClass="App\Repository\GaresIDFRepository")
  *
- * @ApiResource
+ * @ApiResource(attributes={"filters"={"garesidf.search_filter"}})
  */
 class GaresIDF
 {

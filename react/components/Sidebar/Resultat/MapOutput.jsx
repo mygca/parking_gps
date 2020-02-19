@@ -31,7 +31,10 @@ function MapOutput({sport}) {
         setMinHeight={setMinHeight} minHeight={minHeight}
       />
       <p>{gareID}</p>
-      <ParkingOutput />
+      <ParkingOutput gareID={gareID} setIs24={setIs24} is24={is24}
+        setIsHandicap={setIsHandicap} isHandicap={isHandicap}
+        setIsSecurity={setIsSecurity} isSecurity={isSecurity}
+        setMinHeight={setMinHeight} minHeight={minHeight} sport={sport}/>
 
  
     </div>

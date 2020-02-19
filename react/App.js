@@ -10,7 +10,8 @@ import Home from './components/Home';
 
 const App = () => {
 
-  const [sport, setSport] = useState({value: "all", label: "Ton site"})
+  // const [sport, setSport] = useState({label: "hallu", value: "amanda"})
+  const [sport, setSport] = useState({label: "all", value: "Liste des sports", lines:'r'})
   //const [direction, setDirection] = useState({label: "hallu", value: "amanda"})
   const [isSelected, setIsSelected] = useState("false")
   const [isHome, setIsHome] = useState("true")
@@ -21,6 +22,11 @@ const App = () => {
 
       {(isHome==="false")?
         <div className="wrapper">
+          <div className="stateGlobal">
+            <p>{sport.label}</p>
+            <p>{sport.lines}</p>
+            <p>{isSelected}</p>
+          </div>
           <Sidebar setSport={setSport} sport={sport} setIsSelected={setIsSelected} isSelected={isSelected}/>
           <Map sport={sport}/>
         </div>
