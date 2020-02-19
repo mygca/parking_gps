@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import MainFilterSection from './Sidebar/Filter/MainFilterSection';
 import MapOutput from './Sidebar/Resultat/MapOutput';
 
-const Sidebar = ({sport,setSport,setIsSelected,isSelected}) => {
+const Sidebar = ({sport,setSport,setIsSelected,isSelected, lines}) => {
 
   
 
@@ -11,8 +11,9 @@ const Sidebar = ({sport,setSport,setIsSelected,isSelected}) => {
 
       {isSelected === "false"?
         <MainFilterSection sport={sport} setSport={setSport} setIsSelected={setIsSelected}  isSelected={isSelected}/>
-      :<MapOutput sport={sport.value} /> 
+      :<MapOutput sport={sport.value} lines={lines}/> 
       }
+
       
     </div>
   );

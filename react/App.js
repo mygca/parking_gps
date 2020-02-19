@@ -11,7 +11,7 @@ import Home from './components/Home';
 const App = () => {
 
   // const [sport, setSport] = useState({label: "hallu", value: "amanda"})
-  const [sport, setSport] = useState({label: "all", value: "Liste des sports", lines:'r'})
+  const [sport, setSport] = useState({label: "Liste des sports", value: "all", lines:'r'})
   //const [direction, setDirection] = useState({label: "hallu", value: "amanda"})
   const [isSelected, setIsSelected] = useState("false")
   const [isHome, setIsHome] = useState("true")
@@ -27,7 +27,7 @@ const App = () => {
             <p>{sport.lines}</p>
             <p>{isSelected}</p>
           </div>
-          <Sidebar setSport={setSport} sport={sport} setIsSelected={setIsSelected} isSelected={isSelected}/>
+          <Sidebar setSport={setSport} sport={sport} lines={sport.lines} setIsSelected={setIsSelected} isSelected={isSelected}/>
           <Map sport={sport}/>
         </div>
       :<Home isHome={isHome} setIsHome={setIsHome}/>

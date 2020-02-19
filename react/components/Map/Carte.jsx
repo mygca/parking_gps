@@ -54,6 +54,7 @@ function Carte({sport}) {
       {/* <div className="carte__bg">{bg}</div> */}
       <div className="carte__station">{bgStation}</div>
       <div>
+        {console.log(sport)}
         {LineGroup[sport].map((value, index) => {
           return <Linie key={index} nameLine={value}/>
         })}

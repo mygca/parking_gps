@@ -6,7 +6,7 @@ import getGareId from '../../../functions/map/getGareId';
 
 // import {STATIONS} from '../../../data/stations'
 
-function MapOutput({sport}) {
+function MapOutput({sport, lines}) {
 
   const [is24, setIs24] = useState(false)
   const [isHandicap, setIsHandicap] = useState(false)
@@ -34,7 +34,7 @@ function MapOutput({sport}) {
       <ParkingOutput gareID={gareID} setIs24={setIs24} is24={is24}
         setIsHandicap={setIsHandicap} isHandicap={isHandicap}
         setIsSecurity={setIsSecurity} isSecurity={isSecurity}
-        setMinHeight={setMinHeight} minHeight={minHeight} sport={sport}/>
+        setMinHeight={setMinHeight} minHeight={minHeight} sport={sport} lines={lines}/>
 
  
     </div>

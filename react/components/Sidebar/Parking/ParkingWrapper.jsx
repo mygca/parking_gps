@@ -9,7 +9,7 @@ import getParkingByLine from '../../../functions/map/getParkingByLine';
 import showParkings from '../../../functions/map/showParking';
 
 
-function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHandicap,isSecurity,minHeight,setMinHeight, sport}) {
+function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHandicap,isSecurity,minHeight,setMinHeight, sport, lines}) {
   const [data, setData] = useState([]);
   const [gares, setGares] = useState(null);
 
@@ -59,12 +59,12 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
   const linesJO = ['a', 'b', 'c', 'd', 'j', 'n', 'p'];
   //const train = ['j', 'n', 'p'];
   const Line = [];
-    if ((sport.lines).length > 1) 
+    if ((lines).length > 1) 
     { 
-      //const lines = (sport.lines).length;
+      //const lines = (lines).length;
       
-      for (let i = 0; i < (sport.lines).length; i++) {
-        const l = sport.lines[i];
+      for (let i = 0; i < lines.length; i++) {
+        const l = lines[i];
         //console.log(l)
         if (linesJO.includes(l)) {
           //l1 = `rer%20`;
@@ -104,7 +104,7 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
       console.log('na')
       axios
         .get(
-          `/api/gares_i_d_fs?indice_ligne=${sport.lines}`,
+          `/api/gares_i_d_fs?indice_ligne=${lines}`,
         )
         .then((res) => {
             //console.log(res.data["hydra:member"])
@@ -118,9 +118,9 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
     setData(parkings);
     showParkings({data})
 
-    //fetchGare();
+    fetchGare();
     //setData(parkings);
-    //getParkingByLine(gares);
+    getParkingByLine(gares);
  
   }, [])
   console.log(gares);
@@ -166,7 +166,7 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
             </ul> */}
         <p>C'est le gareid :{gareID}</p>
           <p>{is24}</p>
-          <p>{(sport.lines).length}</p>
+          {/* <p>{(lines).length}</p> */}
           {/* <p>{gares[0].reseau}</p> */}
         
           {/* {gares.map(data => (
