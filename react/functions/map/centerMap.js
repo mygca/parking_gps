@@ -2,12 +2,16 @@ export function centerMap(sport){
 
   let scrollContainer=document.querySelector(".wrapper__map");
   let scrollElement=document.querySelector(".box--carte");
+  
 
   let imgWrapperHeight=scrollContainer.offsetHeight;
   let imgWrapperWidth=scrollContainer.offsetWidth;
 
   let imgHeight=scrollElement.clientHeight
   let imgWidth=scrollElement.clientWidth
+
+  console.log("wrapper height "+imgWrapperHeight);
+  console.log("wrapper imgHeight "+imgHeight);
 
   let yScroll = (imgHeight-imgWrapperHeight)/2;
   let xScroll = (imgWidth-imgWrapperWidth)/2;

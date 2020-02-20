@@ -1,3 +1,11 @@
 .sidebar{
-  padding:5vw;
+  padding:3vw;
+}
+
+.output__intro{
+  margin-bottom: 20px;
+  //display: flex;
+  .output__intro__text{
+    width:calc(100% - 60px);
+  }
 }

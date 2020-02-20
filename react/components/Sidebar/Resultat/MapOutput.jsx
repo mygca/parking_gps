@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import FilterBox from './FilterBox';
 import ParkingOutput from './ParkingOutput';
+import Popup from '../../Map/Popup';
 
 import getGareId from '../../../functions/map/getGareId';
 
@@ -21,15 +22,28 @@ function MapOutput({sport, lines}) {
  
   return (
     <div className="wrapper--output">
+      <Popup name="popupLinie" sport={sport} lines={lines}/>
+      <Popup name="popupState" sport={sport} lines={lines}/>
 
-      <p>{sport}</p>
-      
-      <FilterBox 
+
+      <div className="output__intro">
+        <div className="wrapper--flex">
+          <span className={"icon--rer icon--rer--"+lines}>{lines}</span> 
+          <div className="output__intro__text">
+            <p>Offre du parking sur la ligne {lines} pour viens directement au site du {sport}</p> </div>
+        </div>
+        
+        <FilterBox 
         setIs24={setIs24} is24={is24}
         setIsHandicap={setIsHandicap} isHandicap={isHandicap}
         setIsSecurity={setIsSecurity} isSecurity={isSecurity}
         setMinHeight={setMinHeight} minHeight={minHeight}
       />
+      </div>
+
+     
+      
+      
       <p>{gareID}</p>
       <ParkingOutput gareID={gareID} setIs24={setIs24} is24={is24}
         setIsHandicap={setIsHandicap} isHandicap={isHandicap}

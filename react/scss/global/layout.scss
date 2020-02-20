@@ -3,13 +3,13 @@
   height:100vh;
   overflow: hidden;
   &__sidebar{
-    width:45%;
+    width:35%;
     background-color: #fff;
     height: 100vh;
     overflow: scroll;
   }
   &__map{
-    width:55%;
+    width:65%;
     background-color:#efefef;
     height: 100vh;
     position: absolute;

@@ -1,6 +1,7 @@
 import React,{useEffect} from 'react';
 import Linie from './Linie';
 
+
 import {bg} from '../../data/svg/bg.js';
 import{centerMap} from '../../functions/map/centerMap.js';
 import {bgStation} from '../../data/svg/bgStation.js';
@@ -51,6 +52,7 @@ function Carte({sport}) {
 
   return (
     <div className="box--carte">
+      
       {/* <div className="carte__bg">{bg}</div> */}
       <div className="carte__station">{bgStation}</div>
       <div>

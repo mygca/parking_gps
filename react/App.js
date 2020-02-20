@@ -22,11 +22,11 @@ const App = () => {
 
       {(isHome==="false")?
         <div className="wrapper">
-          <div className="stateGlobal">
+          {/* <div className="stateGlobal">
             <p>{sport.label}</p>
             <p>{sport.lines}</p>
             <p>{isSelected}</p>
-          </div>
+          </div> */}
           <Sidebar setSport={setSport} sport={sport} lines={sport.lines} setIsSelected={setIsSelected} isSelected={isSelected}/>
           <Map sport={sport}/>
         </div>
