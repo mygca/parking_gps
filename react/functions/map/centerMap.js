@@ -43,6 +43,7 @@ export function centerMap(sport){
     for (let i = 0; i < circles.length; i++) {
       circles[i].setAttribute('r', "8" );
       circles[i].style.fill="white";
+      circles[i].style.display="none";
     }
 
     //display statio Circle + icon

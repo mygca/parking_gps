@@ -1,4 +1,21 @@
 export default function getParkingByLine(gares, parkings){
+
+  // if(gares !=null){
+  //   //console.log(gares);
+  //   for (let i = 0; i < gares.length; i++) {
+  //     console.log(gares[i])
+      
+  //   }
+  // // const parkingList = [];
+  // // for (const p of parkings) {
+  // //   let itemParking = p.gares_id;
+  // //   parkingList.push(itemParking);
+  // // }
+  // }else{
+  //   console.log("caca");
+  // }
+    
+    
   // line (string) = a, b, c, d j, l, n, p//
   // data (tab of object) = parkings
 
@@ -19,7 +36,7 @@ export default function getParkingByLine(gares, parkings){
 
   //const parkingsByLine = [];
 
-  const garesIdLines = [];
+  
 
   //const allGaresidFromPark = [];
   // Transform into array
@@ -64,12 +81,13 @@ export default function getParkingByLine(gares, parkings){
   // }
 
 
-
+  console.log("gares id "+gares);
  
   if (gares != null)
   {
     //const parkingsByLine = [];
     console.log('gares okay')
+    const garesIdLines = [];
     //Object.keys(JSON.parse(gares)).map(function(key){return gares[key]})
     // for (const g of gares) {
     //   //console.log(p.company)
@@ -81,7 +99,7 @@ export default function getParkingByLine(gares, parkings){
       //console.log(g.garesId)
       garesIdLines.push(g.garesId)
     }
-    console.log(garesIdLines)
+    console.log("Array garred ids "+garesIdLines)
 
 
 
@@ -119,17 +137,17 @@ export default function getParkingByLine(gares, parkings){
     // }
 
     // matchFilter();
-    const parkingList = [];
-    for (const p of parkings) {
-      var t = typeof p.gares_id;
-      console.log(t);
-      //console.log(p.gares_id)
-      // for (const pgid of p.gares_id) {
-      //   // console.log(pgid)
-      //   // if ( )
-      // }
+    // const parkingList = [];
+    // for (const p of parkings) {
+    //   var t = typeof p.gares_id;
+    //   console.log(t);
+    //   //console.log(p.gares_id)
+    //   // for (const pgid of p.gares_id) {
+    //   //   // console.log(pgid)
+    //   //   // if ( )
+    //   // }
       
-    }
+    // }
 
     // for (const g of gares) {
       
