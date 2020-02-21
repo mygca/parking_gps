@@ -14,7 +14,7 @@ const App = () => {
   const [sport, setSport] = useState({label: "Liste des sports", value: "all", lines:'r'})
   //const [direction, setDirection] = useState({label: "hallu", value: "amanda"})
   const [isSelected, setIsSelected] = useState("false")
-  const [isHome, setIsHome] = useState("true")
+  const [isHome, setIsHome] = useState("false")
   
  
   return (

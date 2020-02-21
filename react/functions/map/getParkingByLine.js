@@ -21,19 +21,19 @@ export default function getParkingByLine(gares, parkings){
 
   const garesIdLines = [];
 
-  //const allGaresidFromPark = [];
-  // Transform into array
-  //let json = JSON.parse(parkings);
+  // const allGaresidFromPark = [];
+  // // Transform into array
+  // //let json = JSON.parse(parkings);
 
-  //console.log(json)
+  // //console.log(json)
 
-  // for (const p of parkings) {
-  //   //console.log(p.company)
-  // }
+  // // for (const p of parkings) {
+  // //   //console.log(p.company)
+  // // }
 
-  // for (const p of gares) {
-  //   console.log(p.ligne)
-  // }
+  // // for (const p of gares) {
+  // //   console.log(p.ligne)
+  // // }
 
   // for (const p of parkings) {
   //   //console.log(p.ligne)
@@ -78,8 +78,9 @@ export default function getParkingByLine(gares, parkings){
     // }
 
     for (const g of gares) {
-      //console.log(g.garesId)
-      garesIdLines.push(g.garesId)
+
+      //console.log(g.garesId.toString())
+      garesIdLines.push(g.garesId.toString())
     }
     console.log(garesIdLines)
 
@@ -121,15 +122,33 @@ export default function getParkingByLine(gares, parkings){
     // matchFilter();
     const parkingList = [];
     for (const p of parkings) {
-      var t = typeof p.gares_id;
-      console.log(t);
-      //console.log(p.gares_id)
+      //var t = typeof p.gares_id;
+      //console.log(t);
+      //console.log(typeof p.gares_id.toString())
       // for (const pgid of p.gares_id) {
       //   // console.log(pgid)
       //   // if ( )
       // }
+      let itemParking = p.gares_id;
+      parkingList.push(itemParking);
+    }
+    //console.log(parkingList);
+    // const flatParkings = parkingList.flat()
+    // console.log(typeof flatParkings)
+
+    // const arrayParkings = Object.values(flatParkings)
+    // console.log(typeof arrayParkings)
+
+    const parkingsGares = [];
+
+    for (let i = 0; i < parkingList.length; i++) {
+      const element = parkingList[i];
+      //console.log(element)
+      parkingsGares.concat(typeof element)
       
     }
+
+    //console.log(parkingsGares)
 
     // for (const g of gares) {
       
