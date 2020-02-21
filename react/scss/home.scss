@@ -1,0 +1,22 @@
+.intro{
+  width:100%;
+  height:100vh;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .intro__textbox{
+    width:50%;
+    margin-left: 10%;
+  }
+}
+
+.avantage{
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  .avantage__box{
+    width:25%;
+  }
+}

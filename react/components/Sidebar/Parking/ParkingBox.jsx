@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import RerArrete from './RerArrete'
 import Favorit from './Favorit'
 import ParkingOptions from './ParkingOptions'
@@ -11,21 +11,28 @@ import ParkingOpend from './ParkingOpend'
 
 
 
-function Parking() {
+
+
+function Parking({data}) {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
+  //console.log(isOpen);
 
   const toFalse = ()=> {
     setIsOpen(!isOpen);
   }
+
+  useEffect(() => {
+    //showParkings({data})
+  }, [])
 
   return (
     <div className="box--parking parking">
 
       <div className="wrapper--flex">
         <div>
-          <h3>Parking-Vincennes Chateau</h3>
-          <RerArrete name="Vincennes"/>
+          {/* <h3>Parking-Vincennes Chateau</h3> */}
+          <h3>{data.gares_id}</h3>
+          <RerArrete name="Vincennes"/> 
         </div>
         <div className="wrapper--flex">
           <Favorit />
@@ -40,7 +47,7 @@ function Parking() {
           <ParkingOptions name="securite"/>
         </div>
         {isOpen===false?
-          <Price />
+          <Price data={data}/>
         :""}
       </div>
 
@@ -50,7 +57,7 @@ function Parking() {
       </div>
 
       {isOpen===true?
-        <ParkingOpend />
+        <ParkingOpend data={data} />
       :""}
 
     </div>

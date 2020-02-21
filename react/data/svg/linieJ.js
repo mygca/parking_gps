@@ -17,7 +17,7 @@ export const liniej =<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://
   <circle data-ligne="j" data-station-id="29" data-station="asnieres" cx="1222.34" cy="734.23" r="7"/>
   <circle data-ligne="j" site="cheval" data-station-id="82" data-station="bois-colombes" cx="1194.57" cy="706.73" r="7"/>
   <circle data-ligne="j" data-station-id="194" data-station="colombes" cx="1167.67" cy="679.61" r="7"/>
-  <circle data-ligne="j" data-station-id="435" data-station="le-stade" cx="1138.71" cy="651.48" r="7"/>
+  <circle data-ligne="j" hockey="true" data-station-id="435" data-station="le-stade" cx="1138.71" cy="651.48" r="7"/>
   <circle data-ligne="j" data-station-id="24" data-station="argenteuil" cx="1118.46" cy="630.03" r="7"/>
   <circle data-ligne="j" data-station-id="867" data-station="val-dargenteuil" cx="1083.84" cy="597.01" r="7"/>
   <circle data-ligne="j" data-station-id="211" data-station="cormeilles-en-parisis" cx="1038.21" cy="583.58" r="7"/>

@@ -1,14 +1,13 @@
 import React from 'react';
 import Carte from './Map/Carte';
-import Popup from './Map/Popup';
 
-const Map = ({sport, site}) => {
+
+const Map = ({sport}) => {
   return (
     <div className="wrapper__map map">
-      <p>{site}</p>
-      <Carte site={site} />
-      {console.log("mapsport", sport)}
-      <Popup />
+      
+      <Carte sport={sport.value} />
+      
     </div>
   );
 }

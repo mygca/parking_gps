@@ -39,8 +39,8 @@ circle{
 }
 
 .map{
-  pointer-events: none;
   overflow: scroll;
+  position: relative;
   
   .box--carte{
     position: relative;

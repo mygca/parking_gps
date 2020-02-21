@@ -1,13 +1,21 @@
 import React from 'react';
+const price= require('../../../img/infoLinie--price.png');
+const time= require('../../../img/infoLinie--time.png');
+const station= require('../../../img/infoLinie--station.png');
+const adresse= require('../../../img/infoLinie--adresse.png');
+const opperator= require('../../../img/infoLinie--opperator.png');
 
 
-function ParkingInfoLinie({name,legende,value}) {
+function ParkingInfoLinie({name,legende,data}) {
+  let imgPath={name}
+  console.log(eval(imgPath.name))
+
   return (
     <div className="parking__infoLine">
-      <img src={"./build/images/infoLinie--"+name+".png"} className="infoLine__image" alt=""/>
+      <img src={eval(imgPath.name)} className="infoLine__image" alt=""/>
       <div>
         <p className="infoLine__legende">{legende}</p>
-        <p className="infoLine__value">{value}</p>
+        <p className="infoLine__value">{data}</p>
       </div>
       {name==="opperator"?
         <button className="button--contact">Contacter</button>

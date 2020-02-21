@@ -1,23 +1,19 @@
-//import React, { useContext } from 'react';
-// import GareIDContext from '../../contexts/GareIDContext'
-
-export function getGareId(){
+export default function getGareId(setGareID,sport){
 
   console.log("gare id")
 
-  //const { selectedGareID, setSelectedGareID } = useContext(GareIDContext);
-
-  // const handleChangeGareID = selectedGareID => {
-  //   setSelectedGareID(selectedGareID);
-  //   console.log(selectedGareID);
-  //   centerMap(selectedGareID.value);
-  // }
-
-
-  //get all circels of svg which is selected
   let circles = document.querySelectorAll("circle");
 
-  console.log(circles)
+  // display site
+   
+  setTimeout(() => {
+    let selectedSite= document.querySelectorAll('['+sport+']');
+      
+    for (let i = 0; i < selectedSite.length; i++) {
+      selectedSite[i].setAttribute('r', "18" );
+      selectedSite[i].style.fill="#fff";
+    }
+  }, 100);
 
   for (let j = 0; j < circles.length; j++) {
 
@@ -29,6 +25,11 @@ export function getGareId(){
     //if hovered
     circle.addEventListener("click", function(){
 
+      //reset circel size
+      for (let i = 0; i < circles.length; i++) {
+        circles[i].setAttribute('r', "8" );
+      }
+
       //change styke of selected circle
       circle.setAttribute('r', "15" );
 
@@ -36,21 +37,13 @@ export function getGareId(){
       let selectedGareIDoutput = circle.getAttribute('data-station-id');
       console.log(selectedGareIDoutput);
 
-      return selectedGareIDoutput;
-
       // set state gare id
-      // handleChangeGareID(selectedGareID)
-
-
-
-      // get gare name of gare id
-      // for (let i = 0; i < STATIONS[0].length; i++) {
-      //   let station = STATIONS[0][i];
-      //   if(station.fields.gares_id == selectedStationId){   
-      //     _this.handlerGareChange(station.fields.nom_gare);  
-      //   }
-      // }
+      setGareID(selectedGareIDoutput)
 
     });
   }
+
+
+  
 }
+

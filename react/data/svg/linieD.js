@@ -17,7 +17,7 @@ export const linied =<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://
   <circle data-ligne="d" data-station-id="322" data-station="garages-sarcelles" cx="1566.33" cy="546.56" r="7"/>
   <circle data-ligne="d" data-station-id="643" data-station="pierrefitte-stains" cx="1517.77" cy="595.75" r="7"/>
   <circle data-ligne="d" data-station-id="816" data-station="st-denis" cx="1461.5" cy="674.03" r="7"/>
-  <circle  className="siteCircle" athletik="true" natation-denise="true" data-ligne="d" natation-synchronisee="true" plonge="true" data-station-id="806" data-station="stade-de-france-st-denis" cx="1461.5" cy="750" r="7"/>
+  <circle  className="siteCircle" athletik="true" natationdenise="true" data-ligne="d" natationsynchronisee="true" plonge="true" data-station-id="806" data-station="stade-de-france-st-denis" cx="1461.5" cy="750" r="7"/>
   <circle data-ligne="d" data-station-id="310" data-station="gare-du-nord-2" data-name="gare-du-nord" cx="1461.5" cy="839" r="7"/>
   <circle data-ligne="d" data-station-id="170" data-station="chatelet-2" data-name="chatelet" cx="1461.04" cy="991.27" r="7"/>
   <circle data-ligne="d" data-station-id="38" data-station="gare-dausterlitz" cx="1531.42" cy="1104.69" r="7"/>
