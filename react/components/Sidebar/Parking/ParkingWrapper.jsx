@@ -123,6 +123,25 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
               const matchedGareIDArray = getParkingsIdArray.filter(element => getGaresIdArray.includes(element)).map(String);
               //console.log(matchedGareIDArray)
               setMatchedId({matchedGareIDArray})
+
+
+
+              const showParkingsBox = [];
+              for (const parking of parkings) {
+                //console.log(parking.company)
+                for (let i = 0; i < (parking.gares_id).length; i++) {
+                  const parkingBox = parking.gares_id[i].toString();
+                  //console.log(parkingBox)
+                  //console.log(matchedGareIDArray)
+                  if (matchedGareIDArray.includes(parkingBox)) 
+                  {
+                    showParkingsBox.push(parking)
+                  } 
+                  
+                }
+              }
+              //console.log(showParkingsBox)
+              setData({showParkingsBox})
             }
             else{
               console.log("no parking")
@@ -165,6 +184,23 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
               const matchedGareIDArray = getParkingsIdArray.filter(element => getGaresIdArray.includes(element)).map(String);
               //console.log(matchedGareIDArray)
               setMatchedId({matchedGareIDArray})
+
+              const showParkingsBox = [];
+              for (const parking of parkings) {
+                //console.log(parking.company)
+                for (let i = 0; i < (parking.gares_id).length; i++) {
+                  const parkingBox = parking.gares_id[i].toString();
+                  //console.log(parkingBox)
+                  //console.log(matchedGareIDArray)
+                  if (matchedGareIDArray.includes(parkingBox)) 
+                  {
+                    showParkingsBox.push(parking)
+                  } 
+                  
+                }
+              }
+              //console.log(showParkingsBox)
+              setData({showParkingsBox})
             }
             else{
               console.log("no parking")
@@ -375,66 +411,66 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
    
 
  
-  const displayParkings = () => {
-    //console.log(showParkingsBox)
-      // //Get GareIDs of all Parkings
-      // const getGaresIdArray = [];
-      // if (gares != null){
-      //   for (const g of gares) {
-      //     getGaresIdArray.push(g.garesId)
-      //   }
-      //   setgaresIdArray(getGaresIdArray)
-      // }else{
-      //   console.log("cqac")
-      // }
+  // const displayParkings = () => {
+  //   //console.log(showParkingsBox)
+  //     // //Get GareIDs of all Parkings
+  //     // const getGaresIdArray = [];
+  //     // if (gares != null){
+  //     //   for (const g of gares) {
+  //     //     getGaresIdArray.push(g.garesId)
+  //     //   }
+  //     //   setgaresIdArray(getGaresIdArray)
+  //     // }else{
+  //     //   console.log("cqac")
+  //     // }
 
-      // //Get GareIDs of all displayd gares
-      // const getParkingsIdArray = [];
-      // if (parkings != null){
-      //   for (const p of parkings) {
-      //     for (let i = 0; i < (p.gares_id).length; i++) {
-      //       const parkingGareid = p.gares_id[i];
-      //       getParkingsIdArray.push(parkingGareid)  
-      //     }
-      //   }
-      //   getParkingsIdArray.map(String)
-      //   setparkingsIdArray(getParkingsIdArray.map(String))
-      // }else{
-      //   console.log("no parking")
-      // }
-      // console.log(parkingsIdArray)
+  //     // //Get GareIDs of all displayd gares
+  //     // const getParkingsIdArray = [];
+  //     // if (parkings != null){
+  //     //   for (const p of parkings) {
+  //     //     for (let i = 0; i < (p.gares_id).length; i++) {
+  //     //       const parkingGareid = p.gares_id[i];
+  //     //       getParkingsIdArray.push(parkingGareid)  
+  //     //     }
+  //     //   }
+  //     //   getParkingsIdArray.map(String)
+  //     //   setparkingsIdArray(getParkingsIdArray.map(String))
+  //     // }else{
+  //     //   console.log("no parking")
+  //     // }
+  //     // console.log(parkingsIdArray)
 
-     const showParkingsBox = [];
+  //    const showParkingsBox = [];
 
-  //   const matchedGareIDArray = parkingsIdArray.filter(element => garesIdArray.includes(element)).map(String);
-  //   console.log(matchedGareIDArray)
+  // //   const matchedGareIDArray = parkingsIdArray.filter(element => garesIdArray.includes(element)).map(String);
+  // //   console.log(matchedGareIDArray)
 
 
-  //    //display matched gareIDs in carte
+  // //    //display matched gareIDs in carte
 
-  // for (let i = 0; i < matchedGareIDArray.length; i++) {
-  //   const matchedGareId = matchedGareIDArray[i];
-  //   let elementTest=document.querySelector('[data-station-id="'+matchedGareId+'"]')
-  //   elementTest.style.display="block";
-  // }
+  // // for (let i = 0; i < matchedGareIDArray.length; i++) {
+  // //   const matchedGareId = matchedGareIDArray[i];
+  // //   let elementTest=document.querySelector('[data-station-id="'+matchedGareId+'"]')
+  // //   elementTest.style.display="block";
+  // // }
 
-    for (const parking of parkings) {
-      //console.log(parking.company)
-      for (let i = 0; i < (parking.gares_id).length; i++) {
-        const parkingBox = parking.gares_id[i].toString();
-        //console.log(parkingBox)
-        //console.log(matchedGareIDArray)
-        if (matchedGareIDArray.includes(parkingBox)) 
-        {
-          showParkingsBox.push(parking)
-        } 
+  //   for (const parking of parkings) {
+  //     //console.log(parking.company)
+  //     for (let i = 0; i < (parking.gares_id).length; i++) {
+  //       const parkingBox = parking.gares_id[i].toString();
+  //       //console.log(parkingBox)
+  //       //console.log(matchedGareIDArray)
+  //       if (matchedGareIDArray.includes(parkingBox)) 
+  //       {
+  //         showParkingsBox.push(parking)
+  //       } 
         
-      }
-    }
-    //console.log(showParkingsBox)
-    setData({showParkingsBox})
-    //return showParkingsBox
-  }
+  //     }
+  //   }
+  //   //console.log(showParkingsBox)
+  //   setData({showParkingsBox})
+  //   //return showParkingsBox
+  // }
 
   useEffect(() => {
     //setData(showParkingsBox);
@@ -501,7 +537,7 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
     //   elementTest.style.display="block";
     // }
 
-    // displayParkings();
+    //displayParkings();
     showParkings({data})
 
     // console.log(parkingsIdArray)
