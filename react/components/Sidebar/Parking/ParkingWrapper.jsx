@@ -10,8 +10,10 @@ import showParkings from '../../../functions/map/showParking';
 
 
 function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHandicap,isSecurity,minHeight,setMinHeight, sport, lines}) {
-  const [data, setData] = useState([]);
   const [gares, setGares] = useState(null);
+  const [garesIdArray, setgaresIdArray] = useState(null);
+  const [parkingsIdArray, setparkingsIdArray] = useState();
+  const [data, setData] = useState({parkings});
 
   /*
   * Data fetch parkings from API
@@ -93,8 +95,15 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
             let allGares = [...responseOne, ...responseTwo];
 
             //console.log(allGares[0])
+            //console.log(allGares)
             setGares(allGares)
-
+            //setgaresIdArray(allGares.garesId)
+            const getGaresIdArray = [];
+            for (const g of allGares) {
+            
+              getGaresIdArray.push(g.garesId)
+            }
+            setgaresIdArray({getGaresIdArray})
           })
         );
 
@@ -109,49 +118,245 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
         .then((res) => {
             //console.log(res.data["hydra:member"])
             setGares(res.data["hydra:member"])
+
+            const getGaresIdArray = [];
+            for (const g of res.data["hydra:member"]) 
+            {
+              getGaresIdArray.push(g.garesId)
+            }
+            setgaresIdArray({getGaresIdArray})
           }
         )
     }
+    // const getGaresIdArray = [];
+    // //console.log(gares)
+    // // if (gares != null)
+    // // {
+    //   for (const g of gares) 
+    //   {
+    //     getGaresIdArray.push(g.garesId)
+    //   }
+    //   //setgaresIdArray({getGaresIdArray})
+    //   //getGaresIdArray.map(String)
+    // // }
+    // // else
+    // // {
+    // //   console.log("cqac")
+    // // }
+    // const garesIdArrStr = getGaresIdArray.map(String)
+    // setgaresIdArray({garesIdArrStr})
   }
 
-  useEffect(() => {
-    setData(parkings);
-    showParkings({data})
+  // useEffect(() => {
+  //   //setData(showParkingsBox);
+  //   //setData(parkings);
+  //   displaParkings();
+  //   showParkings({data})
 
-    fetchGare();
-  }, [])
+  //   fetchGare();
+  // }, [])
 
 
   //Get GareIDs of all Parkings
-  const garesIdArray = [];
-  if (gares != null){
-    for (const g of gares) {
-      garesIdArray.push(g.garesId)
-    }
-  }else{
-    console.log("cqac")
-  }
+  //const garesIdArray = [];
+  // if (gares != null){
+  //   for (const g of gares) {
+  //     console.log(g)
+  //     garesIdArray.push(g.garesId)
+  //   }
+  // }else{
+  //   console.log("cqac")
+  // }
+  // console.log(garesIdArray)
 
-  //Get GareIDs of all displayd gares
-  const parkingsIdArray = [];
-  if (parkings != null){
-    for (const p of parkings) {
-      for (let i = 0; i < (p.gares_id).length; i++) {
-        const parkingGareid = p.gares_id[i];
-        parkingsIdArray.push(parkingGareid)  
-      }
-    }
-    parkingsIdArray.map(String)
-  }else{
-    console.log("no parking")
-  }
+
+  // const getGaresIdArray = [];
+  // if (gares != null)
+  // {
+  //   for (const g of gares) {
+  //     //console.log(g)
+  //     getGaresIdArray.push(g.garesId)
+  //   }
+  // }
+  // else
+  // {
+  //   console.log("cqac")
+  // }
+  // console.log(getGaresIdArray)
+
+
+  
+  // for (const g of gares) {
+  //   console.log(g)
+  //   garesIdArray.push(g.garesId)
+  // }
+
+  // //Get GareIDs of all displayd gares
+  // const parkingsIdArray = [];
+  // if (parkings != null){
+  //   for (const p of parkings) {
+  //     for (let i = 0; i < (p.gares_id).length; i++) {
+  //       const parkingGareid = p.gares_id[i];
+  //       parkingsIdArray.push(parkingGareid)  
+  //     }
+  //   }
+  //   parkingsIdArray.map(String)
+  // }else{
+  //   console.log("no parking")
+  // }
 
   // find matched GareIDs
-  const matchedGareIDArray = parkingsIdArray.filter(element => garesIdArray.includes(element));
-  console.log(matchedGareIDArray)
+  //const matchedGareIDArray = parkingsIdArray.filter(element => garesIdArray.includes(element)).map(String);
+  //console.log(matchedGareIDArray)
 
 
-  //display matched gareIDs in carte
+  // //display matched gareIDs in carte
+
+  // for (let i = 0; i < matchedGareIDArray.length; i++) {
+  //   const matchedGareId = matchedGareIDArray[i];
+  //   let elementTest=document.querySelector('[data-station-id="'+matchedGareId+'"]')
+  //   elementTest.style.display="block";
+  // }
+
+  // display parkings matched
+  // const showParkingsBox = [];
+  // for (const parking of parkings) {
+  //   //console.log(parking.company)
+  //   for (let i = 0; i < (parking.gares_id).length; i++) {
+  //     const parkingBox = parking.gares_id[i].toString();
+  //     //console.log(parkingBox)
+  //     if (matchedGareIDArray.includes(parkingBox)) 
+  //     {
+  //       showParkingsBox.push(parking)
+  //     } 
+      
+  //   }
+  // }
+  // console.log(showParkingsBox)
+
+   //Get GareIDs of all Parkings
+   //console.log(gares)
+  //   const allGaresId = async () => {
+
+  //    const getGaresIdArray = [];
+  //    console.log(gares)
+  //    if (gares)
+  //    {
+  //      for (const g of gares) {
+  //        getGaresIdArray.push(g.garesId)
+  //      }
+  //      setgaresIdArray({getGaresIdArray})
+  //    }
+  //    else{
+  //      console.log("cqac")
+  //    }
+
+  //  }
+  // const allGaresId =  () => {
+  //   const getGaresIdArray = [];
+  //   //console.log(gares)
+  //   if (gares != null)
+  //   {
+  //     for (const g of gares) {
+  //       getGaresIdArray.push(g.garesId)
+  //     }
+  //     //setgaresIdArray({getGaresIdArray})
+  //     //getGaresIdArray.map(String)
+  //   }
+  //   else{
+  //     console.log("cqac")
+  //   }
+  //   const garesIdArrStr = getGaresIdArray.map(String)
+  //   const garesIdArrStr2 = [...garesIdArrStr]
+  //   console.log(garesIdArrStr2)
+  //   //setgaresIdArray({garesIdArrStr2})
+
+  // } 
+
+  // const getGaresIdArray = [];
+  // //console.log(gares)
+  // if (gares != null)
+  // {
+  //   for (const g of gares) 
+  //   {
+  //     getGaresIdArray.push(g.garesId)
+  //   }
+  //   //setgaresIdArray({getGaresIdArray})
+  //   //getGaresIdArray.map(String)
+  // }
+  // else
+  // {
+  //   console.log("cqac")
+  // }
+  // const garesIdArrStr = getGaresIdArray.map(String)
+  // const garesIdArrStr2 = [...garesIdArrStr]
+  // //console.log(garesIdArrStr)
+  // console.log(garesIdArrStr2)
+
+
+
+
+   
+   const allParkingsId = () => {
+
+      //Get GareIDs of all displayd gares
+      const getParkingsIdArray = [];
+      if (parkings != null)
+      {
+        for (const p of parkings) {
+          for (let i = 0; i < (p.gares_id).length; i++) {
+            const parkingGareid = p.gares_id[i];
+            getParkingsIdArray.push(parkingGareid)  
+          }
+        }
+        getParkingsIdArray.map(String)
+        setparkingsIdArray({getParkingsIdArray})
+      }
+      else{
+        console.log("no parking")
+      }
+      
+    }
+   // console.log(parkingsIdArray)
+
+
+ 
+  const displayParkings = () => {
+    //console.log(showParkingsBox)
+      // //Get GareIDs of all Parkings
+      // const getGaresIdArray = [];
+      // if (gares != null){
+      //   for (const g of gares) {
+      //     getGaresIdArray.push(g.garesId)
+      //   }
+      //   setgaresIdArray(getGaresIdArray)
+      // }else{
+      //   console.log("cqac")
+      // }
+
+      // //Get GareIDs of all displayd gares
+      // const getParkingsIdArray = [];
+      // if (parkings != null){
+      //   for (const p of parkings) {
+      //     for (let i = 0; i < (p.gares_id).length; i++) {
+      //       const parkingGareid = p.gares_id[i];
+      //       getParkingsIdArray.push(parkingGareid)  
+      //     }
+      //   }
+      //   getParkingsIdArray.map(String)
+      //   setparkingsIdArray(getParkingsIdArray.map(String))
+      // }else{
+      //   console.log("no parking")
+      // }
+      // console.log(parkingsIdArray)
+
+    const showParkingsBox = [];
+
+    const matchedGareIDArray = parkingsIdArray.filter(element => garesIdArray.includes(element)).map(String);
+    console.log(matchedGareIDArray)
+
+
+     //display matched gareIDs in carte
 
   for (let i = 0; i < matchedGareIDArray.length; i++) {
     const matchedGareId = matchedGareIDArray[i];
@@ -159,7 +364,104 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
     elementTest.style.display="block";
   }
 
-  
+    for (const parking of parkings) {
+      //console.log(parking.company)
+      for (let i = 0; i < (parking.gares_id).length; i++) {
+        const parkingBox = parking.gares_id[i].toString();
+        //console.log(parkingBox)
+        console.log(matchedGareIDArray)
+        if (matchedGareIDArray.includes(parkingBox)) 
+        {
+          showParkingsBox.push(parking)
+        } 
+        
+      }
+    }
+    //console.log(showParkingsBox)
+    //setData({showParkingsBox})
+    //return showParkingsBox
+  }
+
+  useEffect(() => {
+    //setData(showParkingsBox);
+    //setData(parkings);
+    //setData({showParkingsBox})
+    
+    //setgaresIdArray({getGaresIdArray})
+    fetchGare();
+    //allGaresId();
+    // setgaresIdArray({getGaresIdArray})
+  //   const getGaresIdArray = [];
+  // //console.log(gares)
+  // if (gares != null)
+  // {
+  //   for (const g of gares) 
+  //   {
+  //     getGaresIdArray.push(g.garesId)
+  //   }
+  //   //setgaresIdArray({getGaresIdArray})
+  //   //getGaresIdArray.map(String)
+  // }
+  // else
+  // {
+  //   console.log("cqac")
+  // }
+  // const garesIdArrStr = getGaresIdArray.map(String)
+  //const garesIdArrStr2 = [...garesIdArrStr]
+  //console.log(garesIdArrStr)
+  //console.log(garesIdArrStr2)
+
+    // if (garesIdArrStr2) {
+
+    //   setgaresIdArray({garesIdArrStr})
+    // }
+    // else {
+    //   console.log('woo')
+    // }
+    
+   // const getGaresIdArray = [];
+    // if (gares != null) 
+    // {
+    //   for (const g of gares) {
+    //    // console.log(g)
+    //    getGaresIdArray.push(g.garesId)
+    //   }
+
+    // }
+    // console.log(getGaresIdArray)
+
+    allParkingsId();
+    //displayParkings();
+    showParkings({data})
+
+    // console.log(parkingsIdArray)
+     //console.log(garesIdArray)
+  }, [])
+
+  //   const allGaresId =  () => {
+  //     const getGaresIdArray = [];
+  //     //console.log(gares)
+  //     // if (gares != null)
+  //     // {
+  //       for (const g of gares) {
+  //         getGaresIdArray.push(g.garesId)
+  //       }
+  //       //setgaresIdArray({getGaresIdArray})
+  //       //getGaresIdArray.map(String)
+  //       const garesIdArrStr = getGaresIdArray.map(String)
+  //     const garesIdArrStr2 = [...garesIdArrStr]
+  //     console.log(garesIdArrStr)
+  //     setgaresIdArray({garesIdArrStr})
+  //     //}
+  //     // else{
+  //     //   console.log("cqac")
+  //     // }
+  //     // const garesIdArrStr = getGaresIdArray.map(String)
+  //     // const garesIdArrStr2 = [...garesIdArrStr]
+  //     // console.log(garesIdArrStr2)
+
+  // } 
+
 
 
   
@@ -194,14 +496,14 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
           {/* {gares.map(gare =>(
             <p>{gare.reseau}</p>
           ))} */}
-
+{/* 
          {data.map((data, i )=> (
 
           <ParkingBox key={i} data={data}/>  
             
           )) 
         } 
- 
+  */}
 
       
     </div>
