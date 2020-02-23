@@ -14,16 +14,78 @@ import gareIdToGareName from '../../../functions/map/gareIdToGareName';
 
 
 
-function Parking({data, dataGares}) {
+function Parking({data, dataGares, garesLines}) {
   const [isOpen, setIsOpen] = useState(false);
+  const [garesIdInLines, setgaresIdInLines] = useState(null);
   //console.log(isOpen);
 
   const toFalse = ()=> {
     setIsOpen(!isOpen);
   }
 
+  const getgareIdInLine = () => {
+
+    // const gareIdInLine = data.gares_id.filter(value =>  ( garesLines.include(value)
+    //   // return Object.values(garesLines).include(pbGareId)
+    //   // garesLines.map(gareId => {
+    //   //   // return gareId == value
+    //   //   if (gareId == value) {
+    //   //     return value
+    //   //   }
+    //   // })
+    // ))
+    // let gareIdInLine = data.gares_id.filter(value => garesLines.includes(value) )
+    //console.log(garesLines)
+    //let gareIdInLine = garesLines.filter(gareLine => gareLine.includes(data.gares_id) )
+    //console.log(gareIdInLine)
+    //console.log(value)
+
+    //setgaresIdInLines({gareIdInLine})
+    //console.log(gareIdInLine)
+    //return gareIdInLine
+
+    if (data.gares_id != null) {
+
+      const gareIdLine = [];
+  
+      //console.log(typeof data.gares_id)
+  
+      for (const pbgi of data.gares_id) 
+      {
+        if ( garesLines.includes(pbgi) )
+        {
+          gareIdLine.push(pbgi)
+        }
+      }
+      //console.log(gareIdLine)
+      setgaresIdInLines({gareIdLine})
+      //return gareIdLine
+    }
+    else {
+      console.log('rotai')
+    }
+
+  }
+
+
+  //console.log(garesIdInLines)
+  
   useEffect(() => {
     //showParkings({data})
+
+  //  const gareIdInLine = data.gares_id.filter(value => {
+  //     // return Object.values(garesLines).include(pbGareId)
+  //     garesLines.map(gareId => {
+  //       // return gareId == value
+  //       if (gareId == value) {
+  //         return value
+  //       }
+  //     })
+  // })
+   getgareIdInLine();
+
+   //setgaresIdInLines(getgareIdInLine())
+
   }, [])
 
   return (
@@ -35,13 +97,34 @@ function Parking({data, dataGares}) {
           <h3>{data.gares_id}</h3>
           {/* {console.log(dataGares.getGaresIdArray)} */}
           {/* <h3>{gareIdToGareName(data.gares_id, dataGares)}</h3> */}
-          {/* <h3>{gareIdToGareName(data.gares_id, dataGares)}</h3> */}
-          {
-            data.gares_id.map((value) =>(
-              
-              <RerArrete name={gareIdToGareName(value, dataGares)}/> 
-            ))
+   
+          {/* {console.log(garesLines.getGaresIdArray.map(String))} */}
+          {/* {console.log(typeof garesLines)} */}
+          {/* {
+           
+           garesIdInLines.map((value) =>(
+                            
+                            <RerArrete name={gareIdToGareName(value, dataGares)}/> 
+                          ))
 
+          } */}
+
+          { 
+          
+            //garesIdInLines && console.log(Object.values(garesIdInLines))
+            garesIdInLines && Object.values(garesIdInLines).map( value =>(
+
+            //console.log(value)
+              value.map( item => (
+
+                <RerArrete name={gareIdToGareName(item, dataGares)}/> 
+
+                // value.map((item) => {
+                //   //console.log(item)
+                //    <RerArrete name={item}/> 
+                // })
+              ))
+            ))
           }
         </div>
         <div className="wrapper--flex">
