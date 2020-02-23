@@ -6,6 +6,7 @@ import Distance from './Distance'
 import Price from './Price'
 import ButtonSeeMore from './ButtonSeeMoor'
 import ParkingOpend from './ParkingOpend'
+import gareIdToGareName from '../../../functions/map/gareIdToGareName';
 
 
 
@@ -13,7 +14,7 @@ import ParkingOpend from './ParkingOpend'
 
 
 
-function Parking({data}) {
+function Parking({data, dataGares}) {
   const [isOpen, setIsOpen] = useState(false);
   //console.log(isOpen);
 
@@ -32,7 +33,10 @@ function Parking({data}) {
         <div>
           {/* <h3>Parking-Vincennes Chateau</h3> */}
           <h3>{data.gares_id}</h3>
-          <RerArrete name="Vincennes"/> 
+          {/* {console.log(dataGares.getGaresIdArray)} */}
+          <h3>{gareIdToGareName(data.gares_id, dataGares)}</h3>
+          {/* <h3>{gareIdToGareName(data.gares_id, dataGares)}</h3> */}
+          <RerArrete name={gareIdToGareName(data.gares_id, dataGares)}/> 
         </div>
         <div className="wrapper--flex">
           <Favorit />
