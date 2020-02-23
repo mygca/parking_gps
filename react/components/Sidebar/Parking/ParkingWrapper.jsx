@@ -268,7 +268,7 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
               //console.log(matchedGareIDArray)
               setMatchedId({matchedGareIDArray})
 
-              const showParkingsBox = [];
+              let showParkingsBox = [];
               for (const parking of parkings) {
                 //console.log(parking.company)
                 for (let i = 0; i < (parking.gares_id).length; i++) {
@@ -284,6 +284,54 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
               }
               //console.log(showParkingsBox)
               setData({showParkingsBox})
+
+              if ( showParkingsBox != null)
+              {
+                //filterParkingsOptions(is24, isHandicap, isSecurity, {showParkingsBox}, setData)
+
+
+                if ( is24 && !isHandicap && !isSecurity)
+                {
+                  showParkingsBox = showParkingsBox.filter( parkingH24 => parkingH24.h24 == true )
+                  setData({showParkingsBox})
+                }
+                else if ( !is24 && isHandicap && !isSecurity ) 
+                {
+                  showParkingsBox = showParkingsBox.filter( parkingH => parkingH.handicape == true )
+                  setData({showParkingsBox})
+                }
+                else if ( !is24 && !isHandicap && isSecurity ) 
+                {
+                  showParkingsBox = showParkingsBox.filter( parkingSecure => parkingSecure.camera == true )
+                  setData({showParkingsBox})
+                }
+                else if ( is24 && isHandicap && !isSecurity) 
+                {
+                  showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true)
+                  setData({showParkingsBox})
+                }
+                else if ( is24 && !isHandicap && isSecurity ) 
+                {
+                  showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.camera == true)
+                  setData({showParkingsBox})
+                }
+                else if ( !is24 && isHandicap && isSecurity ) 
+                {
+                  showParkingsBox = showParkingsBox.filter( p => p.handicape == true && p.camera == true)
+                  setData({showParkingsBox})
+                }
+                else if ( is24 && isHandicap && isSecurity ) 
+                {
+                  showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.camera == true && p.handicape == true)
+                  setData({showParkingsBox})
+                }
+                else 
+                {
+                  return
+                }
+              
+
+              }
             }
             else{
               console.log("no parking")
@@ -302,16 +350,7 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
   //   renderParkings = false
   // }
 
-  const filterH24 = () => {
 
-    //console.log(data)
-
-    // if (is24)
-    // {
-    //   const parkingFilterH24 = data.showParkingsBox.filter(parking => parking.h24 == true)
-    //   console.log(parkingFilterH24)
-    // }
-  }
   
 
 
@@ -323,8 +362,6 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
     showParkings({data})
 
     delete data.showParkingsBox
-
-    filterH24();
 
     //filterParkingsOptions();
      
