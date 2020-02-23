@@ -296,10 +296,10 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
             //   // <ParkingBox data={{e}}/> 
             // <p>{e.company}</p>
             // })
-            data.showParkingsBox.map(e => (
+            data.showParkingsBox.map((e, i)=> (
               //console.log(e)
               // <ParkingBox data={e} dataGares={gares} garesLines={garesIdArray.getGaresIdArray.map(String)}/> 
-              <ParkingBox data={e} dataGares={gares} garesLines={garesIdArray.getGaresIdArray}/> 
+              <ParkingBox key={i} data={e} dataGares={gares} garesLines={garesIdArray.getGaresIdArray}/> 
             //<p>{e.company}</p>
             ))
           

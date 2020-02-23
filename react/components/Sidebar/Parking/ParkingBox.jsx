@@ -62,8 +62,8 @@ function Parking({data, dataGares, garesLines}) {
           { 
             garesIdInLines && Object.values(garesIdInLines).map( value => (
 
-              value.map( item => (
-                <RerArrete name={gareIdToGareName(item, dataGares)}/> 
+              value.map( (item, index) => (
+                <RerArrete key={index} name={gareIdToGareName(item, dataGares)}/> 
               ))
             ))
           }
