@@ -303,7 +303,7 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
             //<p>{e.company}</p>
             ))
           
-          // <ParkingBox data={data.showParkingsBox}/>  
+  
 
           )) 
         }
