@@ -8,7 +8,7 @@ const opperator= require('../../../img/infoLinie--opperator.png');
 
 function ParkingInfoLinie({name,legende,data}) {
   let imgPath={name}
-  console.log(eval(imgPath.name))
+  //console.log(eval(imgPath.name))
 
   return (
     <div className="parking__infoLine">

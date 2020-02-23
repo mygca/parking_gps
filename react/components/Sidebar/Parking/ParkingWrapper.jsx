@@ -14,7 +14,7 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
   const [garesIdArray, setgaresIdArray] = useState(null);
   const [parkingsIdArray, setparkingsIdArray] = useState();
   const [matchedId, setMatchedId] = useState();
-  const [data, setData] = useState({parkings});
+  const [data, setData] = useState({});
 
   /*
   * Data fetch parkings from API
@@ -208,23 +208,6 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
           }
         )
     }
-    // const getGaresIdArray = [];
-    // //console.log(gares)
-    // // if (gares != null)
-    // // {
-    //   for (const g of gares) 
-    //   {
-    //     getGaresIdArray.push(g.garesId)
-    //   }
-    //   //setgaresIdArray({getGaresIdArray})
-    //   //getGaresIdArray.map(String)
-    // // }
-    // // else
-    // // {
-    // //   console.log("cqac")
-    // // }
-    // const garesIdArrStr = getGaresIdArray.map(String)
-    // setgaresIdArray({garesIdArrStr})
   }
 
   // useEffect(() => {
@@ -377,31 +360,31 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
 
 
    
-  const allParkingsId = () => {
+  // const allParkingsId = () => {
 
-      //Get GareIDs of all displayd gares
-      const getParkingsIdArray = [];
-      //const matchedGareIDArray = [];
-      if (parkings != null)
-      {
-        for (const p of parkings) {
-          for (let i = 0; i < (p.gares_id).length; i++) {
-            const parkingGareid = p.gares_id[i];
-            getParkingsIdArray.push(parkingGareid)  
-          }
-        }
-        getParkingsIdArray.map(String)
-        setparkingsIdArray({getParkingsIdArray})
+  //     //Get GareIDs of all displayd gares
+  //     const getParkingsIdArray = [];
+  //     //const matchedGareIDArray = [];
+  //     if (parkings != null)
+  //     {
+  //       for (const p of parkings) {
+  //         for (let i = 0; i < (p.gares_id).length; i++) {
+  //           const parkingGareid = p.gares_id[i];
+  //           getParkingsIdArray.push(parkingGareid)  
+  //         }
+  //       }
+  //       getParkingsIdArray.map(String)
+  //       setparkingsIdArray({getParkingsIdArray})
 
-        const matchedGareIDArray = getParkingsIdArray.filter(element => garesIdArray.includes(element)).map(String);
-        //console.log(matchedGareIDArray)
-        setMatchedId({matchedGareIDArray})
-      }
-      else{
-        console.log("no parking")
-      }
+  //       const matchedGareIDArray = getParkingsIdArray.filter(element => garesIdArray.includes(element)).map(String);
+  //       //console.log(matchedGareIDArray)
+  //       setMatchedId({matchedGareIDArray})
+  //     }
+  //     else{
+  //       console.log("no parking")
+  //     }
       
-  }
+  // }
    //console.log(parkingsIdArray)
 
 
@@ -471,6 +454,18 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
   //   setData({showParkingsBox})
   //   //return showParkingsBox
   // }
+  let renderParkings;
+  if (data) {
+    renderParkings = true
+  }
+  else
+  {
+    renderParkings = false
+  }
+
+  
+
+
 
   useEffect(() => {
     //setData(showParkingsBox);
@@ -542,6 +537,9 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
 
     // console.log(parkingsIdArray)
      //console.log(garesIdArray)
+
+     delete data.showParkingsBox
+     
   }, [])
 
   //   const allGaresId =  () => {
@@ -608,8 +606,71 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
           <ParkingBox key={i} data={data}/>  
             
           )) 
-        } 
-  */}
+        }  */}
+{/* 
+        {renderParkings && data.map((data, i )=> (
+
+          <ParkingBox key={i} data={data}/>  
+            
+          )) 
+          
+        } */}
+
+        {Array.isArray(data) ? 'array' : 'object'}
+
+        {/* {(Array.from(data)).map((data, i )=> (
+
+          <ParkingBox key={i} data={data}/>  
+          
+          )) 
+        } */}
+
+        {/* {
+          (Object.values(data)).forEach(([data]) => {
+            //console.log(key); 
+            console.log(data.company); 
+          // <p>{key}{value.company}</p>
+            <ParkingBox data={data}/>  
+          })
+        } */}
+        {/* {
+          
+          Object.values(data).forEach((key)=> {
+          //console.log(data[key][1])
+          console.log(data.showParkingsBox)
+          
+          //<ParkingBox data={data[key]}/>  
+
+          }) 
+        } */}
+        {
+          
+          Object.values(data).map(()=> (
+          //console.log(data[key][1])
+            // data.showParkingsBox.forEach(e => {
+            //   //console.log(e)
+            //   // <ParkingBox data={{e}}/> 
+            // <p>{e.company}</p>
+            // })
+            data.showParkingsBox.map(e => (
+              //console.log(e)
+              <ParkingBox data={e}/> 
+            //<p>{e.company}</p>
+            ))
+          
+          // <ParkingBox data={data.showParkingsBox}/>  
+
+          )) 
+        }
+        {/* {
+          Object.values(data).map(([data]) => (
+            //console.log(key); 
+            //console.log(data.company); 
+          // <p>{key}{value.company}</p>
+            <ParkingBox data={data}/>  
+          ))
+        }
+         */}
 
       
     </div>
