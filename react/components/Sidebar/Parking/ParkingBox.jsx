@@ -34,9 +34,15 @@ function Parking({data, dataGares}) {
           {/* <h3>Parking-Vincennes Chateau</h3> */}
           <h3>{data.gares_id}</h3>
           {/* {console.log(dataGares.getGaresIdArray)} */}
-          <h3>{gareIdToGareName(data.gares_id, dataGares)}</h3>
           {/* <h3>{gareIdToGareName(data.gares_id, dataGares)}</h3> */}
-          <RerArrete name={gareIdToGareName(data.gares_id, dataGares)}/> 
+          {/* <h3>{gareIdToGareName(data.gares_id, dataGares)}</h3> */}
+          {
+            data.gares_id.map((value) =>(
+              
+              <RerArrete name={gareIdToGareName(value, dataGares)}/> 
+            ))
+
+          }
         </div>
         <div className="wrapper--flex">
           <Favorit />

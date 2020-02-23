@@ -1,8 +1,8 @@
-export default function gareIdToGareName(pbGareId, dataGares){
+export default function gareIdToGareName(value, dataGares){
   //console.log("gare id to gare name");
 
   let nameGareParkingBox;
-  Object.values(pbGareId).map(value => {
+  //Object.values(pbGareId).map(value => {
     Object.values(dataGares).map(e => {
       //let idgare = dataGares.garesId
       if ( value == e.garesId ) 
@@ -11,16 +11,16 @@ export default function gareIdToGareName(pbGareId, dataGares){
         //console.log('izz')
         nameGareParkingBox = e.nomGare
       }
-      else
-      {
-        nameGareParkingBox = 'bruh'
-        //onsole.log(dataGares.nomGare)
-      }
+      // else
+      // {
+      //   nameGareParkingBox = 'bruh'
+      //   //onsole.log(dataGares.nomGare)
+      // }
     })
 
     
 
-  })
+  //})
 
   return nameGareParkingBox;
   
