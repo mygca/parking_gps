@@ -18,6 +18,7 @@ function Parking({data, dataGares, garesLines}) {
   const [isOpen, setIsOpen] = useState(false);
   const [garesIdInLines, setgaresIdInLines] = useState(null);
   //console.log(isOpen);
+  console.log('how many parkings shown?')
 
   const toFalse = ()=> {
     setIsOpen(!isOpen);
