@@ -375,37 +375,37 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
                 if ( is24 && !isHandicap && !isSecurity)
                 {
                   showParkingsBox = showParkingsBox.filter( parkingH24 => parkingH24.h24 == true )
-                  setData({showParkingsBox})
+                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
                 }
                 else if ( !is24 && isHandicap && !isSecurity ) 
                 {
                   showParkingsBox = showParkingsBox.filter( parkingH => parkingH.handicape == true )
-                  setData({showParkingsBox})
+                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
                 }
                 else if ( !is24 && !isHandicap && isSecurity ) 
                 {
                   showParkingsBox = showParkingsBox.filter( parkingSecure => parkingSecure.camera == true )
-                  setData({showParkingsBox})
+                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
                 }
                 else if ( is24 && isHandicap && !isSecurity) 
                 {
                   showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true)
-                  setData({showParkingsBox})
+                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
                 }
                 else if ( is24 && !isHandicap && isSecurity ) 
                 {
                   showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.camera == true)
-                  setData({showParkingsBox})
+                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
                 }
                 else if ( !is24 && isHandicap && isSecurity ) 
                 {
                   showParkingsBox = showParkingsBox.filter( p => p.handicape == true && p.camera == true)
-                  setData({showParkingsBox})
+                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
                 }
                 else if ( is24 && isHandicap && isSecurity ) 
                 {
                   showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.camera == true && p.handicape == true)
-                  setData({showParkingsBox})
+                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
                 }
                 else 
                 {
