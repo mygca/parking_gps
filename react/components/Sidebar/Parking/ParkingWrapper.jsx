@@ -125,6 +125,14 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
               //console.log(matchedGareIDArray)
               setMatchedId({matchedGareIDArray})
 
+              setTimeout(() => {
+                for (let i = 0; i < matchedGareIDArray.length; i++) {
+                  const matchedGareId = matchedGareIDArray[i];
+                  let elementTest=document.querySelector('[data-station-id="'+matchedGareId+'"]')
+                  elementTest.style.display="block";
+                }
+              }, 100);
+
 
             /**
              * Data parkings
@@ -268,6 +276,15 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
               //console.log(matchedGareIDArray)
               setMatchedId({matchedGareIDArray})
 
+
+                setTimeout(() => {
+                for (let i = 0; i < matchedGareIDArray.length; i++) {
+                  const matchedGareId = matchedGareIDArray[i];
+                  let elementTest=document.querySelector('[data-station-id="'+matchedGareId+'"]')
+                  elementTest.style.display="block";
+                }
+                }, 100);
+
               let showParkingsBox = [];
               for (const parking of parkings) {
                 //console.log(parking.company)
@@ -367,13 +384,13 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
      
   }, [is24, isHandicap, isSecurity])
 
-  setTimeout(() => {
-  for (let i = 0; i < matchedGareIDArray.length; i++) {
-    const matchedGareId = matchedGareIDArray[i];
-    let elementTest=document.querySelector('[data-station-id="'+matchedGareId+'"]')
-    elementTest.style.display="block";
-  }
-  }, 100);
+  // setTimeout(() => {
+  // for (let i = 0; i < matchedGareIDArray.length; i++) {
+  //   const matchedGareId = matchedGareIDArray[i];
+  //   let elementTest=document.querySelector('[data-station-id="'+matchedGareId+'"]')
+  //   elementTest.style.display="block";
+  // }
+  // }, 100);
 
 
 
