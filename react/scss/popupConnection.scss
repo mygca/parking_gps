@@ -1,0 +1,23 @@
+.popup--connection{
+  position: absolute;
+  width:250px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  top:70px;
+  right:50px;
+  //padding-top: 40px;
+
+  .inputBox{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 20px;
+    font-size: 0.8em;
+    label{
+      margin-top: 5px;
+    }
+  }
+  .popuo--connection__intro{
+    margin-bottom: 30px;
+  }
+}

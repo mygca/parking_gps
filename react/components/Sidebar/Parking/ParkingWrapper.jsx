@@ -153,11 +153,13 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
 
   //display matched gareIDs in carte
 
+  setTimeout(() => {
   for (let i = 0; i < matchedGareIDArray.length; i++) {
     const matchedGareId = matchedGareIDArray[i];
     let elementTest=document.querySelector('[data-station-id="'+matchedGareId+'"]')
     elementTest.style.display="block";
   }
+  }, 100);
 
   
 
