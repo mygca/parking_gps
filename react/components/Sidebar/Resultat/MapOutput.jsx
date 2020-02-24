@@ -7,7 +7,7 @@ import getGareId from '../../../functions/map/getGareId';
 
 // import {STATIONS} from '../../../data/stations'
 
-function MapOutput({sport, lines}) {
+function MapOutput({sport, lines,isSidebarFavoirit}) {
 
   const [is24, setIs24] = useState(false)
   const [isHandicap, setIsHandicap] = useState(false)
@@ -22,6 +22,8 @@ function MapOutput({sport, lines}) {
  
   return (
     <div className="wrapper--output">
+
+      {/* Small pupups at the carte to give more information en plus */}
       <Popup name="popupLinie" sport={sport} lines={lines}/>
       <Popup name="popupState" sport={sport} lines={lines}/>
 
@@ -30,15 +32,26 @@ function MapOutput({sport, lines}) {
         <div className="wrapper--flex">
           <span className={"icon--rer icon--rer--"+lines}>{lines}</span> 
           <div className="output__intro__text">
-            <p>Offre du parking sur la ligne {lines} pour viens directement au site du {sport}</p> </div>
+            {isSidebarFavoirit===false?
+              <p>Offre du parking sur la ligne {lines} pour viens directement au site du {sport}</p>
+              :
+              <p>Tes parking tu as chosis</p>
+            }
+          </div>
         </div>
-        
+
+        {isSidebarFavoirit===true?
+        ""
+        :
         <FilterBox 
         setIs24={setIs24} is24={is24}
         setIsHandicap={setIsHandicap} isHandicap={isHandicap}
         setIsSecurity={setIsSecurity} isSecurity={isSecurity}
         setMinHeight={setMinHeight} minHeight={minHeight}
       />
+        }
+        
+        
       </div>
 
      

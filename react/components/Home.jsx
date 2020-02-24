@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Navigation from './Global/Navigation';
+
 const Home = ({isHome, setIsHome}) => {
 
   function handlerClick(){
@@ -7,6 +9,7 @@ const Home = ({isHome, setIsHome}) => {
   }
   return (
     <div className="wrapper--home">
+      <Navigation isHome={isHome} setIsHome={setIsHome}/>
 
       <section className="section--intro intro">
         <div className="intro__textbox">

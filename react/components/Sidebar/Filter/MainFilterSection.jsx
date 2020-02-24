@@ -7,7 +7,7 @@ import Logo from '../../Global/Logo';
 
 
 
-const MainFilterSection = ({sport,setSport,setIsSelected,isSelected}) => {
+const MainFilterSection = ({sport,setSport,setIsSelected,isSelected,direction,setDirection}) => {
 
   
 
@@ -20,7 +20,9 @@ const MainFilterSection = ({sport,setSport,setIsSelected,isSelected}) => {
 
       <Logo />
       <FilterBox setSport={setSport} sport={sport}  name="site" text="Quelle épreuve allez vous voir?"/>
-      {/* <FilterBox setSport={setSport} name="direction" text="Direction d'arrive"/> */}
+      {/* <FilterBox setDirection={setDirection} direction={direction} name="direction" text="Direction d'arrive"/> */}
+
+      
 
       <button className="button--primary" onClick={handlerClick}>Valide</button>
 
