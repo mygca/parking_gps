@@ -116,7 +116,7 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
 
   useEffect(() => {
     setData(parkings);
-    showParkings({data})
+    //showParkings({data})
 
     fetchGare();
   }, [])
