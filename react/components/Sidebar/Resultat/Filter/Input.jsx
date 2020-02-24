@@ -8,7 +8,7 @@ function Input({name,minHeight,setMinHeight}) {
 
   return (
     <div className="wrapper--input">
-      <input placeholder="1.9" onChange={handlerOnChange} />
+      <input placeholder="ex: 1.9" onChange={handlerOnChange} />
       <label>{name}</label>
     </div>
   );
