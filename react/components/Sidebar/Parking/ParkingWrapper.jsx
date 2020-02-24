@@ -110,8 +110,19 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
 
             const getParkingsIdArray = [];
             //const matchedGareIDArray = [];
-            if (parkings != null)
+            if (parkings != null || gares !=null)
             {
+              //Array du gares sur la carte
+              let allGareIds = document.querySelectorAll('[data-station-id]');
+              let listGareIds = [];
+              for (let i = 0; i < allGareIds.length; i++) {
+                let listGareIdElement =allGareIds[i].getAttribute("data-station-id")
+                listGareIds.push(listGareIdElement);
+              }
+
+              console.log(listGareIds)
+
+              //Array du parkings sur la line
               for (const p of parkings) {
                 for (let i = 0; i < (p.gares_id).length; i++) {
                   const parkingGareid = p.gares_id[i];
@@ -125,13 +136,17 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
               //console.log(matchedGareIDArray)
               setMatchedId({matchedGareIDArray})
 
-              setTimeout(() => {
-                for (let i = 0; i < matchedGareIDArray.length; i++) {
-                  const matchedGareId = matchedGareIDArray[i];
-                  let elementTest=document.querySelector('[data-station-id="'+matchedGareId+'"]')
-                  elementTest.style.display="block";
-                }
-              }, 100);
+              // setTimeout(() => {
+              //   console.log("what match!!!!!")
+              //   console.log(matchedGareIDArray.length);
+              //   for (let i = 0; i < matchedGareIDArray.length; i++) {
+              //     const matchedGareId = matchedGareIDArray[i];
+
+              //     let elementTest=document.querySelector('[data-station-id="'+matchedGareId+'"]')
+              //     console.log(elementTest);
+              //     elementTest.style.display="block";
+              //   }
+              // }, 100);
 
 
             /**
@@ -185,6 +200,31 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
               // filterParkingsOptions(is24, isHandicap, isSecurity, {data}, setData)
               setData({showParkingsBox})
 
+               setTimeout(() => {
+                console.log("what match!!!!!")
+                console.log(showParkingsBox.length);
+                for (let i = 0; i < showParkingsBox.length; i++) {
+                  console.log(i);
+                  let matchedGareId = showParkingsBox[i];
+                  //console.log(matchedGareId)
+                  //console.log(matchedGareId.gares_id.map(String));
+                  let r = [];
+                  
+                  for (const matchId of matchedGareId) {
+                    let p = matchId.gares_id
+                    //r.push(p)
+                    console.log(p);
+                    for (let j = 0; j < p.length; j++) {
+                      let elementTest=document.querySelector('[data-station-id="'+p[j]+'"]')
+                      console.log(elementTest);
+                      elementTest.style.display="block";
+  
+                    }
+                  }
+
+                }
+              }, 100);
+
               if ( showParkingsBox != null)
               {
                 //filterParkingsOptions(is24, isHandicap, isSecurity, {showParkingsBox}, setData)
@@ -229,8 +269,6 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
                 {
                   return
                 }
-              
-
               }
             }
             else{
@@ -376,7 +414,7 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
 
     fetchGare();
 
-    showParkings({data})
+    //showParkings({data})
 
     delete data.showParkingsBox
 
