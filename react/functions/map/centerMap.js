@@ -1,4 +1,6 @@
-export function centerMap(sport){
+export function centerMap(sport,direction){
+
+  console.log("center")
 
   let scrollContainer=document.querySelector(".wrapper__map");
   let scrollElement=document.querySelector(".box--carte");
@@ -19,12 +21,20 @@ export function centerMap(sport){
   console.log("x "+xScroll +" y "+yScroll)
   scrollContainer.scrollTo(xScroll, yScroll);
 
-  // let direction =arrivalDirection;
+  //let direction = arrivalDirection;
+  setTimeout(() => {
+    console.log("direction "+direction)
+  }, 100);
+}
+
+
+
+  // display state
+
 
   // switch (direction) {
   //   case 'nord':
-
-  //     return scrollContainer.scrollTo(xScroll, 0);
+  //     return scrollContainer.scrollTo(xScroll, 0) ;
   //   case 'east':
   //     return scrollContainer.scrollTo(imgWidth, yScroll);
   //   case 'south':
@@ -33,56 +43,21 @@ export function centerMap(sport){
   //     return scrollContainer.scrollTo(0, yScroll);
   //   default:
   //     return scrollContainer.scrollTo(xScroll, yScroll);
-      
+  // }
+
+  // switch (direction) {
+  //   case 'nord':
+  //     return console.log("nord") ;
+  //   case 'east':
+  //     return console.log("eats");
+  //   case 'south':
+  //     return console.log("south");
+  //   case 'west':
+  //     return console.log("west");
+  //   default:
+  //     return scrollContainer.scrollTo(xScroll, yScroll);
   // }
 
 
-  // display state
-
-  if(typeof sport ==="string"){
-    console.log("sport is string")
-
-    //reset circel size
-    let circles = document.querySelectorAll("circle");
-    for (let i = 0; i < circles.length; i++) {
-      circles[i].setAttribute('r', "8" );
-      circles[i].style.fill="white";
-      circles[i].style.display="none";
-    }
-
-    //display statio Circle + icon
-    setTimeout(() => {
-      let selectedSite= document.querySelectorAll('['+sport+']');
-      
-      for (let i = 0; i < selectedSite.length; i++) {
-        selectedSite[i].setAttribute('r', "18" );
-        selectedSite[i].style.fill="#fff";
-      }
-      
-      let selectedSiteStadion= document.querySelector('['+sport+'stadion]');
-      let allStatdionIcon=document.querySelectorAll('.icon--site');
-      for (let i = 0; i < allStatdionIcon.length; i++) {
-        allStatdionIcon[i].style.display="none";
-      }
-      selectedSiteStadion.style.display="block";
 
 
-    }, 100);
-  }else{
-    console.log("sport not string")
-    let allStatdionIcon=document.querySelectorAll('.icon--site');
-    for (let i = 0; i < allStatdionIcon.length; i++) {
-      allStatdionIcon[i].style.display="none";
-    }
-  }
-  
-  
-  
-  
-
-  // selectedSite.setAttribute('r', "20" );
-  // selectedSite.style.fill="red";
-
-
-
-}
