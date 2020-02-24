@@ -6,6 +6,8 @@
 /var/
 /vendor/
 .env
+.vscode/
+.DS_Store/
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###

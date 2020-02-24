@@ -6,6 +6,7 @@ import Distance from './Distance'
 import Price from './Price'
 import ButtonSeeMore from './ButtonSeeMoor'
 import ParkingOpend from './ParkingOpend'
+import gareIdToGareName from '../../../functions/map/gareIdToGareName';
 
 
 
@@ -13,16 +14,45 @@ import ParkingOpend from './ParkingOpend'
 
 
 
-function Parking({data}) {
+function Parking({data, dataGares, garesLines}) {
   const [isOpen, setIsOpen] = useState(false);
+  const [garesIdInLines, setgaresIdInLines] = useState(null);
   //console.log(isOpen);
+  console.log('how many parkings shown?')
 
   const toFalse = ()=> {
     setIsOpen(!isOpen);
   }
 
+  const getgareIdInLine = () => {
+
+    if (data.gares_id != null) {
+
+      const gareIdLine = [];
+    
+      for (const pbgi of data.gares_id) 
+      {
+        if ( garesLines.includes(pbgi) )
+        {
+          gareIdLine.push(pbgi)
+        }
+      }
+      setgaresIdInLines({gareIdLine})
+
+    }
+    else {
+      console.log('rotai')
+    }
+
+  }
+
+
+  
   useEffect(() => {
     //showParkings({data})
+
+   getgareIdInLine();
+
   }, [])
 
   return (
@@ -30,9 +60,14 @@ function Parking({data}) {
 
       <div className="wrapper--flex">
         <div>
-          {/* <h3>Parking-Vincennes Chateau</h3> */}
-          <h3>{data.gares_id}</h3>
-          <RerArrete name="Vincennes"/> 
+          { 
+            garesIdInLines && Object.values(garesIdInLines).map( value => (
+
+              value.map( (item, index) => (
+                <RerArrete key={index} name={gareIdToGareName(item, dataGares)}/> 
+              ))
+            ))
+          }
         </div>
         <div className="wrapper--flex">
           <Favorit />

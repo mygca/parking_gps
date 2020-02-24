@@ -5,14 +5,14 @@ export default function showParkings({data}){
 
 
   // create list with all gare ID on map
-  let allGareIds = document.querySelectorAll('[data-station-id]');
-  let listGareIds = [];
-  for (let i = 0; i < allGareIds.length; i++) {
-    let listGareIdElement =allGareIds[i].getAttribute("data-station-id")
-    listGareIds.push(listGareIdElement);
-  }
+  // let allGareIds = document.querySelectorAll('[data-station-id]');
+  // let listGareIds = [];
+  // for (let i = 0; i < allGareIds.length; i++) {
+  //   let listGareIdElement =allGareIds[i].getAttribute("data-station-id")
+  //   listGareIds.push(listGareIdElement);
+  // }
 
-  console.log(listGareIds)
+  // console.log(listGareIds)
 
 
   // searche gareId(parking in list)
