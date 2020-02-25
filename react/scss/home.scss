@@ -1,22 +1,188 @@
-.intro{
-  width:100%;
-  height:100vh;
-  background-color: pink;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  .intro__textbox{
-    width:50%;
-    margin-left: 10%;
+/*
+On sait que on va aller pour cet CSS dans la enfer du CSS. 
+On savoir se vraiment completement concentre sure le battle du react.
+C'est un CSS operation urgenca.
+Vraiment Desole...
+*/
+
+
+@mixin max-xs {
+  @media (max-width: 767px) {
+    @content;
   }
 }
 
-.avantage{
-  display: flex;
-  width: 80%;
-  margin: 0 auto;
-  justify-content: space-between;
-  .avantage__box{
-    width:25%;
+
+.wrapper--home{
+  width:100vw;
+  overflow: hidden;
+
+  .intro{
+    width:100%;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    .intro__textbox{
+      width:50%;
+      margin-left: 10%;
+      @include max-xs {
+        width:80%;
+        margin-top: -20vh;
+      }
+      h2{
+        text-transform: uppercase;
+        color: #5B5B5F;
+        font-size: 64px;
+        @include max-xs {
+          font-size: 58px;
+        }
+      }
+      .intro__input{
+        margin-top: 10px;
+        padding:5px;
+        font-weight: 100;
+        font-size: 20px;
+        width: 100%;
+      }
+      p{
+        font-size: 37px;
+        font-weight: 100;
+        @include max-xs {
+          font-size: 18px;
+        }
+        span{
+          font-weight: 400;
+        }
+      }
+      .button{
+        margin-top: 20px;
+      }
+    }
+    .intro__image{
+      position: absolute;
+      bottom:0;
+      right:0;
+      width:40%;
+      @include max-xs {
+        width:60%;
+      }
+    }
+  }
+
+  .section--besoin{
+    text-align: center;
+    font-size: 53px;
+    font-weight: 100;
+    padding: 10vw 5vw;
+    @include max-xs {
+      font-size: 42px;
+    }
+    span{
+      font-weight: 400;
+    }
+  }
+
+  .steps{
+    .step__box{
+      height:100vh;
+      @include max-xs {
+        height:65vh
+      }
+      position: relative;
+      .step__image{
+        position: absolute;
+        @include max-xs {
+          bottom:0;
+          top:auto !important;
+        } 
+      }
+      .step__textBox{
+        width:45%;
+        position: relative;
+        @include max-xs {
+          width:70vw;
+        }
+        h2{
+          font-size: 85px;
+          color: #E6625E;
+          text-transform: uppercase;
+          @include max-xs {
+            font-size: 45px;
+          }
+        }
+        p{
+          font-size: 35px;
+          font-weight: 100;
+          @include max-xs {
+            font-size: 20px;
+          }
+        }
+      }
+      &:nth-of-type(1){
+        
+        .step__image{
+          left:-5%;
+          top:0;
+          width:60vw;
+        }
+        .step__textBox{
+          border-left: 1px solid #000;
+          padding-left: 5px;
+          margin-left: 50vw;
+          top: 10vw;
+          @include max-xs {
+            margin-left: 20vw;
+            
+          }
+        }
+      }
+      &:nth-of-type(2){
+        
+        .step__image{
+          width:140vw;
+          right:-15%;
+          top:0;
+        }
+        .step__textBox{
+          border-right: 1px solid #000;
+          padding-right: 5px;
+          margin-left: 5vw;
+          top: 20vw;
+          width:50vw;
+          text-align: right;
+          @include max-xs {
+            margin-left: 10vw;
+            top:10vw;
+            width:70vw;
+          }
+        }
+      }
+      &:nth-of-type(3){
+        
+        .step__image{
+          width:115vw;
+          left:-18%;
+          top:0;
+        }
+        .step__textBox{
+          border-left: 1px solid #000;
+          padding-left: 5px;
+          margin-left: 50vw;
+          margin-top: 20vw;
+          top: 10vw;
+          @include max-xs {
+            margin-left: 10vw;
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+  footer{
+    text-align: right;
+    padding-right: 2vw;
+    padding-bottom: 1vw;
   }
 }

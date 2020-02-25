@@ -7,7 +7,7 @@ import getGareId from '../../../functions/map/getGareId';
 
 // import {STATIONS} from '../../../data/stations'
 
-function MapOutput({sport, lines,isSidebarFavoirit}) {
+function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit}) {
 
   const [is24, setIs24] = useState(false)
   const [isHandicap, setIsHandicap] = useState(false)
@@ -23,9 +23,15 @@ function MapOutput({sport, lines,isSidebarFavoirit}) {
   return (
     <div className="wrapper--output">
 
+
+
       {/* Small pupups at the carte to give more information en plus */}
-      <Popup name="popupLinie" sport={sport} lines={lines}/>
-      <Popup name="popupState" sport={sport} lines={lines}/>
+      {window.innerWidth<760 === false?
+        <Popup name="popupLinie" sport={sport} lines={lines}/>
+      :""}
+      {window.innerWidth<760 === false?
+        <Popup name="popupState" sport={sport} lines={lines}/>
+      :""}
 
 
       <div className="output__intro">
@@ -61,7 +67,8 @@ function MapOutput({sport, lines,isSidebarFavoirit}) {
       <ParkingOutput gareID={gareID} setIs24={setIs24} is24={is24}
         setIsHandicap={setIsHandicap} isHandicap={isHandicap}
         setIsSecurity={setIsSecurity} isSecurity={isSecurity}
-        setMinHeight={setMinHeight} minHeight={minHeight} sport={sport} lines={lines}/>
+        setMinHeight={setMinHeight} minHeight={minHeight} sport={sport} lines={lines}
+        listFavorit={listFavorit} setListFavorit={setListFavorit}/>
 
  
     </div>

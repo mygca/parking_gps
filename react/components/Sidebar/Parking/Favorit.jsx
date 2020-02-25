@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-function Favorit() {
+function Favorit(listFavorit,setListFavorit) {
 
   const [isLiked, setIsLiked] = useState(false);
-  const toggle = () => setIsLiked(!isLiked);
+  const toggle = () => setIsLiked(!isLiked) ;
 
   Favorit.handleClickOutside = () => setIsLiked(false);
 
