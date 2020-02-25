@@ -23,6 +23,7 @@ function ParkingOpend({data}) {
       {/* <ParkingInfoLinie name="time" legende="Ouvertures" value="10:00 - 29:00" /> */}
       {/* <ParkingInfoLinie name="time" legende="Ouvertures" data={ data.time_opening==null ? "nc" : data.time_opening } /> */}
       <ParkingInfoLinie name="time" legende="Ouvertures" data={ data.time_opening==0 ? "24H/24H" : data.time_opening } />
+      <ParkingInfoLinie name="height" legende="Hauteur" data={data.hauteur_maximum + " m"}  />
       <div className="wrapper--flex wrapper--prix">
         {/* <ParkingInfoLinie name="price" legende="Jour" value="10€" /> */}
         {/* <ParkingInfoLinie name="price" legende="Jour" data={data.prix_jour=='' || data.prix_jour=="Pas d'information" ? `${data.prix_jour}€` : "Pas d'information"} /> */}
