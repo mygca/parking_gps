@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 
-function Navigation({isHome,setIsHome,setPopUpNav,isLogin,setIsLogin,setMoodConnection,setIsSidebarFavoirit}) {
+function Navigation({isHome,setIsHome,setPopUpNav,isLogin,setIsLogin,setMoodConnection,setIsSidebarFavoirit,listFavorit}) {
 
   function handlerHomeClick(){
     {setIsHome("true")}
@@ -26,16 +26,9 @@ function Navigation({isHome,setIsHome,setPopUpNav,isLogin,setIsLogin,setMoodConn
       <ul>
         <li className="nav__link" onClick={handlerHomeClick}>Home</li>
         
-        {isLogin=== false?
-        <div>
-          <li className="nav__link" onClick={handlerConnectionClick}>Log In</li>
-        </div>
-          
-        :
-        <div className="wrapper--flex">
-          <li className="nav__link"onClick={handlerFavoritClick} >Favorit</li>
-          <p onClick={handlerProfilClick}>Martin</p>
-        </div>
+        {listFavorit.length>0?
+          <button className="button--sendFavorits">Envoyer tes Favorits</button>
+        :""
         }
         
       </ul>

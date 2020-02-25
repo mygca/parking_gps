@@ -1,9 +1,19 @@
+
+@mixin max-xs {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
 .wrapper{
   display: flex;
   height:100vh;
   overflow: hidden;
   &__sidebar{
     width:35%;
+    @include max-xs {
+      width:100%;
+    }
     background-color: #fff;
     height: 100vh;
     overflow: scroll;

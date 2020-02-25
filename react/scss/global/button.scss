@@ -1,7 +1,7 @@
 .button{
   display: block;
   outline: 0;
-  border: solid 1px #efefef;
+  //border: solid 1px #efefef;
   font-size: 12px;
   border-radius: 10px;
   text-transform: uppercase;
@@ -9,11 +9,11 @@
 
 .button--primary{
   display: inline-block;
-  background-color: #fff;
+  //background-color: #fff;
   padding:10px 40px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  background-image: linear-gradient(#E75F5F, #EC923F);
+  //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  background-color: #E6625E;
   //margin-top: 20px;
   text-decoration: none;
   color:#fff;

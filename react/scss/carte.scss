@@ -33,6 +33,12 @@ circle{
   stroke-width:2px;
   transition:all 0.1s;
   pointer-events: auto !important;
+  transform-origin:center;
+  // @keyframes blink {
+  //   0%{opacity:0}    
+  //   100%{opacity:1 }    
+  // }
+  // animation:blink 1s infinite alternate ;
   &:hover{
   fill: blue;
   }
@@ -44,7 +50,7 @@ circle{
   
   .box--carte{
     position: relative;
-    width:200%;
+    width:300%;
     .wrapper--line{
       position: absolute;
       pointer-events: none;
