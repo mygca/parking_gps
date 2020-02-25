@@ -21,7 +21,7 @@ const App = () => {
   // button validation (sport,direction)
   const [isSelected, setIsSelected] = useState("false")
   // is homepage ou app
-  const [isHome, setIsHome] = useState("true")
+  const [isHome, setIsHome] = useState("false")
   //is popup open 
   const [isPopUpNav, setPopUpNav] = useState("false")
   // login,connection, profil

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import FilterBox from './FilterBox';
 import ParkingOutput from './ParkingOutput';
 import Popup from '../../Map/Popup';
+// import ButtonClose from '../../Global/ButtonClose';
+import GareIDSelected from '../Resultat/Filter/GareIDSelected';
 
 import getGareId from '../../../functions/map/getGareId';
 
@@ -64,6 +66,11 @@ function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit}) 
       
       
       <p>{gareID}</p>
+     
+      <GareIDSelected sport={sport} lines={lines} name={name} />
+      
+
+
       <ParkingOutput gareID={gareID} setIs24={setIs24} is24={is24}
         setIsHandicap={setIsHandicap} isHandicap={isHandicap}
         setIsSecurity={setIsSecurity} isSecurity={isSecurity}

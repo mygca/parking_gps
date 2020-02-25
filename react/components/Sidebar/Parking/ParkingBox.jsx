@@ -14,7 +14,7 @@ import gareIdToGareName from '../../../functions/map/gareIdToGareName';
 
 
 
-function Parking({data, dataGares, garesLines,listFavorit, setListFavorit}) {
+function Parking({data, dataGares, garesLines,listFavorit, setListFavorit, gareId}) {
   const [isOpen, setIsOpen] = useState(false);
   const [garesIdInLines, setgaresIdInLines] = useState(null);
   //console.log(isOpen);
@@ -57,7 +57,7 @@ function Parking({data, dataGares, garesLines,listFavorit, setListFavorit}) {
 
   return (
     <div className="box--parking parking">
-
+      <p>{data.gares_id}</p>
       <div className="wrapper--flex">
         <div>
           { 

@@ -11,7 +11,6 @@ import filterParkingsOptions from '../../../functions/map/filterParkingsOptions'
 import filterParkingMap from '../../../functions/map/filterParkingMap';
 
 
-
 function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHandicap,isSecurity,minHeight,setMinHeight, sport, lines,listFavorit, setListFavorit}) {
   const [gares, setGares] = useState(null);
   const [garesIdArray, setgaresIdArray] = useState(null);
@@ -251,87 +250,226 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
 
               if ( showParkingsBox != null)
               {
+                filterParkingMap({showParkingsBox})
                 //filterParkingsOptions(is24, isHandicap, isSecurity, {showParkingsBox}, setData)
+                //console.log(showParkingsBox)
 
-                if ( is24 && !isHandicap && !isSecurity && !minHeight)
+                /**FILTER BY GARE ID */
+                // if (gareID) {
+                //   //showParkingsBox = showParkingsBox.filter( p => p.gares_id == gareID)
+                //   console.log ('filter gareid man')
+                //   showParkingsBox = showParkingsBox.filter( parking => {
+        
+                //     console.log(parking.gares_id)
+                
+                //     for (let index = 0; index < parking.gares_id.length; index++) {
+                //       const element = parking.gares_id[index];
+
+                //       if ( element == gareID )
+                //       {
+                //         return parking
+                //       }
+                      
+                //     }
+                //   })
+                //   filterParkingMap({showParkingsBox});
+                //   setData({showParkingsBox}); 
+                // }
+                //filterParkingGareID({showParkingsBox, gareID})
+
+                if (gareID) 
                 {
-                  showParkingsBox = showParkingsBox.filter( parkingH24 => parkingH24.h24 == true )
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (!is24 && isHandicap && !isSecurity && !minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( parkingH => parkingH.handicape == true )
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (!is24 && !isHandicap && isSecurity && !minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( parkingSecure => parkingSecure.camera == true )
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (!is24 && !isHandicap && !isSecurity && minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( parkingHeight => parkingHeight.hauteur_maximum >= minHeight)
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (is24 && isHandicap && !isSecurity && !minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true)
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (is24 && !isHandicap && isSecurity && !minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.camera == true )
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (is24 && !isHandicap && !isSecurity && minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.hauteur_maximum >= minHeight)
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (!is24 && isHandicap && isSecurity && !minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( p => p.handicape == true && p.camera == true)
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (!is24 && isHandicap && !isSecurity && minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( p => p.handicape == true && p.hauteur_maximum >= minHeight)
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (!is24 && !isHandicap && isSecurity && minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( p => p.camera == true && p.hauteur_maximum >= minHeight)
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (is24 && isHandicap && isSecurity && !minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true && p.camera == true)
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (is24 && isHandicap && !isSecurity && minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true && p.hauteur_maximum >= minHeight)
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (!is24 && isHandicap && isSecurity && minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( p => p.handicape == true && p.camera == true && p.hauteur_maximum >= minHeight)
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (is24 && !isHandicap && isSecurity && minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.camera == true && p.hauteur_maximum >= minHeight)
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (is24 && isHandicap && isSecurity && minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true && p.camera == true && p.hauteur_maximum >= minHeight)
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
+                  console.log("baba o")
+                  showParkingsBox = showParkingsBox.filter( parking => {
+                  var gareIdSelected;
+                    //console.log(parking.gares_id)
+                
+                    for (let index = 0; index < parking.gares_id.length; index++) {
+                      const element = parking.gares_id[index];
+
+                      if ( element == gareID )
+                      {
+                        gareIdSelected = element;
+                        return parking
+                      }
+                      
+                    }
+                  })
+                  console.log("nb show parking " + showParkingsBox)
+                  setData({showParkingsBox}); 
+                  console.log("nb show parking after setting" + showParkingsBox)
+                  filterParkingMap({showParkingsBox});
+
+                /// Filter by parking options
+                  if ( is24 && !isHandicap && !isSecurity && !minHeight )
+                  {
+                    
+                    showParkingsBox = showParkingsBox.filter( parkingH24 => parkingH24.h24 == true && parkingH24.gares_id == gareIdSelected )
+                    
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox}); 
+                  }
+                  else if (!is24 && isHandicap && !isSecurity && !minHeight) 
+                  {
+                    //filterParkingGareID({showParkingsBox, gareID})
+                    showParkingsBox = showParkingsBox.filter( parkingH => parkingH.handicape == true && parkingH.gares_id == gareIdSelected  )
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (!is24 && !isHandicap && isSecurity && !minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( parkingSecure => parkingSecure.camera == true && parkingSecure.gares_id == gareIdSelected )
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (!is24 && !isHandicap && !isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( parkingHeight => parkingHeight.hauteur_maximum >= minHeight && parkingHeight.gares_id == gareIdSelected)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && isHandicap && !isSecurity && !minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true && p.gares_id == gareIdSelected)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && !isHandicap && isSecurity && !minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.camera == true && p.gares_id == gareIdSelected)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && !isHandicap && !isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.hauteur_maximum >= minHeight && p.gares_id == gareIdSelected)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (!is24 && isHandicap && isSecurity && !minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.handicape == true && p.camera == true && p.gares_id == gareIdSelected)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (!is24 && isHandicap && !isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.handicape == true && p.hauteur_maximum >= minHeight && p.gares_id == gareIdSelected)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (!is24 && !isHandicap && isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.camera == true && p.hauteur_maximum >= minHeight && p.gares_id == gareIdSelected)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && isHandicap && isSecurity && !minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true && p.camera == true && p.gares_id == gareIdSelected)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && isHandicap && !isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true && p.hauteur_maximum >= minHeight && p.gares_id == gareIdSelected)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (!is24 && isHandicap && isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.handicape == true && p.camera == true && p.hauteur_maximum >= minHeight && p.gares_id == gareIdSelected)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && !isHandicap && isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.camera == true && p.hauteur_maximum >= minHeight && p.gares_id == gareIdSelected)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && isHandicap && isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true && p.camera == true && p.hauteur_maximum >= minHeight && p.gares_id == gareIdSelected)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else 
+                  {
+                    return
+                  }
+                } 
                 else 
                 {
-                  return
+                  if ( is24 && !isHandicap && !isSecurity && !minHeight)
+                  {
+                    filterParkingGareID({showParkingsBox, gareID})
+                    showParkingsBox = showParkingsBox.filter( parkingH24 => parkingH24.h24 == true )
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox}); 
+                  }
+                  else if (!is24 && isHandicap && !isSecurity && !minHeight) 
+                  {
+                    filterParkingGareID({showParkingsBox, gareID})
+                    showParkingsBox = showParkingsBox.filter( parkingH => parkingH.handicape == true )
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (!is24 && !isHandicap && isSecurity && !minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( parkingSecure => parkingSecure.camera == true )
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (!is24 && !isHandicap && !isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( parkingHeight => parkingHeight.hauteur_maximum >= minHeight)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && isHandicap && !isSecurity && !minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && !isHandicap && isSecurity && !minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.camera == true )
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && !isHandicap && !isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.hauteur_maximum >= minHeight)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (!is24 && isHandicap && isSecurity && !minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.handicape == true && p.camera == true)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (!is24 && isHandicap && !isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.handicape == true && p.hauteur_maximum >= minHeight)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (!is24 && !isHandicap && isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.camera == true && p.hauteur_maximum >= minHeight)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && isHandicap && isSecurity && !minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true && p.camera == true)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && isHandicap && !isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true && p.hauteur_maximum >= minHeight)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (!is24 && isHandicap && isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.handicape == true && p.camera == true && p.hauteur_maximum >= minHeight)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && !isHandicap && isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.camera == true && p.hauteur_maximum >= minHeight)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && isHandicap && isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true && p.camera == true && p.hauteur_maximum >= minHeight)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else 
+                  {
+                    return
+                  }
                 }
+
+                //setData({showParkingsBox})
               }
             }
             else{
@@ -407,128 +545,196 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
               {
                 //filterParkingsOptions(is24, isHandicap, isSecurity, {showParkingsBox}, setData)
 
+                if (gareID) {
+                  console.log("baba o")
+                  showParkingsBox = showParkingsBox.filter( parking => {
+                  var gareIdSelected;
+                    //console.log(parking.gares_id)
+                
+                    for (let index = 0; index < parking.gares_id.length; index++) {
+                      const element = parking.gares_id[index];
 
-                // if ( is24 && !isHandicap && !isSecurity)
-                // {
-                //   showParkingsBox = showParkingsBox.filter( parkingH24 => parkingH24.h24 == true )
-                //   setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                // }
-                // else if ( !is24 && isHandicap && !isSecurity ) 
-                // {
-                //   showParkingsBox = showParkingsBox.filter( parkingH => parkingH.handicape == true )
-                //   setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                // }
-                // else if ( !is24 && !isHandicap && isSecurity ) 
-                // {
-                //   showParkingsBox = showParkingsBox.filter( parkingSecure => parkingSecure.camera == true )
-                //   setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                // }
-                // else if ( is24 && isHandicap && !isSecurity) 
-                // {
-                //   showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true)
-                //   setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                // }
-                // else if ( is24 && !isHandicap && isSecurity ) 
-                // {
-                //   showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.camera == true)
-                //   setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                // }
-                // else if ( !is24 && isHandicap && isSecurity ) 
-                // {
-                //   showParkingsBox = showParkingsBox.filter( p => p.handicape == true && p.camera == true)
-                //   setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                // }
-                // else if ( is24 && isHandicap && isSecurity ) 
-                // {
-                //   showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.camera == true && p.handicape == true)
-                //   setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                // }
-                // else 
-                // {
-                //   return
-                // }
+                      if ( element == gareID )
+                      {
+                        gareIdSelected = element;
+                        return parking
+                      }
+                      
+                    }
+                  })
+                  console.log("nb show parking " + showParkingsBox)
+                  setData({showParkingsBox}); 
+                  console.log("nb show parking after setting" + showParkingsBox)
+                  filterParkingMap({showParkingsBox});
 
-                // parkingHeight => parkingHeight.hauteur_maximum >= minHeight
-                if ( is24 && !isHandicap && !isSecurity && !minHeight)
-                {
-                  showParkingsBox = showParkingsBox.filter( parkingH24 => parkingH24.h24 == true )
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (!is24 && isHandicap && !isSecurity && !minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( parkingH => parkingH.handicape == true )
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (!is24 && !isHandicap && isSecurity && !minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( parkingSecure => parkingSecure.camera == true )
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (!is24 && !isHandicap && !isSecurity && minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( parkingHeight => parkingHeight.hauteur_maximum >= minHeight)
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (is24 && isHandicap && !isSecurity && !minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true)
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (is24 && !isHandicap && isSecurity && !minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.camera == true )
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (is24 && !isHandicap && !isSecurity && minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.hauteur_maximum >= minHeight)
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (!is24 && isHandicap && isSecurity && !minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( p => p.handicape == true && p.camera == true)
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (!is24 && isHandicap && !isSecurity && minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( p => p.handicape == true && p.hauteur_maximum >= minHeight)
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (!is24 && !isHandicap && isSecurity && minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( p => p.camera == true && p.hauteur_maximum >= minHeight)
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (is24 && isHandicap && isSecurity && !minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true && p.camera == true)
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (is24 && isHandicap && !isSecurity && minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true && p.hauteur_maximum >= minHeight)
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (!is24 && isHandicap && isSecurity && minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( p => p.handicape == true && p.camera == true && p.hauteur_maximum >= minHeight)
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (is24 && !isHandicap && isSecurity && minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.camera == true && p.hauteur_maximum >= minHeight)
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
-                else if (is24 && isHandicap && isSecurity && minHeight) 
-                {
-                  showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true && p.camera == true && p.hauteur_maximum >= minHeight)
-                  setData({showParkingsBox}); filterParkingMap({showParkingsBox})
-                }
+                /// Filter by parking options
+                  if ( is24 && !isHandicap && !isSecurity && !minHeight )
+                  {
+                    
+                    showParkingsBox = showParkingsBox.filter( parkingH24 => parkingH24.h24 == true && parkingH24.gares_id == gareIdSelected )
+                    
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox}); 
+                  }
+                  else if (!is24 && isHandicap && !isSecurity && !minHeight) 
+                  {
+                    //filterParkingGareID({showParkingsBox, gareID})
+                    showParkingsBox = showParkingsBox.filter( parkingH => parkingH.handicape == true && parkingH.gares_id == gareIdSelected  )
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (!is24 && !isHandicap && isSecurity && !minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( parkingSecure => parkingSecure.camera == true && parkingSecure.gares_id == gareIdSelected )
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (!is24 && !isHandicap && !isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( parkingHeight => parkingHeight.hauteur_maximum >= minHeight && parkingHeight.gares_id == gareIdSelected)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && isHandicap && !isSecurity && !minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true && p.gares_id == gareIdSelected)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && !isHandicap && isSecurity && !minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.camera == true && p.gares_id == gareIdSelected)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && !isHandicap && !isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.hauteur_maximum >= minHeight && p.gares_id == gareIdSelected)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (!is24 && isHandicap && isSecurity && !minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.handicape == true && p.camera == true && p.gares_id == gareIdSelected)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (!is24 && isHandicap && !isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.handicape == true && p.hauteur_maximum >= minHeight && p.gares_id == gareIdSelected)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (!is24 && !isHandicap && isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.camera == true && p.hauteur_maximum >= minHeight && p.gares_id == gareIdSelected)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && isHandicap && isSecurity && !minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true && p.camera == true && p.gares_id == gareIdSelected)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && isHandicap && !isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true && p.hauteur_maximum >= minHeight && p.gares_id == gareIdSelected)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (!is24 && isHandicap && isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.handicape == true && p.camera == true && p.hauteur_maximum >= minHeight && p.gares_id == gareIdSelected)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && !isHandicap && isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.camera == true && p.hauteur_maximum >= minHeight && p.gares_id == gareIdSelected)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && isHandicap && isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true && p.camera == true && p.hauteur_maximum >= minHeight && p.gares_id == gareIdSelected)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else 
+                  {
+                    return
+                  }
+                } 
                 else 
                 {
-                  return
+                  if ( is24 && !isHandicap && !isSecurity && !minHeight)
+                  {
+                    filterParkingGareID({showParkingsBox, gareID})
+                    showParkingsBox = showParkingsBox.filter( parkingH24 => parkingH24.h24 == true )
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox}); 
+                  }
+                  else if (!is24 && isHandicap && !isSecurity && !minHeight) 
+                  {
+                    filterParkingGareID({showParkingsBox, gareID})
+                    showParkingsBox = showParkingsBox.filter( parkingH => parkingH.handicape == true )
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (!is24 && !isHandicap && isSecurity && !minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( parkingSecure => parkingSecure.camera == true )
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (!is24 && !isHandicap && !isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( parkingHeight => parkingHeight.hauteur_maximum >= minHeight)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && isHandicap && !isSecurity && !minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && !isHandicap && isSecurity && !minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.camera == true )
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && !isHandicap && !isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.hauteur_maximum >= minHeight)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (!is24 && isHandicap && isSecurity && !minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.handicape == true && p.camera == true)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (!is24 && isHandicap && !isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.handicape == true && p.hauteur_maximum >= minHeight)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (!is24 && !isHandicap && isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.camera == true && p.hauteur_maximum >= minHeight)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && isHandicap && isSecurity && !minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true && p.camera == true)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && isHandicap && !isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true && p.hauteur_maximum >= minHeight)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (!is24 && isHandicap && isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.handicape == true && p.camera == true && p.hauteur_maximum >= minHeight)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && !isHandicap && isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.camera == true && p.hauteur_maximum >= minHeight)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else if (is24 && isHandicap && isSecurity && minHeight) 
+                  {
+                    showParkingsBox = showParkingsBox.filter( p => p.h24 == true && p.handicape == true && p.camera == true && p.hauteur_maximum >= minHeight)
+                    setData({showParkingsBox}); filterParkingMap({showParkingsBox})
+                  }
+                  else 
+                  {
+                    return
+                  }
                 }
-
               }
             }
             else{
@@ -569,7 +775,7 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
 
     //filterParkingsOptions();
      
-  }, [is24, isHandicap, isSecurity, minHeight])
+  }, [is24, isHandicap, isSecurity, minHeight, gareID])
 
   // setTimeout(() => {
   // for (let i = 0; i < matchedGareIDArray.length; i++) {

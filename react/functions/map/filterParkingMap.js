@@ -1,5 +1,7 @@
 export default function filterParkingMap({showParkingsBox}){
 
+  if (showParkingsBox != 0) 
+  {
 
     console.log("what match!!!!!")
     console.log(showParkingsBox.length);
@@ -41,6 +43,12 @@ export default function filterParkingMap({showParkingsBox}){
         
       }
     }
+  }
+  else 
+  {
+    console.log('no parking in cercle')
+  }
+
   
 
   

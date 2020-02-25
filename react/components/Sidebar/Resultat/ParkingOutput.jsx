@@ -5,7 +5,7 @@ import ParkingWrapper from '../Parking/ParkingWrapper';
 function ParkingOutput({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHandicap,isSecurity,minHeight,setMinHeight, sport, lines,direction,listFavorit, setListFavorit}) {
   return (
     <div className="wrapper--parkingOutput">
-      <h2>Tout des Parkings</h2>
+      <h2>Tous les parkings</h2>
       <FilterBoxAffichage />
       <hr></hr>
       <ParkingWrapper gareID={gareID} setIs24={setIs24} is24={is24}
