@@ -16,6 +16,7 @@ export default function filterParkingMap({showParkingsBox}){
     let circles = document.querySelectorAll("circle");
     for (let i = 0; i < circles.length; i++) {
       circles[i].style.display="none";
+      circles[i].style.fill="#fff";
     }
 
     let circleBackground = document.querySelectorAll(".circle__background");
@@ -51,6 +52,7 @@ export default function filterParkingMap({showParkingsBox}){
 
           // set style for circels
           elementTest.style.display="block";
+          elementTest.style.fill="#fff";
           elementTest.setAttribute('r', "10" );
 
           var circBackground = document.createElement('div');
