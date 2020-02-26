@@ -34,6 +34,7 @@ circle{
   transition:all 0.1s;
   pointer-events: auto !important;
   transform-origin:center;
+  cursor: pointer;
   // @keyframes blink {
   //   0%{opacity:0}    
   //   100%{opacity:1 }    
@@ -42,6 +43,42 @@ circle{
   &:hover{
   fill: blue;
   }
+}
+
+.circle__background{
+  width:30px;
+  height:30px;
+  border: solid 1px #000;
+  position: absolute;
+  border-radius: 50%;
+  transform-origin: center;
+  // @keyframes blink {
+  //   0%{transform: scale(1);}    
+  //   100%{transform: scale(2)}    
+  // }
+  // animation:blink 1s infinite alternate ;
+  transform:translateY(-50%) translateX(-50%);
+  // &::before{
+  //   content:"";
+  //   width:20px;
+  //   height:20px;
+  //   top:2.5px;
+  //   left:2.5px;
+  //   border: solid 1px #000;
+  //   position: absolute;
+  //   border-radius: 50%;
+  //   transform-origin: center;
+  //   // @keyframes blink {
+  //   //   0%{transform: scale(1);}    
+  //   //   100%{transform: scale(0.8)}    
+  //   // }
+  //   // animation:blink 1s infinite alternate ;
+  // }
+  &:nth-child(4n) {
+    //background-color: red !important;
+    animation-delay:0.25s;
+  }
+  
 }
 
 .map{
@@ -68,6 +105,22 @@ circle{
         position: relative;
       }
     }
+  }
+}
+
+.parking__hoverInfo{
+  position: absolute;
+  top:0;
+  z-index: 100;
+  background-color: #fff;
+  border-radius:10px;
+  background-color: #fff;
+  position: absolute;
+  padding:5px 10px;
+  .hoverInfo__decription{
+    font-size: 0.9em;
+    color: grey;
+    margin-bottom: 2px;
   }
 }
 

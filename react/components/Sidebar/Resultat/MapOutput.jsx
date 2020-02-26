@@ -3,11 +3,12 @@ import FilterBox from './FilterBox';
 import ParkingOutput from './ParkingOutput';
 import Popup from '../../Map/Popup';
 
+
 import getGareId from '../../../functions/map/getGareId';
 
 // import {STATIONS} from '../../../data/stations'
 
-function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit}) {
+function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,isPopUpNav,setPopUpNav,setMoodConnection,isLogin}) {
 
   const [is24, setIs24] = useState(false)
   const [isHandicap, setIsHandicap] = useState(false)
@@ -17,8 +18,17 @@ function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit}) 
   const [gareID, setGareID] = useState()
 
   useEffect(() => {
-    getGareId(setGareID,sport)
+    {window.innerWidth>760 === true?
+      getGareId(setGareID,sport)
+    :
+    ""}
+
   },[]);
+
+  function handlerLogin(){
+    {setPopUpNav("true")}
+    {setMoodConnection("registre")}
+  }
  
   return (
     <div className="wrapper--output">
@@ -26,22 +36,30 @@ function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit}) 
 
 
       {/* Small pupups at the carte to give more information en plus */}
-      {window.innerWidth<760 === false?
+      {/* {window.innerWidth<760 === false?
         <Popup name="popupLinie" sport={sport} lines={lines}/>
       :""}
       {window.innerWidth<760 === false?
         <Popup name="popupState" sport={sport} lines={lines}/>
-      :""}
+      :""} */}
 
 
       <div className="output__intro">
         <div className="wrapper--flex">
-          <span className={"icon--rer icon--rer--"+lines}>{lines}</span> 
+
           <div className="output__intro__text">
             {isSidebarFavoirit===false?
-              <p>Offre du parking sur la ligne {lines} pour viens directement au site du {sport}</p>
+              <h2 class="headline--etape">Trouve ton parking ideal en function de te besoins</h2>
               :
-              <p>Tes parking tu as chosis</p>
+              <div>
+                <p>Tes parking tu as chosis</p>
+                {isLogin===false?
+                  <div>
+                    <p>Pour mis tes information assecable sur la route cree vite fait un compte</p>
+                    <button className="button--primary" onClick={handlerLogin}>Cree Travel Guide</button>
+                  </div>
+                :<p>Tes favorits sont maintenant sauvgarde dans ton compte</p>}
+              </div>
             }
           </div>
         </div>

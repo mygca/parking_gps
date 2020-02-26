@@ -40,12 +40,7 @@ const App = () => {
 
       {(isHome==="false")?
         <div className="wrapper">
-          {/* <div className="stateGlobal">
-            <p>{sport.label}</p>
-            <p>{sport.lines}</p>
-            <p>{isSelected}</p>
-          </div> */}
-
+ 
           <Sidebar 
           setSport={setSport} sport={sport} 
           lines={sport.lines} 
@@ -54,6 +49,9 @@ const App = () => {
           setIsSidebarFavoirit={setIsSidebarFavoirit}
           direction={direction} setDirection={setDirection}
           listFavorit={listFavorit} setListFavorit={setListFavorit}
+          isPopUpNav={isPopUpNav} setPopUpNav={setPopUpNav} 
+          setMoodConnection={setMoodConnection}
+          isLogin={isLogin}
           />
 
           {console.log("Direction "+direction.value)}
@@ -71,14 +69,10 @@ const App = () => {
           setMoodConnection={setMoodConnection}
           isSidebarFavoirit={isSidebarFavoirit}
           setIsSidebarFavoirit={setIsSidebarFavoirit}
-          listFavorit={listFavorit}/>
+          listFavorit={listFavorit}
+          isSelected={isSelected}/>
 
-          {(isPopUpNav==="true")?
-            <PopupConnection 
-            isLogin={isLogin} setIsLogin={setIsLogin} 
-            setPopUpNav={setPopUpNav} 
-            moodConnection={moodConnection} setMoodConnection={setMoodConnection}  />
-          :""}
+          
         </div>
       :<Home 
       isHome={isHome} setIsHome={setIsHome} 
@@ -86,8 +80,19 @@ const App = () => {
       isSidebarFavoirit={isSidebarFavoirit}
       setIsSidebarFavoirit={setIsSidebarFavoirit}
       listFavorit={listFavorit}
+      isPopUpNav={isPopUpNav} setPopUpNav={setPopUpNav} 
+      setMoodConnection={setMoodConnection}
       />
       }
+
+      {(isPopUpNav==="true")?
+        <PopupConnection 
+        isLogin={isLogin} setIsLogin={setIsLogin} 
+        isHome={isHome} setIsHome={setIsHome} 
+        setPopUpNav={setPopUpNav} 
+        setIsSidebarFavoirit={setIsSidebarFavoirit}
+        moodConnection={moodConnection} setMoodConnection={setMoodConnection}  />
+      :""}
     </div>
     
     

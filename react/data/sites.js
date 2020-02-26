@@ -6,7 +6,7 @@ export const dataSites = [
   {value:'basketballaccor', label:'Basket-ball | AccorHotels Arena', lines: "c"}, // 637 (C, Arena 1) 305 (P, Arena 2)
   {value:'beachvolley', label:'Beach-volley', lines: 'c'}, // 141 (C)
   {value:'bmx', label:'BMX', lines: ['c', 'n']}, // 835 938 (C, N)
-  {value:'box', label:'box', lines: 'c'}, // 376 (C)
+  {value:'box', label:'Box', lines: 'c'}, // 376 (C)
   {value:'canoe', label:'Canoë-kayak', lines: 'p'}, // 866 (P)
   {value:'cyclismpist', label:'Cyclisme sur piste', lines: ['c', 'n']},  // 835 938 (C, N)
   {value:'cyclismroute', label:'Cyclisme sur route', lines: 'a'}, //  151 (A)

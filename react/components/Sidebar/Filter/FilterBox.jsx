@@ -17,8 +17,6 @@ const FilterBox = ({ setSport, text,name, sport,direction,setDirection}) => {
 
     <div className="box--filter filterBox">
     <h2 className="filterBox__headline">{text}</h2>
-    {console.log("Filter "+direction)}
-
 
     {name==="site"?
       <Select
@@ -29,7 +27,7 @@ const FilterBox = ({ setSport, text,name, sport,direction,setDirection}) => {
     :
     <Select
       value={direction}
-      onChange={(e) => {setDirection({label: e.value, value: e.value});}}
+      onChange={(e) => {setDirection({label: e.label, value: e.value});}}
       options={dataDirection}
     />  
     }

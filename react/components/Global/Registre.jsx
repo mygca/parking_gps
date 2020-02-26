@@ -17,10 +17,6 @@ function Registre({setMoodConnection,setIsLogin,setPopUpNav}) {
       <ButtonClose  setPopUpNav={setPopUpNav}/>
       <p className="popuo--connection__intro">Cree un comte pour enregistre tes Favorit</p>
       <div className="inputBox">
-        <label>Nom</label>
-        <input type="text"/>
-      </div>
-      <div className="inputBox">
         <label>E-mail</label>
         <input type="text"/>
       </div>
@@ -30,7 +26,7 @@ function Registre({setMoodConnection,setIsLogin,setPopUpNav}) {
       </div>
       <button className="button--primary" onClick={handlerLogin}>Submit</button>
 
-      <button className="button button--underlined" onClick={handlerConnection}>Deja un compt</button>
+      {/* <button className="button button--underlined" onClick={handlerConnection}>Deja un compt</button> */}
       
 
     </div>

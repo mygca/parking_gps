@@ -39,15 +39,19 @@ function Carte({sport}) {
     tennis:['c'],
     tennistable:['n'],
     volleyball:['b'],
+    vtt:['j'],
     waterpolo:['b'],
     all:['a','b','c','d','n','p','j']
   };
 
   useEffect(() => {
-    centerMap({sport});
+    console.log("sport in carte"+sport)
+
+      centerMap(sport);
+
     console.log("effect"+sport)
 
-  },[])
+  },[sport])
 
 
   return (

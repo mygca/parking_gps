@@ -5,9 +5,14 @@
   font-size: 12px;
   border-radius: 10px;
   text-transform: uppercase;
+  &:focus {outline:0;}
+}
+button{
+  &:focus {outline:0;}
 }
 
 .button--primary{
+  border:none;
   display: inline-block;
   //background-color: #fff;
   padding:10px 40px;
@@ -18,6 +23,7 @@
   text-decoration: none;
   color:#fff;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .button--underlined{

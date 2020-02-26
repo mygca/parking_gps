@@ -366,6 +366,8 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
             {
               for (const p of parkings) {
                 for (let i = 0; i < (p.gares_id).length; i++) {
+                  //console.log("874 check "+p.gares_id[i])
+                  //encore la
                   const parkingGareid = p.gares_id[i];
                   getParkingsIdArray.push(parkingGareid)  
                 }
@@ -374,7 +376,7 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
               setparkingsIdArray({getParkingsIdArray})
       
               const matchedGareIDArray = getParkingsIdArray.filter(element => getGaresIdArray.includes(element)).map(String);
-              //console.log(matchedGareIDArray)
+              console.log("check 874 "+matchedGareIDArray)
               setMatchedId({matchedGareIDArray})
 
 
@@ -563,9 +565,6 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
     delete data.showParkingsBox
 
 
-    
-
-    
 
     //filterParkingsOptions();
      

@@ -1,5 +1,6 @@
 .nav{
   position: absolute;
+  position: fixed;
   padding:5px 10px;
   height:50px;
   padding-right: 40px;
@@ -17,5 +18,18 @@
   }
   .nav__link{
     margin-right: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    p{
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #5B5B5F;
+    }
+    .logo{
+      width:30px;
+      margin-right: 5px; 
+    }
+    
   }
 }
