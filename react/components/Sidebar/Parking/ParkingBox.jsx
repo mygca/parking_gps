@@ -48,6 +48,13 @@ const Parking = ({data, dataGares, garesLines,listFavorit, setListFavorit, gareI
       console.log(parkingClickId)
       setParkingBoxGareId({parkingClickId})
 
+      let circles = document.querySelectorAll("circle");
+      for (let j = 0; j < circles.length; j++) {
+        let circle = circles[j];
+        circle.style.fill="#fff";
+      }
+
+
       for (let i = 0; i < parkingClickId.length; i++) {
         const element = parkingClickId[i];
 

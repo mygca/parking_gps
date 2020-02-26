@@ -19,6 +19,7 @@ function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,is
   const [isHandicap, setIsHandicap] = useState(false)
   const [isSecurity, setIsSecurity] = useState(false)
   const [minHeight, setMinHeight] = useState("1.9")
+  const [isPrixUp, setIsPrixUp] = useState(false)
 
   const [gareID, setGareID] = useState()
   const [gares, setGares] = useState()
@@ -139,6 +140,7 @@ function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,is
         setIsHandicap={setIsHandicap} isHandicap={isHandicap}
         setIsSecurity={setIsSecurity} isSecurity={isSecurity}
         setMinHeight={setMinHeight} minHeight={minHeight}
+        isPrixUp={isPrixUp} setIsPrixUp={setIsPrixUp} 
       />
         }
         
