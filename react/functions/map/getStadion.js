@@ -10,7 +10,7 @@ export function getStadion(sport){
       // hid all sircels in svg
       let circles = document.querySelectorAll("circle");
       for (let i = 0; i < circles.length; i++) {
-        circles[i].setAttribute('r', "8" );
+        circles[i].setAttribute('r', "12" );
         circles[i].style.fill="white";
         circles[i].style.display="none";
       }

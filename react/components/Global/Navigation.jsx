@@ -1,7 +1,8 @@
 
 import React, { useState } from "react";
+import Logo from "./Logo";
 
-function Navigation({isHome,setIsHome,setPopUpNav,isLogin,setIsLogin,setMoodConnection,setIsSidebarFavoirit,listFavorit}) {
+function Navigation({isHome,setIsHome,setPopUpNav,isLogin,setIsLogin,setMoodConnection,setIsSidebarFavoirit,listFavorit,isSelected}) {
 
   function handlerHomeClick(){
     {setIsHome("true")}
@@ -17,6 +18,7 @@ function Navigation({isHome,setIsHome,setPopUpNav,isLogin,setIsLogin,setMoodConn
   function handlerFavoritClick(){
     {setIsSidebarFavoirit(true)}
     console.log("favorit")
+    
   }
 
  
@@ -24,12 +26,12 @@ function Navigation({isHome,setIsHome,setPopUpNav,isLogin,setIsLogin,setMoodConn
   return (
     <nav className="nav">
       <ul>
-        <li className="nav__link" onClick={handlerHomeClick}>Home</li>
-        
-        {listFavorit.length>0?
-          <button className="button--sendFavorits">Envoyer tes Favorits</button>
-        :""
-        }
+      <li className="nav__link" onClick={handlerHomeClick}><Logo /><p>Hello Parking</p></li>
+        {/* <li className="nav__link" onClick={handlerHomeClick}>Home</li> */}
+
+        {isSelected==="true"?
+          <li className="nav__link" onClick={handlerFavoritClick}>Favoris</li>
+        :""}
         
       </ul>
     </nav>

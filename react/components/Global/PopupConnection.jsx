@@ -3,7 +3,7 @@ import Login from './Login';
 import Registre from './Registre';
 import Profil from './Profil';
 
-function PopupConnection({isLogin,setIsLogin,setPopUpNav,moodConnection,setMoodConnection}) {
+function PopupConnection({isLogin,isHome,setIsHome, setIsLogin,setPopUpNav,moodConnection,setMoodConnection,setIsSidebarFavoirit}) {
 
  
   
@@ -13,7 +13,9 @@ function PopupConnection({isLogin,setIsLogin,setPopUpNav,moodConnection,setMoodC
       <Login 
       setIsLogin={setIsLogin}
       setMoodConnection={setMoodConnection} 
-      setPopUpNav={setPopUpNav}  />
+      setPopUpNav={setPopUpNav}
+      setIsHome={setIsHome} 
+      setIsSidebarFavoirit={setIsSidebarFavoirit} />
       :
       (moodConnection==="registre")?
       <Registre 

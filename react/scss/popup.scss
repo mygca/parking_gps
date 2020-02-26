@@ -48,13 +48,13 @@
   justify-content: center;
   align-items: center;
   border:5px solid red;
-  &.icon--rer--a{border-color: red;color: red;border-radius: 50%;}
-  &.icon--rer--b{border-color: blue;color: blue;border-radius: 50%;}
-  &.icon--rer--c{border-color: yellow;color: yellow;border-radius: 50%;}
-  &.icon--rer--d{border-color: green;color: green;border-radius: 50%;}
-  &.icon--rer--j{border-color: green;color: green;border-radius: 30%;}
-  &.icon--rer--n{border-color: green;color: green;border-radius: 30%;}
-  &.icon--rer--p{border-color: green;color: green;border-radius: 30%;}
+  &.icon--rer--a{border-color: #FF1400;color: #FF1400;border-radius: 50%;}
+  &.icon--rer--b{border-color: #3C91DC;color: #3C91DC;border-radius: 50%;}
+  &.icon--rer--c{border-color: #FCDB4C;color: #FCDB4C;border-radius: 50%;}
+  &.icon--rer--d{border-color: #35A748;color: #35A748;border-radius: 50%;}
+  &.icon--rer--j{border-color: #C8D450;color: #C8D450;border-radius: 30%;}
+  &.icon--rer--n{border-color: #04C1B3;color: #04C1B3;border-radius: 30%;}
+  &.icon--rer--p{border-color: #F8B830;color: #F8B830;border-radius: 30%;}
 }
 .icon--sport{
   background-repeat: no-repeat;
