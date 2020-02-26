@@ -165,6 +165,7 @@ function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,is
         setIsSecurity={setIsSecurity} isSecurity={isSecurity}
         setMinHeight={setMinHeight} minHeight={minHeight} sport={sport} lines={lines}
         listFavorit={listFavorit} setListFavorit={setListFavorit}
+        isPrixUp={isPrixUp} setIsPrixUp={setIsPrixUp}
       />
 
  

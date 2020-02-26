@@ -11,7 +11,7 @@ import filterParkingsOptions from '../../../functions/map/filterParkingsOptions'
 import filterParkingMap from '../../../functions/map/filterParkingMap';
 
 
-function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHandicap,isSecurity,minHeight,setMinHeight, sport, lines,listFavorit, setListFavorit}) {
+function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHandicap,isSecurity,minHeight,setMinHeight, sport, lines,listFavorit, setListFavorit, isPrixUp, setIsPrixUp}) {
   const [gares, setGares] = useState(null);
   const [garesIdArray, setgaresIdArray] = useState(null);
   const [parkingsIdArray, setparkingsIdArray] = useState();
@@ -199,6 +199,14 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
               }
               //console.log(showParkingsBox)
               // filterParkingsOptions(is24, isHandicap, isSecurity, {data}, setData)
+              
+              /**SORT BY PRICE INCREASE */
+
+              showParkingsBox.sort((a,b) => 
+                 a.prix_jour - b.prix_jour
+              )
+              // console.log('sort', showParkingsBox)
+
               setData({showParkingsBox})
 
               //  setTimeout(() => {
@@ -541,6 +549,13 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
                 }
               }
               //console.log(showParkingsBox)
+
+              /** SORT BY PRICE INCREASE */
+              showParkingsBox.sort((a,b) => 
+                 a.prix_jour - b.prix_jour
+              )
+              //console.log('sort', showParkingsBox)
+
               setData({showParkingsBox})
 
               if ( showParkingsBox != null)
