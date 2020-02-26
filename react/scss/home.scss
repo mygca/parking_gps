@@ -24,6 +24,11 @@ Vraiment Desole...
     flex-direction: column;
     justify-content: center;
     position: relative;
+    .logo{
+      width:80px;
+      height:80px;
+      margin-bottom: 10px;
+    }
     .intro__textbox{
       width:50%;
       margin-left: 10%;
@@ -73,7 +78,8 @@ Vraiment Desole...
 
   .section--besoin{
     text-align: center;
-    font-size: 53px;
+    font-size: 40px;
+    line-height: 60px;
     font-weight: 100;
     padding: 10vw 5vw;
     @include max-xs {
@@ -113,8 +119,9 @@ Vraiment Desole...
           }
         }
         p{
-          font-size: 35px;
+          font-size: 20px;
           font-weight: 100;
+          max-width: 400px;
           @include max-xs {
             font-size: 20px;
           }
@@ -152,6 +159,9 @@ Vraiment Desole...
           top: 20vw;
           width:50vw;
           text-align: right;
+          p{
+            float: right;
+          }
           @include max-xs {
             margin-left: 10vw;
             top:10vw;

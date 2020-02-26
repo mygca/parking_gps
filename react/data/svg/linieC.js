@@ -31,7 +31,7 @@ export const liniec =<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://
   
   <circle data-ligne="c" data-station-id="574" data-station="musee-soray" cx="1351.06" cy="1063.59" r="7"/>
   <circle data-ligne="c" data-station-id="828" data-station="saint-michel-notre-dame-2" data-name="saint-michel-notre-dame" cx="1445.69" cy="1063.59" r="7"/>
-  <circle data-ligne="c" data-station-id="38" data-station="gare-dausterlitz" data-name="gare-dausterlitz" cx="1526.85" cy="1129.32" r="7"/>
+  <circle data-ligne="c" data-station-id="38" data-station="gare-dausterlitz" data-name="gare-dausterlitz" cx="1526.85" cy="1129.32" r="7" judo="true"/>
   <circle data-ligne="c" data-station-id="71" data-station="bibilotheque-francois-mitterrand" cx="1581.66" cy="1183.84" r="7"/>
   <circle data-ligne="c" data-station-id="369" data-station="ivry-sur-seine" cx="1614.35" cy="1276.31" r="7"/>
   <circle data-ligne="c" data-station-id="918" data-station="vitry-sur-seine" cx="1614.35" cy="1344.62" r="7"/>

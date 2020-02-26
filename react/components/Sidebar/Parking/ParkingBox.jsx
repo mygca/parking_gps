@@ -144,6 +144,10 @@ const Parking = ({data, dataGares, garesLines,listFavorit, setListFavorit, gareI
 
               // <RerArrete name={gareIdToGareName(value, dataGares)}/> 
 
+            //   value.map( (item, index) => (
+            //     <RerArrete key={index} dataGares={dataGares} name={gareIdToGareName(item, dataGares)}/> 
+            //   ))
+            // ))
           }
         </div>
         <div className="wrapper--flex">

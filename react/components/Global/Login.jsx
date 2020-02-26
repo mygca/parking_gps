@@ -2,14 +2,16 @@
 import React, { useState } from "react";
 import ButtonClose from "./ButtonClose"
 
-function Login({setMoodConnection,setIsLogin,setPopUpNav}) {
+function Login({setMoodConnection,setIsLogin,setIsHome,setPopUpNav,setIsSidebarFavoirit}) {
 
   function handlerConnection(){
     {setMoodConnection("registre")}
   }
   function handlerLogin(){
-    {setIsLogin(true)}
+    // {setIsLogin(true)}
     {setPopUpNav(false)}
+    {setIsHome("false")}
+    {setIsSidebarFavoirit(true)}
   }
  
   
@@ -27,7 +29,7 @@ function Login({setMoodConnection,setIsLogin,setPopUpNav}) {
       </div>
       <button className="button--primary" onClick={handlerLogin}>Log in</button>
 
-      <button className="button button--underlined" onClick={handlerConnection}>Pas encore un compt</button>
+      {/* <button className="button button--underlined" onClick={handlerConnection}>Pas encore un compt</button> */}
       
 
     </div>
