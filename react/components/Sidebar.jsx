@@ -6,8 +6,6 @@ import Popup from './Map/Popup';
 
 const Sidebar = ({sport,setSport,setIsSelected,isSelected, lines,isSidebarFavoirit,setIsSidebarFavoirit,setDirection,direction,listFavorit,setListFavorit,isPopUpNav,setPopUpNav,setMoodConnection,isLogin}) => {
 
-  
-
   return (
     <div className="wrapper__sidebar sidebar">
 
@@ -17,7 +15,8 @@ const Sidebar = ({sport,setSport,setIsSelected,isSelected, lines,isSidebarFavoir
     {window.innerWidth<760 === true?
       <div>
         <p>Favorit</p>
-        <MapOutput sport={sport.value} lines={lines} isSidebarFavoirit={isSidebarFavoirit}/>  
+        <MapOutput sport={sport.value} lines={lines} isSidebarFavoirit={isSidebarFavoirit}
+        />  
       </div>
     :
       isSelected === "false"?
@@ -52,7 +51,7 @@ const Sidebar = ({sport,setSport,setIsSelected,isSelected, lines,isSidebarFavoir
             lines={lines} 
             isSidebarFavoirit={isSidebarFavoirit}
             listFavorit={listFavorit} 
-            setListFavorit={setListFavorit}
+            setListFavorit={setListFavorit} 
             />  
 
 
@@ -71,8 +70,7 @@ const Sidebar = ({sport,setSport,setIsSelected,isSelected, lines,isSidebarFavoir
             lines={lines} 
             isSidebarFavoirit={isSidebarFavoirit}
             isPopUpNav={isPopUpNav} setPopUpNav={setPopUpNav} 
-            setMoodConnection={setMoodConnection}
-            isLogin={isLogin}/>  
+            setMoodConnection={setMoodConnection}/>  
           </div>
       }
     

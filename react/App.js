@@ -34,6 +34,8 @@ const App = () => {
   const [listFavorit, setListFavorit] = useState([])
   // is mobil
   const [isMobil,setIsMobil ] = useState(false)
+  // is a gare id selected
+  // const [isGareIdSelected, setIsGareIdSelected] = useState(false)
 
   return (
     <div>

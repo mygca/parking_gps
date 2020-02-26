@@ -14,6 +14,7 @@ import getGareId from '../../../functions/map/getGareId';
 
 function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,isPopUpNav,setPopUpNav,setMoodConnection,isLogin}) {
 
+
   const [is24, setIs24] = useState(false)
   const [isHandicap, setIsHandicap] = useState(false)
   const [isSecurity, setIsSecurity] = useState(false)
@@ -21,11 +22,14 @@ function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,is
 
   const [gareID, setGareID] = useState()
   const [gares, setGares] = useState()
-
+  const [isGareIdSelected, setIsGareIdSelected] = useState(true)
 
 
   const fetchGares = () => 
   {
+    const linesJO = ['a', 'b', 'c', 'd', 'j', 'n', 'p'];
+    //const train = ['j', 'n', 'p'];
+    const Line = [];
     if ((lines).length > 1) 
     { 
       //const lines = (lines).length;
@@ -147,7 +151,10 @@ function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,is
       
       <p>{gareID}</p>
         { gareID &&
-          <GareIDSelected sport={sport} lines={lines} name={name} gares={gares} gareID={gareID}/>
+          <GareIDSelected sport={sport} lines={lines} name={name} gares={gares} gareID={gareID} setGareID={setGareID} 
+          isGareIdSelected={isGareIdSelected} 
+          setIsGareIdSelected={setIsGareIdSelected}
+          />
         }
       
 

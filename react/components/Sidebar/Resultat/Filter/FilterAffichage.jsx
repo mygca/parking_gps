@@ -1,6 +1,10 @@
 import React from 'react';
 
-function FilterAffichage() {
+const FilterAffichage = () => {
+
+  const handleOptionValue = () => {
+    
+  }
   return (
     <select name="" id="">
       <option>down</option>
