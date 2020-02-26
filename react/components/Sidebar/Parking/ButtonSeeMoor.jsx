@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const ButtonSeeMoreContext = React.createContext();
 
-const ButtonSeeMore = ({ onClick, isOpen }) => {
+const ButtonSeeMore = ({ isOpen }) => {
 
   // const [btnOpen, setIsOpen] = useState(false);
   // const toggle = () => setIsOpen(!btnOpen);
@@ -12,7 +12,7 @@ const ButtonSeeMore = ({ onClick, isOpen }) => {
   return (
     // <button className={btnOpen ? 'button--seeMore button--seeMore--active' : 'button--seeMore'} onClick={toggle}></button>
     
-      <button onClick={onClick} className={isOpen ? 'button--seeMore button--seeMore--active' : 'button--seeMore'}></button>
+      <button className={isOpen ? 'button--seeMore button--seeMore--active' : 'button--seeMore'}></button>
     
   );
 }

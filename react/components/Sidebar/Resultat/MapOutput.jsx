@@ -27,8 +27,7 @@ function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,is
   const fetchGares = () => 
   {
     const linesJO = ['a', 'b', 'c', 'd', 'j', 'n', 'p'];
-    //const train = ['j', 'n', 'p'];
-    const Line = [];
+    const Line= []
     if ((lines).length > 1) 
     { 
       //const lines = (lines).length;
@@ -116,7 +115,7 @@ function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,is
 
           <div className="output__intro__text">
             {isSidebarFavoirit===false?
-              <h2 class="headline--etape">Trouve ton parking ideal en function de te besoins</h2>
+              <h2 className="headline--etape">Trouve ton parking ideal en function de te besoins</h2>
               :
               <div>
                 <p>Tes parking tu as chosis</p>

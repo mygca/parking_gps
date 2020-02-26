@@ -18,6 +18,9 @@ body{
   &--bottom{
     align-items: flex-end;
   }
+  &--center{
+    align-items: center;
+  }
 }
 
 .stateGlobal{

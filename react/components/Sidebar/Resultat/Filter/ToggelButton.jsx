@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function ToggelButton({name,is24,isHandicap,isSecurity,setIs24,setIsHandicap,setIsSecurity}) {
+function ToggelButton({name,is24,isHandicap,isSecurity,setIs24,setIsHandicap,setIsSecurity,label}) {
 
 
   function handlerClick(){
@@ -23,18 +23,18 @@ function ToggelButton({name,is24,isHandicap,isSecurity,setIs24,setIsHandicap,set
       return (
         <button 
         className={(is24) ? 'button button--toggel button--toggel--active': 
-        'button button--toggel'} onClick={handlerClick}>{name}</button>
+        'button button--toggel'} onClick={handlerClick}>{label}</button>
       )
     case 'handicap':
       return (
         <button className={(isHandicap) ? 
           'button button--toggel button--toggel--active': 
-          'button button--toggel'} onClick={handlerClick}>{name}</button>
+          'button button--toggel'} onClick={handlerClick}>{label}</button>
       )
     case 'security':
       return (<button className={(isSecurity) ? 
         'button button--toggel button--toggel--active': 
-        'button button--toggel'} onClick={handlerClick}>{name}</button>)
+        'button button--toggel'} onClick={handlerClick}>{label}</button>)
     default:
       return "what";
   }

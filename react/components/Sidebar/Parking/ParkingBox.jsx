@@ -95,7 +95,7 @@ const Parking = ({data, dataGares, garesLines,listFavorit, setListFavorit, gareI
   }, [])
   // console.log("lol", garesIdInLines)
   return (
-    <div className="box--parking parking">
+    <div className="box--parking parking" onClick={toFalse} isOpen={isOpen}>
       <p>{data.gares_id}</p>
       <div className="wrapper--flex">
         <div>
@@ -183,7 +183,7 @@ const Parking = ({data, dataGares, garesLines,listFavorit, setListFavorit, gareI
         </div>
         <div className="wrapper--flex">
           <Favorit listFavorit={listFavorit} setListFavorit={setListFavorit} />
-          <ButtonSeeMore onClick={toFalse} isOpen={isOpen} />
+          <ButtonSeeMore isOpen={isOpen} />
         </div>
       </div>
 

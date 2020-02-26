@@ -1,7 +1,7 @@
 .wrapper--parkingOutput{
   margin-top: 3vw;
-  border: solid #efefef 1px;
-  padding:1vw;
+  //border: solid #efefef 1px;
+  //padding:1vw;
   .wrapper--filterAffichage{
     display: flex;
     justify-content: flex-end;
@@ -11,8 +11,7 @@
 .box--parking{
   border-bottom: 1px solid black;
   padding-bottom: 10px;
-  margin-bottom: 15px;
-  padding-top: 5px;
+  margin-bottom: 10px;
   h3{
     text-transform: uppercase;
   }
@@ -76,6 +75,7 @@
   }
   .price__legende{
     font-size: 14px;
+    color: $lightgrey;
   }
 }
 
@@ -121,8 +121,12 @@
   background-size: 100%;
   background-position: center;
   background-image: url(../img/icon--menu.png);
+  opacity: 0;
+  display: none;
   &--active{
     background-image: url(../img/icon--menu--active.png);
+    opacity: 1;
+    display: block;
   }
 }
 

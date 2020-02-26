@@ -18,7 +18,7 @@ button{
   padding:10px 40px;
   //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-  background-color: #E6625E;
+  background-color: $primary;
   //margin-top: 20px;
   text-decoration: none;
   color:#fff;
@@ -39,4 +39,33 @@ button{
   position: absolute;
   top:20px;
   right:20px;
+}
+
+.button--toggelPrix{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  label{
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-right: 10px;
+    color:$darkgrey;
+  }
+  .button{
+    //border-radius:0px !important;
+    padding:5px 10px;
+    background-color:#fff !important;
+    color:$lightgrey;
+    &--active{
+      color:$primary;
+    }
+    &:first-child {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+    &:last-child {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
 }

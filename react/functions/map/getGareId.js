@@ -1,12 +1,12 @@
 export default function getGareId(setGareID,sport){
 
-  let carteWrapperWidth = document.querySelector(".box--carte").offsetWidth;
-  let svgWrapperWidth = 1727;
+  // let carteWrapperWidth = document.querySelector(".box--carte").offsetWidth;
+  // let svgWrapperWidth = 1727;
 
-  console.log("carteWrapperWidth "+carteWrapperWidth)
-  console.log("carteWrapperWidth "+svgWrapperWidth)
-  let ratio = (svgWrapperWidth /carteWrapperWidth)*1.738;
-  console.log("ratio"+ratio)
+  // console.log("carteWrapperWidth "+carteWrapperWidth)
+  // console.log("carteWrapperWidth "+svgWrapperWidth)
+  // let ratio = (svgWrapperWidth /carteWrapperWidth)*1.738;
+  // console.log("ratio"+ratio)
 
 
   console.log("gare id")
@@ -29,20 +29,20 @@ export default function getGareId(setGareID,sport){
     let circle = circles[j];
 
     //change radius of allcircel
-    circle.setAttribute('r', "10" );
-    var circBackground = document.createElement('div');
-    circBackground.setAttribute('class', 'circle__background');
-    document.querySelector(".carte__station").appendChild(circBackground);
-    var rectCircle = circle.getBoundingClientRect();
-    console.log(rectCircle.top, rectCircle.right, rectCircle.bottom, rectCircle.left);
+    // circle.setAttribute('r', "10" );
+    // var circBackground = document.createElement('div');
+    // circBackground.setAttribute('class', 'circle__background');
+    // document.querySelector(".carte__station").appendChild(circBackground);
+    // var rectCircle = circle.getBoundingClientRect();
+    // console.log(rectCircle.top, rectCircle.right, rectCircle.bottom, rectCircle.left);
 
-    // circBackground.style.top=(circle.getAttribute('cy')/ratio) + (ratio*15)+"px";
-    // circBackground.style.left=(circle.getAttribute('cx')/ratio)+(-ratio*8)+"px";
+    // // circBackground.style.top=(circle.getAttribute('cy')/ratio) + (ratio*15)+"px";
+    // // circBackground.style.left=(circle.getAttribute('cx')/ratio)+(-ratio*8)+"px";
 
-    circBackground.style.top=(circle.getAttribute('cy')/ratio) +40+"px";
-    circBackground.style.left=(circle.getAttribute('cx')/ratio)+"px";
+    // circBackground.style.top=(circle.getAttribute('cy')/ratio) +40+"px";
+    // circBackground.style.left=(circle.getAttribute('cx')/ratio)+"px";
 
-    circle.style.fill="#fff"
+    // circle.style.fill="#fff"
 
     //if click
     circle.addEventListener("click", function(){
