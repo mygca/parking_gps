@@ -19,6 +19,8 @@
   width: 100%;
 }
 
+
+
 .box__filterText{
   margin-bottom: 30px;
   &:empty{
@@ -40,5 +42,12 @@
         color:red;
       }
     }
+  }
+}
+
+.button--toggelPrix{
+  .button{
+    border-radius:0;
+    
   }
 }

@@ -37,12 +37,16 @@
 }
 
 .button--toggel{
-  width:150px;
-  padding:5px;
+  //width:150px;
+  padding:5px 20px;
   display: block;
-  border-radius: 10px;
+  border-radius: 12px;
+  border: 1px solid $lightgrey;
+  margin-right: 10px;
+  text-transform: none;
   &.button--toggel--active{
-    background-color: $primary;
+    border: 1px solid $primary;
+    color: $primary;
   }
 }
 
@@ -50,4 +54,13 @@
 .box--gareSelected {
   position: relative;
 
+}
+
+.headline--parkingOutput{
+  font-size: 20px;
+  span{
+    font-size: 14px;
+    color: $darkgrey;
+    margin-left: 5px;
+  }
 }

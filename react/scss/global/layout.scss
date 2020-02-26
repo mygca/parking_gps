@@ -10,7 +10,7 @@
   height:100vh;
   overflow: hidden;
   &__sidebar{
-    width:35%;
+    width:40%;
     @include max-xs {
       width:100%;
     }
@@ -19,7 +19,7 @@
     overflow: scroll;
   }
   &__map{
-    width:65%;
+    width:60%;
     background-color:#efefef;
     height: 100vh;
     position: absolute;
