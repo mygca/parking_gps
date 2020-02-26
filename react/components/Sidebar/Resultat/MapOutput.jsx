@@ -26,6 +26,9 @@ function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,is
 
   const fetchGares = () => 
   {
+    const linesJO = ['a', 'b', 'c', 'd', 'j', 'n', 'p'];
+    //const train = ['j', 'n', 'p'];
+    const Line = [];
     if ((lines).length > 1) 
     { 
       //const lines = (lines).length;
