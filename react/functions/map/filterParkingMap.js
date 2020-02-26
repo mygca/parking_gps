@@ -3,8 +3,8 @@ export default function filterParkingMap({showParkingsBox}){
   if (showParkingsBox != 0) 
   {
 
-    console.log("what match!!!!!")
-    console.log(showParkingsBox.length);
+    //console.log("what match!!!!!")
+    //console.log(showParkingsBox.length);
 
     let circles = document.querySelectorAll("circle");
     for (let i = 0; i < circles.length; i++) {
@@ -17,10 +17,10 @@ export default function filterParkingMap({showParkingsBox}){
       let matchedGareId = showParkingsBox[i];
       if(matchedGares.indexOf(matchedGareId)===-1){
         matchedGares.push(matchedGareId.gares_id)
-        console.log("new")
+        //console.log("new")
       }
     }
-    console.log("filtered Array "+matchedGares)
+    // console.log("filtered Array "+matchedGares)
     let mattchedArray= matchedGares.flat().map(String)
     //console.log(mattchedArray);
 

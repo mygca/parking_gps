@@ -1,5 +1,6 @@
 import React from 'react';
 import ParkingInfoLinie from './ParkingInfoLinie';
+import gareIdToGareName from '../../../functions/map/gareIdToGareName';
 const cartePlaceholder = require('../../../img/carte.png');
 // const prix= require('../../../img/infoLinie--price.png');
 // const time= require('../../../img/infoLinie--time.png');

@@ -766,7 +766,7 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
 
     //showParkings({data})
 
-    delete data.showParkingsBox
+    //delete data.showParkingsBox
 
 
     
@@ -845,6 +845,20 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
         } */}
         {
           
+          // Object.values(data).map(()=> (
+          // //console.log(data[key][1])
+          //   // data.showParkingsBox.forEach(e => {
+          //   //   //console.log(e)
+          //   //   // <ParkingBox data={{e}}/> 
+          //   // <p>{e.company}</p>
+          //   // })
+          //   data.showParkingsBox.map((e, i)=> (
+          //     //console.log(e)
+          //     // <ParkingBox data={e} dataGares={gares} garesLines={garesIdArray.getGaresIdArray.map(String)}/> 
+          //     <ParkingBox key={i} data={e} dataGares={gares} garesLines={garesIdArray.getGaresIdArray} listFavorit={listFavorit} setListFavorit={setListFavorit}/> 
+          //   //<p>{e.company}</p>
+          //   ))
+          // )) 
           Object.values(data).map(()=> (
           //console.log(data[key][1])
             // data.showParkingsBox.forEach(e => {
@@ -858,10 +872,8 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
               <ParkingBox key={i} data={e} dataGares={gares} garesLines={garesIdArray.getGaresIdArray} listFavorit={listFavorit} setListFavorit={setListFavorit}/> 
             //<p>{e.company}</p>
             ))
-          
-  
-
           )) 
+
         }
         {/* {
           Object.values(data).map(([data]) => (
