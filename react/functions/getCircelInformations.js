@@ -1,5 +1,5 @@
 export default function getCircelInformations({dataGares}){
-
+    //console.log('circle hover')
     let circles = document.querySelectorAll("circle");
 
     for (let j = 0; j < circles.length; j++) {

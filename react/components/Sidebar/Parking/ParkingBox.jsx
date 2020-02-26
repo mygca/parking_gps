@@ -8,6 +8,7 @@ import ButtonSeeMore from './ButtonSeeMoor'
 import ParkingOpend from './ParkingOpend'
 import gareIdToGareName from '../../../functions/map/gareIdToGareName';
 import { array } from 'prop-types';
+// import getCircelInformations from '../../../functions/getCircelInformations';
 
 
 
@@ -25,39 +26,61 @@ const Parking = ({data, dataGares, garesLines,listFavorit, setListFavorit, gareI
     setIsOpen(!isOpen);
   }
 
-  const test = []
+  
+  
+  //const test = []
+  // const getgareIdInLine = () => {
+
+  //   if (data.gares_id != null) {
+  //     //console.log(data.gares_id) // Bon parkings to show
+  //     for (const pbgi of data.gares_id) 
+  //     {
+  //       //console.log(pbgi) // ok every id is there
+  //       //console.log(garesLines)
+  //       if ( garesLines.includes(pbgi) )
+  //       {
+  //         // gareIdLine.push(pbgi)
+  //         // console.log("pbgi", pbgi)
+  //         //console.log("pbgi", pbgi)
+  //         test.push(pbgi)
+
+  //       }
+  //     }
+  //     //  setgaresIdInLines(test);
+  //     // console.log("gareIdLine", gareIdLine) //toujours bon parkings to show
+      
+
+  //     // const returnGare = () => {
+        
+  //     // }
+  //   }
+  //   else {
+  //     console.log('rotai')
+  //   }
+
+  // }
 
   const getgareIdInLine = () => {
 
     if (data.gares_id != null) {
-      //console.log(data.gares_id) // Bon parkings to show
+
+      const gareIdLine = [];
+    
       for (const pbgi of data.gares_id) 
       {
-        //console.log(pbgi) // ok every id is there
-        //console.log(garesLines)
         if ( garesLines.includes(pbgi) )
         {
-          // gareIdLine.push(pbgi)
-          // console.log("pbgi", pbgi)
-          //console.log("pbgi", pbgi)
-          test.push(pbgi)
-
+          gareIdLine.push(pbgi)
         }
       }
-      //  setgaresIdInLines(test);
-      // console.log("gareIdLine", gareIdLine) //toujours bon parkings to show
-      
+      setgaresIdInLines({gareIdLine})
 
-      // const returnGare = () => {
-        
-      // }
     }
     else {
       console.log('rotai')
     }
 
   }
-
 
   
   useEffect(() => {
@@ -76,7 +99,7 @@ const Parking = ({data, dataGares, garesLines,listFavorit, setListFavorit, gareI
       <p>{data.gares_id}</p>
       <div className="wrapper--flex">
         <div>
-          {/* <RerArrete/>  */}
+          {/* <RerArrete dataGares={dataGares} name={gareIdToGareName(item, dataGares)}/>  */}
           { 
 
           // setTimeout(() => {
@@ -87,13 +110,21 @@ const Parking = ({data, dataGares, garesLines,listFavorit, setListFavorit, gareI
 
   /** TODO : Il fait faire un loop, pas un map  */
             // garesIdInLines && Object.values(garesIdInLines).map( value => (
-            //   console.log(value) // tableau de valeur gareid OK
-            //   // value.map( (item, index) => (
+            // //   // console.log(value) // tableau de valeur gareid OK
+            //   value.map( (item) => (
             //   //   console.log(item) // 1 valeur okay
-            //   //   //  <RerArrete key={index} name={gareIdToGareName(item, dataGares)}/> 
-            //   // ))
+            //     //  <RerArrete key={index} name={gareIdToGareName(item, dataGares)}/> 
+            // <RerArrete dataGares={dataGares} name={gareIdToGareName(item, dataGares)}/> 
+            //   ))
             // ))
 
+
+            garesIdInLines && Object.values(garesIdInLines).map( value => (
+
+              value.map( (item, index) => (
+                <RerArrete key={index} dataGares={dataGares} name={gareIdToGareName(item, dataGares)}/> 
+              ))
+            ))
             
             // garesIdInLines && garesIdInLines.map( value => {
             //   console.log(value) // tableau de valeur gareid OK

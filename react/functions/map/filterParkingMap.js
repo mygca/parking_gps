@@ -13,7 +13,7 @@ export default function filterParkingMap({showParkingsBox}){
 
     let matchedGares =[];
     for (let i = 0; i < showParkingsBox.length; i++) {
-      console.log(showParkingsBox[i].gares_id);
+      //console.log(showParkingsBox[i].gares_id);
       let matchedGareId = showParkingsBox[i];
       if(matchedGares.indexOf(matchedGareId)===-1){
         matchedGares.push(matchedGareId.gares_id)
