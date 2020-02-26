@@ -163,7 +163,8 @@ function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,is
         setIsHandicap={setIsHandicap} isHandicap={isHandicap}
         setIsSecurity={setIsSecurity} isSecurity={isSecurity}
         setMinHeight={setMinHeight} minHeight={minHeight} sport={sport} lines={lines}
-        listFavorit={listFavorit} setListFavorit={setListFavorit}/>
+        listFavorit={listFavorit} setListFavorit={setListFavorit}
+      />
 
  
     </div>

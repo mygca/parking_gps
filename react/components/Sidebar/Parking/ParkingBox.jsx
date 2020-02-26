@@ -19,6 +19,7 @@ import { array } from 'prop-types';
 const Parking = ({data, dataGares, garesLines,listFavorit, setListFavorit, gareId}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [garesIdInLines, setgaresIdInLines] = useState();
+  const [parkingBoxGareId, setParkingBoxGareId] = useState();
   //console.log(isOpen);
   //console.log('how many parkings shown?')
 
@@ -26,6 +27,35 @@ const Parking = ({data, dataGares, garesLines,listFavorit, setListFavorit, gareI
     setIsOpen(!isOpen);
   }
 
+  const handleClickParkingBox = () => {
+    console.log('click on Box')
+    if (data.gares_id != null) {
+
+      const parkingClickId = [];
+    
+      for (const pbgi of data.gares_id) 
+      {
+        if ( garesLines.includes(pbgi) )
+        {
+          parkingClickId.push(pbgi)
+        }
+      }
+      console.log(parkingClickId)
+      setParkingBoxGareId({parkingClickId})
+
+      for (let i = 0; i < parkingClickId.length; i++) {
+        const element = parkingClickId[i];
+
+        let selectedParking= document.querySelector('[data-station-id="'+element+'"]');
+        selectedParking.style.fill="blue";
+      }
+
+    }
+    else {
+      console.log('pb no gareId')
+    }
+
+  }
   
   
   //const test = []
@@ -89,13 +119,12 @@ const Parking = ({data, dataGares, garesLines,listFavorit, setListFavorit, gareI
    getgareIdInLine();
   //  console.log("test", test)
   //  setgaresIdInLines(test);
-  
-   
-
   }, [])
   // console.log("lol", garesIdInLines)
+
+  
   return (
-    <div className="box--parking parking">
+    <div className="box--parking parking" onClick={handleClickParkingBox}>
       <p>{data.gares_id}</p>
       <div className="wrapper--flex">
         <div>

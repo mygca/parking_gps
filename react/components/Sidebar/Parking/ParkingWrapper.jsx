@@ -757,10 +757,6 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
   // }
 
 
-  
-
-
-
   useEffect(() => {
 
     fetchGare();
@@ -776,72 +772,16 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
      
   }, [is24, isHandicap, isSecurity, minHeight, gareID])
 
-  // setTimeout(() => {
-  // for (let i = 0; i < matchedGareIDArray.length; i++) {
-  //   const matchedGareId = matchedGareIDArray[i];
-  //   let elementTest=document.querySelector('[data-station-id="'+matchedGareId+'"]')
-  //   elementTest.style.display="block";
-  // }
-  // }, 100);
 
 
 
   
   return (
     <div className="wrapper--parking">
-      {/*
-             console.log(data) 
-            /*{ console.log(data["hydra:member"][0].ParkName) } */}
-            {/* <ul>
-              {
-                data.map(parking => (
-                  <li key={parking.id}>
-                    <p>{parking.ParkName}</p>
-                  </li>
-                  )
-                )
-              }
-            </ul> */}
+  
         {/* <p>C'est le gareid :{gareID}</p> */}
           <p>{is24}</p>
-          {/* <p>{(lines).length}</p> */}
-          {/* <p>{gares[0].reseau}</p> */}
         
-        {/* 
-         {data.map((data, i )=> (
-
-          <ParkingBox key={i} data={data}/>  
-            
-          )) 
-        }  */}
-      {/* 
-        {renderParkings && data.map((data, i )=> (
-
-          <ParkingBox key={i} data={data}/>  
-            
-          )) 
-          
-        } */}
-
-
-        {/* {
-          (Object.values(data)).forEach(([data]) => {
-            //console.log(key); 
-            console.log(data.company); 
-          // <p>{key}{value.company}</p>
-            <ParkingBox data={data}/>  
-          })
-        } */}
-        {/* {
-          
-          Object.values(data).forEach((key)=> {
-          //console.log(data[key][1])
-          console.log(data.showParkingsBox)
-          
-          //<ParkingBox data={data[key]}/>  
-
-          }) 
-        } */}
         {
           
           // Object.values(data).map(()=> (
@@ -874,15 +814,6 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
           )) 
 
         }
-        {/* {
-          Object.values(data).map(([data]) => (
-            //console.log(key); 
-            //console.log(data.company); 
-          // <p>{key}{value.company}</p>
-            <ParkingBox data={data}/>  
-          ))
-        }
-         */}
 
       
     </div>
