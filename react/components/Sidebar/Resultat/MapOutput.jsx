@@ -14,6 +14,7 @@ import getGareId from '../../../functions/map/getGareId';
 
 function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,isPopUpNav,setPopUpNav,setMoodConnection,isLogin}) {
 
+
   const [is24, setIs24] = useState(false)
   const [isHandicap, setIsHandicap] = useState(false)
   const [isSecurity, setIsSecurity] = useState(false)
@@ -21,7 +22,7 @@ function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,is
 
   const [gareID, setGareID] = useState()
   const [gares, setGares] = useState()
-
+  const [isGareIdSelected, setIsGareIdSelected] = useState(true)
 
 
   const fetchGares = () => 
@@ -149,7 +150,10 @@ function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,is
       
       <p>{gareID}</p>
         { gareID &&
-          <GareIDSelected sport={sport} lines={lines} name={name} gares={gares} gareID={gareID}/>
+          <GareIDSelected sport={sport} lines={lines} name={name} gares={gares} gareID={gareID} setGareID={setGareID} 
+          isGareIdSelected={isGareIdSelected} 
+          setIsGareIdSelected={setIsGareIdSelected}
+          />
         }
       
 
@@ -158,7 +162,8 @@ function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,is
         setIsHandicap={setIsHandicap} isHandicap={isHandicap}
         setIsSecurity={setIsSecurity} isSecurity={isSecurity}
         setMinHeight={setMinHeight} minHeight={minHeight} sport={sport} lines={lines}
-        listFavorit={listFavorit} setListFavorit={setListFavorit}/>
+        listFavorit={listFavorit} setListFavorit={setListFavorit}
+      />
 
  
     </div>

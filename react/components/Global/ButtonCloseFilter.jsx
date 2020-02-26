@@ -2,10 +2,15 @@
 import React, { useState } from "react";
 
 // function ButtonCloseFilter({setPopUpNav}) {
-function ButtonCloseFilter({setPopUpNav}) {
+const ButtonCloseFilter = ({isGareIdSelected, setIsGareIdSelected, setPopUpNav, gareID, setGareID}) => {
 
-  function handlerClose(){
+  const handlerClose = () => {
+    console.log('want to close')
     // {setPopUpNav(false)}
+      // setIsGareIdSelected={setIsGareIdSelected}
+    {setIsGareIdSelected(false)}
+      // setIsGareIdSelected(true)
+    {setGareID(null)}
   }
   
   return (
