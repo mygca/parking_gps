@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from 'react';
-//import getCircelInformations from '../../../functions/getCircelInformations';
+import getCircelInformations from '../../../functions/getCircelInformations';
 
 
 const RerArrete = ({parkingBoxGareID,dataGares, garesIdInLines, data, item, parkingName, value}) => 
@@ -49,7 +49,7 @@ const RerArrete = ({parkingBoxGareID,dataGares, garesIdInLines, data, item, park
 
 
   useEffect(() => {
-    //getCircelInformations({dataGares})
+    getCircelInformations({dataGares})
     setRerStationName(circleName)
   
     

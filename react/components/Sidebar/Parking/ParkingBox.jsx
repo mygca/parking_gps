@@ -161,7 +161,7 @@ const Parking = ({data, dataGares, garesLines,is24, isHandicap, isSecurity,listF
   
   return (
     <div className="box--parking parking" onClick={handleClickParkingBox} >
-      <p>{data.gares_id}</p>
+      {/* <p>{data.gares_id}</p> */}
       <div className="wrapper--flex">
         <div>
           {/* <RerArrete dataGares={dataGares} name={gareIdToGareName(item, dataGares)}/>  */}
