@@ -25,6 +25,14 @@ export default function filterParkingMap({showParkingsBox}){
       element.remove();  
     }
 
+    let nrParkingBoxes=document.querySelectorAll(".box--parking").length;
+    let nrParkingDisplayBoxes=document.querySelectorAll(".headline--parkingOutput__number");
+    for (let i = 0; i < nrParkingDisplayBoxes.length; i++) {
+      const element = nrParkingDisplayBoxes[i];
+      element.innerHTML=nrParkingBoxes;
+    }
+  
+
 
 
     //get circle of displayed parkings

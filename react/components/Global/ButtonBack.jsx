@@ -1,4 +1,5 @@
 import React from 'react';
+const backImg= require('../../img/back.png');
 
 function ButtonBack({setIsSelected}) {
   function handlerReturn(){
@@ -17,7 +18,7 @@ function ButtonBack({setIsSelected}) {
     }
   }
   return (
-  <button className="button--back" onClick={handlerReturn}>Back</button>
+  <button className="button button--back" onClick={handlerReturn}></button>
   );
 }
 

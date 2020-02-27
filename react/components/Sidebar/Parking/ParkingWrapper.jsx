@@ -12,7 +12,7 @@ import filterParkingMap from '../../../functions/map/filterParkingMap';
 import sortPrice from '../../../functions/sortPrice';
 
 
-function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHandicap,isSecurity,minHeight,setMinHeight, sport, lines,listFavorit, setListFavorit, isPrixUp, setIsPrixUp,setIsFirstFav,setPopUpNav,setMoodConnection, parentCallback}) {
+function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHandicap,isSecurity,minHeight,setMinHeight, sport, lines,listFavorit, setListFavorit, isPrixUp, setIsPrixUp,setIsFirstFav,setPopUpNav,setMoodConnection,isLogin, parentCallback}) {
   const [gares, setGares] = useState(null);
   const [garesIdArray, setgaresIdArray] = useState(null);
   const [parkingsIdArray, setparkingsIdArray] = useState();
@@ -850,7 +850,7 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
             data.showParkingsBox.map((e, i)=> (
               //console.log(e)
               // <ParkingBox data={e} dataGares={gares} garesLines={garesIdArray.getGaresIdArray.map(String)}/> 
-              <ParkingBox key={i} data={e} dataGares={gares} garesLines={garesIdArray.getGaresIdArray} listFavorit={listFavorit} setListFavorit={setListFavorit} is24={is24} isHandicap={isHandicap} isSecurity={isSecurity} setIsFirstFav={setIsFirstFav} setPopUpNav={setPopUpNav} setMoodConnection={setMoodConnection} /> 
+              <ParkingBox key={i} data={e} dataGares={gares} garesLines={garesIdArray.getGaresIdArray} listFavorit={listFavorit} setListFavorit={setListFavorit} is24={is24} isHandicap={isHandicap} isSecurity={isSecurity} setIsFirstFav={setIsFirstFav} setPopUpNav={setPopUpNav} setMoodConnection={setMoodConnection} isLogin={isLogin} /> 
             //<p>{e.company}</p>
             ))
           )) 

@@ -101,24 +101,68 @@ function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,is
   //   {setPopUpNav("true")}
   //   {setMoodConnection("registre")}
   // }
+
+  const handlerClose = () => {
+    console.log('want to close')
+    // {setPopUpNav(false)}
+      // setIsGareIdSelected={setIsGareIdSelected}
+    {setIsGareIdSelected(false)}
+      // setIsGareIdSelected(true)
+    {setGareID(null)}
+  }
  
   return (
     <div className="wrapper--output">
-      <ButtonBack setIsSelected={setIsSelected}/>
+      
 
       <div className="output__intro">
         <div className="wrapper--flex">
 
           <div className="output__intro__text">
+          
             {isSidebarFavoirit===false?
               lines.length>1?
                 <div className="wrapper--flex">
+                  <ButtonBack setIsSelected={setIsSelected}/>
                   
                   <div className={"popup__icon icon--rer icon--rer--"+lines[0]}>{lines[0]}</div>
                   <div className={"popup__icon icon--rer icon--rer--"+lines[1]}>{lines[1]}</div>
-                  <p className="icon--rer__text">Ligns</p>
+                  { gareID!==undefined?
+                  <p className="icon--rer__text icon--rer__text__link" onClick={handlerClose} >Lignes</p>
+                  :
+                  <p className="icon--rer__text" >Lignes</p>
+                }
+
+                  { gareID &&
+                    <div className="box--gareSelect">
+                      <div className="wrapper--flex">
+                        <ButtonBack setIsSelected={setIsSelected}/>
+                        <p>Zone du Parking</p>
+                      </div>
+                    </div>
+                  }
+                  
                 </div>
-              :<div className="wrapper--flex"><div className={"popup__icon icon--rer icon--rer--"+lines}>{lines}</div><p className="icon--rer__text">Ligne</p></div>
+              :
+              <div className="wrapper--flex">
+                <ButtonBack setIsSelected={setIsSelected}/>
+                <div className={"popup__icon icon--rer icon--rer--"+lines}>{lines}
+                </div>
+                { gareID!==undefined?
+                  <p className="icon--rer__text icon--rer__text__link" onClick={handlerClose} >Ligne</p>
+                  :
+                  <p className="icon--rer__text" >Ligne</p>
+                }
+                { gareID &&
+                    <div className="box--gareSelect">
+                      <div className="wrapper--flex">
+                        <ButtonBack setIsSelected={setIsSelected}/>
+                        <p>Zone du Parking</p>
+                      </div>
+                    </div>
+                  }
+              </div>
+                
               :
               <div>
                 <p>Tes parking tu as chosis</p>
@@ -151,7 +195,7 @@ function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,is
      
       
       
-      <p>{gareID}</p>
+      {/* <p>{gareID}</p> */}
         { gareID &&
           <GareIDSelected sport={sport} lines={lines} name={name} gares={gares} gareID={gareID} setGareID={setGareID} 
           isGareIdSelected={isGareIdSelected} 
@@ -169,6 +213,7 @@ function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,is
         isPrixUp={isPrixUp} setIsPrixUp={setIsPrixUp}
         setIsFirstFav={setIsFirstFav}
         setPopUpNav={setPopUpNav} 
+        isLogin={isLogin}
         setMoodConnection={setMoodConnection}
       />
 

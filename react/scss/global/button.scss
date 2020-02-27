@@ -11,6 +11,19 @@ button,input{
   &:focus {outline:0;}
 }
 
+.button--back{
+  width:30px;
+  cursor: pointer;
+  border:none;
+  height:35px;
+  margin-right: 5px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  background-image: url(../../img/back.png);
+}
+
 
 .button--primary{
   border:none;
