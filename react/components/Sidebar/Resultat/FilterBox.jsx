@@ -13,8 +13,8 @@ function FilterBox({setIs24,setIsHandicap,setIsSecurity,is24,isHandicap,isSecuri
           <ToggleButton name="24" label="Ouvert 24/24" setIs24={setIs24} is24={is24}/>
           <ToggleButton name="handicap" label="Handicapé" setIsHandicap={setIsHandicap} isHandicap={isHandicap}/>
           <ToggleButton name="security" label="Securite" setIsSecurity={setIsSecurity} isSecurity={isSecurity}/>
+          <Input name="Hauter Minimum" setMinHeight={setMinHeight} minHeight={minHeight} />
         </div>
-        <Input name="Hauter Minimum" setMinHeight={setMinHeight} minHeight={minHeight} />
         <TogglePrix isPrixUp={isPrixUp} setIsPrixUp={setIsPrixUp}/>
 
         

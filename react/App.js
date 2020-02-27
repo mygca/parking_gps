@@ -57,11 +57,12 @@ const App = () => {
           />
 
           {console.log("Direction "+direction.value)}
+          {console.log("fav list app ",listFavorit)}
 
           {window.innerWidth<760 === true?
             ""
           :
-            <Map sport={sport} direction={direction}/>
+            <Map sport={sport} direction={direction} isSelected={isSelected}/>
           }
 
           <Navigation 

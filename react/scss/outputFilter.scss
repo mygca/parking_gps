@@ -53,14 +53,23 @@
 // Gare selected box in sidebar
 .box--gareSelected {
   position: relative;
-
+  .box--gareSelected__name{
+    display: block;
+  }
 }
 
 .headline--parkingOutput{
   font-size: 20px;
+  margin-bottom: 20px;
   span{
     font-size: 14px;
     color: $darkgrey;
     margin-left: 5px;
   }
+}
+
+.icon--rer__text{
+  font-size: 31px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }

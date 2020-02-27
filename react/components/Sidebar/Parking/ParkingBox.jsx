@@ -16,7 +16,7 @@ import { array } from 'prop-types';
 
 
 
-const Parking = ({data, dataGares, garesLines,listFavorit, setListFavorit, gareId}) => {
+const Parking = ({data, dataGares, garesLines,is24, isHandicap, isSecurity,listFavorit, setListFavorit, gareId}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [garesIdInLines, setgaresIdInLines] = useState();
   const [parkingBoxGareId, setParkingBoxGareId] = useState();
@@ -136,7 +136,7 @@ const Parking = ({data, dataGares, garesLines,listFavorit, setListFavorit, gareI
 
   
   return (
-    <div className="box--parking parking" onClick={handleClickParkingBox} isOpen={isOpen}>
+    <div className="box--parking parking" onClick={handleClickParkingBox} >
       <p>{data.gares_id}</p>
       <div className="wrapper--flex">
         <div>
@@ -224,15 +224,18 @@ const Parking = ({data, dataGares, garesLines,listFavorit, setListFavorit, gareI
         </div>
         <div className="wrapper--flex">
           <Favorit listFavorit={listFavorit} setListFavorit={setListFavorit} />
+          {console.log(listFavorit)}
           <ButtonSeeMore isOpen={isOpen} />
         </div>
       </div>
+      <p className="parking--name">Nom du Parking</p>
 
       <div className="wrapper--flex">
         <div className="parking__options">
-          <ParkingOptions name="24"/>
-          <ParkingOptions name="handicape"/>
-          <ParkingOptions name="securite"/>
+          
+          <ParkingOptions data={data} name="24"/>
+          <ParkingOptions data={data} name="handicape"/>
+          <ParkingOptions data={data} name="securite"/>
         </div>
         {isOpen===false?
           <Price data={data}/>
@@ -240,8 +243,8 @@ const Parking = ({data, dataGares, garesLines,listFavorit, setListFavorit, gareI
       </div>
 
       <div className="parking__distance">
-        <Distance name="En Pied" value="50m - 3min"/>
-        <Distance name="En Train" value="20km - 20min"/>
+        <Distance name="jusqu’au rer" value="50m - 3min"/>
+        <Distance name="temps de transport jusqu’a l’épreuve" value="20km - 20min"/>
       </div>
 
       {isOpen===true?

@@ -19,7 +19,7 @@ const MainFilterSection = ({sport,setSport,setIsSelected,isSelected,direction,se
   return (
     <div className="wrapper--filter">
 
-      {/* <Logo /> */}
+      <Logo />
       <h2 className="headline--etape">Trouve la ligne du Train qui te rammner du parking a ton epreuve!</h2>
 
       <FilterBox setSport={setSport} sport={sport}  name="site" text="Quelle épreuve allez vous voir?"/>
@@ -32,7 +32,7 @@ const MainFilterSection = ({sport,setSport,setIsSelected,isSelected,direction,se
         {direction.value !== "center"?
           <div className="wrapper--flex box__filterText__Box">
             <img src="https://i.pinimg.com/originals/20/27/1e/20271eec1a8a6c42f1b1679737e36c38.png" alt=""/>
-            <p>Pour <span>evite la haute circulation</span> et des bouchons essayer de te <span>gare le plus au sude</span> du ligne {sport.lines} pour sauvgarde du temps.</p>
+            <p>Pour <span>evite la haute circulation</span> et des bouchons essayer de te <span>gare le plus au {direction.value}</span> du ligne {sport.lines} pour sauvgarde du temps.</p>
           </div>
           
         :""}

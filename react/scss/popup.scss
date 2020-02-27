@@ -11,6 +11,9 @@
   &.popup--linie{
     top:2vw;
     left:42vw;
+    .popup__text{
+      font-size: 25px;
+    }
   }
   &.popup--state{
     bottom:2vw;
