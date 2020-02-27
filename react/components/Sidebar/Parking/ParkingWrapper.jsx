@@ -794,7 +794,7 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
   const sendParkingsCount = () =>
   {
     // parentCallback(data)
-     parentCallback("4")
+    //  parentCallback("4")
     // parentCallback(data.length)
     // parentCallback(countingParkings)
   }

@@ -20,6 +20,7 @@ const Parking = ({data, dataGares, garesLines,is24, isHandicap, isSecurity,listF
   const [isOpen, setIsOpen] = useState(false);
   const [garesIdInLines, setgaresIdInLines] = useState();
   const [parkingBoxGareId, setParkingBoxGareId] = useState();
+  const [parkingName, setParkingName] = useState();
   //console.log(isOpen);
   // console.log('how many parkings shown?')
 
@@ -131,6 +132,29 @@ const Parking = ({data, dataGares, garesLines,is24, isHandicap, isSecurity,listF
    getgareIdInLine();
   //  console.log("test", test)
   //  setgaresIdInLines(test);
+
+    let circleName = [];
+    Object.values(dataGares).map(e => {
+
+      // console.log(e) // render 1 parking object
+      //console.log(parkingBoxGareID) // render [__ , __]
+      // if ( item == e.garesId) 
+      // {
+      //   circleName.push(e.nomGare);
+      // }
+      for (let i = 0; i < data.gares_id.length; i++) 
+      {
+        const element = data.gares_id[i];
+        if ( element == e.garesId) 
+        {
+          circleName.push(e.nomGare);
+        }
+        
+      }
+
+      setParkingName(circleName)
+
+    })
   }, [])
   // console.log("lol", garesIdInLines)
 
@@ -160,12 +184,22 @@ const Parking = ({data, dataGares, garesLines,is24, isHandicap, isSecurity,listF
             // ))
 
 
-            garesIdInLines && Object.values(garesIdInLines).map( value => (
+            // garesIdInLines && Object.values(garesIdInLines).map( value => (
 
-              value.map( (item, index) => (
-                <RerArrete key={index} dataGares={dataGares} name={gareIdToGareName(item, dataGares)}/> 
+            //   value.map( (item, index) => (
+                
+            //     // <RerArrete key={index} dataGares={dataGares} name={gareIdToGareName(item, dataGares)}/> 
+            //     <RerArrete key={index} data={data} dataGares={dataGares} parkingBoxGareID={data.gares_id} garesIdInLines={garesIdInLines} item={item} parkingName={parkingName}/> 
+            //   ))
+            // ))
+            garesIdInLines && data.gares_id.map( value => (
+
+         
+                
+                // <RerArrete key={index} dataGares={dataGares} name={gareIdToGareName(item, dataGares)}/> 
+                <RerArrete data={data} dataGares={dataGares} parkingBoxGareID={data.gares_id} garesIdInLines={garesIdInLines} parkingName={parkingName} value={value}/> 
               ))
-            ))
+       
             
             // garesIdInLines && garesIdInLines.map( value => {
             //   console.log(value) // tableau de valeur gareid OK
@@ -228,7 +262,7 @@ const Parking = ({data, dataGares, garesLines,is24, isHandicap, isSecurity,listF
           <ButtonSeeMore isOpen={isOpen} />
         </div>
       </div>
-      <p className="parking--name">Nom du Parking</p>
+      <p className="parking--name">{data.nom_parking}</p>
 
       <div className="wrapper--flex">
         <div className="parking__options">
