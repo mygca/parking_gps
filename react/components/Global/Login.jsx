@@ -8,7 +8,7 @@ function Login({setMoodConnection,setIsLogin,setIsHome,setPopUpNav,setIsSidebarF
     {setMoodConnection("registre")}
   }
   function handlerLogin(){
-    // {setIsLogin(true)}
+    {setIsLogin(true)}
     {setPopUpNav(false)}
     {setIsHome("false")}
     {setIsSidebarFavoirit(true)}
@@ -19,6 +19,7 @@ function Login({setMoodConnection,setIsLogin,setIsHome,setPopUpNav,setIsSidebarF
     <div className="popuo--connection connection--login">
       <ButtonClose  setPopUpNav={setPopUpNav}/>
       <p className="popuo--connection__intro">Log In</p>
+      <p>Cree un compte pour ajoute des favorite et utiliser eux apres.</p>
       <div className="inputBox">
         <label>E-mail</label>
         <input type="text"/>

@@ -32,14 +32,19 @@
     }
     &.nav__link--fav{
       position: relative;
-      &:after{
-        position: absolute;
-        width:5px;
-        height:5px;
-        background-color: $green;
-        border-radius: 50%;
-        content: "";
+      &--active{
+        &:after{
+          position: absolute;
+          width:5px;
+          height:5px;
+          background-color: $green;
+          border-radius: 50%;
+          content: "";
+          top:0;
+          right:0;
+        }
       }
+      
     }
     
   }

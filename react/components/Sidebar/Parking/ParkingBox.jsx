@@ -16,7 +16,7 @@ import { array } from 'prop-types';
 
 
 
-const Parking = ({data, dataGares, garesLines,is24, isHandicap, isSecurity,listFavorit, setListFavorit, gareId}) => {
+const Parking = ({data, dataGares, garesLines,is24, isHandicap, isSecurity,listFavorit, setListFavorit, gareId,setIsFirstFav,setPopUpNav,setMoodConnection}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [garesIdInLines, setgaresIdInLines] = useState();
   const [parkingBoxGareId, setParkingBoxGareId] = useState();
@@ -223,7 +223,7 @@ const Parking = ({data, dataGares, garesLines,is24, isHandicap, isSecurity,listF
           }
         </div>
         <div className="wrapper--flex">
-          <Favorit listFavorit={listFavorit} setListFavorit={setListFavorit} />
+          <Favorit listFavorit={listFavorit} setListFavorit={setListFavorit}   setIsFirstFav={setIsFirstFav} setPopUpNav={setPopUpNav} setMoodConnection={setMoodConnection} />
           {console.log(listFavorit)}
           <ButtonSeeMore isOpen={isOpen} />
         </div>
