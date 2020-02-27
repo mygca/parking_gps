@@ -35,9 +35,9 @@ const Sidebar = ({sport,setSport,setIsSelected,isSelected, lines,isSidebarFavoir
             {sport.value !== "all"?
               <Popup name="popupLinie" isSelected={isSelected} sport={sport.value} lines={lines}/>
             :""}
-            {sport.value !== "all"?
+            {/* {sport.value !== "all"?
               <Popup name="popupState" isSelected={isSelected} sport={sport.value} lines={lines}/>
-            :""}
+            :""} */}
           
         </div>
         
@@ -62,7 +62,7 @@ const Sidebar = ({sport,setSport,setIsSelected,isSelected, lines,isSidebarFavoir
 
               <Popup name="popupLinie" sport={sport.value} lines={lines}/>
      
-              <Popup name="popupState" sport={sport.value} lines={lines}/>
+              {/* <Popup name="popupState" sport={sport.value} lines={lines}/> */}
  
             
           </div>

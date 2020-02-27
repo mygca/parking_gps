@@ -32,7 +32,7 @@ function Navigation({isHome,setIsHome,setPopUpNav,isLogin,setIsLogin,setMoodConn
         {/* <li className="nav__link" onClick={handlerHomeClick}>Home</li> */}
 
         {isSelected==="true" && isLogin===true?
-          <li className={listFavorit.length>0?"nav__link nav__link--fav nav__link--fav--active":"nav__link nav__link--fav"}  onClick={handlerFavoritClick}>Favoris</li>
+          <li className={listFavorit.length>0?"nav__link nav__link--fav nav__link--fav--active":"nav__link nav__link--fav"}  onClick={handlerFavoritClick}>Ma List</li>
         :""}
         
       </ul>

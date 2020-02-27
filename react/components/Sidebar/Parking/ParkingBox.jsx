@@ -53,14 +53,18 @@ const Parking = ({data, dataGares, garesLines,is24, isHandicap, isSecurity,listF
       for (let j = 0; j < circles.length; j++) {
         let circle = circles[j];
         circle.style.fill="#fff";
+        circle.setAttribute('r', "10" );
       }
 
 
       for (let i = 0; i < parkingClickId.length; i++) {
         const element = parkingClickId[i];
 
+        console.log("parking click")
+
         let selectedParking= document.querySelector('[data-station-id="'+element+'"]');
-        selectedParking.style.fill="blue";
+        selectedParking.style.fill="#fff";
+        selectedParking.setAttribute('r', "20" );
       }
 
     }
