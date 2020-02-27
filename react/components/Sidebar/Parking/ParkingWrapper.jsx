@@ -9,6 +9,7 @@ import getParkingByLine from '../../../functions/map/getParkingByLine';
 import showParkings from '../../../functions/map/showParking';
 import filterParkingsOptions from '../../../functions/map/filterParkingsOptions';
 import filterParkingMap from '../../../functions/map/filterParkingMap';
+import sortPrice from '../../../functions/sortPrice';
 
 
 function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHandicap,isSecurity,minHeight,setMinHeight, sport, lines,listFavorit, setListFavorit, isPrixUp, setIsPrixUp}) {
@@ -59,6 +60,7 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
   const linesJO = ['a', 'b', 'c', 'd', 'j', 'n', 'p'];
   //const train = ['j', 'n', 'p'];
   const Line = [];
+
   /** TWO LINES SELECTED */
     if ((lines).length > 1) 
     { 
@@ -202,9 +204,8 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
               
               /**SORT BY PRICE INCREASE */
 
-              showParkingsBox.sort((a,b) => 
-                 a.prix_jour - b.prix_jour
-              )
+              sortPrice(isPrixUp, showParkingsBox)
+
               // console.log('sort', showParkingsBox)
 
               setData({showParkingsBox})
@@ -551,9 +552,7 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
               //console.log(showParkingsBox)
 
               /** SORT BY PRICE INCREASE */
-              showParkingsBox.sort((a,b) => 
-                 a.prix_jour - b.prix_jour
-              )
+              sortPrice(isPrixUp, showParkingsBox)
               //console.log('sort', showParkingsBox)
 
               setData({showParkingsBox})
@@ -785,7 +784,7 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
 
     //filterParkingsOptions();
      
-  }, [is24, isHandicap, isSecurity, minHeight, gareID])
+  }, [is24, isHandicap, isSecurity, minHeight, gareID, isPrixUp])
 
 
 
