@@ -11,13 +11,17 @@
 .box--parking{
   border-bottom: 1px solid black;
   padding-bottom: 10px;
+  padding:10px;
   margin-bottom: 10px;
   cursor: pointer;
   h3{
     text-transform: uppercase;
   }
   &:hover{
-    background-color: #e1e1e1;
+    // background-color: #e1e1e1;
+    padding:9px;
+    padding-bottom: 9px;
+    border: 1px solid $primary;
   }
 }
 
@@ -34,6 +38,9 @@
   .rerStationBox__name{
     position: relative;
     padding-left: 30px;
+    &:empty{
+      display: none !important;
+    }
     &:after{
       position: absolute;
       left: 0;

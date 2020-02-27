@@ -28,7 +28,7 @@
 .box__filterText{
   margin-bottom: 30px;
   &:empty{
-    display: none;
+    display: none !important;
   }
   .box__filterText__Box{
     margin-top: 10px;
@@ -58,7 +58,7 @@
 
 .wrapper--input{
   label{
-    font-size: 12px;
+    font-size: 14px;
   }
   input{
     border: none;

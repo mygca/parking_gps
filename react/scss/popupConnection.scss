@@ -1,23 +1,47 @@
 .popup--connection{
+  .popuo--connection__logo{
+    width:70%;
+  }
   position: absolute;
-  width:250px;
+  width:400px;
   background-color: #fff;
   border-radius: 10px;
   padding: 20px;
   top:70px;
   right:50px;
+  box-shadow: -9px 7px 13px rgba(0, 0, 0, 0.15);
   //padding-top: 40px;
 
   .inputBox{
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     margin-bottom: 20px;
-    font-size: 0.8em;
     label{
       margin-top: 5px;
+      color:$darkgrey;
+      font-size: 18px;
+      font-weight: 300;
+      margin-bottom: 5px;
+    }
+    input{
+      font-size: 20px;
+      padding:5px;
+      color:$darkgrey;
+      border-radius: 5px;
+      display: block;
     }
   }
-  .popuo--connection__intro{
-    margin-bottom: 30px;
+  .button--valide{
+    width:80%;
+    margin-left: 10%;
+  }
+  p{
+    font-size: 23px;
+    line-height: 26px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    span{
+      color:$primary;
+    }
   }
 }

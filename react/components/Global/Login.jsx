@@ -1,6 +1,7 @@
 
 import React, { useState } from "react";
-import ButtonClose from "./ButtonClose"
+import ButtonClose from "./ButtonClose";
+const logologin= require('../../img/login--logo.png');
 
 function Login({setMoodConnection,setIsLogin,setIsHome,setPopUpNav,setIsSidebarFavoirit}) {
 
@@ -17,9 +18,9 @@ function Login({setMoodConnection,setIsLogin,setIsHome,setPopUpNav,setIsSidebarF
   
   return (
     <div className="popuo--connection connection--login">
+      <img src={logologin} className="popuo--connection__logo" alt=""/>
       <ButtonClose  setPopUpNav={setPopUpNav}/>
-      <p className="popuo--connection__intro">Log In</p>
-      <p>Cree un compte pour ajoute des favorite et utiliser eux apres.</p>
+      <p>Renseigner votre mail et un mot de passe pour récupérer votre liste directement sur notre application mobile.</p>
       <div className="inputBox">
         <label>E-mail</label>
         <input type="text"/>
