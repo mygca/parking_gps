@@ -58,7 +58,15 @@ const RerArrete = ({parkingBoxGareID,dataGares, garesIdInLines, data, item, park
 
   return (
     <div className="parkingPreview__rerStationBox rerStationBox">
-      <img alt="rer icon" className="rerStationBox__icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/RER.svg/1200px-RER.svg.png" />
+       <img alt="rer icon" className="rerStationBox__icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/RER.svg/1200px-RER.svg.png" />
+      {
+        // rerStationName === '' ?
+        //   <img alt="rer icon" className="rerStationBox__icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/RER.svg/1200px-RER.svg.png" />
+        //   <p className="rerStationBox__name">{rerStationName}</p>
+        // :
+        // ''
+
+      }
 
       { 
 
@@ -73,7 +81,7 @@ const RerArrete = ({parkingBoxGareID,dataGares, garesIdInLines, data, item, park
 
         // })
       }
-      <p className="rerStationBox__name">{rerStationName}</p>
+       <p className="rerStationBox__name">{rerStationName}</p>
       {/* <p className="rerStationBox__name">{value}</p> */}
       {/* {console.log(name)} */}
       
