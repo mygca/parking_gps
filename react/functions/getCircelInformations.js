@@ -30,6 +30,7 @@ export default function getCircelInformations({dataGares}){
       
 
       circle.addEventListener("mouseover", function(){
+        console.log("mouseover circle")
 
         var circDescription = document.createElement('div');
         circDescription.innerHTML = "<p class='hoverInfo__decription'>Zone du parking</p><div class='parkingPreview__rerStationBox rerStationBox'><p class='rerStationBox__name'>"+getGareName()+"</p></div>";
@@ -42,7 +43,10 @@ export default function getCircelInformations({dataGares}){
         circDescription.style.left=rect.left+10+"px";
       })
       circle.addEventListener("mouseleave", function(){
-        document.querySelector(".parking__hoverInfo").remove()
+        if(document.querySelector(".parking__hoverInfo")){
+          document.querySelector(".parking__hoverInfo").remove()
+        }
+       
       })
     }
 }
