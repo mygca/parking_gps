@@ -6,19 +6,27 @@ const GareIDSelected = ({sport,lines,name, gares, gareID, setGareID, isGareIdSel
 
   return (
     <div className="box--gareSelected">
-      <div className="box--gareSelected__name rerStationBox">
-        <p>Zone du Parking</p>
-        <div className="wrapper--flex wrapper--flex--start">
-          <img alt="rer icon" className="rerStationBox__icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/RER.svg/1200px-RER.svg.png" />
-          {/* <p className="rerStationBox__name">Station RER</p> */}
-          <p className="rerStationBox__name">{ gareIdToGareName(gareID, gares) }</p>
-          {/* {console.log(gares)}
-          {console.log(gareID)} */}
-        </div>
-        
+      <div className="wrapper--flex">
+        <h3 className="headline--parkingOutput">Parking Proche du Station :</h3>
+        <ButtonCloseFilter isGareIdSelected={isGareIdSelected} setIsGareIdSelected={setIsGareIdSelected} gareID={gareID} setGareID={setGareID}/>
       </div>
-      <ButtonCloseFilter isGareIdSelected={isGareIdSelected} setIsGareIdSelected={setIsGareIdSelected} gareID={gareID} setGareID={setGareID}/>
+      <p className="rerStationBox__name">{ gareIdToGareName(gareID, gares) }<span >-<span className="headline--parkingOutput__number">..</span> résultats</span></p>
     </div>
+    
+    // <div className="box--gareSelected">
+    //   <div className="box--gareSelected__name rerStationBox">
+    //     <p>Parking Proche du Station :</p>
+    //     <div className="wrapper--flex wrapper--flex--start">
+    //       <img alt="rer icon" className="rerStationBox__icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/RER.svg/1200px-RER.svg.png" />
+    //       {/* <p className="rerStationBox__name">Station RER</p> */}
+    //       <p className="rerStationBox__name">{ gareIdToGareName(gareID, gares) }</p>
+    //       {/* {console.log(gares)}
+    //       {console.log(gareID)} */}
+    //     </div>
+        
+    //   </div>
+    //   <ButtonCloseFilter isGareIdSelected={isGareIdSelected} setIsGareIdSelected={setIsGareIdSelected} gareID={gareID} setGareID={setGareID}/>
+    // </div>
   )
 }
 

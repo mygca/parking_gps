@@ -9,9 +9,6 @@ const Sidebar = ({sport,setSport,setIsSelected,isSelected, lines,isSidebarFavoir
   return (
     <div className="wrapper__sidebar sidebar">
 
-      
-
-
     {window.innerWidth<760 === true?
       <div>
         <p>Favorit</p>
@@ -59,6 +56,7 @@ const Sidebar = ({sport,setSport,setIsSelected,isSelected, lines,isSidebarFavoir
             setIsFirstFav={setIsFirstFav}
             setPopUpNav={setPopUpNav} 
             setMoodConnection={setMoodConnection}
+            isLogin={isLogin}
             />  
 
 

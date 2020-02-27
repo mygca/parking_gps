@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Favorit({listFavorit,setListFavorit,setIsFirstFav,parkings,setPopUpNav,setMoodConnection}) {
+function Favorit({listFavorit,isLogin,setListFavorit,setIsFirstFav,parkings,setPopUpNav,setMoodConnection}) {
 
   const [isLiked, setIsLiked] = useState(false);
   
@@ -16,14 +16,12 @@ function Favorit({listFavorit,setListFavorit,setIsFirstFav,parkings,setPopUpNav,
     setPopUpNav("true")
     setMoodConnection("registre")
 
-    
 
-    //getParkingID();
 
-    // if(listFavorit.indexOf(parkingID) === -1) {
-    //   listFavorit.push(parkingID);
-    //   setListFavorit([...listFavorit, parkingID])
-    // }
+    if(listFavorit.indexOf(parkingID) === -1) {
+      listFavorit.push(parkingID);
+      setListFavorit([...listFavorit, parkingID])
+    }
    
     
   }
@@ -31,7 +29,7 @@ function Favorit({listFavorit,setListFavorit,setIsFirstFav,parkings,setPopUpNav,
 
   return (
     
-  <button className={isLiked ? 'button--like button--like--active' : 'button--like'} onClick={toggle}></button>
+  <button className={isLiked && isLogin ? 'button--like button--like--active' : 'button--like'} onClick={toggle}></button>
   // {console.log(parkings.id)}
 
   );

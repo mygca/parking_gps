@@ -16,7 +16,7 @@ import { array } from 'prop-types';
 
 
 
-const Parking = ({data, dataGares, garesLines,is24, isHandicap, isSecurity,listFavorit, setListFavorit, gareId,setIsFirstFav,setPopUpNav,setMoodConnection}) => {
+const Parking = ({data, dataGares, garesLines,is24, isHandicap, isSecurity,listFavorit, setListFavorit, gareId,setIsFirstFav,setPopUpNav,setMoodConnection,isLogin}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [garesIdInLines, setgaresIdInLines] = useState();
   const [parkingBoxGareId, setParkingBoxGareId] = useState();
@@ -223,7 +223,7 @@ const Parking = ({data, dataGares, garesLines,is24, isHandicap, isSecurity,listF
           }
         </div>
         <div className="wrapper--flex">
-          <Favorit listFavorit={listFavorit} setListFavorit={setListFavorit}   setIsFirstFav={setIsFirstFav} setPopUpNav={setPopUpNav} setMoodConnection={setMoodConnection} parkings={data} />
+          <Favorit listFavorit={listFavorit} isLogin={isLogin} setListFavorit={setListFavorit}   setIsFirstFav={setIsFirstFav} setPopUpNav={setPopUpNav} setMoodConnection={setMoodConnection} parkings={data} />
           {console.log(listFavorit)}
           <ButtonSeeMore isOpen={isOpen} />
         </div>
@@ -237,15 +237,18 @@ const Parking = ({data, dataGares, garesLines,is24, isHandicap, isSecurity,listF
           <ParkingOptions data={data} name="handicape"/>
           <ParkingOptions data={data} name="securite"/>
         </div>
-        {isOpen===false?
-          <Price data={data}/>
-        :""}
+        
       </div>
 
       <div className="parking__distance">
         <Distance name="jusqu’au rer" value="50m - 3min"/>
         <Distance name="temps de transport jusqu’a l’épreuve" value="20km - 20min"/>
+        {isOpen===false?
+          <Price data={data}/>
+        :""}
       </div>
+
+      
 
       {isOpen===true?
         <ParkingOpend data={data} />
