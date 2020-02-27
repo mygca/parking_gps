@@ -24,7 +24,7 @@ function ParkingOutput({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHandi
         setIsFirstFav={setIsFirstFav}
         setPopUpNav={setPopUpNav} 
         setMoodConnection={setMoodConnection}
-        parentCallback={getParkingCount}
+        // parentCallback={getParkingCount}
       />
     </div>
   );
