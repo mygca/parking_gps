@@ -4,6 +4,10 @@
   align-items: flex-start;
   .logo{
     margin-bottom: 3vw;
+    align-self: center;
+  }
+  .button--primary{
+    align-self: center;
   }
 }
 
@@ -49,5 +53,15 @@
   .button{
     border-radius:0;
     
+  }
+}
+
+.wrapper--input{
+  label{
+    font-size: 12px;
+  }
+  input{
+    border: none;
+    border-bottom: solid $darkgrey 1px;
   }
 }

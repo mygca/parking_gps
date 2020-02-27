@@ -30,6 +30,17 @@
       width:30px;
       margin-right: 5px; 
     }
+    &.nav__link--fav{
+      position: relative;
+      &:after{
+        position: absolute;
+        width:5px;
+        height:5px;
+        background-color: $green;
+        border-radius: 50%;
+        content: "";
+      }
+    }
     
   }
 }

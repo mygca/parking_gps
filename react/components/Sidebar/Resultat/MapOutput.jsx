@@ -6,13 +6,14 @@ import Popup from '../../Map/Popup';
 // import ButtonClose from '../../Global/ButtonClose';
 import GareIDSelected from '../Resultat/Filter/GareIDSelected';
 import gareIdToGareName from '../../../functions/map/gareIdToGareName';
+import ButtonBack from '../../Global/ButtonBack';
 
 
 import getGareId from '../../../functions/map/getGareId';
 
 // import {STATIONS} from '../../../data/stations'
 
-function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,isPopUpNav,setPopUpNav,setMoodConnection,isLogin}) {
+function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,isPopUpNav,setPopUpNav,setMoodConnection,isLogin,setIsSelected}) {
 
 
   const [is24, setIs24] = useState(false)
@@ -28,6 +29,9 @@ function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,is
 
   const fetchGares = () => 
   {
+
+    
+
     const linesJO = ['a', 'b', 'c', 'd', 'j', 'n', 'p'];
     const Line= []
     if ((lines).length > 1) 
@@ -93,40 +97,37 @@ function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,is
 
   },[]);
 
-  function handlerLogin(){
-    {setPopUpNav("true")}
-    {setMoodConnection("registre")}
-  }
+  // function handlerLogin(){
+  //   {setPopUpNav("true")}
+  //   {setMoodConnection("registre")}
+  // }
  
   return (
     <div className="wrapper--output">
-
-
-
-      {/* Small pupups at the carte to give more information en plus */}
-      {/* {window.innerWidth<760 === false?
-        <Popup name="popupLinie" sport={sport} lines={lines}/>
-      :""}
-      {window.innerWidth<760 === false?
-        <Popup name="popupState" sport={sport} lines={lines}/>
-      :""} */}
-
+      <ButtonBack setIsSelected={setIsSelected}/>
 
       <div className="output__intro">
         <div className="wrapper--flex">
 
           <div className="output__intro__text">
             {isSidebarFavoirit===false?
-              <h2 className="headline--etape">Trouve ton parking ideal en function de te besoins</h2>
+              lines.length>1?
+                <div className="wrapper--flex">
+                  
+                  <div className={"popup__icon icon--rer icon--rer--"+lines[0]}>{lines[0]}</div>
+                  <div className={"popup__icon icon--rer icon--rer--"+lines[1]}>{lines[1]}</div>
+                  <p className="icon--rer__text">Ligns</p>
+                </div>
+              :<div className="wrapper--flex"><div className={"popup__icon icon--rer icon--rer--"+lines}>{lines}</div><p className="icon--rer__text">Ligne</p></div>
               :
               <div>
                 <p>Tes parking tu as chosis</p>
-                {isLogin===false?
+                {/* {isLogin===false?
                   <div>
                     <p>Pour mis tes information assecable sur la route cree vite fait un compte</p>
                     <button className="button--primary" onClick={handlerLogin}>Cree Travel Guide</button>
                   </div>
-                :<p>Tes favorits sont maintenant sauvgarde dans ton compte</p>}
+                :<p>Tes favorits sont maintenant sauvgarde dans ton compte</p>} */}
               </div>
             }
           </div>

@@ -7,13 +7,13 @@ function Navigation({isHome,setIsHome,setPopUpNav,isLogin,setIsLogin,setMoodConn
   function handlerHomeClick(){
     {setIsHome("true")}
   }
-  function handlerConnectionClick(){
-    {setPopUpNav("true")}
-  }
-  function handlerProfilClick(){
-    {setPopUpNav("true")}
-    {setMoodConnection("profil")}
-  }
+  // function handlerConnectionClick(){
+  //   {setPopUpNav("true")}
+  // }
+  // function handlerProfilClick(){
+  //   {setPopUpNav("true")}
+  //   {setMoodConnection("profil")}
+  // }
 
   function handlerFavoritClick(){
     {setIsSidebarFavoirit(true)}
@@ -30,7 +30,7 @@ function Navigation({isHome,setIsHome,setPopUpNav,isLogin,setIsLogin,setMoodConn
         {/* <li className="nav__link" onClick={handlerHomeClick}>Home</li> */}
 
         {isSelected==="true"?
-          <li className="nav__link" onClick={handlerFavoritClick}>Favoris</li>
+          <li className={listFavorit>0?"nav__link nav__link--fav":"nav__link nav__link--fav"}  onClick={handlerFavoritClick}>Favoris</li>
         :""}
         
       </ul>

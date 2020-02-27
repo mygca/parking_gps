@@ -9,7 +9,7 @@ const Sidebar = ({sport,setSport,setIsSelected,isSelected, lines,isSidebarFavoir
   return (
     <div className="wrapper__sidebar sidebar">
 
-      {console.log("sidebar fav "+isSidebarFavoirit)}
+      
 
 
     {window.innerWidth<760 === true?
@@ -32,11 +32,14 @@ const Sidebar = ({sport,setSport,setIsSelected,isSelected, lines,isSidebarFavoir
             {console.log("Sport sidebar "+sport.value)}
             {/* Small pupups at the carte to give more information en plus */}
 
+            {console.log("sidebar fav "+isSidebarFavoirit)}
+            {console.log("selected "+isSelected)}
+
             {sport.value !== "all"?
-              <Popup name="popupLinie" sport={sport.value} lines={lines}/>
+              <Popup name="popupLinie" isSelected={isSelected} sport={sport.value} lines={lines}/>
             :""}
             {sport.value !== "all"?
-              <Popup name="popupState" sport={sport.value} lines={lines}/>
+              <Popup name="popupState" isSelected={isSelected} sport={sport.value} lines={lines}/>
             :""}
           
         </div>
@@ -52,6 +55,7 @@ const Sidebar = ({sport,setSport,setIsSelected,isSelected, lines,isSidebarFavoir
             isSidebarFavoirit={isSidebarFavoirit}
             listFavorit={listFavorit} 
             setListFavorit={setListFavorit} 
+            setIsSelected={setIsSelected}
             />  
 
 

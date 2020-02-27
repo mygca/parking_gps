@@ -1,6 +1,6 @@
 import React from 'react';
 const price= require('../../../img/infoLinie--price.png');
-const height= require('../../../img/infoLinie--time.png');
+const height= require('../../../img/infoLinie--height.png');
 const time= require('../../../img/infoLinie--time.png');
 const station= require('../../../img/infoLinie--station.png');
 const adresse= require('../../../img/infoLinie--adresse.png');
