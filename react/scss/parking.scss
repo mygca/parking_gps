@@ -34,6 +34,9 @@
   .rerStationBox__name{
     position: relative;
     padding-left: 30px;
+    &:empty{
+      display: none;
+    }
     &:after{
       position: absolute;
       left: 0;
