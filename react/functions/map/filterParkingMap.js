@@ -19,11 +19,11 @@ export default function filterParkingMap({showParkingsBox}){
       circles[i].style.fill="#fff";
     }
 
-    let circleBackground = document.querySelectorAll(".circle__background");
-    for (let i = 0; i < circleBackground.length; i++) {
-      const element = circleBackground[i];
-      element.remove();  
-    }
+    // let circleBackground = document.querySelectorAll(".circle__background");
+    // for (let i = 0; i < circleBackground.length; i++) {
+    //   const element = circleBackground[i];
+    //   element.remove();  
+    // }
 
     let nrParkingBoxes=document.querySelectorAll(".box--parking").length;
     let nrParkingDisplayBoxes=document.querySelectorAll(".headline--parkingOutput__number");
@@ -63,17 +63,17 @@ export default function filterParkingMap({showParkingsBox}){
           elementTest.style.fill="#fff";
           elementTest.setAttribute('r', "10" );
 
-          var circBackground = document.createElement('div');
-          circBackground.setAttribute('class', 'circle__background');
-          document.querySelector(".carte__station").appendChild(circBackground);
-          var rectCircle = elementTest.getBoundingClientRect();
-          //console.log(rectCircle.top, rectCircle.right, rectCircle.bottom, rectCircle.left);
+          // var circBackground = document.createElement('div');
+          // circBackground.setAttribute('class', 'circle__background');
+          // document.querySelector(".carte__station").appendChild(circBackground);
+          // var rectCircle = elementTest.getBoundingClientRect();
+          // //console.log(rectCircle.top, rectCircle.right, rectCircle.bottom, rectCircle.left);
 
-          // circBackground.style.top=(circle.getAttribute('cy')/ratio) + (ratio*15)+"px";
-          // circBackground.style.left=(circle.getAttribute('cx')/ratio)+(-ratio*8)+"px";
+          // // circBackground.style.top=(circle.getAttribute('cy')/ratio) + (ratio*15)+"px";
+          // // circBackground.style.left=(circle.getAttribute('cx')/ratio)+(-ratio*8)+"px";
 
-          circBackground.style.top=(elementTest.getAttribute('cy')/ratio) +40+"px";
-          circBackground.style.left=(elementTest.getAttribute('cx')/ratio)+"px";
+          // circBackground.style.top=(elementTest.getAttribute('cy')/ratio) +40+"px";
+          // circBackground.style.left=(elementTest.getAttribute('cx')/ratio)+"px";
         }
         
       }

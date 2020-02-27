@@ -73,22 +73,26 @@ const App = () => {
             <Map sport={sport} direction={direction} isSelected={isSelected}/>
           }
 
-          <Navigation 
-          isHome={isHome} setIsHome={setIsHome} 
-          isPopUpNav={isPopUpNav} setPopUpNav={setPopUpNav} 
-          isLogin={isLogin} setIsLogin={setIsLogin} 
-          setMoodConnection={setMoodConnection}
-          isSidebarFavoirit={isSidebarFavoirit}
-          setIsSidebarFavoirit={setIsSidebarFavoirit}
-          listFavorit={listFavorit}
-          isSelected={isSelected}
-          />
+
+          {window.innerWidth>760 === true?
+            <Navigation 
+            isHome={isHome} setIsHome={setIsHome} 
+            isPopUpNav={isPopUpNav} setPopUpNav={setPopUpNav} 
+            isLogin={isLogin} setIsLogin={setIsLogin} 
+            setMoodConnection={setMoodConnection}
+            isSidebarFavoirit={isSidebarFavoirit}
+            setIsSidebarFavoirit={setIsSidebarFavoirit}
+            listFavorit={listFavorit}
+            isSelected={isSelected}
+            />
+          :""}
 
           
         </div>
       :<Home 
       isHome={isHome} setIsHome={setIsHome} 
       isMobil={isMobil}
+      isLogin={isLogin} setIsLogin={setIsLogin}
       isSidebarFavoirit={isSidebarFavoirit}
       setIsSidebarFavoirit={setIsSidebarFavoirit}
       listFavorit={listFavorit}
