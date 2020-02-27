@@ -191,7 +191,10 @@ Vraiment Desole...
     }
   }
   footer{
-    text-align: right;
+    width: 300px;
+    float: right;
+    display: flex;
+    justify-content: space-between;
     padding-right: 2vw;
     padding-bottom: 1vw;
   }

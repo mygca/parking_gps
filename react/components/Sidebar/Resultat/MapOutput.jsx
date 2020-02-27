@@ -7,13 +7,14 @@ import Popup from '../../Map/Popup';
 import GareIDSelected from '../Resultat/Filter/GareIDSelected';
 import gareIdToGareName from '../../../functions/map/gareIdToGareName';
 import ButtonBack from '../../Global/ButtonBack';
+import ButtonCloseFavorit from '../../Global/ButtonCloseFavorit'
 
 
 import getGareId from '../../../functions/map/getGareId';
 
 // import {STATIONS} from '../../../data/stations'
 
-function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,isPopUpNav,setPopUpNav,setMoodConnection,isLogin,setIsSelected,setIsFirstFav}) {
+function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,isPopUpNav,setPopUpNav,setMoodConnection,isLogin,setIsSelected,setIsFirstFav,setIsSidebarFavoirit}) {
 
 
   const [is24, setIs24] = useState(false)
@@ -165,7 +166,13 @@ function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,is
                 
               :
               <div>
-                <p>Tes parking tu as chosis</p>
+                <div className="wrapper--flex">
+                  <div className="wrapper--relative">
+                  <ButtonCloseFavorit setIsSidebarFavoirit={setIsSidebarFavoirit}/>
+                  <p className="icon--rer__text">Ta List</p>
+                  </div>
+                  
+                </div>
                 {/* {isLogin===false?
                   <div>
                     <p>Pour mis tes information assecable sur la route cree vite fait un compte</p>

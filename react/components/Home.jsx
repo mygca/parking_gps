@@ -138,7 +138,7 @@ const Home = ({isHome, setIsHome,setIsSidebarFavoirit,isSidebarFavoirit,listFavo
         </div>
       </section> */}
 
-      <footer><p>Placeholder</p></footer>
+      <footer><p>Choisire son chemin</p><p>Haut de la page</p></footer>
 
     </div>
 

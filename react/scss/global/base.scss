@@ -10,6 +10,11 @@ body{
   // 300,400,700
 }
 
+.wrapper--relative{
+  position: relative;
+  width:100%;
+}
+
 .wrapper--flex{
   display: flex;
   align-items: flex-start;

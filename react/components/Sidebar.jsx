@@ -68,13 +68,13 @@ const Sidebar = ({sport,setSport,setIsSelected,isSelected, lines,isSidebarFavoir
           </div>
           :
           <div>
-            <p>Favorit</p>
-            <p></p>
+            {/* <p className="">Ma List</p> */}
             <MapOutput 
             sport={sport.value} 
             lines={lines} 
             listFavorit={listFavorit}
             isSidebarFavoirit={isSidebarFavoirit}
+            setIsSidebarFavoirit={setIsSidebarFavoirit}
             isPopUpNav={isPopUpNav} setPopUpNav={setPopUpNav} 
             setMoodConnection={setMoodConnection}/>  
           </div>

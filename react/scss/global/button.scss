@@ -11,6 +11,10 @@ button,input{
   &:focus {outline:0;}
 }
 
+.button--close-Fav{
+  right:-25vw !important;
+}
+
 .button--back{
   width:30px;
   cursor: pointer;
