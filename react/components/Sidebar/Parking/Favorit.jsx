@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Favorit({listFavorit,setListFavorit}) {
+function Favorit({listFavorit,setListFavorit, parkings}) {
 
   const [isLiked, setIsLiked] = useState(false);
   
@@ -8,22 +8,27 @@ function Favorit({listFavorit,setListFavorit}) {
 
   Favorit.handleClickOutside = () => setIsLiked(false);
 
-  // let parkingID;
+  let parkingID = parkings.recordid;
 
   function toggle(){
     setIsLiked(!isLiked)
+
+    //getParkingID();
 
     // if(listFavorit.indexOf(parkingID) === -1) {
     //   listFavorit.push(parkingID);
     //   setListFavorit([...listFavorit, parkingID])
     // }
-    
+   
     
   }
 
 
   return (
-    <button className={isLiked ? 'button--like button--like--active' : 'button--like'} onClick={toggle}></button>
+    
+  <button className={isLiked ? 'button--like button--like--active' : 'button--like'} onClick={toggle}></button>
+  // {console.log(parkings.id)}
+
   );
 }
 

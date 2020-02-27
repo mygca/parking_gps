@@ -21,7 +21,7 @@ const Parking = ({data, dataGares, garesLines,is24, isHandicap, isSecurity,listF
   const [garesIdInLines, setgaresIdInLines] = useState();
   const [parkingBoxGareId, setParkingBoxGareId] = useState();
   //console.log(isOpen);
-  //console.log('how many parkings shown?')
+  // console.log('how many parkings shown?')
 
   // const toFalse = ()=> {
   //   setIsOpen(!isOpen);
@@ -223,8 +223,8 @@ const Parking = ({data, dataGares, garesLines,is24, isHandicap, isSecurity,listF
           }
         </div>
         <div className="wrapper--flex">
-          <Favorit listFavorit={listFavorit} setListFavorit={setListFavorit} />
-          {console.log(listFavorit)}
+          <Favorit listFavorit={listFavorit} setListFavorit={setListFavorit} parkings={data}/>
+          {/* {console.log(listFavorit)} */}
           <ButtonSeeMore isOpen={isOpen} />
         </div>
       </div>
