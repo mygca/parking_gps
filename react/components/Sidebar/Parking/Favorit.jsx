@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Favorit({listFavorit,setListFavorit, parkings}) {
+function Favorit({listFavorit,setListFavorit,setIsFirstFav,parkings,setPopUpNav,setMoodConnection}) {
 
   const [isLiked, setIsLiked] = useState(false);
   
@@ -12,6 +12,11 @@ function Favorit({listFavorit,setListFavorit, parkings}) {
 
   function toggle(){
     setIsLiked(!isLiked)
+    //setIsFirstFav(true)
+    setPopUpNav("true")
+    setMoodConnection("registre")
+
+    
 
     //getParkingID();
 

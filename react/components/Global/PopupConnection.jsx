@@ -1,29 +1,40 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Login from './Login';
 import Registre from './Registre';
 import Profil from './Profil';
 
-function PopupConnection({isLogin,isHome,setIsHome, setIsLogin,setPopUpNav,moodConnection,setMoodConnection,setIsSidebarFavoirit}) {
-
+function PopupConnection({isLogin,isHome,setIsHome, setIsLogin,setPopUpNav,moodConnection,setMoodConnection,setIsSidebarFavoirit,isFirstFav}) {
  
   
   return (
     <div className="popup--connection">
-      {(moodConnection==="login")?
-      <Login 
-      setIsLogin={setIsLogin}
-      setMoodConnection={setMoodConnection} 
-      setPopUpNav={setPopUpNav}
-      setIsHome={setIsHome} 
-      setIsSidebarFavoirit={setIsSidebarFavoirit} />
-      :
-      (moodConnection==="registre")?
-      <Registre 
-      setIsLogin={setIsLogin} 
-      setMoodConnection={setMoodConnection} 
-      setPopUpNav={setPopUpNav}/>
 
-      :<Profil setMoodConnection={setMoodConnection} setIsLogin={setIsLogin} setPopUpNav={setPopUpNav} />
+
+
+    
+        {/* <Login 
+        setIsLogin={setIsLogin}
+        setMoodConnection={setMoodConnection} 
+        setPopUpNav={setPopUpNav}
+        setIsHome={setIsHome} 
+        setIsSidebarFavoirit={setIsSidebarFavoirit} /> */}
+    
+
+      {(moodConnection==="login")?
+        <Login 
+        setIsLogin={setIsLogin}
+        setMoodConnection={setMoodConnection} 
+        setPopUpNav={setPopUpNav}
+        setIsHome={setIsHome} 
+        setIsSidebarFavoirit={setIsSidebarFavoirit} />
+        :
+      (moodConnection==="registre")?
+        <Registre 
+        setIsLogin={setIsLogin} 
+        setMoodConnection={setMoodConnection} 
+        setPopUpNav={setPopUpNav}/>
+
+      :""
       }
     </div>
   )

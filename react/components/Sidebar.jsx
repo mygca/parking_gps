@@ -4,7 +4,7 @@ import MapOutput from './Sidebar/Resultat/MapOutput';
 import Registre from './Global/Registre';
 import Popup from './Map/Popup';
 
-const Sidebar = ({sport,setSport,setIsSelected,isSelected, lines,isSidebarFavoirit,setIsSidebarFavoirit,setDirection,direction,listFavorit,setListFavorit,isPopUpNav,setPopUpNav,setMoodConnection,isLogin}) => {
+const Sidebar = ({sport,setSport,setIsSelected,isSelected, lines,isSidebarFavoirit,setIsSidebarFavoirit,setDirection,direction,listFavorit,setListFavorit,isPopUpNav,setPopUpNav,setMoodConnection,isLogin,setIsFirstFav}) => {
 
   return (
     <div className="wrapper__sidebar sidebar">
@@ -56,6 +56,9 @@ const Sidebar = ({sport,setSport,setIsSelected,isSelected, lines,isSidebarFavoir
             listFavorit={listFavorit} 
             setListFavorit={setListFavorit} 
             setIsSelected={setIsSelected}
+            setIsFirstFav={setIsFirstFav}
+            setPopUpNav={setPopUpNav} 
+            setMoodConnection={setMoodConnection}
             />  
 
 

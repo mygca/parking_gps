@@ -13,7 +13,7 @@ import getGareId from '../../../functions/map/getGareId';
 
 // import {STATIONS} from '../../../data/stations'
 
-function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,isPopUpNav,setPopUpNav,setMoodConnection,isLogin,setIsSelected}) {
+function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,isPopUpNav,setPopUpNav,setMoodConnection,isLogin,setIsSelected,setIsFirstFav}) {
 
 
   const [is24, setIs24] = useState(false)
@@ -167,6 +167,9 @@ function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,is
         setMinHeight={setMinHeight} minHeight={minHeight} sport={sport} lines={lines}
         listFavorit={listFavorit} setListFavorit={setListFavorit}
         isPrixUp={isPrixUp} setIsPrixUp={setIsPrixUp}
+        setIsFirstFav={setIsFirstFav}
+        setPopUpNav={setPopUpNav} 
+        setMoodConnection={setMoodConnection}
       />
 
  

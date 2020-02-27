@@ -42,7 +42,7 @@ const Home = ({isHome, setIsHome,setIsSidebarFavoirit,isSidebarFavoirit,listFavo
           {window.innerWidth<760 === true?
           <div>
             <p>Rentrez votre mail pour récupérer vos Favoris</p>
-            <button className="button button--primary" onClick={handlerInputClick}>Start</button>
+            <button className="button button--primary" onClick={handlerInputClick}>Login</button>
           </div>
             
             :

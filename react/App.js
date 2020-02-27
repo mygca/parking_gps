@@ -21,7 +21,7 @@ const App = () => {
   // button validation (sport,direction)
   const [isSelected, setIsSelected] = useState("false")
   // is homepage ou app
-  const [isHome, setIsHome] = useState("false")
+  const [isHome, setIsHome] = useState("true")
   //is popup open 
   const [isPopUpNav, setPopUpNav] = useState("false")
   // login,connection, profil
@@ -34,11 +34,17 @@ const App = () => {
   const [listFavorit, setListFavorit] = useState([])
   // is mobil
   const [isMobil,setIsMobil ] = useState(false)
+  // is first time Favorit
+  const [isFirstFav,setIsFirstFav ] = useState(false)
   // is a gare id selected
   // const [isGareIdSelected, setIsGareIdSelected] = useState(false)
 
+  
+
   return (
     <div>
+
+      {console.log("isPopUpNav",isPopUpNav)}
 
       {(isHome==="false")?
         <div className="wrapper">
@@ -54,10 +60,12 @@ const App = () => {
           isPopUpNav={isPopUpNav} setPopUpNav={setPopUpNav} 
           setMoodConnection={setMoodConnection}
           isLogin={isLogin}
+          setIsFirstFav={setIsFirstFav}
           />
 
           {console.log("Direction "+direction.value)}
           {console.log("fav list app ",listFavorit)}
+          {console.log("first fav"+isFirstFav)}
 
           {window.innerWidth<760 === true?
             ""
@@ -73,7 +81,8 @@ const App = () => {
           isSidebarFavoirit={isSidebarFavoirit}
           setIsSidebarFavoirit={setIsSidebarFavoirit}
           listFavorit={listFavorit}
-          isSelected={isSelected}/>
+          isSelected={isSelected}
+          />
 
           
         </div>
@@ -88,11 +97,12 @@ const App = () => {
       />
       }
 
-      {(isPopUpNav==="true")?
+      {(isPopUpNav==="true" && isLogin===false)?
         <PopupConnection 
         isLogin={isLogin} setIsLogin={setIsLogin} 
         isHome={isHome} setIsHome={setIsHome} 
         setPopUpNav={setPopUpNav} 
+        isFirstFav={isFirstFav}
         setIsSidebarFavoirit={setIsSidebarFavoirit}
         moodConnection={moodConnection} setMoodConnection={setMoodConnection}  />
       :""}
