@@ -224,7 +224,7 @@ const Parking = ({data, dataGares, garesLines,is24, isHandicap, isSecurity,listF
         </div>
         <div className="wrapper--flex">
           <Favorit listFavorit={listFavorit} setListFavorit={setListFavorit}   setIsFirstFav={setIsFirstFav} setPopUpNav={setPopUpNav} setMoodConnection={setMoodConnection} parkings={data} />
-          {console.log(listFavorit)}
+          {/* {console.log(listFavorit)} */}
           <ButtonSeeMore isOpen={isOpen} />
         </div>
       </div>

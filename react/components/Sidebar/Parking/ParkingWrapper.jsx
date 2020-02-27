@@ -12,7 +12,7 @@ import filterParkingMap from '../../../functions/map/filterParkingMap';
 import sortPrice from '../../../functions/sortPrice';
 
 
-function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHandicap,isSecurity,minHeight,setMinHeight, sport, lines,listFavorit, setListFavorit, isPrixUp, setIsPrixUp,setIsFirstFav,setPopUpNav,setMoodConnection}) {
+function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHandicap,isSecurity,minHeight,setMinHeight, sport, lines,listFavorit, setListFavorit, isPrixUp, setIsPrixUp,setIsFirstFav,setPopUpNav,setMoodConnection, parentCallback}) {
   const [gares, setGares] = useState(null);
   const [garesIdArray, setgaresIdArray] = useState(null);
   const [parkingsIdArray, setparkingsIdArray] = useState();
@@ -770,6 +770,34 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
   //   renderParkings = false
   // }
 
+  const countingParkings = ( data ) => 
+  {
+    // var length = 0;
+    // for( var key in data ) {
+    //     if( data.hasOwnProperty(key) ) {
+    //         ++length;
+    //     }
+    // }
+    // return length;
+
+    //return Object.keys(data.Data).length
+    let count = 0;
+
+    data.map(()=>{
+      count++
+    })
+    console.log(count)
+    return count
+
+  };
+
+  const sendParkingsCount = () =>
+  {
+    // parentCallback(data)
+    //  parentCallback("4")
+    // parentCallback(data.length)
+    parentCallback(countingParkings)
+  }
 
   useEffect(() => {
 
@@ -781,7 +809,7 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
     //delete data.showParkingsBox
 
 
-
+    sendParkingsCount();
     //filterParkingsOptions();
      
   }, [is24, isHandicap, isSecurity, minHeight, gareID, isPrixUp])
