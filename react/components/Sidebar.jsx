@@ -73,6 +73,7 @@ const Sidebar = ({sport,setSport,setIsSelected,isSelected, lines,isSidebarFavoir
             <MapOutput 
             sport={sport.value} 
             lines={lines} 
+            listFavorit={listFavorit}
             isSidebarFavoirit={isSidebarFavoirit}
             isPopUpNav={isPopUpNav} setPopUpNav={setPopUpNav} 
             setMoodConnection={setMoodConnection}/>  

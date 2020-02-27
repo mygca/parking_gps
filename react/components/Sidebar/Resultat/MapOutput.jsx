@@ -215,6 +215,7 @@ function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,is
         setPopUpNav={setPopUpNav} 
         isLogin={isLogin}
         setMoodConnection={setMoodConnection}
+        isSidebarFavoirit={isSidebarFavoirit}
       />
 
  
