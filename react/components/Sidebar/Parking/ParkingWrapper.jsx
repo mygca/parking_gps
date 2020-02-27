@@ -781,22 +781,22 @@ function ParkingWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
     // return length;
 
     //return Object.keys(data.Data).length
-    let count = 0;
+    // let count = 0;
 
-    data.map(()=>{
-      count++
-    })
-    console.log(count)
-    return count
+    // data.map(()=>{
+    //   count++
+    // })
+    // console.log(count)
+    // return count
 
   };
 
   const sendParkingsCount = () =>
   {
     // parentCallback(data)
-    //  parentCallback("4")
+     parentCallback("4")
     // parentCallback(data.length)
-    parentCallback(countingParkings)
+    // parentCallback(countingParkings)
   }
 
   useEffect(() => {
