@@ -21,7 +21,7 @@ function Popup({sport,lines,name,isSelected}) {
           lines.length>1?
             <p className="popup__text">Ligne {lines[0]} + {lines[1]} selectionnée</p>
             :
-            <p className="popup__text">Ligne {lines} selectionnée</p>
+            <p className="popup__text">Ligne {lines} sélectionnée</p>
           :""
       }
         

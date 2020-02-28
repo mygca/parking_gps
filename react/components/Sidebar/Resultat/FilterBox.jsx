@@ -11,9 +11,9 @@ function FilterBox({setIs24,setIsHandicap,setIsSecurity,is24,isHandicap,isSecuri
       
         <div className="wrapper--flex wrapper--flex--start">
           <ToggleButton name="24" label="Ouvert 24/24" setIs24={setIs24} is24={is24}/>
-          <ToggleButton name="handicap" label="Handicapé" setIsHandicap={setIsHandicap} isHandicap={isHandicap}/>
-          <ToggleButton name="security" label="Securite" setIsSecurity={setIsSecurity} isSecurity={isSecurity}/>
-          <Input name="Hauter Minimum" setMinHeight={setMinHeight} minHeight={minHeight} />
+          <ToggleButton name="handicap" label="Mobilité réduite" setIsHandicap={setIsHandicap} isHandicap={isHandicap}/>
+          <ToggleButton name="security" label="Caméra de surveillance" setIsSecurity={setIsSecurity} isSecurity={isSecurity}/>
+          <Input name="Hauteur voiture" setMinHeight={setMinHeight} minHeight={minHeight} />
         </div>
         <TogglePrix isPrixUp={isPrixUp} setIsPrixUp={setIsPrixUp}/>
 

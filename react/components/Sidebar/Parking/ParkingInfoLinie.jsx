@@ -3,7 +3,7 @@ const price= require('../../../img/infoLinie--price.png');
 const height= require('../../../img/infoLinie--height.png');
 const time= require('../../../img/infoLinie--time.png');
 const station= require('../../../img/infoLinie--station.png');
-const adresse= require('../../../img/infoLinie--adresse.png');
+const adresse= require('../../../img/infoLinie--station.png');
 const opperator= require('../../../img/infoLinie--opperator.png');
 
 

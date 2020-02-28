@@ -99,7 +99,7 @@ const Home = ({isHome, setIsHome,setIsSidebarFavoirit,isSidebarFavoirit,listFavo
 
       <section className="section--besoin besoin rellax" data-rellax-speed="1">
         <p>Vous souhaitez garer votre voiture en <span>evitant les embouteillages</span> pour rejoindre vos <span>épreuves sportives ?</span></p>
-        <p><span>On t’aide a trouver un parking à coté du RER</span></p>
+        <p><span>On t’aide à trouver un parking à coté du RER</span></p>
       </section>
 
       <section className="section--steps steps">
@@ -123,7 +123,7 @@ const Home = ({isHome, setIsHome,setIsSidebarFavoirit,isSidebarFavoirit,listFavo
         <div className="step__box">
           <div className="step__textBox rellax" data-rellax-speed="-0.5">
             <h2>VOYAGER</h2>
-            <p>Retrouvez votre liste sur votre sur votre mobile, et accedez a vos itinéraires pour voyager en tranquillité avec lien Waze.</p>
+            <p>Retrouvez votre liste sur votre sur votre mobile, et accédez à vos itinéraires pour voyager en tranquillité.</p>
           </div>
           <img src={step1Img} className="step__image rellax" data-rellax-speed="1.2" alt=""/>
         </div>
@@ -145,7 +145,7 @@ const Home = ({isHome, setIsHome,setIsSidebarFavoirit,isSidebarFavoirit,listFavo
         </div>
       </section> */}
 
-      <footer><p onClick={handlerClick}>Trouver ton Parking</p><p onClick={handlerScrollTop}>Haut de la page</p></footer>
+      <footer><p onClick={handlerClick}>Rechercher un parking</p><p onClick={handlerScrollTop}>Haut de la page</p></footer>
 
     </div>
 

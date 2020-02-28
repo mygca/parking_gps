@@ -1,6 +1,6 @@
 export const dataDirection = [
-  {value:'south', label:'South'},
+  {value:'south', label:'Sud'},
   {value:'nord', label:'Nord'},
-  {value:'east', label:'East'},
-  {value:'west', label:'West'}
+  {value:'east', label:'Est'},
+  {value:'west', label:'Ouest'}
 ]

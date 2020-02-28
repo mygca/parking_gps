@@ -169,7 +169,7 @@ function MapOutput({sport, lines,isSidebarFavoirit,listFavorit,setListFavorit,is
                 <div className="wrapper--flex">
                   <div className="wrapper--relative">
                   <ButtonCloseFavorit setIsSidebarFavoirit={setIsSidebarFavoirit}/>
-                  <p className="icon--rer__text">Ta List</p>
+                  <p className="icon--rer__text">Votre liste de favoris</p>
                   </div>
                   
                 </div>

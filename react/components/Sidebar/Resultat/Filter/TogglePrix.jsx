@@ -17,7 +17,7 @@ function TogglePrix({isPrixUp ,setIsPrixUp}) {
         <label>Trier pas prix</label>
         <div className="wrapper--flex">
           <button className={isPrixUp===true?"button button--active":"button"} onClick={handlerClickUp}>Croissant</button>
-          <button className={isPrixUp===false?"button button--active":"button"} onClick={handlerClickDown}>Dècroissant</button>
+          <button className={isPrixUp===false?"button button--active":"button"} onClick={handlerClickDown}>Décroissant</button>
         </div>
       </div>
     </div>

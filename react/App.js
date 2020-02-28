@@ -17,7 +17,7 @@ const App = () => {
   //selected sport
   const [sport, setSport] = useState({label: "Liste des sports", value: "all", lines:'r'})
   //selected Direction
-  const [direction, setDirection] = useState({label: "List du direction", value: "center"})
+  const [direction, setDirection] = useState({label: "Directions d'arrivée", value: "center"})
   // button validation (sport,direction)
   const [isSelected, setIsSelected] = useState("false")
   // is homepage ou app
