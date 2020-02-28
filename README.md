@@ -25,12 +25,6 @@ Créer les tables:
 php bin/console d:m:m
 ```
 
-OU une seule commande:
-```bash
-php bin/console reset:db
-```
-
-
 ## Importation des données
 
 Concernant l'import des CSV dans la base de données, plusieurs commandes sont à votre disposition:
@@ -53,7 +47,7 @@ Supprimer une migration:
 php bin/console doctrine:migrations:version YYYYMMDDHHMMSS --delete
 ```
 
-Reset sa base de données:
+Commande permettant de supprimer sa BDD afin de la recréer et remplir à nouveau:
 ```bash
 php bin/console reset:db
 ```
