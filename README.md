@@ -1,4 +1,15 @@
-# Projet d'étude - Parking GPS
+# Projet HETIC - Hello Parkings
+
+## TEAM
+
+  - Gena Nunes : UX/UI Designer
+  - Mathias Vincelet: UX/UI Designer
+  - Yannis Rezzoug: Développeur Back
+  - Christina Stephan: Développeur Front
+  - Amanda Tan: Développeur Front
+
+
+## BACK
 
 #Installation:
 
@@ -13,7 +24,7 @@ Etape à suivre:
  
  Si un problème survient, ouvrez une issues et décrivez votre problème.
 
-## Initialisation de la BDD
+### Initialisation de la BDD
 
 Créer la base de données:
 ```bash
@@ -26,7 +37,7 @@ php bin/console d:m:m
 ```
 
 
-## Importation des données
+### Importation des données
 
 Concernant l'import des CSV dans la base de données, plusieurs commandes sont à votre disposition:
 
@@ -41,7 +52,7 @@ php bin/console csv:gareidf
 ```
 
 
-## Commande utile
+## Commandes utiles
 
 Supprimer une migration:
 ```bash
@@ -58,20 +69,16 @@ php bin/console c:c
 ```
 
 
+## FRONT
 
-## Côté DEV
+### REACT directory
 
-### Si vous souhaitez faire du JS / SASS
+Go to the react directory to check the front-end code
 
-Pour faire du JS (React), il vous suffit de vous rendre dans: assets/js/app.js
-
-Pour faire du SASS, il vous suffit de vous rendre dans: assets/css/app.scss
-
-Pour utiliser WEBPACK:
+Runs the app in the production mode:
 
 ```bash
 yarn encore dev --watch
 
-## CTRL + C pour arreter le process
 ```
 
