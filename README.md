@@ -1,6 +1,6 @@
 # Projet HETIC - Hello Parkings
 
-## TEAM
+## **TEAM**
 
   - Gena Nunes : UX/UI Designer
   - Mathias Vincelet: UX/UI Designer
@@ -9,8 +9,8 @@
   - Amanda Tan: Développeur Front
 
 
-## BACK
-
+## **BACK
+**
 #Installation:
 
 Etape à suivre:
@@ -69,7 +69,7 @@ php bin/console c:c
 ```
 
 
-## FRONT
+## **FRONT**
 
 ### REACT directory
 
