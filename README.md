@@ -25,6 +25,11 @@ Créer les tables:
 php bin/console d:m:m
 ```
 
+OU une seule commande:
+```bash
+php bin/console reset:db
+```
+
 
 ## Importation des données
 
