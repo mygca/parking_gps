@@ -14,7 +14,7 @@ function ParkingOpend({data}) {
   return (
     <div className="parking--opened">
       {/* <img className="parking__map" src={cartePlaceholder} alt=""/> */}
-      <ParkingInfoMap/>
+      <ParkingInfoMap data={data}/>
       {/* <ParkingInfoLinie name="station" legende="Station RER" value="Vincennes" /> */}
       {/* <ParkingInfoLinie name="station" legende="Station RER" data={data.gares_id} /> */}
       {/* <ParkingInfoLinie name="adresse" legende="Adresse du Parking" value="4,Rue de la Bienfaisance" /> */}
