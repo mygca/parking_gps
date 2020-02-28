@@ -671,72 +671,17 @@ function FavoritWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
   
   return (
     <div className="wrapper--parking">
-        <p>HEllO FAVORIT PAGE</p>
     
         
         {
           
-         
-          // Object.values(data).map(()=> (
-         
-          //   data.showParkingsBox.map((e, i)=> (
-
-          //     <ParkingBox key={i} data={e} dataGares={gares} garesLines={garesIdArray.getGaresIdArray} listFavorit={listFavorit} setListFavorit={setListFavorit} is24={is24} isHandicap={isHandicap} isSecurity={isSecurity} setIsFirstFav={setIsFirstFav} setPopUpNav={setPopUpNav} setMoodConnection={setMoodConnection} isLogin={isLogin} /> 
-          //   //<p>{e.company}</p>
-          //   ))
-          // )) 
-          
           garesIdArray && Object.values(showListFavorit).map((e, i)=> (
          
-            // data.showParkingsBox.map((e, i)=> (
 
               <ParkingBox key={i} data={e} dataGares={gares} garesLines={garesIdArray.getGaresIdArray} listFavorit={listFavorit} setListFavorit={setListFavorit} is24={is24} isHandicap={isHandicap} isSecurity={isSecurity} setIsFirstFav={setIsFirstFav} setPopUpNav={setPopUpNav} setMoodConnection={setMoodConnection} isLogin={isLogin} /> 
-            //<p>{e.company}</p>
-            // ))
+       
           )) 
 
-          // Array.from(new Set(listFavorit))
-          //  console.log(Array.from(new Set(listFavorit)))
-          // console.log(listFavorit)
-
-
-          // garesIdArray && Object.values(parkings).map(p => {
-          //   //console.log(p.gares_id)
-          //   // for (let i = 0; i < listFavorit.length; i++) {
-          //   //   const element = listFavorit[i];
-          //   //   if (element == p.gares_id) 
-          //   //   {
-          //   //     <ParkingBox key={i} data={p} dataGares={gares} garesLines={garesIdArray.getGaresIdArray} listFavorit={listFavorit} setListFavorit={setListFavorit} is24={is24} isHandicap={isHandicap} isSecurity={isSecurity} setIsFirstFav={setIsFirstFav} setPopUpNav={setPopUpNav} setMoodConnection={setMoodConnection} isLogin={isLogin} 
-          //   //     /> 
-
-          //   //   }
-          //   // }
-            
-          //     Array.from(new Set(listFavorit)).map((i) => {
-          //         // <ParkingBox data={p} dataGares={gares} garesLines={garesIdArray.getGaresIdArray} listFavorit={listFavorit} setListFavorit={setListFavorit} is24={is24} isHandicap={isHandicap} isSecurity={isSecurity} setIsFirstFav={setIsFirstFav} setPopUpNav={setPopUpNav} setMoodConnection={setMoodConnection} isLogin={isLogin} 
-          //         // /> 
-          //         // console.log(p)
-          //       <p>{i}</p>
-          //     })
-
-          // })
-
-          // console.log(showListFavorit)
-
-          // Object.values(showListFavorit).map( pfavorit => {
-          //   console.log("favorit parkings",pfavorit) 
-          //   // <ParkingBox key={i} data={p} dataGares={gares} garesLines={garesIdArray.getGaresIdArray} listFavorit={listFavorit} setListFavorit={setListFavorit} is24={is24} isHandicap={isHandicap} isSecurity={isSecurity} setIsFirstFav={setIsFirstFav} setPopUpNav={setPopUpNav} setMoodConnection={setMoodConnection} isLogin={isLogin}
-          //   // />
-
-          // })
-          // garesIdArray && Object.values(showListFavorit).map( (pfavorit,i) => {
-
-          //   // console.log("favorit parkings",pfavorit) 
-            
-          //   // <ParkingBox key={i} data={pfavorit} dataGares={gares} garesLines={garesIdArray.getGaresIdArray} listFavorit={listFavorit} setListFavorit={setListFavorit} is24={is24} isHandicap={isHandicap} isSecurity={isSecurity} setIsFirstFav={setIsFirstFav} setPopUpNav={setPopUpNav} setMoodConnection={setMoodConnection} isLogin={isLogin}
-          //   // />
-          //   // <p>{pfavorit.code_postal}</p>
-          // })
         }
 
       
