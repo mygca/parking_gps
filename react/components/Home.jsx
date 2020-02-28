@@ -19,6 +19,13 @@ const Home = ({isHome, setIsHome,setIsSidebarFavoirit,isSidebarFavoirit,listFavo
     {setIsHome("false")}
   }
 
+  function handlerScrollTop(){
+    console.log("scroll top");
+    window.scroll(0, 0);
+
+    
+  }
+
   
   
   function handlerLogin(){
@@ -138,7 +145,7 @@ const Home = ({isHome, setIsHome,setIsSidebarFavoirit,isSidebarFavoirit,listFavo
         </div>
       </section> */}
 
-      <footer><p>Choisire son chemin</p><p>Haut de la page</p></footer>
+      <footer><p onClick={handlerClick}>Trouver ton Parking</p><p onClick={handlerScrollTop}>Haut de la page</p></footer>
 
     </div>
 
