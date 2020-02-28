@@ -1,7 +1,8 @@
 import React from 'react';
 import ParkingInfoLinie from './ParkingInfoLinie';
+import ParkingInfoMap from './ParkingInfoMap';
 import gareIdToGareName from '../../../functions/map/gareIdToGareName';
-const cartePlaceholder = require('../../../img/carte.png');
+// const cartePlaceholder = require('../../../img/carte.png');
 // const prix= require('../../../img/infoLinie--price.png');
 // const time= require('../../../img/infoLinie--time.png');
 // const station= require('../../../img/infoLinie--station.png');
@@ -12,7 +13,8 @@ const cartePlaceholder = require('../../../img/carte.png');
 function ParkingOpend({data}) {
   return (
     <div className="parking--opened">
-      <img className="parking__map" src={cartePlaceholder} alt=""/>
+      {/* <img className="parking__map" src={cartePlaceholder} alt=""/> */}
+      <ParkingInfoMap/>
       {/* <ParkingInfoLinie name="station" legende="Station RER" value="Vincennes" /> */}
       {/* <ParkingInfoLinie name="station" legende="Station RER" data={data.gares_id} /> */}
       {/* <ParkingInfoLinie name="adresse" legende="Adresse du Parking" value="4,Rue de la Bienfaisance" /> */}
