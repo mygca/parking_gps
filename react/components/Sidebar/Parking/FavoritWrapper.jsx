@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import ParkingBox from './ParkingBox';
+// import ParkingBox from './ParkingBox';
+import ParkingBox from '../Parking/ParkingBox';
 //import { data } from '../../../../data/parkings';
 import parkings from '../../../data/parkings';
-import getParkingByLine from '../../../functions/map/getParkingByLine';
+// import getParkingByLine from '../../../functions/map/getParkingByLine';
 //import handleToggleFilter from '../../../functions/map/handleToggleFilter';
 
 import showParkings from '../../../functions/map/showParking';
@@ -18,7 +19,7 @@ function FavoritWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
   const [parkingsIdArray, setparkingsIdArray] = useState();
   const [matchedId, setMatchedId] = useState();
   const [data, setData] = useState({});
-  const [showListFavorit, setShowListFavorit] = useState();
+  const [showListFavorit, setShowListFavorit] = useState(null);
 
   /*
   * Data fetch parkings from API
@@ -636,22 +637,31 @@ function FavoritWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
     }
   }
 
-  // const showListFavorit = () => {
-  //   Object.values(parkings).map(p => {
+  const getShowListFavorit = () => {
 
-  //     Array.from(new Set(listFavorit)).map((i) => {
+    let listFavoritArray = [];
+    Object.values(parkings).map(p => {
 
-  //     })
 
-  //   })
-  // }
+      Array.from(new Set(listFavorit)).map(item => {
+        //console.log("parkingIdFavorit",i)
+        if (item == p.recordid)
+        {
+          listFavoritArray.push(p)
+        }
+        //console.log(listFavoritArray)
+      })
+
+    })
+    setShowListFavorit(listFavoritArray)
+  }
 
 
 
   useEffect(() => {
 
-    fetchGare();
-
+    fetchGare()
+    getShowListFavorit()
      
   }, [is24, isHandicap, isSecurity, minHeight, gareID, isPrixUp])
 
@@ -675,29 +685,58 @@ function FavoritWrapper({gareID, setIs24,setIsHandicap,setIsSecurity,is24,isHand
           //   //<p>{e.company}</p>
           //   ))
           // )) 
+          
+          garesIdArray && Object.values(showListFavorit).map((e, i)=> (
+         
+            // data.showParkingsBox.map((e, i)=> (
+
+              <ParkingBox key={i} data={e} dataGares={gares} garesLines={garesIdArray.getGaresIdArray} listFavorit={listFavorit} setListFavorit={setListFavorit} is24={is24} isHandicap={isHandicap} isSecurity={isSecurity} setIsFirstFav={setIsFirstFav} setPopUpNav={setPopUpNav} setMoodConnection={setMoodConnection} isLogin={isLogin} /> 
+            //<p>{e.company}</p>
+            // ))
+          )) 
+
           // Array.from(new Set(listFavorit))
           //  console.log(Array.from(new Set(listFavorit)))
           // console.log(listFavorit)
-          garesIdArray && Object.values(parkings).map(p => {
-            //console.log(p.gares_id)
-            // for (let i = 0; i < listFavorit.length; i++) {
-            //   const element = listFavorit[i];
-            //   if (element == p.gares_id) 
-            //   {
-            //     <ParkingBox key={i} data={p} dataGares={gares} garesLines={garesIdArray.getGaresIdArray} listFavorit={listFavorit} setListFavorit={setListFavorit} is24={is24} isHandicap={isHandicap} isSecurity={isSecurity} setIsFirstFav={setIsFirstFav} setPopUpNav={setPopUpNav} setMoodConnection={setMoodConnection} isLogin={isLogin} 
-            //     /> 
 
-            //   }
-            // }
+
+          // garesIdArray && Object.values(parkings).map(p => {
+          //   //console.log(p.gares_id)
+          //   // for (let i = 0; i < listFavorit.length; i++) {
+          //   //   const element = listFavorit[i];
+          //   //   if (element == p.gares_id) 
+          //   //   {
+          //   //     <ParkingBox key={i} data={p} dataGares={gares} garesLines={garesIdArray.getGaresIdArray} listFavorit={listFavorit} setListFavorit={setListFavorit} is24={is24} isHandicap={isHandicap} isSecurity={isSecurity} setIsFirstFav={setIsFirstFav} setPopUpNav={setPopUpNav} setMoodConnection={setMoodConnection} isLogin={isLogin} 
+          //   //     /> 
+
+          //   //   }
+          //   // }
             
-              Array.from(new Set(listFavorit)).map((i) => {
-                  // <ParkingBox data={p} dataGares={gares} garesLines={garesIdArray.getGaresIdArray} listFavorit={listFavorit} setListFavorit={setListFavorit} is24={is24} isHandicap={isHandicap} isSecurity={isSecurity} setIsFirstFav={setIsFirstFav} setPopUpNav={setPopUpNav} setMoodConnection={setMoodConnection} isLogin={isLogin} 
-                  // /> 
-                  // console.log(p)
-                <p>{i}</p>
-              })
+          //     Array.from(new Set(listFavorit)).map((i) => {
+          //         // <ParkingBox data={p} dataGares={gares} garesLines={garesIdArray.getGaresIdArray} listFavorit={listFavorit} setListFavorit={setListFavorit} is24={is24} isHandicap={isHandicap} isSecurity={isSecurity} setIsFirstFav={setIsFirstFav} setPopUpNav={setPopUpNav} setMoodConnection={setMoodConnection} isLogin={isLogin} 
+          //         // /> 
+          //         // console.log(p)
+          //       <p>{i}</p>
+          //     })
 
-          })
+          // })
+
+          // console.log(showListFavorit)
+
+          // Object.values(showListFavorit).map( pfavorit => {
+          //   console.log("favorit parkings",pfavorit) 
+          //   // <ParkingBox key={i} data={p} dataGares={gares} garesLines={garesIdArray.getGaresIdArray} listFavorit={listFavorit} setListFavorit={setListFavorit} is24={is24} isHandicap={isHandicap} isSecurity={isSecurity} setIsFirstFav={setIsFirstFav} setPopUpNav={setPopUpNav} setMoodConnection={setMoodConnection} isLogin={isLogin}
+          //   // />
+
+          // })
+          // garesIdArray && Object.values(showListFavorit).map( (pfavorit,i) => {
+
+          //   // console.log("favorit parkings",pfavorit) 
+            
+          //   // <ParkingBox key={i} data={pfavorit} dataGares={gares} garesLines={garesIdArray.getGaresIdArray} listFavorit={listFavorit} setListFavorit={setListFavorit} is24={is24} isHandicap={isHandicap} isSecurity={isSecurity} setIsFirstFav={setIsFirstFav} setPopUpNav={setPopUpNav} setMoodConnection={setMoodConnection} isLogin={isLogin}
+          //   // />
+          //   // <p>{pfavorit.code_postal}</p>
+          // })
         }
 
       

@@ -196,6 +196,8 @@ const Parking = ({data, dataGares, garesLines,is24, isHandicap, isSecurity,listF
             //     <RerArrete key={index} data={data} dataGares={dataGares} parkingBoxGareID={data.gares_id} garesIdInLines={garesIdInLines} item={item} parkingName={parkingName}/> 
             //   ))
             // ))
+
+            
             garesIdInLines && data.gares_id.map( value => (
 
          
@@ -262,7 +264,7 @@ const Parking = ({data, dataGares, garesLines,is24, isHandicap, isSecurity,listF
         </div>
         <div className="wrapper--flex">
           <Favorit listFavorit={listFavorit} isLogin={isLogin} setListFavorit={setListFavorit}   setIsFirstFav={setIsFirstFav} setPopUpNav={setPopUpNav} setMoodConnection={setMoodConnection} parkings={data} />
-          {console.log(listFavorit)}
+          {/* {console.log(listFavorit)} */}
           <ButtonSeeMore isOpen={isOpen} />
         </div>
       </div>
@@ -280,7 +282,7 @@ const Parking = ({data, dataGares, garesLines,is24, isHandicap, isSecurity,listF
 
       <div className="parking__distance">
         <Distance name="jusqu’au rer" value="50m - 3min"/>
-        <Distance name="temps de transport jusqu’a l’épreuve" value="20km - 20min"/>
+        <Distance name="temps de transport jusqu’à l’épreuve" value="20km - 20min"/>
         {isOpen===false?
           <Price data={data}/>
         :""}
