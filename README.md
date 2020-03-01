@@ -1,13 +1,20 @@
 # Projet d'étude - Parking GPS
 
-#Installation:
+# Description du projet:
+
+
+
+# Installation:
 
 Etape à suivre:
 
  - Cloner le git
  - Configurer le fichier ".env"
- - Utiliser la commande "composer install"
- 
+ - Utiliser les commande:
+ ```bash
+ composer install
+ yarn install
+ ```
  
  /!\ Ayez une version de PHP décente.
  
@@ -18,7 +25,20 @@ Etape à suivre:
 symfony server:start
 ```
 
-## Initialisation de la BDD
+## Créer et inserer les datas (Optionnel)
+
+J'ai synthétisé toute les commandes afin d'en utiliser qu'une seule.
+Les étapes:
+- Drop de la DB
+- Création de la DB
+- Insertion des données via les CSV
+
+La commande:
+```bash
+php bin/console reset:db
+```
+
+## Initialisation de la BDD (Manuellement)
 
 Créer la base de données:
 ```bash
@@ -51,27 +71,3 @@ Supprimer une migration:
 ```bash
 php bin/console doctrine:migrations:version YYYYMMDDHHMMSS --delete
 ```
-
-Commande permettant de supprimer sa BDD afin de la recréer et remplir à nouveau:
-```bash
-php bin/console reset:db
-```
-
-
-
-## Côté DEV
-
-### Si vous souhaitez faire du JS / SASS
-
-Pour faire du JS (React), il vous suffit de vous rendre dans: assets/js/app.js
-
-Pour faire du SASS, il vous suffit de vous rendre dans: assets/css/app.scss
-
-Pour utiliser WEBPACK:
-
-```bash
-yarn encore dev --watch
-
-## CTRL + C pour arreter le process
-```
-
