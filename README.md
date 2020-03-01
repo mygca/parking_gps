@@ -5,9 +5,8 @@
   - Gena Nunes : UX/UI Designer
   - Mathias Vincelet: UX/UI Designer
   - Yannis Rezzoug: Développeur Back
-  - Christina Stephan: Développeur Front
-  - Amanda Tan: Développeur Front
-
+  - **Christina Stephan: Développeur Front**
+  - **Amanda Tan: Développeur Front**
 
 
 # **Summary**
