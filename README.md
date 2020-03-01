@@ -191,7 +191,7 @@ Données à envoyées:
 Données à envoyées:
 ```json
 {
-  "id": int,
+  "id": 0,
   "geopoint": "string",
   "geoshape": "string",
   "nomGare": "string",
@@ -200,7 +200,7 @@ Données à envoyées:
   "ligne": "string",
   "ligneCode": "string",
   "exploitant": "string",
-  "garesId": int,
+  "garesId": 0,
   "indiceLigne": "string",
   "reseau": "string",
   "x": "string",
