@@ -2,7 +2,19 @@
 
 # Description du projet:
 
+Tout d'abord je tiens à préciser les membres de l'équipe, ainsi que leur fonction:
 
+### Composition de l'équipe 10 : 
+- Gena Nunes: UX/UI designer
+- Mathias Vincelet: UX/UI designer
+- Christina Stephan: Développeur Front-End
+- Amanda Tan: Développeur Front-End
+- Yannis Rezzoug: Développeur Back-End
+
+### Objectif du projet:
+
+Mise en place d'une plateforme afin d'indiquer des parkings en banlieue parisienne durant les JO 2024 qui auront lieu à Paris.
+Le but étant de désengorger les routes de Paris et de privilégier les transports en commun.
 
 # Installation:
 
