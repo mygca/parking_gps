@@ -157,10 +157,13 @@ Méthodes: GET / POST / DELETE
 Les autres méthodes (PUT & PATCH) ne seront pas utilisés dans le projet.
 
 **Favorite:**
+
 ![Image description](https://zupimages.net/up/20/09/1vfi.png)
 
 *GET /api/favorites:* Liste la totalité des favoris.
+
 *POST /api/favorites:* Insertion en base d'un favoris.
+
 Données à envoyées:
 ```json
 {
@@ -172,14 +175,19 @@ Données à envoyées:
   ]
 }
 ```
+
 *GET /api/favorites/{id}:* Liste un favoris selon son ID.
+
 *DELETE /api/favorites/{id}:* Supprime un favoris selon son ID.
 
 **Gares:**
+
 ![Image description](https://zupimages.net/up/20/09/vkmo.png)
 
 *GET /api/api/gares_i_d_fs:* Liste la totalité des gares.
+
 *POST /api/api/gares_i_d_fs:* Insertion en base d'une gare.
+
 Données à envoyées:
 ```json
 {
@@ -202,14 +210,19 @@ Données à envoyées:
   ]
 }
 ```
+
 *GET /api/api/gares_i_d_fs/{id}:* Liste une gare selon son ID.
+
 *DELETE /api/api/gares_i_d_fs/{id}:* Supprime une gare selon son ID.
 
 **Parking:**
+
 ![Image description](https://zupimages.net/up/20/09/1uea.png)
 
 *GET /api/parkings:* Liste la totalité des parkings.
+
 *POST /api/parkings:* Insertion en base d'un parking.
+
 Données à envoyées:
 ```json
 {
@@ -238,15 +251,20 @@ Données à envoyées:
   ]
 }
 ```
+
 *GET /api/parkings/{id}:* Liste un parking selon son ID.
+
 *DELETE /api/parkings/{id}:* Supprime un parking selon son ID.
 
 **Users:**
+
 ![Image description](https://zupimages.net/up/20/09/l9a3.png)
 
 
 *GET /api/users:* Liste la totalité des users.
+
 *POST /api/users:* Insertion en base d'un user.
+
 Données à envoyées:
 ```json
 {
@@ -258,7 +276,9 @@ Données à envoyées:
   "LastName": "string",
 }
 ```
+
 *GET /api/users/{id}:* Liste un user selon son ID.
+
 *DELETE /api/users/{id}:* Supprime un user selon son ID.
 
 
