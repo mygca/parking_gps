@@ -12,6 +12,11 @@ Etape à suivre:
  /!\ Ayez une version de PHP décente.
  
  Si un problème survient, ouvrez une issues et décrivez votre problème.
+ 
+## Démarrer le serveur
+```bash
+symfony server:start
+```
 
 ## Initialisation de la BDD
 
